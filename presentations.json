@@ -20,6 +20,11 @@
 		{
 			"title" : "HTML Basics",
 			"authors" : ["Stephan Pavlovic", "Jan Kus"]
+		},
+		"2014-10-09-html-advanced/index.html":
+		{
+			"title" : "HTML Advanced",
+			"authors" : ["Stephan Pavlovic", "Jan Kus"]
 		}
 	}
 }

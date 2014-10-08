@@ -100,12 +100,182 @@
                 &lt;/section>
                 &lt;section>
                   &lt;h2> Audio &lt;/h2>
-                  &lt;audio src="http://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg" controls="controls">&lt;/audio>
+                  &lt;audio src="http://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg" controls="controls"/>
                 &lt;/section>
                 &lt;section>
                   &lt;h2> Video &lt;/h2>
-                  &lt;video src="http://shapeshed.com/examples/HTML5-video-element/video/320x240.ogg" controls="controls">&lt;/video>
+                  &lt;video src="http://shapeshed.com/examples/HTML5-video-element/video/320x240.ogg" controls="controls"/>
                 &lt;/section>
+              &lt;/body>
+            &lt;/html></code></pre>
+          </a>
+        </section>
+        <section>
+          <h2>Tabellen - Basis </h2>
+          <p class="fragment">
+            <strong>Tabelle</strong>
+            <ul class="fragment">
+              <li>&lt;table> Kein Inhalt&lt;/table></li>
+              <li>Umschließt die komplette Tabelle</li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>Zeile</strong>
+            <ul class="fragment">
+              <li>&lt;tr> Kein Inhalt&lt;/tr></li>
+              <li>Ein Element pro Zeile</li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>Zelle</strong>
+            <ul class="fragment">
+              <li>&lt;td> Endlich Inhalt&lt;/td></li>
+              <li>Viele Zellen pro Zeile</li>
+            </ul>
+          </p>
+        </section>
+        <section>
+          <h2>Tabellen - Im Detail </h2>
+          <p class="fragment">
+            <strong>Tabellen Kopf</strong>
+            <ul class="fragment">
+              <li>&lt;thead> Kein Inhalt&lt;/thead></li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>Tabellenzelle im Kopf</strong>
+            <ul class="fragment">
+              <li>&lt;th> Kopfzelle&lt;/th></li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>Tabellen Inhalt</strong>
+            <ul class="fragment">
+              <li>&lt;tbody>&lt;/tbody></li>
+            </ul>
+          </p>
+        </section>
+        <section>
+          <h2>Eine HTML Seite mit einer Tabelle</h2>
+          <a href='basic_table.html' target='_blank'>
+          <p><pre><code>
+            &lt;html>
+              &lt;body>
+                &lt;table>
+                  &lt;thead>
+                    &lt;tr>
+                      &lt;th>
+                        Kopfzelle
+                      &lt;/th>
+                      &lt;th>
+                        Kopfzelle
+                      &lt;/th>
+                    &lt;/tr>
+                  &lt;/thead>
+                  &lt;tbody>
+                    &lt;tr>
+                      &lt;td>
+                        Normale Zelle
+                      &lt;/td>
+                      &lt;td>
+                        Normale Zelle
+                      &lt;/td>
+                    &lt;/tr>
+                    &lt;tr>
+                      &lt;td>
+                        Normale Zelle
+                      &lt;/td>
+                      &lt;td>
+                        Normale Zelle
+                      &lt;/td>
+                    &lt;/tr>
+                  &lt;/tbody>
+                &lt;/table>
+              &lt;/body>
+            &lt;/html></code></pre>
+          </a>
+        </section>
+        <section>
+          <h2>Formulare </h2>
+          <ul>
+            <li class="fragment">Grundelement jeder interaktiven Seite</li>
+            <li class="fragment">Suchfeld, Login, Newsletter Signup, ...</li>
+            <li class="fragment">Basis: &lt;form></li>
+            <li class="fragment">Eingabe-Felder: &lt;input></li>
+            <li class="fragment">Button: &lt;button>Abschicken&lt;/button></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Spezielle Input-Typen </h2>
+          <p class="fragment">
+            <strong>Texteingabe Felder</strong>
+            <ul class="fragment">
+              <li>&lt;input type=text></li>
+              <li>Standard Eingabe Feld</li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>Select Feld</strong>
+            <ul class="fragment">
+              <li>&lt;select>&lt;/select></li>
+              <li>Beinhaltet &lt;option value="value1">Value 1&lt;/option> </li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>Radio Buttons</strong>
+            <ul class="fragment">
+              <li>&lt;input type=radio value='red'>Rot</li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>Checkboxen</strong>
+            <ul class="fragment">
+              <li>&lt;checkbox label='orange'>&lt;/checkbox></li>
+            </ul>
+          </p>
+        </section>
+        <section>
+          <h2>Spezielle Input Typen </h2>
+          <p>&lt;input type=?></p>
+          <ul class='fragment'>
+            <li>Email</li>
+            <li>Password</li>
+            <li>Phone</li>
+            <li>Number</li>
+            <li>Date</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Eine Seite mit Formulare</h2>
+          <a href='form.html' target='_blank'>
+          <p><pre><code>
+            &lt;html>
+              &lt;head>...&lt;/head>
+              &lt;body>
+              &lt;form>
+                &lt;label>Name</label>
+                &lt;input type=text/>
+                &lt;label>Email</label>
+                &lt;input type=email></input>
+                &lt;label>Password</label>
+                &lt;input type=password></input>
+                &lt;label>Number</label>
+                &lt;input type=number></input>
+                &lt;label>Date</label>
+                &lt;input type=date></input>
+                &lt;input type=radio value='red'/> Rot
+                &lt;input type=radio value='green'/> Grün
+                &lt;input type=radio value='green'/> Blau
+                &lt;input type=checkbox value='red'/> Rot
+                &lt;input type=checkbox value='green'/> Grün
+                &lt;input type=checkbox value='green'/> Blau
+                &lt;select>
+                  &lt;option>Milch</option>
+                  &lt;option>Kaffee</option>
+                  &lt;option>Tee</option>
+                &lt;/select>
+                &lt;button>Abschicken</button>
+              &lt;/form>
               &lt;/body>
             &lt;/html></code></pre>
           </a>
