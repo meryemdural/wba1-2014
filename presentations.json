@@ -10,6 +10,16 @@
 		{
 			"title" : "Git Einführung",
 			"authors" : ["Stephan Pavlovic", "Jan Kus"]
+		},
+		"2014-10-09-web-basics/index.html":
+		{
+			"title" : "Web Basics",
+			"authors" : ["Volker Schaefer"]
+		},
+		"2014-10-09-html-basics/index.html":
+		{
+			"title" : "HTML Basics",
+			"authors" : ["Stephan Pavlovic", "Jan Kus"]
 		}
 	}
 }
