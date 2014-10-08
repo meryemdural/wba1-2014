@@ -112,7 +112,7 @@
           </a>
         </section>
         <section>
-          <h2>Tags</h3>
+          <h2>Tags</h2>
           <ul>
             <li class="fragment" <pre><code contenteditable>&lt;tagname> text &lt;/tagname></code></pre></li>
             <li class="fragment">Einleitendes Tag / Abschlie&szlig;endes Tag<br></li>
@@ -120,7 +120,7 @@
           </ul>
         </section>
         <section>
-          <h2>Tags</h3>
+          <h2>Tags</h2>
           <ul>
             <li <pre><code contenteditable>&lt;tagname attribute='attribute'> text &lt;/tagname></code></pre></li>
             <li class="fragment">Manche Tags können mit Attributen erweitert werden<br></li>
@@ -226,7 +226,7 @@
           </a>
         </section>
         <section>
-          <h2>Elemente zur <strong>logischen</strong> Auszeichnung von speziellen Textelementen </h3>
+          <h2>Elemente zur <strong>logischen</strong> Auszeichnung von speziellen Textelementen </h2>
             <ul>
               <li class='fragment'><strong>&lt;em>Wichtig&lt;/em> </strong> zeichnet einen wichtigen Text aus</li>
               <li class='fragment'><strong>&lt;strong>Wichtiger&lt;/strong> </strong> zeichnet einen sehr wichtigen Text aus (Steigerung von em)</li>
@@ -259,6 +259,60 @@
                     Ein Satz mit <b>fettem</b>, <i>kursiven</i> und <small>kleinem</small> Text
                   &lt;/p>
                 &lt;/section>
+              &lt;/body>
+            &lt;/html></code></pre>
+          </a>
+        </section>
+        <section>
+          <h2>Listen in HTML </h2>
+          <p class="fragment">
+            <strong>Ungeordnete Listen</strong>
+            <ul class="fragment">
+              <li>Ein &lt;ul> umschließt alle Listeneinträge</li>
+              <li>Jeder Listeneintrag besteht aus einem &lt;li></li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>Aufzählungslisten</strong>
+            <ul class="fragment">
+              <li>Ein &lt;ol> umschließt alle Listeneinträge</li>
+              <li>Jeder Listeneintrag besteht aus einem &lt;li></li>
+            </ul>
+          </p>
+          <p class="fragment">
+            <strong>Definitionslisten</strong>
+            <ul class="fragment">
+              <li>Zum Beispiel für Glossare</li>
+              <li>Ein &lt;dl> umschließt alle Listeneinträge</li>
+              <li>Jeder Listeneintrag besteht aus zwei Einträgen</li>
+              <li>Ein &lt;dt> für den Definitionsausdruck</li>
+              <li>Ein &lt;dd> für die Erklärung</li>
+            </ul>
+          </p>
+        </section>
+        <section>
+          <h2>Wie sieht unser HTML Dokument mit Listen aus</h2>
+          <a href='lists.html' target='_blank'>
+          <p><pre><code>
+            &lt;html>
+              &lt;body>
+              &lt;h1>Hier gehts um Listen&lt;/h1>
+              &lt;ul>
+                &lt;li>Erster Eintrag&lt;/li>
+                &lt;li>Zweiter Eintrag&lt;/li>
+                &lt;li>Dritter Eintrag&lt;/li>
+              &lt;/ul>
+              &lt;ol>
+                &lt;li>Erster Eintrag&lt;/li>
+                &lt;li>Zweiter Eintrag&lt;/li>
+                &lt;li>Dritter Eintrag&lt;/li>
+              &lt;/ol>
+              &lt;dl>
+                &lt;dt>Ausdruck&lt;/dt>
+                &lt;dd>Erklärung dazu&lt;/dd>
+                &lt;dt>Ausdruck&lt;/dt>
+                &lt;dd>Erklärung dazu&lt;/dd>
+              &lt;/dl>
               &lt;/body>
             &lt;/html></code></pre>
           </a>
