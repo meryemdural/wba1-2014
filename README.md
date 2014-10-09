@@ -15,5 +15,3 @@ Lernmaterialien, Ansprechpartner etc. zum Modul "Web-basierte Anwendungen 1": WW
 [Christian Poplawski](https://github.com/Plsr), FH-Köln
 
 
-
-
