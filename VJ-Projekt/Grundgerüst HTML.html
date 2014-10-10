@@ -1,11 +1,18 @@
- <!--  TODO : 
+     <!--  TODO : 
     -Grundgerüst (BoxModell) der Site mit Div-Containern Aufbauen x
     -Stylesheet anlegen und mit html sheet linken x
+    -
     -Von HTML unterstützte Medienformate finden , 
     -In jedem Format eine Rohdatei zum Testen anlegen 
     -Recherche ,wie sich diese Formate im html einbetten lassen 
     -Herausfinden ,wie sich diese eingebetteten Medien über Java
-        script ansprechen lassen  -->
+        script ansprechen lassen
+    -Wie werden Mediendaten lokal und "global" referenziert? 
+
+    Funktionsideen: 
+    -Input forms für URL's , die Videos aus Youtube laden 
+
+      -->
 
 
 
@@ -47,11 +54,17 @@
             <!-- Video Section -->
             <section>
                 <div>
-                    <!-- Video1 zum mischen einbetten -->
+                    <!-- Video1 zum mischen einbetten , hier kann auch noch autoplay im videotag eingefügt werden, sowie eine zweite Source als Fallback-->
+                     <video controls="true">
+                        <source src="file:////Users/Tobi/Documents/FH/WBA_I/PR.mp4" type="video/mp4" />
+                     </video> 
                 </div>
 
                 <div>
                     <!-- Video 2 zum mischen einbetten -->
+                    <video controls="true">
+                        <source src="https://www.youtube.com/watch?v=e4FSbGVrLS8" type="video/mp4"/>
+                    </video>
                 </div>
 
                 <div>
