@@ -166,7 +166,7 @@
 					<li><strong>Seit 2002</strong> - Arbeit an der überarbeiteten Version CSS Level 2 revision 1 (CSS 2.1)</li>
 					<li><strong>2011</strong> - Publication von CSS Level 2.1 Recommendation</li>
 					<blockquote class="fragment">
-						CSS 3 ist im Gegensatz zu den Vorgängern modular aufgebaut, das heißt einzelne Teiltechniken (beispielsweise zur Steuerung der Sprachausgabe) haben ihren eigenen Entwicklungsrhythmus und Versionsschritte.
+						CSS 3 ist im Gegensatz zu den Vorgängern modular aufgebaut, das heißt einzelne Teiltechniken (beispielsweise zur Steuerung der Sprachausgabe) haben ihren eigenen Entwicklungsrhythmus und Versionsschritte. <a href="http://www.w3.org/Style/CSS/specs">CSS3-Sezifikation</a>
 					</blockquote>
 				</ul>
 			</section>
@@ -201,10 +201,8 @@ p, li { color:black; font-size: 20px }</code></pre>
   &lt;head&gt;
     &lt;meta charset=&quot;utf-8&quot;&gt;
     &lt;title&gt;Stylesheet &uuml;ber externe Datei einbinden&lt;/title&gt;
-    &lt;style&gt;
-      &lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheet.css&quot; type=&quot;text/css&quot;&gt;
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/reveal.css&quot;&gt;
-    &lt;/style&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheet.css&quot; type=&quot;text/css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/reveal.css&quot;&gt;
   &lt;/head&gt;
   &lt;body&gt;
   &lt;/body&gt;
@@ -217,36 +215,261 @@ p, li { color:black; font-size: 20px }</code></pre>
 			</section>
 			<section>
 				<h2>Einbindung über eine externe Datei</h2>
-				<p>mit @import in der HTML-Datei</p>
+				<p>mit @import</p>
+
+				<p>oder in einer CSS-Datei</p>
+				<pre><code>
+@import &quot;../css/style.css&quot;;
+p {
+	color: black;
+};
+
+h1 {
+	color: red; 
+	font-size: 16px;
+}</code></pre>
+				<blockquote class="fragment" style="position:absolute;left: -5%; top:12%; width:300px; font-size:0.8em">@import muss immer vor allen
+					<br>anderen Regeln stehen.</blockquote>
+
+			</section>
+			<section>
+				<h2>Einbindung innerhalb des style-Elements</h2>
+
 				<pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;Stylesheet &uuml;ber externe Datei einbinden&lt;/title&gt;
+    &lt;title&gt;Stylesheet innerhalb des style-Elements definieren&lt;/title&gt;
     &lt;style&gt;
-      @import &quot;../css/style.css&quot;;
-      @import &quot;../css/reveal.css&quot;;
+      p {
+        color: black;
+      };
+
+      h1 {
+        color: red; 
+        font-size: 16px;
+      }    
     &lt;/style&gt;
   &lt;/head&gt;
   &lt;body&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-				<div class=fragment>
-					<p>oder in einer CSS-Datei</p>
-					<pre><code>
-@import &quot;../css/style.css&quot;;
-p {
-    color: black
-};
-
-h1 {
-    color: red; 
-    font-size: 16px;
-}
-		</code></pre>
+			</section>
+			<section>
+				<h2>Einbindung über das style-Attribut des Elements</h2>
+				<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Stylesheet über das style-Attribut definieren&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p style=&quot;color: red; font-size: 14px;&quot;&gt;
+      Lorem ipsum dolor sit amet, 
+      consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+      Donec quam felis
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				<ul class="fragment">
+					<li>Style ist an ein Dokument gebunden und kann nicht an zentraler Stelle bearbeitet werden</li>
+					<li>Wartungsaufwand steigt und Flexibilität geht verloren</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Selektoren</h2>
+				<ul>
+					<li><strong>Einfache Selektoren</strong>
+					</li>
+					<li>Kombinatoren</li>
+					<li>Pseudoelemente</li>
+					<li>Pseudoklassen</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Einfache Selektoren</h2>
+				<table>
+					<tr>
+						<td>* {…}</td>
+						<td>Universalselektor</td>
+						<td>Alle Elemente in einem Dokument</td>
+					</tr>
+					<tr>
+						<td>p {…}</td>
+						<td>Typselektor</td>
+						<td>Alle p-Elemente im Dokument</td>
+					</tr>
+					<tr>
+						<td>.info {…}</td>
+						<td>Klassenselektor</td>
+						<td>Alle Elemente die der Klasse "Info" angehören</code>
+						</td>
+					</tr>
+					<tr>
+						<td>#wichtig {…}</td>
+						<td>ID-Selektor</td>
+						<td>Das Element mit der ID "wichtig"</td>
+					</tr>
+				</table>
+				<blockquote class="fragment">
+					Eine bestimmte Klasse darf beliebig vielen Elementen in einem Dokument zugewiesen werden. Eine bestimmte ID darf nur einem einzigen Element in einem Dokument zugewiesen werden.
+				</blockquote>
+			</section>
+			<section>
+				<h2>Einfache Selektoren</h2>
+				<p>Einfache Selektoren können auch miteinander kombiniert werden.</p>
+				<table>
+					<tr>
+						<td>p, div {…}</td>
+						<td>Alle p- und div-Elemente</td>
+					</tr>
+					<tr>
+						<td>p.info {…}</td>
+						<td>Alle p-Elemente mit der Klasse "info"</td>
+					</tr>
+					<tr>
+						<td>.info,&nbsp;.wichtig&nbsp;{…}&nbsp;&nbsp;</td>
+						<td>Alle Elmente mit der Klasse "info" <strong>oder</strong>"wichtig"</td>
+					</tr>
+					<tr>
+						<td>.info.wichtig&nbsp;{…}</td>
+						<td>Alle Elemente mit den Klassen "info" <strong>und</strong> "wichtig"</td>
+					</tr>
+					<tr>
+						<td>.info .wichtig</td>
+						<td>Alle Elemente die der Klasse "wichtig" angehören und sich <strong>innerhalb</strong> der Elemente mit der Klasse "info" befinden></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Attribut-Selektoren</h2>
+				<table>
+					<tr>
+						<td>[href]&nbsp;{…}</td>
+						<td>Alle Elemente mit dem Attributnamen "href"</td>
+					</tr>
+					<tr>
+						<td>[href=http://google.de]&nbsp;{…}</td>
+						<td>Alle Elemente deren Attribut "href" <strong>exakt</strong> den Wert "http://google.de" haben</td>
+					</tr>
+					<tr>
+						<td>[href*=google]&nbsp;{…}</td>
+						<td>Alle Elemente die das Attribut "href" haben und deren Wert die Zeichenkette "google" <strong>enthalten</strong>
+						</td>
+					</tr>
+					<tr>
+						<td>[href^=http]&nbsp;{…}</td>
+						<td>Alle Elemente die das Attribut "href" haben und deren Wert mit der Zeichenkette "http" <strong>beginnen</strong>
+						</td>
+					</tr>
+					<tr>
+						<td>[href$=http]&nbsp;{…}</td>
+						<td>Alle Elemente die das Attribut "href" haben und deren Wert mit der Zeichenkette "http" <strong>enden</strong>
+						</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>CSS-Eigenschaften zur Schriftformatierung</h2>
+				<div style="float:left;width: 40%">
+					<p>Schriftbild</p>
+					<ul>
+						<li>font-family (Schriftart)</li>
+						<li>font-style</li>
+						<li>font-size</li>
+						<li>font-weight</li>
+						<li>…</li>
+					</ul>
 				</div>
-				<blockquote class="fragment" style="position:absolute;left: -5%; top:44%; width:300px; font-size:0.8em">@import muss immer vor allen
-					<br>anderen Regeln stehen.</blockquote>
+				<div>
+					<p>Textformatierung</p>
+					<ul>
+						<li>color</li>
+						<li>letter-spacing</li>
+						<li>word-spacing</li>
+						<li>text-decoration</li>
+						<li>…</li>
+					</ul>
+					<p>Weitere Eigenschaften auf <a href="http://www.w3.org/TR/css3-fonts/">W3C - CSS Fonts Module Level 3</a>
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2>CSS-Eigenschaften zur Schriftformatierung</h2>
+				<p>Viele Angaben lassen sich in einer Kurzschreibweise zusammenfassen</p>
+				<div class="fragment">
+					<p>"Normale" Schreibweise:</p>
+					<pre><code>p {
+	font-style: italic;
+	font-weight: lighter;
+	font-size: 14px;
+	line-height: 1.4;
+	font-family: Georgia, serif;
+}
+					</code></pre>
+				</div>
+				<div class="fragment">
 
+					<p>Kurzschreibweise:</p>
+					<pre><code>p {
+	font: italic lighter 14px/1.4 Georgia, serif;
+}
+					</code></pre>
+				</div>
+				<p class="fragment">Mehr Infos unter: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">mozilla.org - shorthand properties</a>
+				</p>
+			</section>
+			<section>
+				<h2>Block- vs. Inline-Elemente</h2>
+				<div style="width:50%;float: left" class="fragment">
+					<p>Block-Elemente…</p>
+					<ul>
+						<li>sind so breit wie ihr Elternelement, falls kein anderer Wert angegeben wird</li>
+						<li>sind so hoch wie ihr Inhalt, falls kein andererr Wert angegeben wird</li>
+						<li>können Innen- und und Außenabstände haben</li>
+						<li>erzeugen einen Umbruch</li>
+						<li>sind u.a. &lt;p&gt;, &lt;div&gt;, &lt;form&gt;, &lt;header&gt;, &lt;nav&gt;, &lt;ul&gt;, &lt;li&gt;, and &lt;h1&gt;</li>
+					</ul>
+				</div>
+				<div style="width:50%; float: right" class="fragment">
+					<p>Inline-Elemente…</p>
+					<ul>
+						<li>ignorieren Höhen- und Breitenangaben</li>
+						<li>befinden sich im Textfluss</li>
+						<li>können Abstände nach oben und unten, jedoch nicht nach links und rechts, zugewiesen werden</li>
+						<li>erzeugen keinen Umbruch</li>
+						<li>sind u.a. &lt;a&gt;, &lt;span&gt;, &lt;b&gt;, &lt;em&gt;, &lt;i&gt;, &lt;cite&gt;, &lt;mark&gt;, and &lt;code&gt;</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h2>Das Box-Modell</h2>
+				<blockquote cite="http://wiki.selfhtml.org/wiki/CSS/Box-Modell">Im visuellen Anzeigemodell erfolgt die Darstellung von Elementen durch das Zeichnen von Rechtecken. Die Bestandteile dieser Rechtecke beschreibt das „Box-Modell“.</blockquote>
+				<p><small> Quelle: <a href="http://wiki.selfhtml.org/wiki/CSS/Box-Modell">SELFHTML-Wiki - CSS/Box-Modell</a> (13.11.2014)</small>
+				</p>
+			</section>
+			<section>
+				<h2>Das Box-Modell</h2>
+				<img src="images/boxmodell-detail.png" alt="boxmodell">
+				<ul>test</ul>
+
+				<p><small> Quelle: <a href="http://wiki.selfhtml.org/wiki/CSS/Box-Modell">SELFHTML-Wiki - CSS/Box-Modell</a> (13.11.2014)</small>
+				</p>
+
+			</section>
+			<section>
+				<h2>Das Box-Modell</h2>
+				<ul>
+					<li class="fragment">Für Block-Elemente können Höhe und Breite beliebig festgelegt weren</li>
+					<li class="fragment">Bei Inline-Elementen werden die Maße durch den Inhalt vorgegeben</li>
+					<li class="fragment">über die Eigenschaft display: block kann ein Inline-Element als Block-Element dargestellt werden</li>
+					<li class="fragment">Hintergrundbilder- und farben werden in den Bereich des Inhalts, Innenabstands und Rahmen gezeichnet.</li>
+					<li class="fragment">Die Gesamtbreite eines Elements errechnet sich durch:
+						<pre><code>margin-left + border-left + padding-left + width + padding-right + border-right + margin-right</code></pre> 
+					</li>
+					<li class="fragment">Die Gesamthöhe eines Elements sich durch:
+						<pre><code>margin-top + border-top + padding-top + height + padding-bottom + border-bottom + margin-bottom</code></pre> 
+					</li>
+				</ul>
 			</section>
 			<section>
 				<h2>
@@ -273,6 +496,10 @@ h1 {
 				</p>
 
 			</section>
+
+
+
+
 			<section>
 				<blockquote style="margin-bottom: 80px;">
 					Das Web editieren zu können ist genauso wichtig, wie durch das Web zu browsen.
