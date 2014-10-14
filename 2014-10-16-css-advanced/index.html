@@ -138,7 +138,7 @@
           <li class="fragment"><strong>Hands On</strong></li>
           <li class="fragment">Umgang mit übergroßen Inhalten</li>
           <li class="fragment">Kombinatoren</li>
-          <li class="fragment">Pseudoklassen</li>
+          <li class="fragment">Pseudoklassen & Pseudoelemente</li>
           <li class="fragment"><strong>Hands On</strong></li>
           <li class="fragment">Spezifizität</li>
         </ul>
@@ -284,6 +284,9 @@
         <img src="http://css-tricks.com/wp-content/csstricks-uploads/collapse.png" width="400" style="float:right">
       </section>
       <section>
+        <blockquote>Fragen zur Floating?</blockquote>
+      </section>
+      <section>
         <h2>Was passiert, wenn Dinge zu groß werden </h2>
         <ul class="fragment" style='max-width:450px'>
           <li>Kontrolliert man mit dem CSS-Attribut <code>overflow</code></li>
@@ -331,6 +334,9 @@
         </ul>
       </section>
       <section>
+        <blockquote>Fragen zu Overflow?</blockquote>
+      </section>
+      <section>
         <h2>Kombinatoren: Verhältnisse von Elementen zueinander </h2>
         <ul>
           <li class='fragment'>Manchmal möchte/kann man nicht ein Element direkt ansprechen</li>
@@ -343,7 +349,7 @@
         <h2>Kombinatoren: Verhältnisse von Elementen zueinander </h2>
         <div class='fragment'>
           <ul>
-            <li><strong>Nachfahren-Selektor</strong></li>
+            <li><strong>Nachfahren-Kombinator</strong></li>
             <li>wählt alle <strong>direkten & indirekten</strong> Nachfahren eines Elements</li>
             <li><code>.box .sub_box</code></li>
             <li>Können wir nutzen um oberstes <code>div</code> auszuschließen</li>
@@ -351,12 +357,111 @@
           <hr>
         </div>
         <ul class='fragment'>
-          <li><strong>Kind-Selektor</strong></li>
+          <li><strong>Kind-Kombinator</strong></li>
           <li>wählt alle <strong>direkten</strong> Nachfahren eines Elements</li>
           <li><code>.box > .sub_box</code></li>
           <li>Können wir nutzen um innerstes <code>div</code> auszuschließen</li>
           <li class='fragment'>Auf zu unserem kleinen <a href='http://codepen.io/anon/pen/tmbxI?editors=110' target='_blank'>Live-Beispiel</a></li>
         </ul>
+      </section>
+      <section>
+        <h2>Kombinatoren: Verhältnisse von Elementen zueinander </h2>
+        <div class='fragment'>
+          <ul>
+            <li><strong>Nachbar-Kombinator</strong></li>
+            <li>wählt den <strong>direkten</strong> nachfolgenden Nachbarn eines Elements</li>
+            <li><code>.box + .box</code></li>
+          </ul>
+          <hr>
+        </div>
+        <ul class='fragment'>
+          <li><strong>Geschwister-Kombinator</strong></li>
+          <li>wählt alle <strong>direkten und indirekten</strong> nachfolgenden Nachbarn eines Elements</li>
+          <li><code>.box ~ .box</code></li>
+          <li class='fragment'>Auf zu unserem kleinen <a href='http://codepen.io/anon/pen/tmbxI?editors=110' target='_blank'>Live-Beispiel</a></li>
+        </ul>
+      </section>
+      <section>
+        <blockquote>Fragen zu Kombinatoren?</blockquote>
+      </section>
+      <section>
+        <h2>Pseudoelemente & Pseudoklassen </h2>
+        <ul>
+          <li class='fragment'>Man unterscheidet zwischen:</li>
+          <li class='fragment'><strong>Pseudoklasse: </strong>Eine CSS-Klasse die implizit verfügbar ist</li>
+          <li class='fragment'><strong>Pseudoelement: </strong>Ein HTML-Element, welches im CSS lebt</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Pseudoklassen für Interaktionselemente</h2>
+        <ul>
+          <li class='fragment'>Der klassischte aller Fälle <strong>:hover </strong></li>
+          <li class='fragment'><strong>:active </strong>betrifft akive Elemente, besonders wichtig im mobilen Anwendungen</li>
+          <li class='fragment'><strong>:focus </strong>wichtig für die Bedienung mit der Tastatur und für das Thema <em>Barrierefreiheit</em></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Weitere Pseudoklassen</h2>
+        <ul class='fragment'>
+          <li><strong>:first-child, :last-child </strong> Besonders häufig im Kontext von Listen</li>
+          <li><strong>:nth-child() </strong> Häufigster Fall sind Tabellen</li>
+        </ul>
+        <div class='fragment'>
+          <img src="images\first_child.jpg" alt="first_child" width="30%">
+          <img src="images\last_child.jpg" alt="last_child" width="30%">
+          <img src="images\nth_child.jpg" alt="nth_child" width="30%">
+        </div>
+        <ul class='fragment'>
+          <li>Weitere Pseudoklassen findet man <a href="http://www.sitepoint.com/web-foundations/css3-pseudo-classes/" target='_blank'>hier</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Pseudoelemente</h2>
+        <ul class='fragment'>
+          <li><strong>::before, ::after</strong> Werden sehr häufig für <em>Dekorationen</em> verwendet</li>
+          <li>Standard-Beispiel sind Pfeile <a href="http://codepen.io/anon/pen/FtKpr?editors=110" target="_blank">(Beispiel)</a> </li>
+        </ul>
+        <ul class='fragment'>
+          <li><a href="http://nicolasgallagher.com/pure-css-gui-icons/demo/" target="_blank">Krasses Beispiel</a> (Alle Icons sind pures CSS) </li>
+        </ul>
+        <ul class='fragment'>
+          <li>Weitere Beispiele für Pseudoelemente</li>
+          <li><strong>::first-letter</strong> Besonderes Styling für den ersten Buchstaben</li>
+          <li><strong>::first-line</strong> Besonderes Styling für dedie erste Zeile</li>
+          <li><a href="http://codepen.io/anon/pen/kzpjg?editors=110" target="_blank">Demo</a> </li>
+        </ul>
+      </section>
+      <section>
+        <blockquote>Fragen zu Pseudoklassen?</blockquote>
+      </section>
+      <section>
+        <h2>Spezifizität </h2>
+        <ul>
+          <li>Schwieriges Wort, im englischen <strong>specificity</strong></li>
+          <li class='fragment'>Mehrere Regeln treffen auf das selbe HTML-Element zu, welche Regel gewinnt?</li>
+          <li class='fragment'>Lösung: Ein einfaches Punktesystem</li>
+          <li class='fragment'>Typselector <strong>p</strong>: 1 Punkt </li>
+          <li class='fragment'>Klasse <strong>.box</strong>: 10 Punkte </li>
+          <li class='fragment'>Pseudoklasse <strong>:visited</strong>: 10 Punkte </li>
+          <li class='fragment'>ID <strong>#special-box</strong>: 100 Punkte </li>
+          <li class='fragment'>Attribute-style <strong>&lt;p style=""></strong>: 1000 Punkte </li>
+          <li class='fragment'>Der Erfindung des Teufels <strong>!important</strong>: 100000000000000 Punkte </li>
+        </ul>
+      </section>
+      <section>
+        <blockquote>Meine Empfehlung: Verwendet nur Klassen! Die Welt wäre so viel schöner...</blockquote>
+      </section>
+      <section>
+        <h2>Eine kleine Quizrunde: </h2>
+        <ul>
+          <li><code>a.box</code> ?</li>
+          <li class='fragment'><code>p a.box:visited</code> ?</li>
+          <li class='fragment'><code>a#main-box.box</code> ?</li>
+          <li class='fragment'><code>a#main-box#super-box.box</code> ?</li>
+        </ul>
+      </section>
+      <section>
+        <blockquote>Fragen zu Spezifizität?</blockquote>
       </section>
       <!-- End of slides container. -->
     </div>
