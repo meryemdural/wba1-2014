@@ -42,19 +42,15 @@
 		.tabelle th {
 			font-weight: normal;
 		}
-		.kaestchen {
-			margin: 30px 0 0 30px !important;
-		}
-		.kaestchen li {
-			background-color: #DD1166;
-			color: white;
-			display: inline-bock;
+		.kaestchen div {
+			border-width: 6px;
+			border-color: #77cc00;
+			background-color: rgb(63, 63, 63);
 			float: left;
-			list-style-type: none;
-			margin: 0 15px 15px 0;
+			margin: 0 20px 20px 0;
 			padding: 10px;
-			text-align: center;
-			width: 230px;
+			width: 180px;
+			height: 180px;
 		}
 		.fullscreenImage .reveal .slides {
 			height: 100% !important;
@@ -132,13 +128,6 @@
 				<p style="margin-top:10%">Stephan Pavlovic, Volker Schaefer</p>
 			</section>
 			<section>
-				<h2><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</h2>
-				<img src="images/tranquil-cascading-waterfall.jpg" alt="Wasserfall">
-				<p><small>Quelle: http://1ms.net/</small>
-				</p>
-
-			</section>
-			<section>
 				<h2>Trennung von Struktur, Layout und Funktion</h2>
 				<img src="images/html_css_js.svg" alt="Abbildung html css javascript">
 			</section>
@@ -187,10 +176,10 @@ p, li { color:black; font-size: 20px }</code></pre>
 			<section>
 				<h2>Einbindung von CSS in HTML</h2>
 				<ul class="big-font">
-					<li class="fragment">Über eine externe Datei mit link-Element</li>
-					<li class="fragment">Über eine externe Datei mit @import</li>
-					<li class="fragment">Innerhalb des style-Elements</li>
-					<li class="fragment">Im style-Attribut des Elements</li>
+					<li>Über eine externe Datei mit link-Element</li>
+					<li>Über eine externe Datei mit @import</li>
+					<li>Innerhalb des style-Elements</li>
+					<li>Im style-Attribut des Elements</li>
 				</ul>
 			</section>
 			<section>
@@ -215,9 +204,7 @@ p, li { color:black; font-size: 20px }</code></pre>
 			</section>
 			<section>
 				<h2>Einbindung über eine externe Datei</h2>
-				<p>mit @import</p>
-
-				<p>oder in einer CSS-Datei</p>
+				<p>mit @import in eine CSS-Datei</p>
 				<pre><code>
 @import &quot;../css/style.css&quot;;
 p {
@@ -420,7 +407,7 @@ h1 {
 			</section>
 			<section>
 				<h2>Block- vs. Inline-Elemente</h2>
-				<div style="width:50%;float: left" class="fragment">
+				<div style="width:48%;float: left" class="fragment">
 					<p>Block-Elemente…</p>
 					<ul>
 						<li>sind so breit wie ihr Elternelement, falls kein anderer Wert angegeben wird</li>
@@ -430,7 +417,7 @@ h1 {
 						<li>sind u.a. &lt;p&gt;, &lt;div&gt;, &lt;form&gt;, &lt;header&gt;, &lt;nav&gt;, &lt;ul&gt;, &lt;li&gt;, and &lt;h1&gt;</li>
 					</ul>
 				</div>
-				<div style="width:50%; float: right" class="fragment">
+				<div style="width:48%; float: right" class="fragment">
 					<p>Inline-Elemente…</p>
 					<ul>
 						<li>ignorieren Höhen- und Breitenangaben</li>
@@ -450,7 +437,6 @@ h1 {
 			<section>
 				<h2>Das Box-Modell</h2>
 				<img src="images/boxmodell-detail.png" alt="boxmodell">
-				<ul>test</ul>
 
 				<p><small> Quelle: <a href="http://wiki.selfhtml.org/wiki/CSS/Box-Modell">SELFHTML-Wiki - CSS/Box-Modell</a> (13.11.2014)</small>
 				</p>
@@ -472,510 +458,376 @@ h1 {
 				</ul>
 			</section>
 			<section>
-				<h2>
-                        Das Web ist ein <strong>Hypertext</strong>-Informationssystem
-                    </h2>
-				<blockquote>
-					Hypertext ermöglicht es Ihnen, Texte und visuelle Informationen auf nicht lineare Weise zu lesen und durch sie zu navigieren, indem sie das auswählen, was Sie als nächstes wissen wollen.
-				</blockquote>
-				<p>
-					<small>Quelle: Lemay, Laura; Tyler, Denise: HTML 4 in 21 Tagen, 1. Aufl.,  Markt+Technik, 2000, S. 15</small>
-				</p>
-			</section>
+				<h2>Innen- und Außenabstände</h2>
 
-			<section class="fullscreenImage" data-state="fullscreenImage" data-background="white" style="background-image: url(images/roussel_lesemaschine.jpg)">
-				<p class="bu">Roussels Lesemaschine</p>
-			</section>
-			<section data-state="fullscreenImage" style="background-image: url(images/buecherrad_ramelli.jpg)">
-				<p class="bu">Buecherrad von Agostino Ramelli (16. Jahrhundert)</p>
-			</section>
-			<section data-state="fullscreenImage" style="background-image: url(images/erste_website.png)">
-				<p class="bu fragment" style="width: 720px;">Die erste Website, verfasst und veröffentlicht von Tim Berners-Lee am 13. November 1990 auf einem NeXT-Rechner</p>
-				<p class="quelle">
-					Quelle: <a href="http://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html">http://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html</a> (04.12.2012)
-				</p>
-
-			</section>
-
-
-
-
-			<section>
-				<blockquote style="margin-bottom: 80px;">
-					Das Web editieren zu können ist genauso wichtig, wie durch das Web zu browsen.
-				</blockquote>
-
+				<p>Die Abstände können für jede Seite einzeln definiert weren</p>
+				<pre><code>p {
+	margin-top: 10px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+	margin-left: 5px;
+}</code></pre>
 				<div class="fragment">
-					<blockquote>
-						Computer können genutzt werden, um im Hintergrund Aufgaben zu erledigen, damit Gruppen besser zusammenarbeiten können.
-					</blockquote>
-					<small>Quelle: Berners-Lee, Tim: Weaving the Web, 1. Aufl., HarperOne, 1999</small>
+					<p>oder in Kurzschreibweise definiert werden</p>
+					<pre><code>/* Abst&auml;nde werden im Uhrzeiger definiert, beginnend mit der oberen Seite */
+p { margin: 10px 20px 30px 5px } 
+					
+/*  f&uuml;r alle 4 Abst&auml;nde gilt derselbe Wert */
+p {margin: 20px}
+
+/* 1. Wert f&uuml;r margin-top und margin bottom. 2. Wert f&uuml;r margin-left und margin-right */
+p { margin: 10px 20px } 
+
+/* 1. Wert f&uuml;r margin-top, 2. Wert f&uuml;r margin-left und margin-right, 3. Wert f&uuml;r margin-bottom */
+p { margin: 10px 30px 5px}</code></pre>
 				</div>
 			</section>
 			<section>
-				<blockquote style="margin-bottom: 80px;">
-					Jeder Bereich des Internets sollte eher eine Netzstruktur als eine Baumstruktur haben. Erwähnenswerte Ausnahmen sind das Domain Name System und die Regeln für die Vergabe von Domainnamen durch die ICANN.
-				</blockquote>
-				<div class="fragment">
-					<blockquote>
-						Informatiker tragen nicht nur eine technische, sondern auch eine moralische Verantwortung.
-					</blockquote>
-					<small>Quelle: Berners-Lee, Tim: Weaving the Web, 1. Aufl., HarperOne, 1999</small>
-				</div>
-			</section>
-
-			<section>
-				<h2>
-                        Die <strong>drei</strong> Säulen des <strong>WWW</strong>
-                    </h2>
-				<ul>
-					<c class="fragment"><strong>URI</strong>
-						<br /><strong>U</strong>niform <strong>R</strong>esource <strong>I</strong>dentifier</li>
-						<p class="fragment"><strong>HTTP</strong>
-							<br /> <strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol</li>
-							<p class="fragment"><strong>HTML</strong>
-								<br /><strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
-				</ul>
-			</section>
-			<section>
-				<h2>
-                        <strong>U</strong>niform <strong>R</strong>esource <strong>I</strong>dentifier
-                    </h2>
-				<p style="font-size: 24px; margin-bottom: 0px">
-					http://hans:geheim@example.org:80/demo/example.cgi?land=de&amp;stadt=aa#geschichte
-				</p>
-				<embed class="fragment" type="image/svg+xml" src="images/aufbau_url_bezeichnungen.svg" />
-			</section>
-			<section>
-				<embed type="image/svg+xml" src="images/client_server.svg" />
-				<embed class="fragment" style="position: absolute; top: 250px; left: 0px;" type="image/svg+xml" src="images/request.svg" />
-				<embed class="fragment" style="position: absolute; top: 295px; right: 165px;" type="image/svg+xml" src="images/response.svg" />
-			</section>
-			<section>
-				<embed type="image/svg+xml" src="images/client_server_proxy.svg" />
-				<embed class="fragment" style="position: absolute; top: 220px; left: 170px;" type="image/svg+xml" src="images/cache.svg" />
-			</section>
-			<section>
-				<h2>
-                        HTTP-Statuscodes
-                    </h2>
-				<p>
-
-					Die Antwort- oder Statuscodes von HTTP bestimmen direkt die Bedeutung der Antwort auf eine HTTP-Anfrage. Sie werden stets in der ersten Zeile der Response (= Server-Antwort) in der Form</p>
-				<pre><code>HTTP/1.1 &lt;Statuscode&gt; </code></pre>
-				<p>
-					übermittelt, wobei der Statuscode aus einer dreistelligen Zahl und einer kurzen Beschreibung besteht. Die Statuscodes werden nach ihrer ersten Ziffer in Gruppen von unterschiedlicher Bedeutung eingeteilt.
-				</p>
-				<p>
-					<small>Quelle: <a href="http://wiki.selfhtml.org/wiki/Referenz:HTTP/Antwortcodes">http://wiki.selfhtml.org/wiki/Referenz:HTTP/Antwortcodes</a> (04.12.2012)</small>
-				</p>
-			</section>
-			<section>
-				<h2>
-                        HTTP-Statuscodes
-                    </h2>
-				<ul>
-					<li><strong>100+ </strong>Informationen</li>
-					<li><strong>200+ </strong>Erfolg</li>
-					<li><strong>300+ </strong>Umleitung</li>
-					<li><strong>400+ </strong>Fehler beim Client</li>
-					<li><strong>500+ </strong>Fehler beim Server</li>
-					<a class='fragment' href='https://sportabzeichen.splink.de/404' , target='_blank'> Beispiel für eine 404 Seite</a>
-				</ul>
-
-			</section>
-			<section>
-				<h2>
-                        MIME-Types
-                    </h2>
-				<p>
-					Der Internet Media Type, auch MIME-Type (<strong>M</strong>ultipurpose <strong>I</strong>nternet <strong>M</strong>ail <strong>E</strong>xtension) oder Content-Type (nach dem Namen des Feldes), klassifiziert die Daten im Rumpf einer Nachricht im Internet. Wie im MIME-Standard erläutert, wird z. B. bei einer HTTP-Übertragung einem Browser mitgeteilt, welche Daten der Webserver sendet
-				</p>
-				<p>
-					<small>Quelle: <a href="http://de.wikipedia.org/wiki/Internet_Media_Type">http://de.wikipedia.org/wiki/Internet_Media_Type</a> (04.12.2012)</small>
-				</p>
-			</section>
-			<section>
-				<h2>
-                        MIME-Types
-                    </h2>
-				<ul>
-					<li>application/pdf</li>
-					<li>audio/mp3</li>
-					<li>image/jpeg</li>
-					<li>text/html</li>
-					<li>video/mpeg</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>
-                        HTML - <strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage
-                    </h2>
-				<blockquote>
-					Die Hypertext Markup Language (deutsch: Hypertext-Auszeichnungssprache) ist eine textbasierte Auszeichnungssprache zur Strukturierung von Inhalten wie Texten, Bildern und Hyperlinks in Dokumenten. HTML-Dokumente sind die Grundlage des World Wide Web und werden von einem Webbrowser dargestellt.
-				</blockquote>
-				<p>
-					<small>Quelle: <a href="http://de.wikipedia.org/wiki/Hypertext_Markup_Language">http://de.wikipedia.org/wiki/Hypertext_Markup_Language</a> (04.12.2012)</small>
-				</p>
-
-			</section>
-			<section data-state="nobackground">
-				<div style="text-align: center">
-
-					<embed type="image/svg+xml" src="images/sgml.svg" />
-					<embed style="position:absolute; top:39px; left: 334px" type="image/svg+xml" src="images/xml.svg" />
-					<embed style="margin-top:-10px" type="image/svg+xml" src="images/dtd.svg" />
-					<embed style="margin-top:-10px" type="image/svg+xml" src="images/auszeichnungssprachen.svg" />
-				</div>
-
-			</section>
-			<section>
-				<h2>Zeichencodierung, Sonderzeichen & Co.</h2>
-				<blockquote>Eine Zeichenkodierung (englisch Character encoding, kurz Encoding) erlaubt die eindeutige Zuordnung von Schriftzeichen (Buchstaben oder Ziffern) und Symbolen innerhalb eines Zeichensatzes. In der Elektronischen Datenverarbeitung werden Zeichen über einen Zahlenwert kodiert und eignen sich damit für Übertragungen oder Speicherungen.</blockquote>
-				<p>
-					<small>Quelle: <a href="http://de.wikipedia.org/wiki/Zeichensatz">http://de.wikipedia.org/wiki/Zeichensatz</a> (23.11.2013)</small>
-				</p>
-
-			</section>
-			<section>
-				<h2>Zeichencodierung, Sonderzeichen & Co.</h2>
-				<p>Zeichenkodierung für ein HTML-Dokument festlegen:</p>
-				<pre>
-                        <code class="xml">
-&lt;head&gt;
-    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
-&lt;/head&gt;
-                        </code>
-                    </pre>
-
-				<div class="fragment">
-					<p>Wird in HTML5 ersetzt durch:</p>
-					<pre>
-                        <code class="xml">
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;/head&gt;
-                        </code>
-                    </pre>
-				</div>
-
-			</section>
-			<section>
-				<h2>Zeichencodierung, Sonderzeichen & Co.</h2>
-				<table class="tabelle">
-					<tbody>
-						<tr>
-							<th>Code</th>
-							<th>0</th>
-							<th>1</th>
-							<th>2</th>
-							<th>3</th>
-							<th>4</th>
-							<th>5</th>
-							<th>6</th>
-							<th>7</th>
-							<th>8</th>
-							<th>9</th>
-							<th>A</th>
-							<th>B</th>
-							<th>C</th>
-							<th>D</th>
-							<th>E</th>
-							<th>F</th>
-						</tr>
-						<tr>
-							<th>0</th>
-							<td>NUL</td>
-							<td>SOH</td>
-							<td>STX</td>
-							<td>ETX</td>
-							<td>EOT</td>
-							<td>ENQ</td>
-							<td>ACK</td>
-							<td>BEL</td>
-							<td>BS</td>
-							<td>HT</td>
-							<td>LF</td>
-							<td>VT</td>
-							<td>FF</td>
-							<td>CR</td>
-							<td>SO</td>
-							<td>SI</td>
-						</tr>
-						<tr>
-							<th>1</th>
-							<td>DLE</td>
-							<td>DC1</td>
-							<td>DC2</td>
-							<td>DC3</td>
-							<td>DC4</td>
-							<td>NAK</td>
-							<td>SYN</td>
-							<td>ETB</td>
-							<td>CAN</td>
-							<td>EM</td>
-							<td>SUB</td>
-							<td>ESC</td>
-							<td>FS</td>
-							<td>GS</td>
-							<td>RS</td>
-							<td>US</td>
-						</tr>
-						<tr>
-							<th>2</th>
-							<td>SP</td>
-							<td>!</td>
-							<td>"</td>
-							<td>#</td>
-							<td>$</td>
-							<td>%</td>
-							<td>&amp;</td>
-							<td>'</td>
-							<td>(</td>
-							<td>)</td>
-							<td>*</td>
-							<td>+</td>
-							<td>,</td>
-							<td>-</td>
-							<td>.</td>
-							<td>/</td>
-						</tr>
-						<tr>
-							<th>3</th>
-							<td>0</td>
-							<td>1</td>
-							<td>2</td>
-							<td>3</td>
-							<td>4</td>
-							<td>5</td>
-							<td>6</td>
-							<td>7</td>
-							<td>8</td>
-							<td>9</td>
-							<td>:</td>
-							<td>;</td>
-							<td>&lt;</td>
-							<td>=</td>
-							<td>&gt;</td>
-							<td>?</td>
-						</tr>
-						<tr>
-							<th>4</th>
-							<td>@</td>
-							<td>A</td>
-							<td>B</td>
-							<td>C</td>
-							<td>D</td>
-							<td>E</td>
-							<td>F</td>
-							<td>G</td>
-							<td>H</td>
-							<td>I</td>
-							<td>J</td>
-							<td>K</td>
-							<td>L</td>
-							<td>M</td>
-							<td>N</td>
-							<td>O</td>
-						</tr>
-						<tr>
-							<th>5</th>
-							<td>P</td>
-							<td>Q</td>
-							<td>R</td>
-							<td>S</td>
-							<td>T</td>
-							<td>U</td>
-							<td>V</td>
-							<td>W</td>
-							<td>X</td>
-							<td>Y</td>
-							<td>Z</td>
-							<td>[</td>
-							<td>\</td>
-							<td>]</td>
-							<td>^</td>
-							<td>_</td>
-						</tr>
-						<tr>
-							<th>6</th>
-							<td>`</td>
-							<td>a</td>
-							<td>b</td>
-							<td>c</td>
-							<td>d</td>
-							<td>e</td>
-							<td>f</td>
-							<td>g</td>
-							<td>h</td>
-							<td>i</td>
-							<td>j</td>
-							<td>k</td>
-							<td>l</td>
-							<td>m</td>
-							<td>n</td>
-							<td>o</td>
-						</tr>
-						<tr>
-							<th>7</th>
-							<td>p</td>
-							<td>q</td>
-							<td>r</td>
-							<td>s</td>
-							<td>t</td>
-							<td>u</td>
-							<td>v</td>
-							<td>w</td>
-							<td>x</td>
-							<td>y</td>
-							<td>z</td>
-							<td>{</td>
-							<td>|</td>
-							<td>}</td>
-							<td>~</td>
-							<td>DEL</td>
-						</tr>
-
-					</tbody>
+				<h2>Maßeinheiten im Web</h2>
+				<table>
+					<tr>
+						<td style="width: 100px;">px</td>
+						<td>Pixel</td>
+					</tr>
+					<tr>
+						<td>%</td>
+						<td>Prozent: Je nach CSS-Eigenschaft relativ zur elementeigenen Größe, oder zu der des Elternelements, oder zu einem allgemeinen Kontext</td>
+					</tr>
+					<tr>
+						<td>em</td>
+						<td>Bezogen auf die Schriftgröße des Elements. Ausnahme: Wenn die font-size-Eigenschaft (also die Schriftgröße) selbst mit dieser Maßangabe gesetzt wird, bezieht sich die Angabe auf die Schriftgröße des Elternelements.</td>
+					</tr>
+					<tr>
+						<td>ex</td>
+						<td>Bezogen auf die Höhe des Kleinbuchstaben 'x' in diesem Element</td>
+					</tr>
+					<tr>
+						<td>pt</td>
+						<td>￼￼Punkt: Typografische Maßeinheit. 1 Punkt entspricht 0,376 mm.</td>
+					</tr>
+					<tr>
+						<td>pc</td>
+						<td>Pica: Typografische Maßeinheit. 1 Pica entspricht 12 Punkt.</td>
+					</tr>
+					<tr>
+						<td>in</td>
+						<td>1 Inch entspricht 2.54 Zentimetern.</td>
+					</tr>
+					<tr>
+						<td>mm</td>
+						<td>Millimeter</td>
+					</tr>
+					<tr>
+						<td>cm</td>
+						<td>Zentimeter</td>
+					</tr>
 				</table>
-				<p style="text-align: center">ASCII-Zeichentabelle, hexadezimale Nummerierung</p>
-				<blockquote class="fragment" style="max-width: 400px; position: absolute; top: 80px; left: 0px;">
-					Was fällt auf?
-				</blockquote>
+				<p>Weitere Infos zu Maßeinheiten auf <a href="http://www.w3.org/TR/css3-values/">W3C - CSS Values and Units Module Level 3</a>
+				</p>
 
 			</section>
 			<section>
-				<h2>Wie lösen wir das Problem?</h2>
-				<div class="fragment">
-					<table class="tabelle" style="width: 350px;">
-						<tbody>
-							<tr>
-								<th>Zeichen</th>
-								<th>Ersetzung</th>
-							</tr>
-							<tr>
-								<td>ä</td>
-								<td>&amp;auml;</td>
-							</tr>
-							<tr>
-								<td>Ä</td>
-								<td>&amp;Auml;</td>
-							</tr>
-							<tr>
-								<td>ö</td>
-								<td>&amp;ouml;</td>
-							</tr>
-							<tr>
-								<td>Ö</td>
-								<td>&amp;Ouml;</td>
-							</tr>
-							<tr>
-								<td>ü</td>
-								<td>&amp;uuml;</td>
-							</tr>
-							<tr>
-								<td>Ü</td>
-								<td>&amp;Uuml;</td>
-							</tr>
-							<tr>
-								<td>ß</td>
-								<td>&amp;szlig;</td>
-							</tr>
-						</tbody>
-					</table>
-					<br>
-					<p>Alle Sonderzeichen, die im Content verwendet werden, müssen durch entsprechende Zeichen ersetzt werden. Das gilt auch für Zeichen die zur HTML-Syntax gehören</p>
+				<h2>Hintergrund von Elementen</h2>
+				<div style="float: left; width: 50%">
+					<p>Hintergrundfarben und -bilder</p>
+					<ul>
+						<li>background-image</li>
+						<li>background-position</li>
+						<li>background-size</li>
+						<li>background-color</li>
+						<li>…</li>
+					</ul>
+				</div>
+				<div style="float: right; width: 50%">
+					<p>Farbverläufe als Hintergrundgrafik</p>
+					<ul>
+						<li>linear-gradient()</li>
+						<li>radial-gradient()</li>
+						<li>repeating-linear-gradient()</li>
+						<li>radial-gradient()</li>
+					</ul>
 				</div>
 
 			</section>
-
 			<section>
-				<h2>
-                        Protokoll
-                    </h2>
-
-				<blockquote class="fragment">
-					Ein Protokoll ist ein Satz von Regeln, nach denen Daten zwischen Computern bzw. Prozessen ausgetauscht werden, die durch ein Netzwerk miteinander verbunden sind.
-				</blockquote>
-			</section>
-			<section>
-				<h2>
-                        Dienst
-                    </h2>
-
-				<blockquote class="fragment">
-					Ein Dienst ist eine Funktion, die von einem Rechner anderen Teilnehmern in einem Computernetzwerk bereitgestellt wird
-				</blockquote>
-			</section>
-			<section>
-				<h2>
-                        Format
-                    </h2>
-
-				<blockquote class="fragment">
-					Ein Format ist eine oft standardisierte Beschreibung, wie Informationen in einer Datei gespeichert werden.
-				</blockquote>
-			</section>
-
-			<section>
-				<h2>
-                        <strong>Wer</strong> von Ihnen nutzt:
-                    </h2>
-				<ul class="kaestchen">
-					<li class="fragment">World Wide Web</li>
-					<li class="fragment">Pinterest</li>
-					<li class="fragment">Skype</li>
-					<li class="fragment">Twitter</li>
-					<li class="fragment">ICQ</li>
-					<li class="fragment">Instagram</li>
-					<li class="fragment">Facebook</li>
-					<li class="fragment">Flickr</li>
-					<li class="fragment">YouTube</li>
-					<li class="fragment">Xing</li>
-					<li class="fragment">Tumblr</li>
-					<li class="fragment">Amazon</li>
+				<h2>Hingergrundfarben</h2>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	width: 250px;
+	height: 250px;
+	border: 5px #77cc00 solid;
+	background-color:rgb(63, 63, 63);}</code></pre>
+					<div style="float:right; width: 250px;height: 250px; border: 5px #77cc00 solid; background-color:rgb(63, 63, 63);"></div>
+				</div>
+				<ul>
+					<li>Farben können im CSS auf unterschiedliche Weise festgelegt werden</li>
+					<li>Innerhalb eines Projektes sollte sich auf eine Art festgelegt werden</li>
 				</ul>
 			</section>
 			<section>
-				<h2>
-                        Was sind die Vor- und Nachteile von Web-basierten Anwendungen?
-                    </h2>
-				<div class="fragment" style="float: left !important; margin-right: 70px;">
-					<h3>Vorteile</h3>
-					<ul>
-						<li>Aktualisierbarkeit</li>
-						<li>Zugänglichkeit</li>
-						<li>Kostenstruktur</li>
-						<li>Plattformunabhängigkeit</li>
-						<li>Frei von Redundanzen</li>
-						<li>Personalisierbarkeit</li>
-						<li>Weniger Medienbrüche</li>
-						<li>Messbarkeit</li>
-					</ul>
-				</div>
-				<div class="fragment">
-					<h3>
-                            Nachteile
-                        </h3>
-					<ul>
-						<li>Keine Haptik</li>
-						<li>Technisches Equipment erforderlich</li>
-						<li>Sicherheit (gläserner User)</li>
-						<li>Interaktivität/Geschwindgkeit</li>
-					</ul>
-				</div>
+				<h2>Farben über Hexadezimal-Werte</h2>
+				<pre><code class="big-font">p {background-color: #228B22}</code></pre>
+				<ul>
+					<li>Drei Pärchen aus Hexadezimalwerten</li>
+					<li>Ein Pärchen besteht aus zwei Hexadezimalziffern</li>
+					<li>Die drei Pärchen stehen für die Farbwerte Rot, Grün und Blau. Genau in dieser Reihenfolge</li>
+					<li>In dem Beispiel: Rot: 22 – Grün: 8B – Blau: 22</li>
+				</ul>
 			</section>
-			<section data-state="fullscreenImage" style="background-image: url(images/bill_gates.jpg)">
-				<blockquote style="max-width: 400px; position: absolute; top: 80px; left: 100px;">
-					Das Internet ist nur ein Hype
-				</blockquote>
-				<p class="quelle">
-					Quelle: <a href="http://www.thirdage.com">http://www.thirdage.com</a> (04.12.2012)
+			<section data-transition: "none">
+				<h2>Farben über RGB-Werte</h2>
+				<img src="images/rgb_cube.png">
+				<p>
+					<small>Quelle: <a href="http://upload.wikimedia.org/wikipedia/commons/8/83/RGB_Cube_Show_lowgamma_cutout_b.png">wikimedia.org</a> (aufgerufen am 14. Oktober 2014)</small>
+				</p>
 
+			</section>
+			<section data-transition: "none">
+				<h2>Farben über RGB-Werte</h2>
+				<img src="images/rgb_cube.png" style="float:left;width: 40%;">
+				<ul class="fragment" style="float: right; width: 55%">
+					<li>Farbe wird durch die Addition von Rot, Grün und Blau gebildet</li>
+					<li>
+						Mit prozentualen Angaben zwischen 0% und 100%
+						<pre><code class="big-font">p {background-color: rgb(13.33%,54.51%,13.33%)}</code></pre>
+					</li>
+					<li>Mit Werten zwischen 0 und 255
+						<pre><code class="big-font">p {background-color: rgb(34,139,34)}</code></pre>
+					</li>
+					<li>
+						Über einen vierten Wert kann eine Transparenz zwischen 0 und 1 definiert werden
+						<pre><code class="big-font">p {background-color: rgb(34,139,34, 0.5)}</code></pre>
+
+					</li>
+				</ul>
+			</section>
+			<section data-transition: "none">
+				<h2>Farben über HSL-Werte</h2>
+				<img src="images/hsl_cylinder.png">
+				<p>
+					<small>Quelle: <a href="http://upload.wikimedia.org/wikipedia/commons/c/cb/HSL_color_solid_cylinder_alpha_lowgamma.png">wikimedia.org</a> (aufgerufen am 14. Oktober 2014)</small>
 				</p>
 			</section>
-			<!-- End of slides container. -->
+
+			<section data-transition: "none">
+				<h2>Farben über HSL-Werte</h2>
+				<img src="images/hsl_cylinder.png" style="float:left;width: 40%;">
+				<ul class="fragment" style="float: right; width: 55%">
+					<li>Farbe wird durch den Farbwinkel (H) im Farbkreis, der Sättigung (S) in Prozent und Helligkeitswert (L) in Prozent gebildet</li>
+					<li>
+						Mit prozentualen Angaben zwischen 0% und 100%
+						<pre><code class="big-font">p {background-color: hsl(120,61%,34%);}</code></pre>
+					</li>
+					<li>
+						Über einen vierten Wert kann eine Transparenz zwischen 0 und 1 definiert werden
+						<pre><code class="big-font">p {background-color: hsl(120,61%,34%, 0.5);</code></pre>
+
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Farben über vorderfinierte Schlüsselworte</h2>
+				<pre><code class="big-font">p {background-color: forestgreen}</code></pre>
+				<ul>
+					<li>In CSS2 16 vordefinierte Farbschlüsselworte</li>
+					<li>Wurde in CSS3 auf 140 Farbschlüsselworte erweitert</li>
+					<img src="images/css2-farben.png">
+				</ul>
+				<p>Übersicht aller Farbschlüsselworte auf <a href="http://www.w3.org/TR/css3-color/#svg-color/">W3C - CSS Color Module Level 3 - Extended color keywords</a>
+				</p>
+
+			</section>
+			<section>
+				<h2>Hingergrundgrafiken</h2>
+				<div style="height: 250px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 107px;
+	height: 150px;
+	border: 3px #77cc00 solid;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 107px;height: 150px; border: 3px #77cc00 solid;"></div>
+				</div>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Hingergrundgrafiken</h2>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+	background-repeat: repeat-x;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-repeat: repeat-x;"></div>
+				</div>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+	background-repeat: repeat-x;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-repeat: repeat-y"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Hingergrundgrafiken</h2>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+	background-repeat: no-repeat;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-repeat: no-repeat;"></div>
+				</div>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+	background-repeat: space;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-repeat: space"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Hingergrundgrafiken</h2>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+	background-repeat: no-repeat;
+	background-position: center
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-position: center;background-repeat: no-repeat;"></div>
+				</div>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	background-image: url(images/css3-logo.jpg);
+	width: 250px;
+	height: 250px;
+	border: 3px #77cc00 solid;
+	background-repeat: no-repeat;
+	background-position: 20px 80px;
+}</code></pre>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-position: 20px 80px;background-repeat: no-repeat;"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Rahmen von Elementen</h2>
+				<div style="float: left; width: 50%">
+					<ul>
+						<li>border-width</li>
+						<li>border-style</li>
+						<li>border-color</li>
+						<li>border-radius</li>
+						<li>…</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2>Rahmen von Elementen</h2>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	border-width: 5px;
+	border-color: #77cc00;
+	border-style: solid;
+	background-color: rgb(63, 63, 63);
+	
+	/*oder in Kurzform*/
+.logo {
+	border: 3px #77cc00 black;
+	background-color: rgb(63, 63, 63);
+}
+</code></pre>
+					<div style="float:right;border-width: 5px;border-color: #77cc00;border-style: solid;background-color: rgb(63, 63, 63); width: 200px; height: 200px"></div>
+				</div>
+				<div style="height: 300px">
+					<pre style="width:50%; float: left; margin: 0;"><code>.logo {
+	border-top: 5px grey solid;
+	border-right: 10px green solid;
+	border-bottom: 15px blue solid;
+	border-left: 20px red solid;
+}
+</code></pre>
+					<div style="float:right;	border-top: 5px grey solid;
+	border-right: 10px green solid;
+	border-bottom: 15px blue solid;
+	border-left: 20px red solid;
+	background-color: rgb(63, 63, 63);
+background-color: rgb(63, 63, 63); width: 200px; height: 200px"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Rahmentypen</h2>
+				<div class="kaestchen">
+					<div style="border-style:dotted">dotted</div>
+					<div style="border-style:dashed">dashed</div>
+					<div style="border-style:solid">solid</div>
+					<div style="border-style:double">double</div>
+					<div style="border-style:groove">groove</div>
+					<div style="border-style:ridge">ridge</div>
+					<div style="border-style:inset">inset</div>
+					<div style="border-style:outset">outset</div>
+				</div>
+			</section>
+			<section>
+				<h2>Abgerundete Ecken</h2>
+				<div style="height: 140px">
+					<pre style="width:60%; float: left; margin: 0;"><code>.logo {
+	/* Radius ist fuer alle vier Ecken gleich */
+	border-radius:20px;
+}
+</code></pre>
+					<div style="float:right;margin-right: 50px;border-width: 5px;border-color: #77cc00;border-style: solid;background-color: rgb(63, 63, 63); width: 100px; height: 100px; border-radius: 20px"></div>
+				</div>
+				<div class="fragment" style="height: 140px">
+					<pre style="width:60%; float: left; margin: 0;"><code>.logo {
+	/* Erster Wert: oben links / unten rechts
+	  Zweiter Wert: oben rechts / unten links */
+	border-radius:  10px 40px;
+}
+</code></pre>
+					<div style="float:right;margin-right: 50px;border-width: 5px;border-color: #77cc00;border-style: solid;background-color: rgb(63, 63, 63); width: 100px; height: 100px; border-radius:  10px 40px"></div>
+				</div>
+				<div class="fragment" style="height: 140px">
+					<pre style="width:60%; float: left; margin: 0;"><code>.logo {
+	/* Werte für alle Ecken im Uhrzeigersinn 
+	   beginnend oben links  */
+	border-radius:  10px 50px 30px 5px;
+}
+</code></pre>
+					<div style="float:right;margin-right: 50px;border-width: 5px;border-color: #77cc00;border-style: solid;background-color: rgb(63, 63, 63); width: 100px; height: 100px; border-radius:  10px 50px 30px 5px"></div>
+				</div>
+				<div class="fragment" style="height: 140px">
+					<pre style="width:60%; float: left; margin: 0;"><code>.logo {
+	/* Erster Wert: Radius horizontal
+	  Zweiter Wert: Radius vertiakl */
+	border-radius:  50px / 20px;
+}
+</code></pre>
+					<div style="float:right;margin-right: 50px;border-width: 5px;border-color: #77cc00;border-style: solid;background-color: rgb(63, 63, 63); width: 100px; height: 100px; border-radius:  50px / 20px"></div>
+				</div>
+
+			</section>
+			<sect <!-- End of slides container. -->
 
 		</div>
 
