@@ -283,6 +283,81 @@
         </ul>
         <img src="http://css-tricks.com/wp-content/csstricks-uploads/collapse.png" width="400" style="float:right">
       </section>
+      <section>
+        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <ul class="fragment" style='max-width:450px'>
+          <li>Kontrolliert man mit dem CSS-Attribut <code>overflow</code></li>
+          <li>Die Default-Eigenschaft ist <code>visible</code></li>
+          <li>Setzt man so von Hand ganz selten, außer man überschreibt die Eigenschaft von wo anders</li>
+        </ul>
+        <img  class="fragment" src="http://css-tricks.com/wp-content/csstricks-uploads/overflow-visible.png" width="500" style="float:right">
+      </section>
+      <section>
+        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <ul style='max-width:450px'>
+          <li>Kontrolliert man mit dem CSS-Attribut <code>overflow</code></li>
+          <li>Will man Dinge einfach abschneiden so nutzt man <code>hidden</code></li>
+        </ul>
+        <img src="http://css-tricks.com/wp-content/csstricks-uploads/css-overflow-hidden.png" width="500" style="float:right">
+      </section>
+      <section>
+        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <ul style='max-width:450px'>
+          <li>Kontrolliert man mit dem CSS-Attribut <code>overflow</code></li>
+          <li>Will man den User scrollen lassen dass nimmt man <code>scroll</code></li>
+          <li>Man erhält Scrollbars, selbst wenn sie gar nicht nötig sind</li>
+          <li><strong>Wichtig: </strong>Scrollbars sehen in allen Browsern unterschiedlich aus</li>
+        </ul>
+        <img src="http://css-tricks.com/wp-content/csstricks-uploads/css-scroll.png" width="500" style="float:right">
+      </section>
+      <section>
+        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <ul style='max-width:450px'>
+          <li>Kontrolliert man mit dem CSS-Attribut <code>overflow</code></li>
+          <li>Will man den Browser entscheiden lassen: <code>auto</code></li>
+          <li>Man erhält Scrollbars nur wenn diese nötig sind</li>
+        </ul>
+        <img src="http://css-tricks.com/wp-content/csstricks-uploads/css-overflow-auto.png" width="500" style="float:right">
+      </section>
+      <section>
+        <h2>Was passiert, wenn Dinge zu groß werden </h2>
+        <h3>Auch Text kann zu groß werden </h3>
+        <div style='width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-bottom:20px'>Ein Test Text mit Punkten</div>
+        <ul>
+          <li>Hierfür muss ein Kombination von Attributen gesetzt werden</li>
+          <li>Die eigentliche Punkte erzeugt <code>text-overflow:ellipsis</code></li>
+          <li>Funktioniert aber nur wenn die Box <code>overflow:hidden</code> besitzt</li>
+          <li>Außerdem darf der Text nicht umbrechen <code>white-space:nowrap</code></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Kombinatoren: Verhältnisse von Elementen zueinander </h2>
+        <ul>
+          <li class='fragment'>Manchmal möchte/kann man nicht ein Element direkt ansprechen</li>
+          <li class='fragment'>Sondern nur in einem speziellen Kontext</li>
+          <li class='fragment'>Hierfür benutzt man sogenannte Kombinatoren als Selektor</li>
+          <li class='fragment'>Unser kleines <a href='http://codepen.io/anon/pen/tmbxI?editors=110' target='_blank'>Live-Beispiel hierfür</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Kombinatoren: Verhältnisse von Elementen zueinander </h2>
+        <div class='fragment'>
+          <ul>
+            <li><strong>Nachfahren-Selektor</strong></li>
+            <li>wählt alle <strong>direkten & indirekten</strong> Nachfahren eines Elements</li>
+            <li><code>.box .sub_box</code></li>
+            <li>Können wir nutzen um oberstes <code>div</code> auszuschließen</li>
+          </ul>
+          <hr>
+        </div>
+        <ul class='fragment'>
+          <li><strong>Kind-Selektor</strong></li>
+          <li>wählt alle <strong>direkten</strong> Nachfahren eines Elements</li>
+          <li><code>.box > .sub_box</code></li>
+          <li>Können wir nutzen um innerstes <code>div</code> auszuschließen</li>
+          <li class='fragment'>Auf zu unserem kleinen <a href='http://codepen.io/anon/pen/tmbxI?editors=110' target='_blank'>Live-Beispiel</a></li>
+        </ul>
+      </section>
       <!-- End of slides container. -->
     </div>
 
