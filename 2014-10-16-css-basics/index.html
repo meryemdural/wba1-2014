@@ -155,7 +155,7 @@
 					<li><strong>Seit 2002</strong> - Arbeit an der überarbeiteten Version CSS Level 2 revision 1 (CSS 2.1)</li>
 					<li><strong>2011</strong> - Publication von CSS Level 2.1 Recommendation</li>
 					<blockquote class="fragment">
-						CSS 3 ist im Gegensatz zu den Vorgängern modular aufgebaut, das heißt einzelne Teiltechniken (beispielsweise zur Steuerung der Sprachausgabe) haben ihren eigenen Entwicklungsrhythmus und Versionsschritte. <a href="http://www.w3.org/Style/CSS/specs">CSS3-Sezifikation</a>
+						CSS 3 ist im Gegensatz zu den Vorgängern modular aufgebaut, das heißt einzelne Teiltechniken (beispielsweise zur Steuerung der Sprachausgabe) haben ihren eigenen Entwicklungsrhythmus und Versionsschritte. <a href="http://www.w3.org/Style/CSS/specs">CSS3-Spezifikation</a>
 					</blockquote>
 				</ul>
 			</section>
@@ -171,10 +171,13 @@
 					
 p, li { color: black; }
 
-p, li { color:black; font-size: 20px }</code></pre>
+p, li { 
+	color:black; 
+	font-size: 20px 
+}</code></pre>
 			</section>
 			<section>
-				<h2>Einbindung von CSS in HTML</h2>
+				<h2>Einbindung von CSS</h2>
 				<ul class="big-font">
 					<li>Über eine externe Datei mit link-Element</li>
 					<li>Über eine externe Datei mit @import</li>
@@ -191,7 +194,7 @@ p, li { color:black; font-size: 20px }</code></pre>
     &lt;meta charset=&quot;utf-8&quot;&gt;
     &lt;title&gt;Stylesheet &uuml;ber externe Datei einbinden&lt;/title&gt;
     &lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheet.css&quot; type=&quot;text/css&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/reveal.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../css/reveal.css&quot;&gt; type=&quot;text/css&quot; 
   &lt;/head&gt;
   &lt;body&gt;
   &lt;/body&gt;
@@ -215,7 +218,7 @@ h1 {
 	color: red; 
 	font-size: 16px;
 }</code></pre>
-				<blockquote class="fragment" style="position:absolute;left: -5%; top:12%; width:300px; font-size:0.8em">@import muss immer vor allen
+				<blockquote class="fragment" style="position:absolute;left: -5%; top:0%; width:300px; font-size:0.8em">@import muss immer vor allen
 					<br>anderen Regeln stehen.</blockquote>
 
 			</section>
@@ -263,6 +266,55 @@ h1 {
 				</ul>
 			</section>
 			<section>
+				<h2>DOM und Vererbung</h2>
+				<p><strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel</p>
+				<blockquote>
+					Document Object Model (DOM) ist eine Spezifikation einer Schnittstelle für den Zugriff auf HTML- oder XML-Dokumente. Sie wird vom World Wide Web Consortium definiert.
+				</blockquote>
+				<p>
+					<small>Quelle: <a href="http://de.wikipedia.org/wiki/Document_Object_Model">Wikipedia - Document Object Model</a> (aufgerufen am 15.10.2014)</small>
+					<p><a href="http://www.w3.org/DOM/DOMTR">W3C - Document Object Model Specifications</a>
+					</p>
+			</section>
+			<section>
+				<h2>DOM und Vererbung</h2>
+				<pre style="float:left;width:320px"><code><!DOCTYPE html>&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;DOM&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;Lorem Ipsum&lt;/p&gt;
+		&lt;ul&gt;
+			&lt;li&gt;Apfel&lt;/li&gt;
+			&lt;li&gt;Birne&lt;/li&gt;
+			&lt;li&gt;Kirsche&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				<img class="fragment" src="images/dom.svg" alt="Abbildung DOM-Baum" style="float: right">
+				<ul class="fragment" style="float:right;margin-right: 14%">
+					<li><strong>document</strong> ist das Wurzelelement</li>
+					<li><strong>head</strong> und <strong>body</strong> sind Geschwister</li>
+					<li><strong>ul</strong> und <strong>li</strong> sind Eltern- und Kind-Element</li>
+				</ul>
+
+
+			</section>
+			<section>
+				<h2>DOM und Vererbung</h2>
+				<blockquote>Vererbung steht für die Übertragung der deklarierten CSS-Werte von einem Element auf das nachfolgende. Dabei gibt jedes Element des Dokuments seine Werte an seine Kind- Elemente weiter.</blockquote>
+				<small>Quelle: <a href="http://www.thestyleworks.de/basics/inheritance.shtml">The Styleworks - CSS-Vererbung</a> (aufgerufen am 15.10.2014)</small>
+				<ul>
+					<li>Es werden nicht alle Eigenschaften vererbt.</li>
+					<li>Der Wert 'inherit' bewirkt die Veerbung der Werte des Elternelements, die laut Standard nicht vererbt werden</li>
+					<li>Auflistung von Eigenschaften die vererbt oder nicht vererbt werden unter: <a href="http://www.thestyleworks.de/basics/inheritance.shtml">The Styleworks - CSS-Vererbung</a></li>
+					<li><a href="http://codepen.io/anon/pen/EnthG">Beispiel</a></li>
+				
+					
+				</ul>
+
+			</section>
+			<section>
 				<h2>Selektoren</h2>
 				<ul>
 					<li><strong>Einfache Selektoren</strong>
@@ -297,6 +349,10 @@ h1 {
 						<td>Das Element mit der ID "wichtig"</td>
 					</tr>
 				</table>
+				<pre class="fragment"><code>&lt;p id=&quot;wichtig&quot; class=&quot;hinweis modal&quot;&gt;
+	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+	ut labore et dolore magna aliquyam
+&lt;/p&gt;</code></pre>
 				<blockquote class="fragment">
 					Eine bestimmte Klasse darf beliebig vielen Elementen in einem Dokument zugewiesen werden. Eine bestimmte ID darf nur einem einzigen Element in einem Dokument zugewiesen werden.
 				</blockquote>
@@ -414,7 +470,7 @@ h1 {
 						<li>sind so hoch wie ihr Inhalt, falls kein andererr Wert angegeben wird</li>
 						<li>können Innen- und und Außenabstände haben</li>
 						<li>erzeugen einen Umbruch</li>
-						<li>sind u.a. &lt;p&gt;, &lt;div&gt;, &lt;form&gt;, &lt;header&gt;, &lt;nav&gt;, &lt;ul&gt;, &lt;li&gt;, and &lt;h1&gt;</li>
+						<li>sind u.a. &lt;p&gt;, &lt;div&gt;, &lt;form&gt;, &lt;header&gt;, &lt;nav&gt;, &lt;ul&gt;, &lt;li&gt;, und &lt;h1&gt;</li>
 					</ul>
 				</div>
 				<div style="width:48%; float: right" class="fragment">
@@ -424,21 +480,44 @@ h1 {
 						<li>befinden sich im Textfluss</li>
 						<li>können Abstände nach oben und unten, jedoch nicht nach links und rechts, zugewiesen werden</li>
 						<li>erzeugen keinen Umbruch</li>
-						<li>sind u.a. &lt;a&gt;, &lt;span&gt;, &lt;b&gt;, &lt;em&gt;, &lt;i&gt;, &lt;cite&gt;, &lt;mark&gt;, and &lt;code&gt;</li>
+						<li>sind u.a. &lt;a&gt;, &lt;span&gt;, &lt;em&gt;, &lt;cite&gt;, und &lt;code&gt;</li>
 					</ul>
 				</div>
 			</section>
 			<section>
+				<h2><h2>Block- vs. Inline-Elemente</h2></h2>
+				<p>Über die CSS-Eigenschaft 'display' kann die Anzeigeart eines Elements geändert werden</p>
+				<table>
+					<tr>
+						<td width="30%">p { display: none }</td>
+						<td>Element wird nicht angezeigt und es wird auch kein Platzhalter freigelassen.</td>
+					</tr>
+					<tr>
+						<td>span { display: block }</td>
+						<td>Erzwingt einen Block - das Element erzeugt eine neue Zeile.</td>
+					</tr>
+					<tr>
+						<td>p { display: inline }</td>
+						<td>Erzwingt die Anzeige im Text - das Element wird im laufenden Textfluss angezeigt.</td>
+					</tr>
+					<tr>
+						<td>span { display: inline-block }</td>
+						<td>Erzeugt äußerlich einen Block, für den Breite, Höhe und Außenabstand angegeben werden kann, belässt das Element jedoch im laufenden Textfluss.</td>
+					</tr>
+				</table>
+				<a href="http://codepen.io/anon/pen/GqHgj">Beispiel</a>
+			</section>
+			<section>
 				<h2>Das Box-Modell</h2>
 				<blockquote cite="http://wiki.selfhtml.org/wiki/CSS/Box-Modell">Im visuellen Anzeigemodell erfolgt die Darstellung von Elementen durch das Zeichnen von Rechtecken. Die Bestandteile dieser Rechtecke beschreibt das „Box-Modell“.</blockquote>
-				<p><small> Quelle: <a href="http://wiki.selfhtml.org/wiki/CSS/Box-Modell">SELFHTML-Wiki - CSS/Box-Modell</a> (13.11.2014)</small>
+				<p><small> Quelle: <a href="http://wiki.selfhtml.org/wiki/CSS/Box-Modell">SELFHTML-Wiki - CSS/Box-Modell</a> (aufgerufen am 13.11.2014)</small>
 				</p>
 			</section>
 			<section>
 				<h2>Das Box-Modell</h2>
-				<img src="images/boxmodell-detail.png" alt="boxmodell">
+				<img src="images/boxmodell_content_box.png" alt="boxmodell">
 
-				<p><small> Quelle: <a href="http://wiki.selfhtml.org/wiki/CSS/Box-Modell">SELFHTML-Wiki - CSS/Box-Modell</a> (13.11.2014)</small>
+				<p><small> Quelle: <a href="http://www.drweb.de/magazin/css3-das-etwas-andere-box-modell-mit-box-sizingborder-box-39078/">Dr. Web - CSS/Box-Modell</a> (aufgerufen am 13.11.2014)</small>
 				</p>
 
 			</section>
@@ -458,10 +537,25 @@ h1 {
 				</ul>
 			</section>
 			<section>
+				<h2>Alternatives Box-Modell</h2>
+				<ul>
+					<li>Problem des klassischen Box-Modell: Höhen- und Breitenangabe sind ungenau, da sie sich nur auf den Content beziehen</li>
+					<li>Die Deklaration <strong>box-sizing: border-box</strong> aktiviert ein alternatives Boxmodell</li>
+					<li>Padding und Border wird in die Höhen- und Breitenangabe mit einbezogen</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Alternatives Box-Modell</h2>
+				<img src="images/boxmodell_border_box.png" alt="boxmodell">
+
+				<p><small> Quelle: <a href="http://www.drweb.de/magazin/css3-das-etwas-andere-box-modell-mit-box-sizingborder-box-39078/">Dr. Web - CSS/Box-Modell</a> (aufgerufen am 13.11.2014)</small>
+				</p>
+			</section>
+			<section>
 				<h2>Innen- und Außenabstände</h2>
 
 				<p>Die Abstände können für jede Seite einzeln definiert weren</p>
-				<pre><code>p {
+				<pre style="font-size: 1.3rem"><code>p {
 	margin-top: 10px;
 	margin-right: 20px;
 	margin-bottom: 30px;
@@ -469,17 +563,20 @@ h1 {
 }</code></pre>
 				<div class="fragment">
 					<p>oder in Kurzschreibweise definiert werden</p>
-					<pre><code>/* Abst&auml;nde werden im Uhrzeiger definiert, beginnend mit der oberen Seite */
+					<pre style="font-size: 1.3rem"><code>/* Abst&auml;nde werden im Uhrzeiger definiert, beginnend mit der oberen Seite */
 p { margin: 10px 20px 30px 5px } 
 					
 /*  f&uuml;r alle 4 Abst&auml;nde gilt derselbe Wert */
 p {margin: 20px}
 
-/* 1. Wert f&uuml;r margin-top und margin bottom. 2. Wert f&uuml;r margin-left und margin-right */
+/* 1. Wert f&uuml;r margin-top und margin bottom. 
+   2. Wert f&uuml;r margin-left und margin-right */
 p { margin: 10px 20px } 
+			
+/* Setzt den rechten und linken Abstand auf die noch 
+   zur Verfügung stehende Breite */
+p { margin: 0 auto }</code></pre>
 
-/* 1. Wert f&uuml;r margin-top, 2. Wert f&uuml;r margin-left und margin-right, 3. Wert f&uuml;r margin-bottom */
-p { margin: 10px 30px 5px}</code></pre>
 				</div>
 			</section>
 			<section>
@@ -498,28 +595,12 @@ p { margin: 10px 30px 5px}</code></pre>
 						<td>Bezogen auf die Schriftgröße des Elements. Ausnahme: Wenn die font-size-Eigenschaft (also die Schriftgröße) selbst mit dieser Maßangabe gesetzt wird, bezieht sich die Angabe auf die Schriftgröße des Elternelements.</td>
 					</tr>
 					<tr>
+						<td>rem</td>
+						<td>(root em): Bezieht sich auf die Schriftgröße des Wurzelelements.</td>
+					</tr>
+					<tr>
 						<td>ex</td>
-						<td>Bezogen auf die Höhe des Kleinbuchstaben 'x' in diesem Element</td>
-					</tr>
-					<tr>
-						<td>pt</td>
-						<td>￼￼Punkt: Typografische Maßeinheit. 1 Punkt entspricht 0,376 mm.</td>
-					</tr>
-					<tr>
-						<td>pc</td>
-						<td>Pica: Typografische Maßeinheit. 1 Pica entspricht 12 Punkt.</td>
-					</tr>
-					<tr>
-						<td>in</td>
-						<td>1 Inch entspricht 2.54 Zentimetern.</td>
-					</tr>
-					<tr>
-						<td>mm</td>
-						<td>Millimeter</td>
-					</tr>
-					<tr>
-						<td>cm</td>
-						<td>Zentimeter</td>
+						<td>Wird ähnlich wie em verarbeitet. Ist jedoch auf die Höhe des Kleinbuchstaben 'x' in diesem Element bezogen</td>
 					</tr>
 				</table>
 				<p>Weitere Infos zu Maßeinheiten auf <a href="http://www.w3.org/TR/css3-values/">W3C - CSS Values and Units Module Level 3</a>
@@ -547,6 +628,11 @@ p { margin: 10px 30px 5px}</code></pre>
 						<li>radial-gradient()</li>
 					</ul>
 				</div>
+				<p style="clear:both">Weitere Infos zu Hingergründen: <a href="http://www.w3.org/TR/css3-background/#backgrounds">W3C - CSS Background and Borders Module Level 3</a>
+				</p>
+				<p>Weitere Infos zu Farbverläufen: <a href="http://www.w3.org/TR/2011/WD-css3-images-20110217/">W3C - CSS Image Values and Replaced Content Module Level 3</a>
+				</p>
+
 
 			</section>
 			<section>
@@ -596,7 +682,7 @@ p { margin: 10px 30px 5px}</code></pre>
 					</li>
 					<li>
 						Über einen vierten Wert kann eine Transparenz zwischen 0 und 1 definiert werden
-						<pre><code class="big-font">p {background-color: rgb(34,139,34, 0.5)}</code></pre>
+						<pre><code class="big-font">p {background-color: rgba(34,139,34, 0.5)}</code></pre>
 
 					</li>
 				</ul>
@@ -620,7 +706,7 @@ p { margin: 10px 30px 5px}</code></pre>
 					</li>
 					<li>
 						Über einen vierten Wert kann eine Transparenz zwischen 0 und 1 definiert werden
-						<pre><code class="big-font">p {background-color: hsl(120,61%,34%, 0.5);</code></pre>
+						<pre><code class="big-font">p {background-color: hsla(120,61%,34%, 0.5);</code></pre>
 
 					</li>
 				</ul>
@@ -676,7 +762,7 @@ p { margin: 10px 30px 5px}</code></pre>
 	width: 250px;
 	height: 250px;
 	border: 3px #77cc00 solid;
-	background-repeat: repeat-x;
+	background-repeat: repeat-y;
 }</code></pre>
 					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-repeat: repeat-y"></div>
 				</div>
@@ -699,9 +785,13 @@ p { margin: 10px 30px 5px}</code></pre>
 	width: 250px;
 	height: 250px;
 	border: 3px #77cc00 solid;
-	background-repeat: space;
+	
+	/* passt unter Beibehaltung des 
+	Seitenverhältnisses die kleinere Seite 
+	der Grafik in den Anzeigebereich ein */
+	background-size: cover;
 }</code></pre>
-					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-repeat: space"></div>
+					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-size: cover"></div>
 				</div>
 			</section>
 			<section>
@@ -826,6 +916,21 @@ background-color: rgb(63, 63, 63); width: 200px; height: 200px"></div>
 					<div style="float:right;margin-right: 50px;border-width: 5px;border-color: #77cc00;border-style: solid;background-color: rgb(63, 63, 63); width: 100px; height: 100px; border-radius:  50px / 20px"></div>
 				</div>
 
+			</section>
+			<section>
+				<h2>Zusammenfassung</h2>
+				<ul>
+					<li>Syntax</li>
+					<li>Einbindung von CSS</li>
+					<li>DOM und Vererbung</li>
+					<li>Block- und Inline-Elemente</li>
+					<li>Box-Modell</li>
+					<li>Farbmodelle</li>
+					<li>Hintergrundfarben- und Grafiken</li>
+					<li>Rahmen und abgerundete Ecken</li>
+
+
+				</ul>
 			</section>
 			<sect <!-- End of slides container. -->
 
