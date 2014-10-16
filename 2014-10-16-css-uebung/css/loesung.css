@@ -12,6 +12,9 @@
 	padding: 0;
 	margin: 0;
 }
+header object{
+	float:right;
+}
 
 /* 2) Legen Sie als Hintgrundgrafik die Datei "hintergrund.jpg" im image-Ordner fest */
 body {
@@ -44,6 +47,7 @@ header {
 nav {
 	margin: 66px 0 0 0;
 	font-size: 18px;
+	float:left;
 }
 
 section {
@@ -58,7 +62,9 @@ article {
 	font-size: 12px;
 	margin: 0 20px 0 0;
 	width: 210px;
-	display: inline-block;
+	float:left;
+
+	/*display: inline-block;*/
 }
 
 
