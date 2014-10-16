@@ -25,6 +25,16 @@
 		{
 			"title" : "HTML Advanced",
 			"authors" : ["Stephan Pavlovic", "Jan Kus"]
+		},
+		"2014-10-16-css-basics/index.html":
+		{
+			"title" : "CSS Basics",
+			"authors" : ["Stephan Pavlovic", "Volker Schaefer"]
+		},
+		"2014-10-16-css-advanced/index.html":
+		{
+			"title" : "CSS Advanced",
+			"authors" : ["Stephan Pavlovic", "Volker Schaefer"]
 		}
 	}
 }
