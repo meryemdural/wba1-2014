@@ -1,4 +1,4 @@
-﻿###Web-basierte Anwendungen 1: WWW-Technologien
+###Web-basierte Anwendungen 1: WWW-Technologien
 ####Wintersemester 2014/2015
 
 **[Im Wiki](https://github.com/fh-koeln/wba1-2014/wiki)** finden Sie alle relevanten Informationen,
@@ -15,3 +15,4 @@ Lernmaterialien, Ansprechpartner etc. zum Modul "Web-basierte Anwendungen 1": WW
 [Christian Poplawski](https://github.com/Plsr), FH-Köln
 
 
+** Git-Uebung **
