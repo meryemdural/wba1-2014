@@ -69,13 +69,11 @@
             </ul>
             <li>DOM Manipulation</li>
             <ul>
-              <li>DOM Elemente erstellen</li>
-              <li>DOM Elemente verändern</li>
+              <li>DOM Elemente erstellen/verändern</li>
             </ul>
             <li>CSS-Eigenschaften dynamisch zuweisen, Erweiterte Selektierung von Elementen</li>
             <li>Schwierigkeiten beim Umgang mit dem DOM</li>
             <li>Events, Eventhandler und -listener</li>
-            <li>Allround Beispiel Lightbox</li>
             <li>Wie debugge ich meinen Javascript Code</li>
             <li>Abstecher: Testing</li>
             <li>Herausforderungen</li>
@@ -116,10 +114,11 @@
         <section>
           <h2>DOM Manipulation (Change)</h2>
           <ul>
-            <li>element.innerHTML - Change the inner HTML of an element</li>
+            <li>element.innerHTML - Ändert den kompletten HTML-Inhalt eines Elements</li>
+            <!-- Set .setAttribute und .attribute ist das gleiche? Dachte immer .attribute ist der Getter?-->
             <li>element.attribute - Change the attribute of an HTML element</li>
-            <li>element.setAttribute(attribute,value) - Change the attribute of an HTML element</li>
-            <li>element.style.property - Change the style of an HTML element</li>
+            <li>element.setAttribute(attribute,value) - Ändert ein spezielles Attribut eines HTML element</li>
+            <li>element.style.property - Styling-Änderung eines HTML element</li>
             <li><a href="http://fiddle.jshell.net/koos/Ls96gp9f/1/">http://fiddle.jshell.net/koos/Ls96gp9f/1/</a>
           </ul>
           <p>
@@ -143,31 +142,31 @@
         <section>
           <h2>DOM Manipulation (Create/Remove)</h2>
           <ul>
-            <li>document.createElement(tag) -  Create an HTML element</li>
-            <li>document.removeChild(parent) - Remove an HTML element</li>
-            <li>document.appendChild(parent) - Add an HTML element</li>
-            <li>document.replaceChild(parent, child) - Replace an HTML element</li>
+            <li>document.createElement(tag) -  Erzeugt ein HTML Element</li>
+            <li>document.removeChild(parent) - Entfernt ein HTML Element</li>
+            <li>document.appendChild(parent) - Hängt ein HTML element ans Ende des "parents"</li>
+            <li>document.replaceChild(parent, child) - Ersetzt Ein HTML Element</li>
             <li><a href="http://fiddle.jshell.net/koos/somrzve3/1/">http://fiddle.jshell.net/koos/somrzve3/1/</a>
           </ul>
           <p>
             <pre>
               <code>
-                function addElement () { 
-                  // create a new div element 
-                  // and give it some content 
-                  var newDiv = document.createElement("div"); 
-                  var newContent = document.createTextNode("Hi there and greetings!"); 
-                  newDiv.appendChild(newContent); //add the text node to the newly created div. 
+                function addElement () {
+                  // create a new div element
+                  // and give it some content
+                  var newDiv = document.createElement("div");
+                  var newContent = document.createTextNode("Hi there and greetings!");
+                  newDiv.appendChild(newContent); //add the text node to the newly created div.
                   alert("Hello I'm adding a new Div");
-                  // add the newly created element and its content into the DOM 
-                  var currentDiv = document.getElementById("div1"); 
-                  document.body.insertBefore(newDiv, currentDiv); 
+                  // add the newly created element and its content into the DOM
+                  var currentDiv = document.getElementById("div1");
+                  document.body.insertBefore(newDiv, currentDiv);
                 }
 
                 addElement();
               </code>
             </pre>
-          </p>          
+          </p>
         </section>
 
         <section>
@@ -207,7 +206,7 @@
           <p>
             <pre class="big-font">
               <code>
-                <textarea id="i1" rows="6" cols="30"></textarea> 
+                <textarea id="i1" rows="6" cols="30"></textarea>
 
                 …
                               +----- Element, auf dem das Ereignis abgefangen werden soll
@@ -253,6 +252,7 @@
           <h2>Event Handler/Listener</h2>
           <p>
             <pre class="big-font">
+              <!-- Wofür sind die letzten beiden Zeilen des Beispiels? -->
               <code>
                 var element = document.getElementById('id_des_elements');
                 function lauscher(event_object){
@@ -265,7 +265,7 @@
               </code>
             </pre>
           </p>
-        </section>        
+        </section>
 
         <section>
           <h2>Beispiel: Lightbox</h2>
@@ -286,32 +286,32 @@
                    if (img.className.match(/LB_Simple/)) {
                       img.onclick = function () {
                          var limg = this.nextSibling;
-                         
-                         while (limg.nodeName != 'IMG' && limg.nextSibling) 
+
+                         while (limg.nodeName != 'IMG' && limg.nextSibling)
                             limg = limg.nextSibling;
 
                          if (limg.nodeName == 'IMG') {
-                            document.getElementById('LB_Shade').style.display = "block"; 
-                            
-                            var iWidth = window.innerWidth ||  // Breite und Höhe 
+                            document.getElementById('LB_Shade').style.display = "block";
+
+                            var iWidth = window.innerWidth ||  // Breite und Höhe
                                                                // des Browserfensters
-                                (window.document.documentElement.clientWidth || 
+                                (window.document.documentElement.clientWidth ||
                                 window.document.body.clientWidth);
-                            var iHeight = window.innerHeight || 
-                                (window.document.documentElement.clientHeight || 
+                            var iHeight = window.innerHeight ||
+                                (window.document.documentElement.clientHeight ||
                                 window.document.body.clientHeight);
-                      
+
                             limg.style.display = "block";
-                            limg.style.top = 
+                            limg.style.top =
                                   parseInt(iHeight/2 - limg.getAttribute('height')/2) + "px";
-                            limg.style.left = 
+                            limg.style.left =
                                   parseInt(iWidth/2 - limg.getAttribute('width')/2) + "px";
 
                             limg.onclick = function() {
                                this.style.display = "none";
                                document.getElementById('LB_Shade').style.display = "none";
                             };
-                         } 
+                         }
 
                          document.getElementById('LB_Shade').onclick = function() {
                             if (limg && limg.nodeName == 'IMG') limg.style.display = "none";
@@ -343,6 +343,7 @@
             <li>Inspect Element - Browsen durch's DOM</li>
             <li>Console - Javascript Befehle eingeben und Fehler finden</li>
             <li>Debugger starten - Break Points setzen</li>
+            <!-- Bild passt bei mir nicht auf den Screen -->
             <img src="https://developer.chrome.com/devtools/docs/javascript-debugging/javascript-debugging-overview.jpg" alt="Debugger">
           </ul>
         </section>
@@ -351,8 +352,8 @@
           <h2>Testing</h2>
           <ul>
             <li>Auch Javascript Code sollte getestet werden</li>
-            <li>Da es so eine dynamische Skriptsprache ist und fehlanfällig ist</li>
-            <li>Dadurch zur Laufzeit viel passieren kann</li>
+            <li>Da es so eine dynamische Skriptsprache ist fehlanfällig</li>
+            <li>Dadurch, dass zur Laufzeit viel passieren kann</li>
             <li>Jasmine: <a href="http://jasmine.github.io/">http://jasmine.github.io/</a> </li>
             <li>QUnit: <a href="http://qunitjs.com/">http://qunitjs.com/</a></li>
             <li><a href="http://stackoverflow.com/questions/300855/javascript-unit-test-tools-for-tdd">JavaScript unit test tools for TDD</a>
@@ -375,7 +376,7 @@
           <li><a href="http://htmldog.com/guides/javascript">http://htmldog.com/guides/javascript</a></li>
           <li><a href="http://www.mediaevent.de/javascript/Javascript-Basis-Datentypen.html">http://www.mediaevent.de/javascript/Javascript-Basis-Datentypen.html</a></li>
           <li><a href="http://www.w3schools.com/js">http://www.w3schools.com/js</a></li>
-        </section>        
+        </section>
         <section>
           <h2>JavaScript User Group Köln (Cologne.js)</h2>
           <img src="http://colognejs.de/images/colognejs-logo.svg" />
