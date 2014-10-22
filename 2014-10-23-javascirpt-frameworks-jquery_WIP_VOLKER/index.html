@@ -191,11 +191,16 @@ $( &quot;.myClass&quot; );</code></pre>
 				</div>
 				<div class="fragment">
 
-					<p>Pseudo Selektoren:</p>
-					<pre><code>$( &quot;a.external:first&quot; );
+					<p>Pseudo-Selektoren:</p>
+					
+					  
+					<pre><code>// das erste a-Element mit der Klasse "external"
+$( &quot;a.external:first&quot; );
+					
+// alle ungeraden tr-Elemente
 $( &quot;tr:odd&quot; );
  
-// Alle Div-Elemente die sichtbar sind
+// alle Div-Elemente die sichtbar sind
 $( &quot;div:visible&quot; );</code></pre>
 				</div>
 				<div class="fragment">
@@ -324,12 +329,22 @@ $( "p" ).on( "click", function() {
 				<h2>chaining</h2>
 				<li>Über Chaining ist es möglich mehrere jQuery-Funktion auf das gleiche Element anzuwenden.</li>
 				<li>Funktionen werden von vorne nach hinten abgearbeitet</li>
-				<pre><code>$('p.type').html("Lorem Ipsum").css("color", "red").slideUp(1000).slideDown(1000);
+				<pre><code>$('p.type').html('Lorem Ipsum').css('color', 'red').slideUp(1000).slideDown(1000);</code></pre>
 
 </code></pre>
 				<a href="http://jsfiddle.net/8Lbogfey">Demo</a>
 
 
+			</section>
+			<section>
+				<h2>Link-Liste</h2>
+				<ul>
+					<li><a href="http://jquery.com">http://jquery.com</a></li>
+					<li><a href="https://github.com/jquery">jQuery auf GitHub</a></li>
+					<li><a href="http://api.jquery.com">jQuery API-Documentation</a></li>
+					<li><a href="http://plugins.jquery.com">jQuery Plugin Registry</a></li>
+					<li><a href="http://jqueryui.com">jQuery User Interface</a></li>
+				</ul>
 			</section>
 		</div>
 	</div>
