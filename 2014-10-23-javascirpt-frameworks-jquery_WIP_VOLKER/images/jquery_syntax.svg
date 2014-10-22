@@ -16,7 +16,7 @@
             <path d="M220.262333,187 L520.264,187" id="Line-2" stroke="#FFFFFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
             <path d="M604.499281,187 L778.266487,187" id="Line-3" stroke="#FFFFFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
             <text id="$(”div.box”).hide);" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="96" font-weight="normal" fill="#DD1166">
-                <tspan x="123.764" y="129.5">$(”div.box”).hide);</tspan>
+                <tspan x="123.764" y="129.5">$(”div.box”).hide());</tspan>
             </text>
             <text id="Aufruf-des-Framework" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                 <tspan x="70.352" y="229">Aufruf des </tspan>

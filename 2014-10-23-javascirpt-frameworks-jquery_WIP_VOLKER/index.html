@@ -82,6 +82,7 @@
 					<ul>
 						<li>Sie lernen das Framework, nicht die Sprache</li>
 						<li>Einschränkung</li>
+						<!-- Warum ist das ein Nachteil? -->
 						<li>Code ist öffentlich</li>
 					</ul>
 				</div>
@@ -157,7 +158,7 @@
 					</ul>
 					<pre><code><!-- Version 1.x wird abgerufen -->
 &lt;script src=&quot;//code.jquery.com/jquery-1.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-					
+
 				</div>
 			</section>
 			<section>
@@ -194,14 +195,14 @@ $( &quot;.myClass&quot; );</code></pre>
 				<div class="fragment">
 
 					<p>Pseudo-Selektoren:</p>
-					
-					  
+
+
 					<pre><code>// das erste a-Element mit der Klasse "external"
 $( &quot;a.external:first&quot; );
-					
+
 // alle ungeraden tr-Elemente
 $( &quot;tr:odd&quot; );
- 
+
 // alle Div-Elemente die sichtbar sind
 $( &quot;div:visible&quot; );</code></pre>
 				</div>
@@ -217,7 +218,7 @@ $( &quot;div:visible&quot; );</code></pre>
 				<div class="fragment">
 					<p>Defintion von Attributen:</p>
 					<pre><code>$( &quot;a&quot; ).attr( &quot;href&quot;, &quot;allMyHrefsAreTheSameNow.html&quot; );
- 
+
 $( &quot;a&quot; ).attr({
     title: &quot;all titles are the same too!&quot;,
     href: &quot;somethingNew.html&quot;
