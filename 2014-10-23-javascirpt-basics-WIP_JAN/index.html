@@ -84,6 +84,7 @@
             <li>Gängige Webbrowser können Javascript interpretieren und den Code ausführen (Lynx nicht ;)</li>
             <li>Javascript lässt sich in HTML Dokumenten einfach integrieren und kann dessen Struktur und aussehen zur Laufzeit verändern</li>
             <li>Wird sowohl Serverseitig als auch Clientseitig verwendet</li>
+            <li>Funktional und Objektorientiert</li>
           </ul>
           <hr/>
           <p>Basiert auf dem EcmaScript5 Standard (Release 2011, 6 & 7 sind WIP)</p>
@@ -129,7 +130,7 @@
           <h2>Syntax</h2>
           <p>
             <pre class="big-font">
-              <a href="https://gist.github.com/koos/cef097028d14032c810c">
+              <a href="http://jsfiddle.net/koos/5Lcksa4w/">
                 <code>
                   /* 
                   Hier habe ich ein Beispiel Javascript 
@@ -151,41 +152,141 @@
         </section>
 
         <section>
+          <h2>Die häufigsten Syntaxfehler</h2>
+            <ul>
+              <li>Fehlen schließende runde oder geschweifte Klammern?</li>
+              <li>Fehlt ein schließendes Hochkamma oder wird ein doppeltes Hochkomma durch ein einfaches Hochkomma geschlossen?</li>
+              <li>Klammer zuviel im Script-Code?</li>
+              <li>Bindestrich im Variablennamen? Javascript mag keine Bindestriche.</li>
+              <li>Groß und Kleinschreibung beachtet? Hier ist Javascript tatsächlich empfindlich</li>
+              <li>Schreibfehler in einer der DOM-Methoden? Vor allem getElementById macht immer Ärger.</li>
+        </section>
+
+        <section>
           <h2>Variablen</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>                                    
+            <li>Speichern Daten (Zahlen / Zeichenketten) deren Wert sich im Laufe der Anwendung verändert</li>
+            <li>Variablen: <code>Name, Typ, Wert</code></li>
+            <li>In Javascript speziell:</li>
+              <ul>
+                <li>Implizite Variablen Deklaration</li>
+                <li>Dynamische Typisierung</li>
+              </ul>
+            <li>Explizite Variablendeklaration mit <code>var</code>
+            <li>Globale Variablen</li>
+            <li>Konstanten <code>const</code></li>
           </ul>
           <hr/>
-          <ul>
-            <li>Konstanten</li>
-          </ul>
-          <hr/>          
           <p>
             <pre class="big-font">
               <code>
+                var myString; // Typ: undefined, Wert: undefined; Globale Variable
+                var myString = 5; // Typ: number, Wert: 5; Globale Variable
+                myAnotherString = 10.4; // Typ: number, Wert: 10.4; Globale Variable
+                function myFunction() {
+                    var myString; // Lokale Variable
+                    alert(myString);
+                }
+                function myFunction1() {
+                    var myString1 = 10; // Lokale Variable
+                    alert(myString1);
+                    alert(myString);
+                }
+                myString;
+                myFunction();
+                myFunction1();
               </code>
             </pre>
           </p>
         </section>
 
         <section>
-          <h2>TYPEN</h2>
+          <h2>Korrekte Variablennamen</h2>
+            <ul>
+              <li>bestehen aus Buchstaben (wobei auch ein Unterstrich „_“ als Buchstabe zählt),</li>
+              <li>aus Ziffern,</li>
+              <li>dürfen keine Leerzeichen enthalten,</li>
+              <li>dürfen nicht mit einer Zahl, einem Sonderzeichen oder Satzzeichen anfangen und</li>
+              <li>dürfen nicht mit einem Schlüsselwort übereinstimmen.</li>
+            <ul>
+        </section>        
+
+        <section>
+          <h2>Typen</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>                                    
+            <li>Primitive Typen:</li>
+              <ul>
+                <li>String</li>
+                <li>Number (Integer, Float)</li>
+                <li>Boolean</li>
+              </ul>
+            <li>Spezielle Typen:</li>
+              <ul>
+                <li>undefined</li>
+                <li>Null</li>
+              </ul>
+            <li>Refernzierte Datentypen:</li>                                    
+              <ul>
+                <li>Objekte</li>
+                <li>Funktionen</li>
+              </ul>
+            </li>
           </ul>
           <hr/>
           <p>
             <pre class="big-font">
               <code>
+                a = { a: "test"}
+                > Object {a: "test"}
+                a.a
+                > "test"
+                typeof(a.a)
+                > "string"
               </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Typen</h2>
+          <p>
+            <pre class="big-font">
+              <a href="http://jsfiddle.net/koos/5Lcksa4w/">
+                <code>
+                  b = 5
+                  > 5
+                  typeof(b);
+                  > "number"
+                  a = ["hello", "world"]
+                  > ["hello", "world"]
+                  typeof(a)
+                  > "object"
+                  a = new Array;
+                  > []
+                  typeof(a)
+                  > "object"
+                  a = function(p1, p2) { return p1 * p2 };
+                  > function (p1, p2) { return p1 * p2 }
+                  a
+                  > function (p1, p2) { return p1 * p2 }
+                  typeof(a)
+                  > "function"
+                  a = ["hello", "world", 5]
+                  > ["hello", "world", 5]
+                  a[0]
+                  > "hello"
+                  typeof(a[0]);
+                  > "string"
+                  typeof(a[1]);
+                  > "string"
+                  typeof(a[2]);
+                  > "number"
+                  a = "hello"
+                  > "hello"
+                  typeof(a);
+                  > "string"
+                </code>
+              </a>
             </pre>
           </p>
         </section>
@@ -193,34 +294,49 @@
         <section>
           <h2>Operatoren</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>                                    
+            <li>Regeln zur Typenkonvertierung</li>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            <li>Gefährlich weil kein Einfluss darauf zur Laufzeit</li>
           </ul>
           <hr/>
           <p>
             <pre class="big-font">
               <code>
+                function typeConversion() {
+                   alert("");
+                   alert("Type conversion:");
+                   var a = "Hello";
+                   alert(a + 10);
+                   a = "20";
+                   alert(a + 10);
+                   a = "20";
+                   alert(a * 10);
+                   a = "s";
+                   alert(a * 10);
+                 }
               </code>
             </pre>
           </p>
         </section>
 
         <section>
-          <h2>Weitere Logische Operationen</h2>
+          <h2>Logische Operatoren</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>                                    
-          </ul>
-          <hr/>
+            <li>Konkatenation – Strings miteinander verbinden (Konkatenation zweier Strings)</li>
+            <li>Mathematische Operatoren (Berechnungen)</li>
+            <li>Vergleichs-Operatoren (Vergleiche zweier Werte)</li>
+            <li>Zuweisungs-Operatoren (weisen Variablen Werte zu)</li>
+            <li>Logische Operatoren (&&, !, ||) (vergleich von Anweisungen und prüfung von true oder false)</li>
+            <li>Bitweise Operatoren und spezielle Operatoren</li>
           <p>
             <pre class="big-font">
               <code>
+                ....
               </code>
             </pre>
           </p>
@@ -229,16 +345,13 @@
         <section>
           <h2>Bedingte Anweisungen</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>                                    
+            <li>if (Bedingung) then else Abfragen</li>
           </ul>
           <hr/>
           <p>
             <pre class="big-font">
               <code>
+                ...
               </code>
             </pre>
           </p>
@@ -247,11 +360,9 @@
         <section>
           <h2>Schleifen</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>                                    
+            <li>for () </li>
+            <li>for … in</li>
+            <li>while (Bedingung)</li>
           </ul>
           <hr/>
           <p>
@@ -265,16 +376,29 @@
         <section>
           <h2>Funktionen</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>                                    
+            <li>Funktionen sind ein Block von Anweisungen mit einem Namen.</li>
+            <li>Der Funktionsblock wird einmal definiert.</li>
+            <li>Dann können die Javascript-Befehle der Funktion über den Namen mehrfach im Programm aufgerufen werden.</li>
+            <li>Das Zusammenfassen von Befehlen in einer Funktion verbessert obendrein die Lesbarkeit des Scripts.</li>
           </ul>
           <hr/>
           <p>
             <pre class="big-font">
               <code>
+                    +--- Schlüsselwort
+                    |       +---> Name der Funktion
+                    |       |
+                    |       |      +---> Argument
+                    |       |      |       +---> Argument
+                    |       |      |       |
+                function steuer ( betrag, satz) {
+                   var mwst = betrag * satz / 100;        // <-+
+                   var summe = betrag + mwst;             //   +  Anweisungsblock
+                   return summe;                          // <-+
+                }
+                …
+
+                var brutto = steuer ( 200, 16 );          // Funktionsaufruf
               </code>
             </pre>
           </p>
@@ -283,17 +407,63 @@
         <section>
           <h2>Objekte</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>                                    
+            <li>Objekte sind Behälter für logisch zusammen gehörende Variablen und Funktionen</li>
+            <li>Objekte können bestimmte Eigenschaften und Methoden zugewiesen werden</li> 
+            <li>Kapseln Logik nach aussen und bieten eine Schnittstelle an</li>
+            <li>Wer von den formalen Programmiersprachen kommt, findet Javascript-Objekte recht simpel. Javascript hat ein beschränktes Objekt-Modell.</li>
           </ul>
           <hr/>
           <p>
             <pre class="big-font">
               <code>
+                var konto = new Object;
+                     ^      ^
+                     |      |
+                     |      |
+                     |      +--- neues Objekt 
+                     +--- das neue Objekt heißt "konto"
+
+                konto.betrag = "400";
+                    ^
+                    +--- Eigenschaft »betrag«
+                konto.open();
+                    ^
+                    +--- Methode »open«
               </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Typen</h2>
+          <p>
+            <pre class="big-font">
+              <code>
+                var konto = new Object;
+                     ^      ^
+                     |      |
+                     |      |
+                     |      +--- neues Objekt 
+                     +--- das neue Objekt heißt "konto"
+
+                konto.betrag = "400";
+                    ^
+                    +--- Eigenschaft »betrag«
+                konto.open();
+                    ^
+                    +--- Methode »open«
+              </code>              
+              <a href="http://jsfiddle.net/koos/5Lcksa4w/">
+                <code>
+                  Literale Syntax                   | Implizite Kurzschrift
+                                                    |
+                  var adress = new Object();        | var adress = { lastName: "Meier",
+                  adress = { lastName: "Meier",     |                 plz:      47111,
+                             plz:      47111,       |                 ort:      "Neukirch"
+                             ort:      "Neukirch"   |               }
+                           }                        |
+                </code>
+              </a>
             </pre>
           </p>
         </section>
