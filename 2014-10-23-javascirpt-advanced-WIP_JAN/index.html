@@ -53,17 +53,17 @@
           <ul>
             <li>Wie man mittels Javascript das DOM manipuliert</li>
             <li>Events</li>
-            <li>Callbacks</li>
+            <!-- <li>Callbacks</li> -->
             <li>Debugging</li>
-            <li>ggf. Testing / "use strict";</li>
+            <!-- <li>ggf. Testing / "use strict";</li> -->
           </ul>
         </section>
         <section>
           <h2>Aufbau dieses Session</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Zugreifen auf das DOM, DOM Manipulation</li>
+            <li>CSS-Eigenschaften dynamisch zuweisen, Erweiterte Selektierung von Elementen</li>
+            <li>Schwierigkeiten beim Umgang mit dem DOM</li>
             <li></li>
             <li></li>
             <li></li>
@@ -72,21 +72,170 @@
         </section>
 
         <section>
-          <h2>DOM Manipulation (mehrere Folien)</h2>
+          <h2>Recap: DOM</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>The HTML elements as objects</li>
+            <li>The properties of all HTML elements</li>
+            <li>The methods to access all HTML elements</li>
+            <li>The events for all HTML elements</li>
           </ul>
         </section>
 
         <section>
-          <h2>Events<h2>
+          <h2>Zugriff auf das DOM (Finding)</h2>
+          <ul>
+            <li>document.getElementById(<id des Elements>)</li>
+            <li>document.getElementsByName(<name-Attribut des Elements>)</li>
+            <li>element.getElementsByTagName(tagName)</li>
+            <li>document.getElementsByClassName(<class des Elements>)</li>
+            <li>var myId = document.getElementById('myId').innerHTML;</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>DOM Manipulation (Change)</h2>
+          <ul>
+            <li>element.innerHTML=  Change the inner HTML of an element</li>
+            <li>element.attribute=  Change the attribute of an HTML element</li>
+            <li>element.setAttribute(attribute,value) Change the attribute of an HTML element</li>
+            <li>element.style.property= Change the style of an HTML element</li>
+          </ul>
+        </section>
+
+
+        <section>
+          <h2>DOM Manipulation (Create/Remove)</h2>
+          <ul>
+            <li>document.createElement()  Create an HTML element</li>
+            <li>document.removeChild()  Remove an HTML element</li>
+            <li>document.appendChild()  Add an HTML element</li>
+            <li>document.replaceChild() Replace an HTML element</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>DOM Manipulation (Create/Remove)</h2>
+          <ul>
+            <li>getAttribute (attributeName)</li>
+            <li>setAttribute (attributeName, attributeValue)</li>
+            <li>removeAttribute (attributeName)</li>
+            <li>getAttributeNode (name)</li>
+            <li>setAttributeNode (newAttribute)</li>
+            <li>removeAttributeNode (oldAttribute)</li>
+          </ul>
+          <hr/>
+          <p>
+            <pre class="big-font">
+              <code>
+                ...
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Events</h2>
+          <ul>
+            <li>Ereignisse die der Seite hinzugefügt werden können</li>
+            <li>CSS Animationen können durch Javascript erzeugt werden</li>
+            <li>Das Laden der Seite ist schon ein Event</li>
+            <li>Window Formular Events: onload, onchange, onreset / onsubmit, usw.</li>
+            <li>Mouse Events: onmouseover, onclick, etc.</li>
+            <li>Tastatur Events: onkeydown, onkeyup, onkeypress, etc.</li>
+            <li>Touch events, Drag Events, Video Audio Events, Animations Events, etc.</li>
+          </ul>
+          <hr/>
+          <p>
+            <pre class="big-font">
+              <code>
+                <textarea id="i1" rows="6" cols="30"></textarea> 
+
+                …
+                              +----- Element, auf dem das Ereignis abgefangen werden soll
+                              |
+                              |                  +------ abzufangendes Ereignis
+                              |                  |
+                              |                  |           + ----- Event Handler
+                              |                  |           |
+                              v                  v           v
+                document.getElementById('i1').onkeyup = function() {
+                }
+                …
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Event Handler</h2>
+          <ul>
+            <li>Durch ein reguläres HTML-Attribut <a href="" onclick="tuNix();"></a></li>
+            <li>Implizit im Skript (Event Handlers als Eigenschaft des Objekts) element.onclick = tuNix();</li>
+            <li>Implizit im Skript mit element.addEventListener() element.addEventListener ('click',tuNix, false);</li>
+            <li>Event Handler als anonyme Funktion: Wenn sicher gestellt ist, dass der Aufruf des Scripts   erst nach dem Laden des Elements ausgeführt ist, hält eine anonyme Funktion das Script übersicht.
+            window.onload = function () {
+                document.getElementById('myform').onsubmit = function () {
+                    evt = (evt) ? evt : ((window.event) ? window.event : "");
+                    // Verarbeitung des Events
+                }
+            }
+            </li>
+          </ul>
+          <hr/>
+          <p>
+            <pre class="big-font">
+              <code>
+                <textarea id="i1" rows="6" cols="30"></textarea> 
+
+                …
+                              +----- Element, auf dem das Ereignis abgefangen werden soll
+                              |
+                              |                  +------ abzufangendes Ereignis
+                              |                  |
+                              |                  |           + ----- Event Handler
+                              |                  |           |
+                              v                  v           v
+                document.getElementById('i1').onkeyup = function() {
+                }
+                …
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Beispiel: Lightbox</h2>
+          <ul>
+            <li>Zusammenspiel von HTML/CSS und Javascript</li>
+            <li>Das Javascript definiert das erscheinen und verschwinden der Lightbox</li>
+            <li>Im DOM werden entsprechende HTML-Strukturen und CSS-Anweisungen verändert</li>
+            <li>Es werden Eventhandler benutzt um auf den "Click" zu reagieren</li>
+            <li><a href="http://www.mediaevent.de/javascript/simple-lightbox.html">http://www.mediaevent.de/javascript/simple-lightbox.html</a></li>
+          </ul>
+          <hr/>
+          <p>
+            <pre class="big-font">
+              <code>
+                ...
+              </code>
+            </pre>
+          </p>
+        </section>
+
+        <section>
+          <h2>Weitere Dinge die man mit Javascript machen kann</h2>
+          <ul>
+            <li>Callbacks</li>
+            <li>Auf Fenster Orientierung, Position, Höhe, Breite, Auflösung reagieren</li>
+            <li>HTML5 Javascript: Local Storage, Session Storage, Drag and Drop, etc.</li>
+            <li>AJAX - Asynchronous Javascript And XML</li>
+            <li>Canvas zeichnen, animieren</li>
+            <li>Formulare und JQuery</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Debugging</h2>
           <ul>
             <li></li>
             <li></li>
@@ -106,47 +255,7 @@
         </section>
 
         <section>
-          <h2>Callbacks<h2>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-          <hr/>
-          <p>
-            <pre class="big-font">
-              <code>
-                ...
-              </code>
-            </pre>
-          </p>
-        </section>
-
-        <section>
-          <h2>Debugging<h2>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-          <hr/>
-          <p>
-            <pre class="big-font">
-              <code>
-                ...
-              </code>
-            </pre>
-          </p>
-        </section>
-
-        <section>
-          <h2>Testing<h2>
+          <h2>Testing</h2>
           <ul>
             <li></li>
             <li></li>
