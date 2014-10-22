@@ -469,31 +469,63 @@
         </section>
 
         <section>
-          <h2>DOM</h2>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>                                    
-          </ul>
-          <hr/>
+          <h2>DOM und Vererbung</h2>
+          <p><strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel</p>
+          <blockquote>
+            Document Object Model (DOM) ist eine Spezifikation einer Schnittstelle für den Zugriff auf HTML- oder XML-Dokumente. Sie wird vom World Wide Web Consortium definiert.
+          </blockquote>
           <p>
-            <pre class="big-font">
-              <code>
-              </code>
-            </pre>
-          </p>
+            <small>Quelle: <a href="http://de.wikipedia.org/wiki/Document_Object_Model">Wikipedia - Document Object Model</a> (aufgerufen am 15.10.2014)</small>
+            <p><a href="http://www.w3.org/DOM/DOMTR">W3C - Document Object Model Specifications</a>
+            </p>
+        </section>
+
+        <section>
+          <h2>DOM und Vererbung</h2>
+          <pre style="float:left;width:320px"><code><!DOCTYPE html>&lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;DOM&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;p&gt;Lorem Ipsum&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Apfel&lt;/li&gt;
+        &lt;li&gt;Birne&lt;/li&gt;
+        &lt;li&gt;Kirsche&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;</code></pre>
+          <img class="fragment" src="../2014-10-16-css-basics/images/dom.svg" alt="Abbildung DOM-Baum" style="float: right">
+          <ul class="fragment" style="float:right;margin-right: 14%">
+            <li><strong>document</strong> ist das Wurzelelement</li>
+            <li><strong>head</strong> und <strong>body</strong> sind Geschwister</li>
+            <li><strong>ul</strong> und <strong>li</strong> sind Eltern- und Kind-Element</li>
+          </ul>
+
+
+        </section>
+
+        <section>
+          <h2>DOM und Javascript</h2>
+          <blockquote>Mit Javascript kann man über den DOM Baum navigieren und HTML Tags, Attribute oder Inhalte verändern, hinzufügen oder entfernen</blockquote>
+          <ul>
+            <li>DOM zugreifen <code>getElementsByTagName()</code></li>
+            <li>Neue Knoten erzeugen <code>createElement()</code></li>
+            <li>HTML Attribute zugreifen und manipulieren <code>getAttribute()</code></li>
+            <li>Durch den DOM Baum navigieren <code>parentNode</code></li>
+            <li>Den DOM Baum manipulieren <code>insertBefore()</code></li>
+            <li>Den DOM Baum analysieren <code>nodeName</code></li>
+          </ul>
         </section>
 
         <section>
           <h2>BOM</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>                                    
+            <li>The Browser Object Model</li>
+            <li>Kein Offizieller Standard</li>
+            <li>Dient zur Manipulation mit dem Browserfenster</li>
+            <li>navigator, history, screen, location and document which are children of window</li>
+            <li>document repräsentiert dann den Inhalt der Seite - den DOM</li>
           </ul>
           <hr/>
           <p>
