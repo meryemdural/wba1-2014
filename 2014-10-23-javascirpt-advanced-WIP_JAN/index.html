@@ -61,56 +61,113 @@
         <section>
           <h2>Aufbau dieses Session</h2>
           <ul>
-            <li>Zugreifen auf das DOM, DOM Manipulation</li>
+            <li>Zugreifen auf das DOM (Findings)</li>
+            <ul>
+              <li>byId</li>
+              <li>byName</li>
+              <li>usw.</li>
+            </ul>
+            <li>DOM Manipulation</li>
+            <ul>
+              <li>DOM Elemente erstellen</li>
+              <li>DOM Elemente verändern</li>
+            </ul>
             <li>CSS-Eigenschaften dynamisch zuweisen, Erweiterte Selektierung von Elementen</li>
             <li>Schwierigkeiten beim Umgang mit dem DOM</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Events, Eventhandler und -listener</li>
+            <li>Allround Beispiel Lightbox</li>
+            <li>Wie debugge ich meinen Javascript Code</li>
+            <li>Abstecher: Testing</li>
+            <li>Herausforderungen</li>
           </ul>
         </section>
 
         <section>
           <h2>Recap: DOM</h2>
           <ul>
-            <li>The HTML elements as objects</li>
-            <li>The properties of all HTML elements</li>
-            <li>The methods to access all HTML elements</li>
-            <li>The events for all HTML elements</li>
+            <li>Eine Repräsentation der HTML Elements als Objekte</li>
+            <li>Zugriff auf Eigenschaften von HTML Elementen</li>
+            <li>Bereitstellung von Methoden um auf HTML-Elemente zu zugreifen</li>
+            <li>Die Möglichkeit Ereignisse an HTML-Elemente bereitzustellen</li>
           </ul>
         </section>
 
         <section>
           <h2>Zugriff auf das DOM (Finding)</h2>
           <ul>
-            <li>document.getElementById(<id des Elements>)</li>
-            <li>document.getElementsByName(<name-Attribut des Elements>)</li>
+            <li>document.getElementById(id des Elements)</li>
+            <li>document.getElementsByName(name-Attribut des Elements)</li>
             <li>element.getElementsByTagName(tagName)</li>
-            <li>document.getElementsByClassName(<class des Elements>)</li>
-            <li>var myId = document.getElementById('myId').innerHTML;</li>
+            <li>document.getElementsByClassName(class des Elements)</li>
+            <li><a href="http://fiddle.jshell.net/koos/4vxmuw3r/">http://fiddle.jshell.net/koos/4vxmuw3r/</a></li>
           </ul>
+          <p>
+            <pre class="big-font">
+              <code>
+                var input_element = document.getElementById('firstname');
+                var input_element1 = document.getElementsByName('lastname');
+                var input_element2 = document.getElementsByTagName('p');
+                var input_element3 = document.getElementsByClassName('surename');
+              </code>
+            </pre>
+          </p>
         </section>
 
         <section>
           <h2>DOM Manipulation (Change)</h2>
           <ul>
-            <li>element.innerHTML=  Change the inner HTML of an element</li>
-            <li>element.attribute=  Change the attribute of an HTML element</li>
-            <li>element.setAttribute(attribute,value) Change the attribute of an HTML element</li>
-            <li>element.style.property= Change the style of an HTML element</li>
+            <li>element.innerHTML - Change the inner HTML of an element</li>
+            <li>element.attribute - Change the attribute of an HTML element</li>
+            <li>element.setAttribute(attribute,value) - Change the attribute of an HTML element</li>
+            <li>element.style.property - Change the style of an HTML element</li>
+            <li><a href="http://fiddle.jshell.net/koos/Ls96gp9f/1/">http://fiddle.jshell.net/koos/Ls96gp9f/1/</a>
           </ul>
+          <p>
+            <pre class="big-font">
+              <code>
+                var input_element = document.getElementById('firstname');
+                var input_element1 = document.getElementsByName('lastname');
+                var input_element2 = document.getElementsByTagName('p');
+                var input_element3 = document.getElementsByClassName('surename');
+
+                input_element2[0].innerHTML = "Changed Test";
+                input_element.name = "Changed Name Test";
+                input_element.setAttribute(name, "Peter");
+                input_element.style.background="#f00";
+              </code>
+            </pre>
+          </p>
         </section>
 
 
         <section>
           <h2>DOM Manipulation (Create/Remove)</h2>
           <ul>
-            <li>document.createElement()  Create an HTML element</li>
-            <li>document.removeChild()  Remove an HTML element</li>
-            <li>document.appendChild()  Add an HTML element</li>
-            <li>document.replaceChild() Replace an HTML element</li>
+            <li>document.createElement(tag) -  Create an HTML element</li>
+            <li>document.removeChild(parent) - Remove an HTML element</li>
+            <li>document.appendChild(parent) - Add an HTML element</li>
+            <li>document.replaceChild(parent, child) - Replace an HTML element</li>
+            <li><a href="http://fiddle.jshell.net/koos/somrzve3/1/">http://fiddle.jshell.net/koos/somrzve3/1/</a>
           </ul>
+          <p>
+            <pre>
+              <code>
+                function addElement () { 
+                  // create a new div element 
+                  // and give it some content 
+                  var newDiv = document.createElement("div"); 
+                  var newContent = document.createTextNode("Hi there and greetings!"); 
+                  newDiv.appendChild(newContent); //add the text node to the newly created div. 
+                  alert("Hello I'm adding a new Div");
+                  // add the newly created element and its content into the DOM 
+                  var currentDiv = document.getElementById("div1"); 
+                  document.body.insertBefore(newDiv, currentDiv); 
+                }
+
+                addElement();
+              </code>
+            </pre>
+          </p>          
         </section>
 
         <section>
@@ -122,12 +179,15 @@
             <li>getAttributeNode (name)</li>
             <li>setAttributeNode (newAttribute)</li>
             <li>removeAttributeNode (oldAttribute)</li>
+            <li><a href="http://fiddle.jshell.net/koos/somrzve3/3/">http://fiddle.jshell.net/koos/somrzve3/3/</a>
           </ul>
           <hr/>
           <p>
             <pre class="big-font">
               <code>
-                ...
+                var div1 = document.getElementById("div1");
+                var align = div1.getAttribute("align");
+                alert(align); // shows the value of align for the element with id="div1"
               </code>
             </pre>
           </p>
@@ -144,7 +204,6 @@
             <li>Tastatur Events: onkeydown, onkeyup, onkeypress, etc.</li>
             <li>Touch events, Drag Events, Video Audio Events, Animations Events, etc.</li>
           </ul>
-          <hr/>
           <p>
             <pre class="big-font">
               <code>
@@ -167,41 +226,46 @@
         </section>
 
         <section>
-          <h2>Event Handler</h2>
+          <h2>Event Handler/Listener</h2>
           <ul>
             <li>Durch ein reguläres HTML-Attribut <a href="" onclick="tuNix();"></a></li>
-            <li>Implizit im Skript (Event Handlers als Eigenschaft des Objekts) element.onclick = tuNix();</li>
-            <li>Implizit im Skript mit element.addEventListener() element.addEventListener ('click',tuNix, false);</li>
-            <li>Event Handler als anonyme Funktion: Wenn sicher gestellt ist, dass der Aufruf des Scripts   erst nach dem Laden des Elements ausgeführt ist, hält eine anonyme Funktion das Script übersicht.
-            window.onload = function () {
-                document.getElementById('myform').onsubmit = function () {
-                    evt = (evt) ? evt : ((window.event) ? window.event : "");
-                    // Verarbeitung des Events
-                }
-            }
-            </li>
+            <li>Implizit im Skript (Event Handlers als Eigenschaft des Objekts): <code>element.onclick = tuNix();</code></li>
+            <li>Implizit im Skript mit element.addEventListener(): <code>element.addEventListener ('click',tuNix, false);</code></li>
+            <li>
+            <li>addEventListener fügt einen Event Handler zu einem Element hinzu</li>
+            <li>Über den EventListener kann das Element mehrere Event Handler haben</li>
           </ul>
-          <hr/>
           <p>
             <pre class="big-font">
               <code>
-                <textarea id="i1" rows="6" cols="30"></textarea> 
-
-                …
-                              +----- Element, auf dem das Ereignis abgefangen werden soll
-                              |
-                              |                  +------ abzufangendes Ereignis
-                              |                  |
-                              |                  |           + ----- Event Handler
-                              |                  |           |
-                              v                  v           v
-                document.getElementById('i1').onkeyup = function() {
+                window.onload = function () {
+                    document.getElementById('myform').onsubmit = function () {
+                        evt = (evt) ? evt : ((window.event) ? window.event : "");
+                        // Verarbeitung des Events
+                    }
                 }
-                …
               </code>
             </pre>
           </p>
         </section>
+
+        <section>
+          <h2>Event Handler/Listener</h2>
+          <p>
+            <pre class="big-font">
+              <code>
+                var element = document.getElementById('id_des_elements');
+                function lauscher(event_object){
+                    // code
+                };
+
+                element.addEventListener('click', lauscher);
+                var input_element = document.getElementById('id_des_textfelds');
+                input_element.value = 'Neuer Text';
+              </code>
+            </pre>
+          </p>
+        </section>        
 
         <section>
           <h2>Beispiel: Lightbox</h2>
@@ -210,20 +274,59 @@
             <li>Das Javascript definiert das erscheinen und verschwinden der Lightbox</li>
             <li>Im DOM werden entsprechende HTML-Strukturen und CSS-Anweisungen verändert</li>
             <li>Es werden Eventhandler benutzt um auf den "Click" zu reagieren</li>
-            <li><a href="http://www.mediaevent.de/javascript/simple-lightbox.html">http://www.mediaevent.de/javascript/simple-lightbox.html</a></li>
+            <li><a href="http://fiddle.jshell.net/koos/apzpgek4/1/">http://fiddle.jshell.net/koos/apzpgek4/1/</a></li>
           </ul>
-          <hr/>
           <p>
             <pre class="big-font">
               <code>
-                ...
+                // http://www.mediaevent.de/javascript/simple-lightbox.html source
+
+                var allimg = document.getElementsByTagName('img');
+                for (var i=0, img; img=allimg[i]; i++ ) {
+                   if (img.className.match(/LB_Simple/)) {
+                      img.onclick = function () {
+                         var limg = this.nextSibling;
+                         
+                         while (limg.nodeName != 'IMG' && limg.nextSibling) 
+                            limg = limg.nextSibling;
+
+                         if (limg.nodeName == 'IMG') {
+                            document.getElementById('LB_Shade').style.display = "block"; 
+                            
+                            var iWidth = window.innerWidth ||  // Breite und Höhe 
+                                                               // des Browserfensters
+                                (window.document.documentElement.clientWidth || 
+                                window.document.body.clientWidth);
+                            var iHeight = window.innerHeight || 
+                                (window.document.documentElement.clientHeight || 
+                                window.document.body.clientHeight);
+                      
+                            limg.style.display = "block";
+                            limg.style.top = 
+                                  parseInt(iHeight/2 - limg.getAttribute('height')/2) + "px";
+                            limg.style.left = 
+                                  parseInt(iWidth/2 - limg.getAttribute('width')/2) + "px";
+
+                            limg.onclick = function() {
+                               this.style.display = "none";
+                               document.getElementById('LB_Shade').style.display = "none";
+                            };
+                         } 
+
+                         document.getElementById('LB_Shade').onclick = function() {
+                            if (limg && limg.nodeName == 'IMG') limg.style.display = "none";
+                            this.style.display = "none";
+                         }
+                      }
+                   }
+                }
               </code>
             </pre>
           </p>
         </section>
 
         <section>
-          <h2>Weitere Dinge die man mit Javascript machen kann</h2>
+          <h2>Weitere Eigenschaften die Javascript anbietet</h2>
           <ul>
             <li>Callbacks</li>
             <li>Auf Fenster Orientierung, Position, Höhe, Breite, Auflösung reagieren</li>
@@ -235,45 +338,37 @@
         </section>
 
         <section>
-          <h2>Debugging</h2>
+          <h2>Debugging mit Inspector/Firebug</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Inspect Element - Browsen durch's DOM</li>
+            <li>Console - Javascript Befehle eingeben und Fehler finden</li>
+            <li>Debugger starten - Break Points setzen</li>
+            <img src="https://developer.chrome.com/devtools/docs/javascript-debugging/javascript-debugging-overview.jpg" alt="Debugger">
           </ul>
-          <hr/>
-          <p>
-            <pre class="big-font">
-              <code>
-                ...
-              </code>
-            </pre>
-          </p>
         </section>
 
         <section>
           <h2>Testing</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Auch Javascript Code sollte getestet werden</li>
+            <li>Da es so eine dynamische Skriptsprache ist und fehlanfällig ist</li>
+            <li>Dadurch zur Laufzeit viel passieren kann</li>
+            <li>Jasmine: <a href="http://jasmine.github.io/">http://jasmine.github.io/</a> </li>
+            <li>QUnit: <a href="http://qunitjs.com/">http://qunitjs.com/</a></li>
+            <li><a href="http://stackoverflow.com/questions/300855/javascript-unit-test-tools-for-tdd">JavaScript unit test tools for TDD</a>
           </ul>
-          <hr/>
-          <p>
-            <pre class="big-font">
-              <code>
-                ...
-              </code>
-            </pre>
-          </p>
         </section>
 
+        <section>
+          <h2>Herausforderungen</h2>
+            <ul>
+              <li>querySelector und querySelectorAll sind relativ neu und von älteren Browsern nicht unterstützt</li>
+              <li>Nicht jeder Browser hält sich an den DOM-Standard</li>
+              <li>Moderne Browser bessern sich aber mittlerweile in der Hinsicht</li>
+              <li>Volle Browserunterstützung führt zu mehr Code für Fallback-Lösungen und somit schwerer zu pflegen</li>
+              <li>Die Lösung: JavaScript-Frameworks</li>
+            </ul>
+        </section>
 
         <section>
           <h1>Fragen?</h1>
