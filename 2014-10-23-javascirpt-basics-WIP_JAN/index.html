@@ -277,44 +277,8 @@
             </pre>
           </p>
         </section>
-
         <section>
           <h2>Operatoren</h2>
-          <ul>
-            <!-- Ist das eine der 3 wo noch was fehlt? -->
-            <li>Regeln zur Typenkonvertierung</li>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            <li>Gefährlich weil kein Einfluss darauf zur Laufzeit</li>
-            <li><a href="http://jsfiddle.net/koos/5Lcksa4w/1/">http://jsfiddle.net/koos/5Lcksa4w/1/</a>
-          </ul>
-          <hr/>
-          <p>
-            <pre class="big-font">
-              <code>
-                function typeConversion() {
-                   alert("");
-                   alert("Type conversion:");
-                   var a = "Hello";
-                   alert(a + 10);
-                   a = "20";
-                   alert(a + 10);
-                   a = "20";
-                   alert(a * 10);
-                   a = "s";
-                   alert(a * 10);
-                 }
-              </code>
-            </pre>
-          </p>
-        </section>
-
-        <section>
-          <h2>Logische Operatoren</h2>
           <ul>
             <li>Konkatenation – Strings miteinander verbinden (Konkatenation zweier Strings)</li>
             <li>Mathematische Operatoren (Berechnungen)</li>
@@ -322,44 +286,63 @@
             <li>Zuweisungs-Operatoren (weisen Variablen Werte zu)</li>
             <li>Logische Operatoren (&&, !, ||) (vergleich von Anweisungen und prüfung von true oder false)</li>
             <li>Bitweise Operatoren und spezielle Operatoren</li>
-          <p>
-            <pre class="big-font">
-              <code>
-                ....
-              </code>
-            </pre>
-          </p>
+            <li>Gefährlich weil kein Einfluss darauf zur Laufzeit</li>
+          </ul>
         </section>
-
+        <section>
+          <h2>Operatoren</h2>
+          <a href="http://jsfiddle.net/koos/5Lcksa4w/1/"><img src="operatoren.png"></a>
+        </section>        
         <section>
           <h2>Bedingte Anweisungen</h2>
-          <ul>
-            <li>if (Bedingung) then else Abfragen</li>
-          </ul>
-          <hr/>
-          <p>
+          <a href="http://jsfiddle.net/koos/daoehj81/">
             <pre class="big-font">
               <code>
-                ...
+                if (Bedingung) {
+                   Anweisungen;
+                }
+
+                if (Bedingung) {
+                   Anweisungen;
+                } else {
+                   Anweisungen;
+                }
+
+                switch (Ausdruck) {
+                   case label1: 
+                      Anweisungen; 
+                      break;
+                   case label2: 
+                      Anweisungen; 
+                      break; 
+                   ...
+                } 
               </code>
             </pre>
-          </p>
+          </a>
         </section>
 
         <section>
           <h2>Schleifen</h2>
-          <ul>
-            <li>for () </li>
-            <li>for … in</li>
-            <li>while (Bedingung)</li>
-          </ul>
-          <hr/>
-          <p>
+          <a href="http://jsfiddle.net/koos/17mLo334/">
             <pre class="big-font">
               <code>
+                while (Bedingung) {
+                   Anweisungen;
+                }
+
+
+                do {
+                  Anweisungen;
+                } while (Bedingung);
+
+
+                for (Anweisung; Bedingung; Anweisung) {
+                   Anweisungen;
+                }
               </code>
             </pre>
-          </p>
+          </a>          
         </section>
 
         <section>
