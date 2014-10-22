@@ -521,6 +521,89 @@
             </pre>
           </p>
         </section>
+       <section>
+          <h2>Einbettung und Zusammenhang von Javascript und HTML</h2>
+          <ul>
+            <li>HTML - Hypertext Markup Language / CSS - Cascading Style Sheets</li>
+            <li>NEU: Javascript</li>
+            <li>Einbettung von Javascript in 2 Formen möglich</li>
+            <ul>
+              <li>Code direkt im <code>script</code> Tag innerhalb des <code>head</code> oder <code>head</code> Tags</li>
+              <li>Code verlinkt im <code>script</code> Tag innerhalb des <code>body</code> Tags</li>
+            </ul>
+            <li>Praxis: alles an einem Ort</li>
+          </ul>
+        </section>
+        <section>
+           <h2>Einbettung von Javascript Code im Body</h2>
+           <a href="http://jsfiddle.net/koos/r5s6u5m3/">
+            <pre class="big-font">
+             <code>
+               &lt;!DOCTYPE html&gt;
+               &lt;html&gt;
+               &lt;body&gt; 
+
+               &lt;h1&gt;My Web Page&lt;/h1&gt;
+
+               &lt;p id=&quot;demo&quot;&gt;A Paragraph&lt;/p&gt;
+
+               &lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Try it&lt;/button&gt;
+
+               &lt;script&gt;
+               function myFunction() {
+                  document.getElementById(&quot;demo&quot;).innerHTML = &quot;Paragraph changed.&quot;;
+               }
+               &lt;/script&gt;
+
+               &lt;/body&gt;
+               &lt;/html&gt;
+             </code>
+           </pre>
+          </a>
+        </section>       
+        <section>
+           <h2>Einbettung von Javascript Code im Head</h2>
+           <a href="http://jsfiddle.net/koos/r5s6u5m3/">
+            <pre class="big-font">
+             <code>
+               &lt;!DOCTYPE html&gt;
+               &lt;html&gt;
+               &lt;head&gt;
+               &lt;script&gt;
+               function myFunction() {
+                  document.getElementById(&quot;demo&quot;).innerHTML = &quot;Paragraph changed.&quot;;
+               }
+               &lt;/script&gt;
+               &lt;/head&gt;
+               &lt;body&gt; 
+
+               &lt;h1&gt;My Web Page&lt;/h1&gt;
+
+               &lt;p id=&quot;demo&quot;&gt;A Paragraph&lt;/p&gt;
+
+               &lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Try it&lt;/button&gt;
+
+               &lt;/body&gt;
+               &lt;/html&gt;
+             </code>
+           </pre>
+          </a>
+        </section>                 
+        <section>
+           <h2>Einbettung einer externen Javascript Datei im Body/Head</h2>
+           <a href="http://jsfiddle.net/koos/r5s6u5m3/">
+            <pre class="big-font">
+             <code>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+              &lt;body&gt;
+              &lt;script src=&quot;myScript.js&quot;&gt;&lt;/script&gt;
+              &lt;/body&gt;
+              &lt;/html&gt;
+             </code>
+           </pre>
+          </a>
+        </section>         
         <section>
           <h2>Resourcen</h2>
           <li><a href="http://www.codecademy.com/en/tracks/javascript">http://www.codecademy.com/en/tracks/javascript</a></li>
