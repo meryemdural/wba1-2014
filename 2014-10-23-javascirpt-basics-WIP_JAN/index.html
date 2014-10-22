@@ -86,7 +86,6 @@
             <li>Wird sowohl Serverseitig als auch Clientseitig verwendet</li>
             <li>Funktional und Objektorientiert</li>
           </ul>
-          <hr/>
           <p>Basiert auf dem EcmaScript5 Standard (Release 2011, 6 & 7 sind WIP)</p>
           <p>ECMA = European Computer Manufacturers Association (u.a. Microsoft)</p>
           <p>Entwickelt von Brendan Eich (Netscape), am Anfang hiess es noch Mocha, LiveScript</p>
@@ -102,7 +101,7 @@
             <li>Bindestriche sind Minuszeichen (Unterstriche stattdessen)</li>
             <li>Umrbüche, Leerzeichen - ziemlich unempfindlich</li>
             <li>Das Semikolon <code>;</code> beendet eine Javascsript-Anweisung</li>
-            <li>Kommentare - Einzeilig <code>//</code> oder Mehrzeili <code>/* */</code></li>
+            <li>Kommentare - Einzeilig <code>//</code> oder Mehrzeilig <code>/* */</code></li>
           </ul>
           <hr/>
           <p>
@@ -167,16 +166,12 @@
           <ul>
             <li>Speichern Daten (Zahlen / Zeichenketten) deren Wert sich im Laufe der Anwendung verändert</li>
             <li>Variablen: <code>Name, Typ, Wert</code></li>
-            <li>In Javascript speziell:</li>
-              <ul>
-                <li>Implizite Variablen Deklaration</li>
-                <li>Dynamische Typisierung</li>
-              </ul>
+            <li>In Javascript speziell: Implizite Variablen Deklaration, Dynamische Typisierung <code>typeof("5"+5)</code></li>
             <li>Explizite Variablendeklaration mit <code>var</code>
             <li>Globale Variablen</li>
-            <li>Konstanten <code>const</code></li>
+            <li>Konstanten werden mit <code>const</code> definiert</li>
+            <li><a href="http://fiddle.jshell.net/koos/juzv695u/">http://fiddle.jshell.net/koos/juzv695u/</a></li>
           </ul>
-          <hr/>
           <p>
             <pre class="big-font">
               <code>
@@ -220,19 +215,9 @@
                 <li>Number (Integer, Float)</li>
                 <li>Boolean</li>
               </ul>
-            <li>Spezielle Typen:</li>
-              <ul>
-                <li>undefined</li>
-                <li>Null</li>
-              </ul>
-            <li>Refernzierte Datentypen:</li>                                    
-              <ul>
-                <li>Objekte</li>
-                <li>Funktionen</li>
-              </ul>
-            </li>
+            <li>Spezielle Typen: Null, undefined</li>
+            <li>Refernzierte Datentypen: Objekte, Funktionen</li>                                    
           </ul>
-          <hr/>
           <p>
             <pre class="big-font">
               <code>
@@ -302,6 +287,7 @@
                 <li></li>
               </ul>
             <li>Gefährlich weil kein Einfluss darauf zur Laufzeit</li>
+            <li><a href="http://jsfiddle.net/koos/5Lcksa4w/1/">http://jsfiddle.net/koos/5Lcksa4w/1/</a>
           </ul>
           <hr/>
           <p>
@@ -435,7 +421,7 @@
         </section>
 
         <section>
-          <h2>Typen</h2>
+          <h2>Objekte</h2>
           <p>
             <pre class="big-font">
               <code>
@@ -526,16 +512,37 @@
             <li>Dient zur Manipulation mit dem Browserfenster</li>
             <li>navigator, history, screen, location and document which are children of window</li>
             <li>document repräsentiert dann den Inhalt der Seite - den DOM</li>
+            <li><a href="http://fiddle.jshell.net/koos/hdtg0a9f/">http://fiddle.jshell.net/koos/hdtg0a9f/</a>
           </ul>
-          <hr/>
           <p>
             <pre class="big-font">
               <code>
+                <p id="demo"></p>
+
+                <script>
+                var w=window.innerWidth
+                || document.documentElement.clientWidth
+                || document.body.clientWidth;
+
+                var h=window.innerHeight
+                || document.documentElement.clientHeight
+                || document.body.clientHeight;
+
+                x=document.getElementById("demo");
+                x.innerHTML="Browser inner window width: " + w + ", height: " + h + "."
+                </script>
               </code>
             </pre>
           </p>
         </section>
-
+        <section>
+          <h2>JavaScript User Group Köln (Cologne.js)</h2>
+          <img src="http://colognejs.de/images/colognejs-logo.svg" />
+          <ul>
+            <li><a href="http://colognejs.de/">http://colognejs.de/</a></li>
+            <li>Next Meetup: Tuesday, December, 16th 2014 — New location at triAGENS / Join us at 19:00, talks start at 19:30</li>
+          </ul>
+        </section>
         <section>
           <h1>Fragen?</h1>
         </section>
@@ -547,13 +554,11 @@
         <section>
           <h2>Wie funktioniert diese Übung?</h2>
           <p>TODO VOLKER</p>
-<!--           <ul>
-            <li class="fragment">Ihr bekommt eine <a href='rezept-uebung.html'>HTML Datei</a></li>
-            <li class="fragment">Diese beinhaltet die absoluten HTMl Basics für eine Rezeptseite</li>
-            <li class="fragment">Im HTML findet ihr als Kommentar 8 Aufgaben</li>
-            <li class="fragment">Bearbeitet die HTML Datei mit einem Editor</li>
+          <ul>
+            <li><a href='http://www.learn-js.org/en/Welcome'>http://www.learn-js.org/en/Welcome</a></li>
+            <li>Dort sind der Reihe nach Übungen die man lösen sollte</li>
           </ul>
- -->        </section>
+        </section>
       </div>
     </div>
 
