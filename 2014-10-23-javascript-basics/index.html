@@ -77,14 +77,19 @@
         </section>
 
         <section>
+          <h2>Trennung von Struktur, Layout und Funktion</h2>
+          <img src="../2014-10-16-css-basics/images/html_css_js.svg" alt="Abbildung html css javascript">
+        </section>        
+
+        <section>
           <h2>Was ist Javascript? Eine Einführung</h2>
           <ul>
             <li>Eine Skriptsprache</li>
             <li>Unterschied zwischen Skript- und Programmiersprache?</li>
             <li>Gängige Webbrowser können Javascript interpretieren und den Code ausführen (Lynx nicht ;)</li>
-            <li>Javascript lässt sich in HTML Dokumenten einfach integrieren und kann dessen Struktur und aussehen zur Laufzeit verändern</li>
+            <li>Javascript lässt sich in HTML Dokumenten einfach integrieren und kann dessen <strong>Struktur und aussehen zur Laufzeit verändern</strong></li>
             <li>Wird sowohl Serverseitig als auch Clientseitig verwendet</li>
-            <li>Funktional und Objektorientiert</li>
+            <li>Funktional und (beschränkt) Objektorientiert</li>
           </ul>
           <p>Basiert auf dem EcmaScript5 Standard (Release 2011, 6 & 7 sind WIP)</p>
           <p>ECMA = European Computer Manufacturers Association (u.a. Microsoft)</p>
@@ -95,9 +100,7 @@
         <section>
           <h2>Syntax</h2>
           <ul>
-            <!-- Was wolltest du hier sagen? Das es diese Sachen alle gibt? -->
-            <li>Literare (Numerische, Strings, Arrays, Objekte)</li>
-            <!-- D.h. IF funktioniert nicht in JS? -->
+            <li>Datentypen - Numerische, Strings, Arrays, Objekte</li>
             <li><strong>Case Sensitive</strong> <code>IF vs. if</code></li>
             <li>Klammern und Hochkommata müssen gesetzt werden</li>
             <li>Bindestriche sind Minuszeichen (Unterstriche stattdessen)</li>
@@ -160,7 +163,7 @@
               <li>Klammer zuviel im Script-Code?</li>
               <li>Bindestrich im Variablennamen? Javascript mag keine Bindestriche.</li>
               <li>Groß und Kleinschreibung beachtet? Hier ist Javascript tatsächlich empfindlich</li>
-              <li>Schreibfehler in einer der DOM-Methoden? Vor allem getElementById macht immer Ärger.</li>
+              <li>Schreibfehler in einer der DOM-Methoden? z.B.: <strong>getElementById</strong> vs <strong>getElementbyId</strong>.</li>
         </section>
 
         <section>
@@ -481,12 +484,12 @@
           <h2>DOM und Javascript</h2>
           <blockquote>Mit Javascript kann man über den DOM Baum navigieren und HTML Tags, Attribute oder Inhalte verändern, hinzufügen oder entfernen</blockquote>
           <ul>
-            <li>DOM zugreifen <code>getElementsByTagName()</code></li>
-            <li>Neue Knoten erzeugen <code>createElement()</code></li>
-            <li>HTML Attribute zugreifen und manipulieren <code>getAttribute()</code></li>
-            <li>Durch den DOM Baum navigieren <code>parentNode</code></li>
-            <li>Den DOM Baum manipulieren <code>insertBefore()</code></li>
-            <li>Den DOM Baum analysieren <code>nodeName</code></li>
+            <li>DOM zugreifen <strong>getElementsByTagName()</strong></li>
+            <li>Neue Knoten erzeugen <strong>createElement()</strong></li>
+            <li>HTML Attribute zugreifen und manipulieren <strong>getAttribute()</strong></li>
+            <li>Durch den DOM Baum navigieren <strong>parentNode</strong></li>
+            <li>Den DOM Baum manipulieren <strong>insertBefore()</strong></li>
+            <li>Den DOM Baum analysieren <strong>nodeName</strong></li>
           </ul>
         </section>
 
@@ -630,7 +633,6 @@
         </section>
         <section>
           <h2>Wie funktioniert diese Übung?</h2>
-          <p>TODO VOLKER</p>
           <ul>
             <li><a href='http://www.learn-js.org/en/Welcome'>http://www.learn-js.org/en/Welcome</a></li>
             <li>Dort sind der Reihe nach Übungen die man lösen sollte</li>
