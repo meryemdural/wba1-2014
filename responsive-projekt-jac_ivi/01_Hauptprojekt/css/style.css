@@ -11,56 +11,21 @@ body {
     line-height: 15px;
 }
 
-a {
-	color: #000;	
-	border-bottom: dotted 1px #d16;
-	text-decoration:none;
-}
-a:visited {
-	color: #666;
-	border-bottom: dotted 1px #d16;
-}
-
-
-a:hover{
-	color: #75bf0d;
-}
-
-h1 {
-background: #d16;
-color: #fff !important;
-font-size: 11px;
-font-weight: bold;
-padding: 2px;
-padding-left: 5px;
-padding-right: 5px;
-margin-top:0;
-text-transform: uppercase;
-margin-bottom: 15px;
-float: left;
-letter-spacing: 1px;
-}
-
-
-input, textarea 
-{
-	background: #F3F6ED;
-	border: #75bf0d 1px solid;
-	margin: 0;
-	padding: 2px;
-	font-size: 11px;
-}
+/* Haupt-Struktur */
 
 #wrap {
     padding-top:15px;
     padding-left:52px;
-    width: 712px;
+    max-width: 712px;
 
 }
 
 #main {
-
+    margin:0;
+    paddding:0;
 }
+
+/* ------- HEADER -------- */
 
 header {
     margin: 0;
@@ -90,6 +55,7 @@ header {
     height: 73px;
 }
 
+/* Bildunterschrift */
 .bu .myriad {
     font-weight: 400;
     font-size: 18px;
@@ -105,10 +71,7 @@ header {
     margin:0;
 }
 
-#main {
-    margin:0;
-    paddding:0;
-}
+/* Navigation */
 
 #nav_wrap ul li {
     display: block;
@@ -148,8 +111,117 @@ padding: 0;
     height:93px;
 }
 
+/* Basic Einstellungen: Links */
+
+a {
+	color: #000;	
+	border-bottom: dotted 1px #d16;
+	text-decoration:none;
+}
+a:visited {
+	color: #666;
+	border-bottom: dotted 1px #d16;
+}
+
+
+a:hover{
+	color: #75bf0d;
+}
+
+/* Basic Einstellungen: Headlines */
+
+h1, h2,h3,h4,h5,h6{
+	font-size: 11px;
+	font-weight: normal;
+}
+
+h1 {
+background: #d16;
+color: #fff !important;
+font-size: 11px;
+font-weight: bold;
+padding: 2px;
+padding-left: 5px;
+padding-right: 5px;
+margin-top:0;
+text-transform: uppercase;
+margin-bottom: 15px;
+float: left;
+letter-spacing: 1px;
+}
+
+
+h2.balkengruen, span.balkengruen, h2.balkenblau, span.balkenblau{
+	background: #77cc00;
+	color: #fff !important;
+	font-size: 11px;
+	font-weight: normal;
+	padding: 2px;
+	padding-left: 5px;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	letter-spacing: 1px;
+}
+
+h2.balkengruen a, h2.balkengrau a{
+	color: #d16;
+}
+
+h2.balkenblau, span.balkenblau{
+	background: #77aabb;
+}
+
+h2.balkengrau, span.balkengrau{
+	background: #442211;
+	color: #fff !important;
+	font-size: 11px;
+	font-weight: normal;
+	padding: 2px;
+	padding-left: 5px;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	letter-spacing: 1px;
+}
+
+h3, h3 a {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* --------- Hauptcontainer --------- */
+
+/* Wiki-Spalte */
+
+.wiki div .author, .wiki div .datum, .wiki div .bezug, .wiki .art, .wiki .studiengang, .wiki .ansprechpartner {
+    display: inline;
+    padding-right: 0;
+}
+
+.wiki div + div {
+    border-top: solid 1px #b4a7a0;
+}
+
+.wiki div {
+    padding-top: 4px;
+    padding-bottom: 8px;
+}
+
+input, textarea 
+{
+	background: #F3F6ED;
+	border: #75bf0d 1px solid;
+	margin: 0;
+	padding: 2px;
+	font-size: 11px;
+}
+
+
 .zeile {
     width: 720px;
+    clear: both;
+padding-bottom: 16px;
 }
 
 .clear, span.clear {
@@ -166,6 +238,10 @@ position: relative;
 width: 352px;
 margin-right: 8px;
 margin-top:0;
+}
+
+.zweifach p {
+padding-right: 8px;
 }
 
 .float {
@@ -232,3 +308,111 @@ position:relative;
 
 .linkbox:hover{border: solid 1px #d16;  }
 .linkbox *:hover{color: #d16 !important;  }
+
+.termine{ 
+	padding-top: 4px;
+	padding-bottom: 4px;
+	position: relative;
+}
+
+.termine + .termine{
+	border-top: solid 1px #e4f5cc;
+}
+
+.termine .datum, .termine .beschreibung{
+	display: block;
+	float: left;
+	width: 168px;
+}
+
+.termine .datum{
+	text-transform: uppercase;
+	color: #77cc00;
+	margin-right: 8px;
+}
+
+div#themen {
+width: 720px;
+}
+
+div#themen div{
+	float: left;
+	width: 172px;
+	/*height: 200px;*/
+	margin-right: 8px;
+	margin-bottom: 8px;
+}
+
+div#themen .titel, 
+div#themen .ansprechpartner,
+div#themen .art,
+div#themen .studiengang{
+	display: inline;
+	padding-right: 2px;
+}
+
+.halb {
+    width: 86px;
+    margin-right: 8px;
+}
+
+/* Boxen mit farbigen Hintergruenden */
+.bg_braun{ background: #f2ebe6; }
+.bg_gruen{ background: #e4f5cc; }
+
+/* linien */
+.linieoben_pink{ border-top: solid 1px #d16; }
+.linieoben_braun{ border-top: solid 1px #b4a7a0; }
+
+.linieoben_pink, .linieoben_braun{
+	padding-top: 4px;
+	margin-top: 8px;
+}
+
+.linieunten_pink{
+	border-bottom: solid 1px #d16;
+}
+
+.linieunten_blau{
+	border-bottom: solid 1px #77aabb;
+}
+
+.linieunten_braun{
+	border-bottom: solid 1px #b4a7a0;
+}
+
+
+
+.linieoben_pink, .linieoben_braun {
+    padding-top: 4px;
+    margin-top: 8px;
+}
+
+.linieoben_braun {
+    border-top: solid 1px #b4a7a0;
+}
+
+.einfach {
+    width: 172px;
+    margin-right: 8px;
+}
+
+.kontaktfooter {
+    width: 720px;
+    height:108px;
+}
+
+/* -------- FOOTER --------- */
+
+footer {
+padding: 2px 0;
+clear: both;
+color: #999;
+border-top: solid 3px #77cc00;
+padding-bottom: 16px;
+width: 720px;
+}
+
+footer p#copy {
+padding-bottom: 16px;
+}
