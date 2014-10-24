@@ -25,6 +25,31 @@
 		{
 			"title" : "HTML Advanced",
 			"authors" : ["Stephan Pavlovic", "Jan Kus"]
+		},
+		"2014-10-16-css-basics/index.html":
+		{
+			"title" : "CSS Basics",
+			"authors" : ["Stephan Pavlovic", "Volker Schaefer"]
+		},
+		"2014-10-16-css-advanced/index.html":
+		{
+			"title" : "CSS Advanced",
+			"authors" : ["Stephan Pavlovic", "Volker Schaefer"]
+		},
+		"2014-10-23-javascript-basics/index.html":
+		{
+			"title" : "Javascript Basics",
+			"authors" : ["Jan Kus", "Volker Schaefer"]
+		},
+		"2014-10-23-javascript-advanced/index.html":
+		{
+			"title" : "Javascript Advanced",
+			"authors" : ["Jan Kus", "Volker Schaefer"]
+		},
+		"2014-10-23-javascript-frameworks-jquery/index.html":
+		{
+			"title" : "Javascript Frameworks jQuery",
+			"authors" : ["Jan Kus", "Volker Schaefer"]
 		}
 	}
 }
