@@ -1,0 +1,91 @@
+body {
+    margin:auto;
+    background-color: #fff;
+}
+
+* {
+    font-family: 'PT Sans',Geneva, Arial, Tahoma, Verdana, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+    line-height: 15px;
+}
+
+a {
+	color: #000;	
+	border-bottom: dotted 1px #d16;
+	text-decoration:none;
+}
+a:visited {
+	color: #666;
+	border-bottom: dotted 1px #d16;
+}
+
+
+a:hover{
+	color: #75bf0d;
+}
+
+
+input, textarea 
+{
+	background: #F3F6ED;
+	border: #75bf0d 1px solid;
+	margin: 0;
+	padding: 2px;
+	font-size: 11px;
+}
+
+#wrap {
+    padding-top:15px;
+    padding-left:52px;
+    width: 712px;
+
+}
+
+#main {
+
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+.mainlogo {
+    margin-left: -20px;
+}
+
+#startbild {
+    border-top: 4px solid #70c000;
+    position: relative;
+    margin-top: 15px;
+
+}
+
+#startbild .bu {
+    position: absolute;
+    left: 360px;
+    bottom: 2px;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+    background: #77cc00;
+    width: 360px;
+    height: 73px;
+}
+
+.bu .myriad {
+    font-weight: 400;
+    font-size: 18px;
+    padding: 8px;
+    margin:0;
+    text-transform: uppercase;
+
+}
+
+.myriadklein {
+    padding: 4px;
+    padding-bottom: 8px;
+    margin:0;
+}
