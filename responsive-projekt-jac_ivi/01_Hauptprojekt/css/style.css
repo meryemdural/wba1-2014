@@ -26,6 +26,21 @@ a:hover{
 	color: #75bf0d;
 }
 
+h1 {
+background: #d16;
+color: #fff !important;
+font-size: 11px;
+font-weight: bold;
+padding: 2px;
+padding-left: 5px;
+padding-right: 5px;
+margin-top:0;
+text-transform: uppercase;
+margin-bottom: 15px;
+float: left;
+letter-spacing: 1px;
+}
+
 
 input, textarea 
 {
@@ -49,7 +64,7 @@ input, textarea
 
 header {
     margin: 0;
-    padding: 0;
+    padding-bottom: 16px;
 }
 
 .mainlogo {
@@ -89,3 +104,131 @@ header {
     padding-bottom: 8px;
     margin:0;
 }
+
+#main {
+    margin:0;
+    paddding:0;
+}
+
+#nav_wrap ul li {
+    display: block;
+    background: none;
+    padding: 0;
+}
+
+#nav_wrap ul {
+float: left;
+width: 170px;
+margin: 0 10px 0 0;
+padding: 0;
+}
+
+#nav_wrap a{
+	display: block;
+	border: none;
+}
+
+#nav_wrap a:hover{
+	background: #d16;
+	color: #fff !important;
+	padding-left: 2px;
+	border: none;
+}
+
+#nav_wrap a:visited{
+	border: none;
+}
+
+#nav_wrap * {
+    color: #d16;
+}
+
+#nav_wrap {
+    width:780px;
+    height:93px;
+}
+
+.zeile {
+    width: 720px;
+}
+
+.clear, span.clear {
+display: block;
+clear: both;
+}
+
+p.startnews {
+position: relative;
+
+}
+
+.zweifach {
+width: 352px;
+margin-right: 8px;
+margin-top:0;
+}
+
+.float {
+float: left;
+display: block;
+}
+
+p.startnews a{
+	display: block;
+	position: relative;
+}
+
+p.startnews img{
+	border: solid 1px #b4a7a0;
+}
+
+p.startnews a, p.startnews a:visited{
+	border: none;
+}
+
+.fade {
+  opacity: 0.6;
+   }
+
+   .fade:hover {
+        opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+      
+      }
+
+p.startnews strong {
+display: block;
+position: absolute;
+bottom: 13px;
+left: 0;
+margin: 1px;
+background: #fff;
+color: #77cc00;
+padding: 2px;
+font-weight: normal;
+padding-right: 5px;
+}
+
+.linkbox {
+border: solid 1px #77cc00;
+width: 340px;
+height: 90px;
+padding: 5px;
+text-align: right;
+display:block;
+position:relative;
+}
+
+.linkbox *{
+	color: #77cc00 !important;
+}
+
+.linkbox a::before{
+    height:75px;
+    display:block;
+    content:"";}
+
+.linkbox:hover{border: solid 1px #d16;  }
+.linkbox *:hover{color: #d16 !important;  }
