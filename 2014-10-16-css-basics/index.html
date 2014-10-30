@@ -194,7 +194,7 @@ p, li {
     &lt;meta charset=&quot;utf-8&quot;&gt;
     &lt;title&gt;Stylesheet &uuml;ber externe Datei einbinden&lt;/title&gt;
     &lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheet.css&quot; type=&quot;text/css&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;../css/reveal.css&quot;&gt; type=&quot;text/css&quot; 
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../css/reveal.css&quot; type=&quot;text/css&quot; &gt;  
   &lt;/head&gt;
   &lt;body&gt;
   &lt;/body&gt;
@@ -207,7 +207,7 @@ p, li {
 			</section>
 			<section>
 				<h2>Einbindung über eine externe Datei</h2>
-				<p>mit @import in eine CSS-Datei</p>
+				<p>mit @import in einer CSS-Datei</p>
 				<pre><code>
 @import &quot;../css/style.css&quot;;
 p {
@@ -564,18 +564,18 @@ h1 {
 				<div class="fragment">
 					<p>oder in Kurzschreibweise definiert werden</p>
 					<pre style="font-size: 1.3rem"><code>/* Abst&auml;nde werden im Uhrzeiger definiert, beginnend mit der oberen Seite */
-p { margin: 10px 20px 30px 5px } 
+p { margin: 10px 20px 30px 5px;} 
 					
 /*  f&uuml;r alle 4 Abst&auml;nde gilt derselbe Wert */
-p {margin: 20px}
+p {margin: 20px; }
 
 /* 1. Wert f&uuml;r margin-top und margin bottom. 
    2. Wert f&uuml;r margin-left und margin-right */
-p { margin: 10px 20px } 
+p { margin: 10px 20px; } 
 			
 /* Setzt den rechten und linken Abstand auf die noch 
    zur Verfügung stehende Breite */
-p { margin: 0 auto }</code></pre>
+p { margin: 0 auto; }</code></pre>
 
 				</div>
 			</section>
@@ -642,7 +642,8 @@ p { margin: 0 auto }</code></pre>
 	width: 250px;
 	height: 250px;
 	border: 5px #77cc00 solid;
-	background-color:rgb(63, 63, 63);}</code></pre>
+	background-color:rgb(63, 63, 63);
+	}</code></pre>
 					<div style="float:right; width: 250px;height: 250px; border: 5px #77cc00 solid; background-color:rgb(63, 63, 63);"></div>
 				</div>
 				<ul>
@@ -652,7 +653,7 @@ p { margin: 0 auto }</code></pre>
 			</section>
 			<section>
 				<h2>Farben über Hexadezimal-Werte</h2>
-				<pre><code class="big-font">p {background-color: #228B22}</code></pre>
+				<pre><code class="big-font">p {background-color: #228B22;}</code></pre>
 				<ul>
 					<li>Drei Pärchen aus Hexadezimalwerten</li>
 					<li>Ein Pärchen besteht aus zwei Hexadezimalziffern</li>
@@ -675,14 +676,14 @@ p { margin: 0 auto }</code></pre>
 					<li>Farbe wird durch die Addition von Rot, Grün und Blau gebildet</li>
 					<li>
 						Mit prozentualen Angaben zwischen 0% und 100%
-						<pre><code class="big-font">p {background-color: rgb(13.33%,54.51%,13.33%)}</code></pre>
+						<pre><code class="big-font">p {background-color: rgb(13.33%,54.51%,13.33%);}</code></pre>
 					</li>
 					<li>Mit Werten zwischen 0 und 255
-						<pre><code class="big-font">p {background-color: rgb(34,139,34)}</code></pre>
+						<pre><code class="big-font">p {background-color: rgb(34,139,34);}</code></pre>
 					</li>
 					<li>
 						Über einen vierten Wert kann eine Transparenz zwischen 0 und 1 definiert werden
-						<pre><code class="big-font">p {background-color: rgba(34,139,34, 0.5)}</code></pre>
+						<pre><code class="big-font">p {background-color: rgba(34,139,34, 0.5);}</code></pre>
 
 					</li>
 				</ul>
@@ -706,14 +707,14 @@ p { margin: 0 auto }</code></pre>
 					</li>
 					<li>
 						Über einen vierten Wert kann eine Transparenz zwischen 0 und 1 definiert werden
-						<pre><code class="big-font">p {background-color: hsla(120,61%,34%, 0.5);</code></pre>
+						<pre><code class="big-font">p {background-color: hsla(120,61%,34%, 0.5);}</code></pre>
 
 					</li>
 				</ul>
 			</section>
 			<section>
 				<h2>Farben über vorderfinierte Schlüsselworte</h2>
-				<pre><code class="big-font">p {background-color: forestgreen}</code></pre>
+				<pre><code class="big-font">p {background-color: forestgreen;}</code></pre>
 				<ul>
 					<li>In CSS2 16 vordefinierte Farbschlüsselworte</li>
 					<li>Wurde in CSS3 auf 140 Farbschlüsselworte erweitert</li>
@@ -803,7 +804,7 @@ p { margin: 0 auto }</code></pre>
 	height: 250px;
 	border: 3px #77cc00 solid;
 	background-repeat: no-repeat;
-	background-position: center
+	background-position: center;
 }</code></pre>
 					<div style="float:right;background-image: url(images/css3-logo.jpg); width: 250px;height: 250px; border: 3px #77cc00 solid;	background-position: center;background-repeat: no-repeat;"></div>
 				</div>

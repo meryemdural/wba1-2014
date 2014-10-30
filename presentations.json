@@ -1,4 +1,4 @@
-﻿{
+{
 	"presentations":
 	{
 		"2014-10-02-wba1-kickoff/index.html":
@@ -50,6 +50,11 @@
 		{
 			"title" : "Javascript Frameworks jQuery",
 			"authors" : ["Jan Kus", "Volker Schaefer"]
+		},
+		"2014-10-30-social-media-livesession/index.html":
+		{
+			"title" : "Social Media Livesession",
+			"authors" : ["Dajana Jeyaratnam", "Sophie Stelzer"]
 		}
 	}
 }
