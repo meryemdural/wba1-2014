@@ -1,0 +1,218 @@
+﻿html{
+  background-image: -webkit-linear-gradient(top, #E8E8E8 , white );
+  width:100%;
+  height:100%;
+  background-repeat:no-repeat;
+  position:absolute;
+}
+
+body {
+     width:1000px;
+     height:auto;
+     margin:auto;
+     background-repeat:no-repeat;
+     background-image:url(images/platekompaniet.png);   
+     background-position:1% 0%;
+     border:solid 1px #E8E8E8;
+     border-right-style:none;
+     border-left-style:none;
+     border-bottom-style:none;
+     position:relative;
+}
+
+#ml-mainWrapper {
+-webkit-box-shadow: inset 0 1px 4px #C8C8C8, 0 1px 10px white;
+}
+#ml-action-nyheter, #ml-action-nyheter-sub {
+
+-webkit-box-shadow: 0 1px 4px #585858, 0 1px 10px white;
+
+}
+
+#ml-mainWrapper {
+margin:120px auto;
+width:960px;
+height:460px;
+position:relative;
+border-radius:5px;
+
+}
+
+#ml-action-nyheter, #ml-action-nyheter-sub{
+    top:20px;
+    margin:10px 10px auto;
+    width:80%;
+    height:200px;
+    border-radius:2px;
+    position:relative;
+    padding-top:10px;
+   
+}
+
+header p {
+        margin:-10px 0px 10px auto;
+        background-color:#899;
+        background:-webkit-linear-gradient(top, #aac 0%, #88a 100%);
+        border-radius:2px;
+        color:white;
+        font-size:20px;
+    
+    }
+
+aside img{
+    width:160px;
+    height:300px;
+    bottom:410px;
+    right:-790px;
+    position:relative;
+    z-index:-100;
+}
+
+
+.price {padding-right:20px;
+        padding-top:2px;
+        padding-bottom:3px;
+        border-radius:3px;
+        background-color:#C0C0C0; 
+        font: bold 15px 'Trebuchet MS';
+}
+
+h3 {
+    position:relative;
+    top:-23px;
+    text-align:match-parent;
+}
+
+
+.buyBtn1, .buyBtn2,.buyBtn3,.buyBtn4, #handlekurv{
+background-image: url(images/cart.png);
+background-repeat: no-repeat;
+background-position: left;
+background-size:30px;
+color: white;
+font: bold 14px 'Trebuchet MS';
+cursor: pointer;
+
+}
+.buyBtn1, .buyBtn2,.buyBtn3,.buyBtn4 {
+background-color:red;
+padding-left: 30px;
+border: 1px solid red;
+-webkit-border-radius: 4px;
+margin:-10px auto;
+
+/*background:-webkit-linear-gradient(top, red 0%, red 100%); for å gjøre den mer knapp aktig, men har høyre z index en background-image*/
+
+}
+
+ #handlekurv {   
+    top:80px;
+    z-index:1;
+    left:800px;
+    height:30px;
+    width:197px;
+    position:relative;
+    background-color:orange;
+    -webkit-box-shadow: 1px 1px 1px black;
+
+    border-top-left-radius:5px;
+         border-top-right-radius:5px;
+  
+}
+
+#vLine {
+    width:1px;
+    height:20px;
+    left:80px;
+    top:5px;
+    position:relative;
+    background-color:white;
+    border-left:1px solid white;
+}
+
+#gåtilkassen {
+    
+    color:white;
+    position:absolute;
+    top:-7px;
+    left:93px;
+}
+
+#arrowleft, #arrowDown {
+    
+color: white;
+font: bold 25px 'arial, verdana';
+position:relative;
+
+}
+#arrowleft {
+left:180px;
+bottom:46px;
+}
+#arrowDown {
+left:-28px;
+bottom:8px;
+
+transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+
+}
+
+
+
+#SlideUpDown {
+    
+    color:black;
+    width:187px;
+    height:auto;
+    top:30px;
+    position:absolute;
+    border-radius:2px;
+    padding:5px;
+    cursor:initial;
+    
+  background-image: -webkit-linear-gradient(top, white , #F0F0F0 );
+  background-repeat:no-repeat;
+
+  box-shadow:1px 1px 1px;
+  
+  
+}
+
+#Sjul {
+    cursor:pointer;
+}
+
+#textWrap #Sjul, #gåtilkassen2 {
+        font-size:10px;
+        display:inline-block;
+    }
+
+
+#imgThumbnail {
+ height:100px;
+ width:185px;
+ margin-bottom:-90px;  
+-webkit-box-shadow: 0px 1px 4px 1px #585858;
+}
+#imgThumbnail img {
+
+    max-height:100px;
+    max-width:100px;
+    box-shadow: 1px 1px 4px;
+
+}
+#thumbnailTextWrapper {
+   
+}
+#tittel, .thumbnailpris {display:block; bottom:20px; left:75px; position:relative;}
+#slettKnapp {
+width:20px;
+height:20px;
+background:url(images/søppel.png);
+background-repeat: no-repeat;
+background-position: center;
+background-size:20px;
+cursor:pointer;
+bottom:10px; left:160px; position:relative;
+}

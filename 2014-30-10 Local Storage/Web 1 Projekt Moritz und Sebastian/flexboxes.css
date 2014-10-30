@@ -1,0 +1,57 @@
+﻿#flexBox3{position:relative; left:0px;   bottom:-23px;}
+#flexBox2{position:relative; left:380px; bottom:180px;}
+#flexBox4{position:relative; left:380px; bottom:158px;}
+
+#flexBox, #flexBox2,
+ #flexBox3, #flexBox4 {
+display:-moz-box; /* Firefox */
+display:-webkit-box; /* Safari and Chrome */
+display:-ms-flexbox; /* Internet Explorer 10 */
+width:380px;
+display:box;
+/*/border:1px solid black;*/
+}
+#flexImgBox, #flexImgBox2, 
+#flexImgBox3, #flexImgBox4  {
+-moz-box-flex:1.0; /* Firefox */
+-webkit-box-flex:1.0; /* Safari and Chrome */
+-ms-flex:1.0; /* Internet Explorer 10 */
+box-flex:1.0;
+/*border:1px solid red;*/
+}
+
+#flexImgBox img, #flexImgBox2 img,
+#flexImgBox3 img, #flexImgBox4 img  {
+max-height:160px;
+max-width:160px;
+min-height:175px;
+min-width:120px;
+margin-right:10px;
+position:relative;
+box-shadow: 1px 1px 5px #888888;
+}
+
+#flexRest, #flexRest2,
+#flexRest3, #flexRest4 {
+-moz-box-flex:2.0; /* Firefox */
+-webkit-box-flex:2.0; /* Safari and Chrome */
+-ms-flex:2.0; /* Internet Explorer 10 */
+box-flex:2.0;
+/*border:1px solid blue;*/
+}
+#flexRest p, #flexRest2 p, 
+#flexRest3 p, #flexRest4 p {
+overflow:hidden;
+text-overflow:ellipsis; 
+text-align:left;
+text-justify:inter-word;
+break-after:avoid-column;
+word-wrap:break-word;
+width:240px;
+height:75px;
+
+position:relative;
+bottom:20px;
+
+}
+
