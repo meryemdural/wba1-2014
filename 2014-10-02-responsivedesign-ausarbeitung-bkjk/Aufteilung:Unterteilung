@@ -1,18 +1,18 @@
-Aufteilung/Unterteilung Ausarbeitung
+Agenda der Ausarbeitung "Responsive Design"
 
-Einleitung:
-	Was ist reponsive Design (Jan/Bernhard)
+Einleitung: (Jan)
+	Vorwort
+	Was ist Reponsive Design? 
 
 Hauptteil
-	Erklätung von Respoinsive Design (Jan)
+	Erklärung von Responsive Design (Jan)
 		Begriffserklärung
-		Warum kam die Idee auf? Probleme umreißen
-		Ursprung
-		Alternativen (Verschiedene Webseiten für verschiedenen Größen)
+		Ideenherkunft/Ursprung
+		Alternativen
 
-	Unterschiede Responsive Design/2 Webseiten (Jan)
+	Unterschiede: Responsive Design zu 2 unabhängigen Webseiten (Jan)
 		Verschiedene Displaygrößen brauchen unterschiedliche Layouts
-		Immer mehr Geräte im umlauf (Handys, PCs, Laptops, TVs und Tablets)
+		Immer mehr Geräte im Umlauf (Handys, PCs, Laptops, TVs und Tablets)
 		Design muss eventuell immer an die Größe angepasst werden
 		 => Versuch der Vereinfachung durch "Modularisierung"
 
@@ -31,4 +31,4 @@ Hauptteil
 		Kostenfrage
 
 Schlussteil
-	Fazit ob Sinnvoll/Zukunftsfähig doer nicht (Jan/Bernhard)
+	Fazit (sinnvoll/zukunftsfähig) (Jan/Bernhard)
