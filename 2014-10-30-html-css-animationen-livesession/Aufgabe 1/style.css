@@ -1,0 +1,41 @@
+body {
+	background-color:#FFFFFF;
+	font-family:calibri;
+}
+
+#wrapper {
+	margin:0px auto;
+	width:1095px;
+	text-align:justify;
+}
+
+#background {
+	background-image:url(source.png);
+	background-position:top left;
+	background-repeat:no-repeat;
+	min-height:343px;
+}
+
+img#circle {
+	border-radius:77px;
+	border:4px solid #DEDEDE;
+	position:relative;
+	top:40px;
+	left:112px;
+}
+
+img#circle:hover {
+    /*Basic-Aufgabe:*/
+    /*-webkit-transform: scale(2) rotateZ(10deg) rotateX(70deg);*/
+    
+    -webkit-animation-name: wobble; /*Verweis auf den Animationsnamen*/
+    -webkit-animation-duration: 3.5s; /*Gesamtdauer der Animation*/
+    -webkit-animation-timing-function: linear; /*Laufzeit-Ausführungsart: Wie verhält sich die Animationsgeschwindigkeit zur Laufzeit?*/
+    -webkit-animation-iteration-count: infinite; /*Anzahl der Animationsausführungen*/
+}
+
+@-webkit-keyframes wobble {
+    0% {-webkit-transform: rotateZ(0deg) rotateX(0deg) scale(2);} /*Startzustand*/
+    50% {-webkit-transform: rotateZ(180deg) rotateX(70deg) scale(2);} /*Zustand in der Mitte der Animation*/
+    100% {-webkit-transform: rotateZ(360deg) rotateX(0deg) scale(2);} /*Zustand am Ende der Animation*/
+}
