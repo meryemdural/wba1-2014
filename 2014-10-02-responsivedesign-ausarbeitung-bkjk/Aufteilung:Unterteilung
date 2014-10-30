@@ -1,0 +1,34 @@
+Aufteilung/Unterteilung Ausarbeitung
+
+Einleitung:
+	Was ist reponsive Design (Jan/Bernhard)
+
+Hauptteil
+	Erklätung von Respoinsive Design (Jan)
+		Begriffserklärung
+		Warum kam die Idee auf? Probleme umreißen
+		Ursprung
+		Alternativen (Verschiedene Webseiten für verschiedenen Größen)
+
+	Unterschiede Responsive Design/2 Webseiten (Jan)
+		Verschiedene Displaygrößen brauchen unterschiedliche Layouts
+		Immer mehr Geräte im umlauf (Handys, PCs, Laptops, TVs und Tablets)
+		Design muss eventuell immer an die Größe angepasst werden
+		 => Versuch der Vereinfachung durch "Modularisierung"
+
+	Technischer Hintergrund (Bernhard)
+		Html5 und CSS3 Media-Queries
+		Frameworks
+		Displaygrößen
+		Layout von Webseiten
+		Breakpoints
+
+	Vor- und Nachteile (Bernhard)
+		Erhöhter Pflegeaufwand
+		Bedürfnisse der Zielgruppe Mobile Nutzer
+		Entwicklungsaufwand
+		Usabilitykonflikte (Scrollen etc)
+		Kostenfrage
+
+Schlussteil
+	Fazit ob Sinnvoll/Zukunftsfähig doer nicht (Jan/Bernhard)
