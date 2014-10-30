@@ -39,9 +39,23 @@
             background-color: #ffd1d1;
         }
     </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    	function validate(){
+	    	if($('#vorname').val() == '')
+	    	{
+		    	$('#vorname').css('background-color', 'red');
+	    	}
+	    	else
+	    	{
+		    	$('#vorname').css('background-color', 'white');
+	    	}
+    	};
+    </script>
+    
 </head>
 <body>
-    <form action="http://google.de" method="get" name="formular">
+    <form action="#" method="get" name="formular">
         <h1>Kontaktformuler</h1>
         <fieldset>
             <legend>Kontaktdaten</legend>
@@ -59,7 +73,7 @@
             <label for="nachricht" id="labelNachricht">Ihre Nachricht:</label>
             <textarea class="pflichtfeld" id="nachricht"></textarea>
         </fieldset>
-        <input type="submit" value="Nachricht abschicken"> 
+        <input type="submit" value="Nachricht abschicken" onclick="validate();"> 
     </form>
 </body>
 </html>
