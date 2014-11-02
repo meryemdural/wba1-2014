@@ -11,6 +11,12 @@ body {
     line-height: 15px;
 }
 
+/* Bilder automatisch responsiv skalieren lassen */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 /* Haupt-Struktur */
 
 #wrap {
@@ -45,13 +51,13 @@ header {
 
 #startbild .bu {
     position: absolute;
-    left: 360px;
+    left: 50%;
     bottom: 2px;
     filter: alpha(opacity=80);
     -moz-opacity: 0.8;
     opacity: 0.8;
     background: #77cc00;
-    width: 360px;
+    width: 50%;
     height: 73px;
 }
 
@@ -107,7 +113,7 @@ padding: 0;
 }
 
 #nav_wrap {
-    width:780px;
+    width:109.5%;
     height:93px;
 }
 
@@ -219,7 +225,7 @@ input, textarea
 
 
 .zeile {
-    width: 720px;
+    width: 101.1%;
     clear: both;
 padding-bottom: 16px;
 }
@@ -235,7 +241,7 @@ position: relative;
 }
 
 .zweifach {
-width: 352px;
+width: 48.8%;
 margin-right: 8px;
 margin-top:0;
 }
@@ -289,7 +295,7 @@ padding-right: 5px;
 
 .linkbox {
 border: solid 1px #77cc00;
-width: 340px;
+width: 47.2%;
 height: 90px;
 padding: 5px;
 text-align: right;
@@ -309,20 +315,21 @@ position:relative;
 .linkbox:hover{border: solid 1px #d16;  }
 .linkbox *:hover{color: #d16 !important;  }
 
-.termine{ 
+.termine { 
 	padding-top: 4px;
 	padding-bottom: 4px;
+    margin-bottom: 10px;
 	position: relative;
 }
 
-.termine + .termine{
+.termine + .termine {
 	border-top: solid 1px #e4f5cc;
 }
 
 .termine .datum, .termine .beschreibung{
 	display: block;
 	float: left;
-	width: 168px;
+	width: 47.8%;
 }
 
 .termine .datum{
@@ -332,9 +339,11 @@ position:relative;
 }
 
 div#themen {
-width: 720px;
+width: 101.2%;
 }
 
+
+/* dieses div hat eine feste Breite, weil die Spalten beim "kleinmachen" nicht nebeneinander stehen soll */
 div#themen div{
 	float: left;
 	width: 172px;
@@ -392,14 +401,15 @@ div#themen .studiengang{
     border-top: solid 1px #b4a7a0;
 }
 
+/* Feste Breite, weil es beim Kleinmachen alleine in der Zeile stehen soll */
 .einfach {
     width: 172px;
     margin-right: 8px;
 }
 
 .kontaktfooter {
-    width: 720px;
-    height:108px;
+    width: 101.2%;
+    min-height: 108px;
 }
 
 /* -------- FOOTER --------- */
@@ -410,9 +420,103 @@ clear: both;
 color: #999;
 border-top: solid 3px #77cc00;
 padding-bottom: 16px;
-width: 720px;
+width: 100%;
 }
 
 footer p#copy {
 padding-bottom: 16px;
 }
+
+
+nav a#pull {  
+    display: none;  
+}       
+
+
+
+/* --------- IPHONE 5 Portrait und Landscape -------- */
+@media only screen and (max-width : 320px) {  
+    nav li {  
+        display: block;  
+        float: none;  
+        width: 100%;  
+    }  
+    nav li a {  
+        border-bottom: 1px solid #576979;  
+    }  
+} 
+
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 568px) {
+    /* Zweispaltigkeit in eine Spalte verwandeln */
+    .zweifach {
+        width: 100%;
+    }
+    
+    #wrap {
+    padding-left:22px;
+    }
+    
+    
+        
+     nav {  
+        border-bottom: 0;  
+    }  
+    nav ul {  
+        display: none;  
+        height: auto;  
+    }  
+    nav a#pull {  
+        display: block;  
+        background-color: #283744;  
+        width: 100%;  
+        position: relative;  
+    }  
+    nav a#pull:after {  
+        content:"";  
+        background: url('nav-icon.png') no-repeat;  
+        width: 30px;  
+        height: 30px;  
+        display: inline-block;  
+        position: absolute;  
+        rightright: 15px;  
+        top: 10px;  
+    }  
+    #startbild .bu {
+        position:static;
+        width:100%;
+    }
+
+}
+
+
+@media only screen 
+and (min-width : 569px)
+and (max-width : 767px)  {
+    /* Zweispaltigkeit in eine Spalte verwandeln */
+    .zweifach {
+        width: 46%;
+    }
+    
+    #wrap {
+    padding-left:22px;
+    }
+    
+
+
+}
+
+/* ------- IPAD MINI in portrait und landscape ------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  { 
+     .zweifach {
+        width: 33%;
+    }
+
+
+}
+
