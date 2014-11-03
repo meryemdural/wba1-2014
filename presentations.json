@@ -55,6 +55,11 @@
 		{
 			"title" : "Social Media Livesession",
 			"authors" : ["Dajana Jeyaratnam", "Sophie Stelzer"]
+		},
+		"2014-11-06-seo-livesession/index.html":
+		{
+			"title" : "SEO Livesession",
+			"authors" : ["Roman Seibt", "Markus Ernst"]
 		}
 	}
 }
