@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - Pen</title>
+
+</head>
+
+<body>
+
+  <!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+    <head>
+        {MobileAppHeaders}
+        <meta charset="utf-8">
+        <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+        {block:Description}
+        <meta name="description" content="{MetaDescription}">
+        {/block:Description}
+
+        {block:Hidden}
+        <meta name="if:Sliding header" content="1">
+        <meta name="if:Collapse navigation" content="1">
+        <meta name="if:Endless scrolling" content="1">
+        <meta name="select:Layout" content="regular" title="Regular">
+        <meta name="select:Layout" content="narrow" title="Narrow">
+        <meta name="select:Layout" content="grid" title="Grid">
+        <meta name="text:Disqus shortname" content="">
+        <meta name="text:Google analytics ID" content="">
+        <meta name="text:Github username" content="">
+        <meta name="text:Facebook username" content="">
+        {/block:Hidden}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+        <link rel="stylesheet" href="http://static.tumblr.com/vr9xgox/PuGmmhqcs/normalize.css">
+        <link rel="stylesheet" href="http://static.tumblr.com/vr9xgox/qE8n2yg06/optica-icons.css">
+        <link rel="stylesheet" href="http://static.tumblr.com/hriofhd/NYxndttbj/main.css">
+
+        <!-- HTML5 Shiv -->
+        <!--[if lt IE 9]>
+            <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
+        <![endif]-->
+        <style>
+            body {
+                background-color: {BackgroundColor};
+            }
+
+            .jumbotron{
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 100%;
+                position: relative;
+            }
+
+            .main {
+                background-color: white;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+            }
+
+            .profile {
+                background-color: {TitleColor};
+                position: fixed;
+                border-radius: 0 0 25px 0;
+                padding: 50px;
+            }
+
+            .container{
+                border-bottom: 1px solid {AccentColor};
+
+            }
+
+            .content{
+                position: relative;
+                margin-left: 25%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class=main>
+            <div class="jumbotron">
+                {block:ShowHeaderImage}
+                        <img class="jumbotron" src="{HeaderImage}" alt=""/>
+                        <div class="loader-bg"></div>
+                {/block:ShowHeaderImage}
+            </div>
+
+            <div class="profile">
+                <div class="container">
+                    <img src="{PortraitURL-128}"/>
+                    <h3>{Title}</h3>
+                    {block:Description}
+                        <p id="description">{Description}</p>
+                    {/block:Description}
+                </div>
+                <div class="container">
+                    <ul class="social">
+                        <li>Facebook</li>
+                        <li>Social</li>
+                        <li>etc</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <ol id="posts">
+                    {block:Posts}
+                        {block:Text}
+                            <li class="post text">
+                                {block:Title}
+                                    <h3><a href="{Permalink}">{Title}</a></h3>
+                                {/block:Title}{Body}
+                            </li>
+                        {/block:Text}
+                        {block:Photo}
+                            <li class="post photo">
+                                <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                                {block:Caption}
+                                    <div class="caption">{Caption}</div>
+                                {/block:Caption}
+                            </li>
+                        {/block:Photo}
+                        {block:Panorama}
+                            <li class="post panorama">
+                                {LinkOpenTag}
+                                    <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                                {LinkCloseTag}
+                                {block:Caption}
+                                    <div class="caption">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            </li>
+                        {/block:Panorama}
+                        {block:Photoset}
+                            <li class="post photoset">
+                                {Photoset-500}
+                                {block:Caption}
+                                    <div class="caption">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            </li>
+                        {/block:Photoset}
+                        {block:Quote}
+                            <li class="post quote">
+                                "{Quote}"
+                                {block:Source}
+                                    <div class="source">
+                                        {Source}
+                                    </div>
+                                {/block:Source}
+                            </li>
+                        {/block:Quote}
+                        {block:Link}
+                            <li class="post link">
+                                <a href="{URL}" class="link" {Target}>{Name}</a>
+                                {block:Description}
+                                    <div class="description">
+                                        {Description}
+                                    </div>
+                                {/block:Description}
+                            </li>
+                        {/block:Link}
+                        {block:Chat}
+                            <li class="post chat">
+                                {block:Title}
+                                    <h3><a href="{Permalink}">{Title}</a></h3>
+                                {/block:Title}
+                                <ul class="chat">
+                                    {block:Lines}
+                                        <li class="{Alt} user_{UserNumber}">
+                                            {block:Label}
+                                                <span class="label">{Label}</span>
+                                            {/block:Label}{Line}
+                                        </li>
+                                    {/block:Lines}
+                                </ul>
+                            </li>
+                        {/block:Chat}
+                        {block:Video}
+                            <li class="post video">
+                                {Video-500}
+                                {block:Caption}
+                                    <div class="caption">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            </li>
+                        {/block:Video}
+                        {block:Audio}
+                            <li class="post audio">
+                                {AudioEmbed}
+                                {block:Caption}
+                                    <div class="caption">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            </li>
+                        {/block:Audio}
+                    {/block:Posts}
+                </ol>
+            </div>
+            <p id="footer">
+                {block:PreviousPage}
+                    <a href="{PreviousPage}">&#171; Previous</a>
+                {/block:PreviousPage}
+                {block:NextPage}
+                    <a href="{NextPage}">Next &#187;</a>
+                {/block:NextPage}
+
+            <a href="/archive">Archive</a>
+        </p>
+    </body>
+</html>
+
+</body>
+
+</html>
