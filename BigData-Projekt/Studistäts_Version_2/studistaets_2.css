@@ -1,0 +1,193 @@
+
+body {
+    overflow: hidden;
+    font-family: avenir next, arial;
+    color: #8b8b8b;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.content > a,
+.content > input {
+    position: fixed;
+    bottom: 0px;
+    width: 20%;
+    cursor: pointer;
+    font-size: 16pt;
+    height: 40px;
+    line-height: 40px;
+}
+
+.content > input {
+    opacity: 0;
+    z-index: 100;
+}
+
+.content > a {
+    z-index: 10;
+    background: #428bca;
+    color: #ffb600;
+    text-align: center;
+    font-size: 16px;
+}
+.content:before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    background: 428bca;
+    z-index: 9;
+    bottom: 0;
+}
+
+#st-control-1, #st-control-1 + a {
+    left: 0;
+}
+
+#st-control-2, #st-control-2 + a {
+    left: 20%;
+}
+
+#st-control-3, #st-control-3 + a {
+    left: 40%;
+}
+
+#st-control-4, #st-control-4 + a {
+    left: 60%;
+}
+
+
+#st-control-5, #st-control-5 + a {
+    left: 80%;
+}
+
+.content > input:checked + a,
+.content > input:checked:hover + a {
+    background: #ffb600;
+    color: #428bca;
+}
+
+.content > input:checked + a:after,
+.content > input:checked:hover + a:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #ffb600;
+    border-width: 20px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.content > input:hover + a {
+    background: #ffb600;
+    color: #428bca;
+
+}
+
+.sektionen,
+.st-panel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.sektionen {
+    top: 0;
+    left: 0;
+    transition: all 0.6s ease-in-out;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+
+.st-panel {
+    background: #F0F0F0;
+    overflow: hidden;
+}
+
+.st-panel h2 {
+    color: #428bca;
+    text-shadow: 1px 1px 1px rgba(66,139,202,0.3);
+    position: absolute;
+    font-size: 46px;
+    font-weight: 900;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    line-height: 50px;
+    margin: -70px 0 0 0;
+    padding: 0;
+    top: 25%;
+    -webkit-backface-visibility: hidden;
+}
+
+
+.st-panel p {
+    position: absolute;
+    font-size: 16px;
+    line-height: 22px;
+    z-index: 2;
+    padding: 0;
+    width: 50%;
+    left: 25%;
+    top: 28%;
+    margin: 10px 0 0 0;
+}
+
+.st-panel ul{
+    list-style: none;  
+    position: absolute;
+    width: 50%;
+    left: 23%;
+    top: 30%;
+}
+
+
+#st-control-1:checked ~ .sektionen {
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-o-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	transform: translateY(0%);
+}
+#st-control-2:checked ~ .sektionen {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+#st-control-3:checked ~ .sektionen {
+	-webkit-transform: translateY(-200%);
+	-moz-transform: translateY(-200%);
+	-o-transform: translateY(-200%);
+	-ms-transform: translateY(-200%);
+	transform: translateY(-200%);
+}
+#st-control-4:checked ~ .sektionen {
+	-webkit-transform: translateY(-300%);
+	-moz-transform: translateY(-300%);
+	-o-transform: translateY(-300%);
+	-ms-transform: translateY(-300%);
+	transform: translateY(-300%);
+}
+#st-control-5:checked ~ .sektionen {
+	-webkit-transform: translateY(-400%);
+	-moz-transform: translateY(-400%);
+	-o-transform: translateY(-400%);
+	-ms-transform: translateY(-400%);
+	transform: translateY(-400%);
+}
