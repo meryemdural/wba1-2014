@@ -100,7 +100,6 @@ padding: 0;
 #nav_wrap a:hover{
 	background: #d16;
 	color: #fff !important;
-	padding-left: 2px;
 	border: none;
 }
 
@@ -343,10 +342,10 @@ width: 101.2%;
 }
 
 
-/* dieses div hat eine feste Breite, weil die Spalten beim "kleinmachen" nicht nebeneinander stehen soll */
+/* dieses div hat eine feste Breite, weil die Spalten beim "fluiden" nicht nebeneinander stehen soll */
 div#themen div{
 	float: left;
-	width: 172px;
+	width: 23.8%;
 	/*height: 200px;*/
 	margin-right: 8px;
 	margin-bottom: 8px;
@@ -444,6 +443,18 @@ nav a#pull {
     nav li a {  
         border-bottom: 1px solid #576979;  
     }  
+    div#themen div{
+	float: left;
+	width: 100%;
+	/*height: 200px;*/
+	margin-right: 8px;
+	margin-bottom: 8px;
+}
+    
+      #nav_wrap {
+    width:93%;
+    height:93px;
+}
 } 
 
 
@@ -456,13 +467,12 @@ and (max-width : 568px) {
     }
     
     #wrap {
-    padding-left:22px;
+        padding-left:22px;
     }
-    
-    
-        
+
      nav {  
-        border-bottom: 0;  
+        margin-top:10px; 
+        margin-bottom: 30px;
     }  
     nav ul {  
         display: none;  
@@ -470,9 +480,10 @@ and (max-width : 568px) {
     }  
     nav a#pull {  
         display: block;  
-        background-color: #283744;  
-        width: 100%;  
-        position: relative;  
+        background-color: #d16;
+        color:#fff;
+        position: relative; 
+        padding: 10px;
     }  
     nav a#pull:after {  
         content:"";  
@@ -481,12 +492,49 @@ and (max-width : 568px) {
         height: 30px;  
         display: inline-block;  
         position: absolute;  
-        rightright: 15px;  
+        right: 15px;  
         top: 10px;  
     }  
     #startbild .bu {
         position:static;
         width:100%;
+    }
+    
+    div#themen div{
+	float: left;
+	width: 100%;
+	/*height: 200px;*/
+	margin-right: 8px;
+	margin-bottom: 8px;
+    }
+    
+    #nav_wrap {
+    width:100%;
+    }
+    
+    #nav_wrap a {
+    background: #d16;
+    color: #fff !important;
+    padding: 10px;
+        margin-top:3px;
+    }
+    
+    #nav_wrap .firstul {
+        margin-top:35px;
+    }
+    
+    #nav_wrap .lastul {
+    margin-bottom: 10px;
+    }
+    
+    #nav_wrap ul {
+    width: 90%;
+    }
+    
+    /* ---- mit Position:absolute haben wir getrickst und den Navigationspunkt rausgenommen -----*/
+    .mobilehide {
+    visibility: hidden;
+    position: absolute;
     }
 
 }
@@ -499,12 +547,18 @@ and (max-width : 767px)  {
     .zweifach {
         width: 46%;
     }
-    
+     
     #wrap {
     padding-left:22px;
     }
     
-
+     div#themen div{
+	float: left;
+	width: 100%;
+	/*height: 200px;*/
+	margin-right: 8px;
+	margin-bottom: 8px;
+}
 
 }
 
