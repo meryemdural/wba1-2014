@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="studistaets_2.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">
+    <script src="JSON Auslese Test/Statistik.js"></script>
+    <script src="JSON Auslese Test/jquery-2.1.1.js"></script>
+    <script src="JSON Auslese Test/jquery.js"></script>
+    <script src="JSON Auslese Test/Chart.js-master/Chart.js"></script>
     <title>Studistäts - Vergleichen Sie die Studiengänge der FH Köln</title>
 </head>
 <body>
@@ -21,7 +23,7 @@
            <a href="#st-panel-3">Bundesländer</a>
            
            <input type="radio" name="radio-set" id="st-control-4"/>
-           <a href="#st-panel-4">Vergleiche</a>
+           <a href="#st-panel-4">Eventuelle Vergleiche & Tests</a>
            
            <input type="radio" name="radio-set" id="st-control-5"/>
            <a href="#st-panel-5">Infos</a>
@@ -49,28 +51,31 @@
                             <li>Wirtschaftsinformatik</li>
                             <li>Medizinische Informatik</li>
                         </ul>
+                       <p>Hier werden zum einen die Statistiken der Studiengänge Bundesweit aufgeführt. Zum anderen werden hier die Studiengänge untereinander verglichen um den Anteil des jeweiligen Studienganges an der Gesamtanzahl aller Studiengänge zu ermitteln. <br>
+                       Zum Beispiel: Anteil von Medieninformatikern Bundesweit in Semester 13/14.</p>
                     </div>
                </section>
                
                <section class="st-panel" id="st-panel-3">
                    <div class="text">
                         <h2>Bundesländer</h2>
-                        <p>Deutschland besitzt 16 Bundesländer mit unteschiedlichsten Bevölkerungsgruppen. Aber wie schaut es sieht es mit seinen Informatik-Studenten aus? </p>
-                       <button id="auswählen">Wähle ein Bundesland</button>
+                        <p>Hier werden die Studienanfänger der Informatik mit den gesamten Studienfächern auf Bundeslandebene verglichen. <br><br>
+                       Zum Beispiel: Anteil der Allgemeinen Informatikeranfänger in Baden-Würthenberg im Vergleich zu allen Studienanfängern in Baden-Würthenberg
+                       </p>
                     </div>
                </section>
                
                <section class="st-panel" id="st-panel-4">
                    <div class="text">
-                   <h2>Vergleiche</h2>
+                   <h2>Eventuelle Vergleiche & Tests</h2>
                    <p>Vergleichen wir die verschiedenen Studiengänge in unseren 16 Bundesländern
                     </p>
                        <ul>
-                           <li>Studiengänge Bundesweit
+                           <li>Bundesweite Ebene
                                 <ul>
                                     <li>Studiengängen Untereinander Bundesweit vergleichen</li>
                                     <li>Geschlechterquote Bundesweit</li>
-                                    <li>Ausländeranteil</li>
+                                    <li>Ausländeranteile in den Studiengängen</li>
                                         <ul>
                                             <li>Geschlechterverteilung</li>
                                         </ul>
@@ -84,7 +89,12 @@
                                 </ul>
                            </li>
                        </ul>
+                       <button id="button" onclick="ChartActive()">Teststatistik</button>
+                       <div id="canvas-holder">
+                       <canvas id="chart-area" height="250" width="500"/>
                        </div>
+                       </div>
+                       
                </section>
                
                <section class="st-panel" id="st-panel-5">

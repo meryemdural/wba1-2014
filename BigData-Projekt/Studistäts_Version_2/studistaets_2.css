@@ -164,6 +164,7 @@ a {
 	-ms-transform: translateY(-400%);
 	transform: translateY(-400%);
 }
+
 .text 
 {
     position: absolute;
@@ -172,21 +173,6 @@ a {
     height: 80%;
     width: 80%;
     
-}
-
-text {
-    
-}
-
-#auswählen 
-{
-    background-color: #428cba;
-    color: #F0F0F0;
-    font-size: 12px;
-    height: 60px;
-    width: 180px;
-    float: left; 
-    margin-right: 40%;
 }
 
 li 
