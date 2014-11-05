@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Medienformate - LiveSession</title>
+
+		<meta name="description" content="Wie binde ich Video- und Audiomaterial auf Webseiten ein">
+		<meta name="author" content="Max Huhn & Oliver Haarmann">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+		
+		<style type="text/css">
+		
+		.reveal .slides .arrow {
+			border: solid transparent;
+			content: "";
+			height: 0;
+			width: 0;
+			position: relative;
+	
+    		border-top-color: #13daec;
+ 			border-width: 14px;
+			border-top-width: 22px;
+			margin-left: 440px;
+			margin-top: -28px;
+			}
+
+		
+		#formate {
+			width: 100%;
+			border-collapse: collapse;
+		}
+				
+		#formate tr th {
+			padding: 10px;
+			border: 5px solid white;
+			text-align: center;
+			color: #13daec; 
+		}
+		
+		#formate tr td {
+			padding: 30px;
+			border: 2px solid white;
+			text-align: center;
+		}
+		
+		#tag {
+			width: 100%;
+			border-collapse: collapse;
+		}
+		
+		#tag tr th {
+			font-size: 1em;
+		}
+		
+		#tag tr td {
+			font-size: .8em;
+			border-bottom: .7px dotted white;
+		}
+		
+		#vergleich { 
+			width: 100%;
+			border-collapse: collapse;	
+		}
+		
+		#vergleich tr td:first-child {
+			border-right: 5px solid white;
+			padding-right: 0;
+		}
+		
+		#vergleich tr td ul li {
+			list-style-type: none;
+			font-size: .6em;
+		}
+		
+		#vergleich tr th {
+			border-bottom: 5px solid white;
+			font-size: 1em;
+		}
+		
+		
+		
+		.rechts li {
+			text-align: right;
+			margin-right: -25%;
+		}
+		
+		.colored {
+			color: #13daec;
+			display: inline;
+		}
+		
+		.liste li {
+			list-style-type: none;
+			text-align: left;
+		}
+		
+		h7 {
+			position: absolute;
+			font-size: .5em;
+			left: 0;
+			top: 100%;
+		}
+		
+		.re {
+			text-align: right;
+		}	
+		
+		video {
+			box-shadow: 0 0 10px white;
+		}
+		
+		.codebsp code p, .codebsp {
+			
+			width: 100%;
+			line-height: 120%;
+			text-align: left;
+			font-size: .45em;
+		}
+		
+		.codebsp code p:first-child {
+			padding-top: 20px;
+		}
+		.codebsp code p:last-child {
+			padding-bottom: 20px;
+		}
+		
+		.codebsp {
+			background-color: rgba(0,0,0,.2);
+			box-shadow: 2px 2px 10px rgba(0,0,0, .5);
+		}
+		
+		.ohne li {
+			text-align: center;
+			list-style-type: none;		
+		}
+		
+		
+		
+		
+		
+		#play, #rew, #fastFwd {
+			border-radius: 15px / 17px;
+			background-color: #13daec;
+			box-shadow: 2px 2px 10px rgba(19,218,236, .8);
+			
+		}
+		#control {
+			position: absolute;
+			top: 70%;
+			left: 70%;
+		}	
+		
+		.picture li {
+			font-size: .75em;
+			list-style-type: circle;
+		}
+		
+		.kleiner p {
+			font-size: .75em;
+		}
+		
+		</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Medienformate</h1>
+					<h3>Welches Format <div class="colored">wann?</div> Und <div class="colored">wie?</div></h3>
+					<p>
+						<small><i>Created by Max Huhn & Oliver Haarmann</i></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Was ist der Plan...</h2>
+						<ul>
+							<li>Welche Formate?<a href="#/2"><div class='arrow'></div></a></li>
+							<li>HTML5, Flash oder Beides?<a href="#/3"><div class='arrow'></div></a></li>
+							<li>Was ist mit Audio?<a href="#/4"><div class='arrow'></div></a></li>
+							<li><code>&lt;picture&gt;</code>-Element...<a href="#/5"><div class='arrow'></div></a></li>
+							<li>Live-Übung<a href="#/6"><div class='arrow'></div></a></li>
+						</ul>
+					</section>
+			
+				<section>
+					<section>
+						<h3>Welche Formate?<br/><br/></h3>
+						<table id='formate'>
+							<tr>
+								<th>.m4v</th>
+								<th>.mp4</th>
+							</tr>
+							<tr>
+								<td><small>Chrome, Safari</small></td>
+								<td><small>Chrome, IE9+, Safari</small></td>
+							</tr>
+							<tr>
+								<th>.ogv/.ogg</th>
+								<th>Flash (.swf/.flv)</th>
+							</tr>
+							<tr>
+								<td><small>Chrome, Firefox</small></td>
+								<td><small>IE6/7/8</small></td>
+							</tr>
+						</table>
+					</section>
+					<section>
+					<h3>4 verschiedene Formate um <div class='colored'><br/>alle<br/></div> Browser abzudecken!<br/><br/></h3>
+					<h5>Nachteile</h5>
+					<ul class="liste">
+						<li><small><u>verbraucht sehr viel Speicherplatz</u></small></li>
+						<li><small>kleine Änderungen dauern länger</small></li>
+					</ul>
+					<h7><br/>Software:&nbsp;&nbsp;&nbsp; <a href="https://handbrake.fr/" target="_blank">hier</a> und <a href="http://v2v.cc/~j/ffmpeg2theora/" target="_blank">hier</a></h7>
+					</section>
+				</section>
+			
+				<section>
+					<section>
+						<h3>HTML5, Flash oder Beides?<br/></h3>
+						<h5><div class="colored">&lt;video&gt;-Element</div></h5>
+						<table id="vergleich">
+						<tr>
+							<th><i>Vorteile</i></th>
+							<th><div class="re"><i>Nachteile</i></div></th>
+						</tr>
+						<tr>
+							<td>
+								<ul>
+									<li>einfacher Code</li>
+									<li>keine Plug-ins nötig</li>
+									<li>schnellere Ladezeiten</li>
+									<li>kann mit JavaScript gesteuert werden</li>
+								</ul>
+							</td>
+							<td>
+								<ul class="rechts">
+									<li>kein Streaming</li>
+									<li>kein stylen mit CSS</li>
+									<li>wenige Metadaten (SEA?)</li>
+									<li>Fullscreen -> Browser überlassen </li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+					</section>
+					<section>
+						<h5><div class="colored">&lt;video&gt;-Element</div></h5>
+						<table id="tag">
+						<tr>
+							<th><code>&lt;video ...</code></th>
+						</tr>
+						<tr>
+							<td><code>width=""</code></td>
+							<td>Breite des Videos</td>
+						</tr>
+						<tr>
+							<td><code>height=""</code></td>
+							<td>Höhe des Videos</td>
+						</tr>
+						<tr>
+							<td><code>poster=""</code></td>
+							<td>Bild, wenn Video noch nicht gestartet</td>
+						</tr>
+						<tr>
+							<td><code>autoplay</code></td>
+							<td>Video wird sofort gestartet</td>
+						</tr>
+						<tr>
+							<td><code>controls</code></td>
+							<td>play, pause, stop... </td>
+						</tr>
+						<tr>
+							<td><code>autobuffer</code></td>
+							<td>Speichert das Video beim Laden zwischen</td>
+						</tr>
+						<tr>
+							<td><code>muted</code></td>
+							<td>Video auf stumm geschaltet</td>
+						</tr>
+						<tr>
+							<td><code>loop</code></td>
+							<td>Nach Ende beginnt es wieder von Vorne</td>
+						</tr>
+						</table>
+					</section>
+				
+					<section>
+						<h5><div class="colored">Code-Beispiel</div></h5>
+						<div class="codebsp"><code><p>&nbsp;&nbsp;  &lt;video controls muted width="500" height="300" poster="chameleon.jpg" autobuffer&gt;</p>
+						<p>&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="wildlife.mp4" type="video/mp4"&gt;</p>
+						<p>&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="wildlife.m4v" type="video/mp4"&gt;</p>
+						<p>&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="wildlife.ogv" type="video/ogg"&gt;</p>
+						<p>&nbsp;&nbsp;  &lt;/video&gt;</p></code></div>
+						<br/>
+						<video controls muted width="500" height="300" poster="http://perlenidee.de/uni/video/chameleon.jpg" autobuffer>
+							<source src="http://perlenidee.de/uni/video/wildlife.mp4" type="video/mp4">
+						</video>
+					</section>
+				
+					<section>
+					<h5><div class="colored">Flash</div></h5>
+					<ul class="ohne">
+						<li><small>funktioniert nur, wenn Flash als Plug-in installiert ist</small></li>
+						<li><small>muss als &lt;object&gt; eingebunden werden</small></li>
+					</ul>
+					<div class="codebsp"><code><p>&nbsp;&nbsp; &lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+												<br/>&nbsp;&nbsp;&nbsp;&nbsp;codebase="http://fpdownload.adobe.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0"
+												<br/>&nbsp;&nbsp;&nbsp; height="300" type="application/x-shockwave-flash" width="500"&gt;</p>
+ 											   <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;param name="movie" value="player.swf" /&gt;</p>
+  											   <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;param name="flashvars" value="file=wildlife.mp4" /&gt;</p>
+  											   <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;param name="allowfullscreen" value="true" /&gt;</p>
+											   <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;img src="chameleon.jpg" alt="Alternatives Bild" width="500" height="300" /&gt;&lt;/a&gt;</p>
+											   <p>&nbsp;&nbsp; &lt;/object&gt;</p></code>
+					
+					</div>
+					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.adobe.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" height="250" type="application/x-shockwave-flash" width="450">
+   						<param name="movie" value="player.swf" />
+   						<param name="flashvars" value="file=http://perlenidee.de/uni/video/wildlife.mp4" />
+   						<param name="allowfullscreen" value="true" /> 
+   						<param name="allowscriptaccess" value="always" />
+   						<img src="http://perlenidee.de/uni/video/chameleon.jpg" alt="Alternatives Bild" width="450" height="250" /></a>
+					</object>
+					<h7>Links:&nbsp;&nbsp;<a href="http://www.mediaevent.de/tutorial/html-video-tag-object-tag.html" target="_blank">hier</a> und <a href="http://www.asdala.de/netz/html/video.html" target="_blank">hier</a></h7>
+
+					</section>
+				</section>
+			
+				<section>
+					<section>
+						<h3>Audio-Formate<br/><br/></h3>
+						<table id='formate'>
+							<tr>
+								<th>.mp3</th>
+								<th>.wav</th>
+							</tr>
+							<tr>
+								<td><small>IE9+, Chrome, FF, Safari, Opera</small></td>
+								<td><small>Chrome, FF, Safari, Opera</small></td>
+							</tr>
+							<tr>
+								<th>.ogg</th>
+								<th></th>
+								
+							</tr>
+							<tr>
+								<td><small>Chrome, FF, Opera</small></td>
+								<td><small></small></td>
+							</tr>
+						</table>
+					</section>
+
+					<section>
+						<h5><div class="colored">&lt;audio&gt;-Element</div></h5>
+						<table id="tag">
+						<tr>
+							<th><code>&lt;audio ...</code></th>
+						</tr>
+						<tr>
+							<td><code>autoplay</code></td>
+							<td>Audio wird sofort gestartet</td>
+						</tr>
+						<tr>
+							<td><code>muted</code></td>
+							<td>Audio zu beginn stumm</td>
+						</tr>
+						<tr>
+							<td><code>controls</code></td>
+							<td>Leiste mit Steuerungsfunktionen (z.B. play)</td>
+						</tr>
+						<tr>
+							<td><code>loop</code></td>
+							<td>Audio in Dauerschleife</td>
+						</tr>
+
+						<tr>
+							<td><code>volume</code></td>
+							<td>Lautstärke (0.0 - 1.0)</td>
+						</tr>
+						</table>
+					</section>
+
+					<section>
+						<h5><div class="colored">Code-Beispiel</div></h5>
+						<div class="codebsp"><code><p>&nbsp;&nbsp;  &lt;audio controls muted loop&gt;</p>
+						<p>&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="audio-bsp.mp3" type="audio/mp3"&gt;</p>
+						<p>&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="audio-bsp.wav" type="audio/wav"&gt;</p>
+						<p>&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="audio-bsp.ogg" type="audio/ogg"&gt;</p>
+						<p>&nbsp;&nbsp;  &lt;/audio&gt;</p></code></div>
+						<br/>
+
+
+
+						<audio controls muted loop>
+							<source src="http://perlenidee.de/uni/audio/audio-bsp.mp3" type="audio/mp3" />
+							Ihr Browser kann html5-audio nicht verarbeiten! (Sie arbeiten doch nicht etwa mit dem Internet Explorer?!?)
+						</audio>
+
+
+					</section>
+					
+					
+					<section>
+						<h5><div class="colored">mit JavaScript manipulieren...</div></h5>
+						<table id="tag">
+						<tr>
+							<th>Methoden</th>
+						</tr>
+						<tr>
+							<td><code>play()</code></td>
+							<td>startet Video/Audio</td>
+						</tr>
+						<tr>
+							<td><code>pause()</code></td>
+							<td>pausiert Video/Audio</td>
+						</tr>
+						<tr>
+							<th>Attribute</th>
+						</tr>
+						<tr>
+							<td><code>currentTime</code></td>
+							<td>aktuelle Spielzeit Video/Audio</td>
+						</tr>
+						<tr>
+							<td><code>duration</code></td>
+							<td>gibt die Länge von Video/Audio zurück</td>
+						</tr>
+						<tr>
+							<td><code>ended</code></td>
+							<td>(boolean) ob die Datei zuende gelaufen ist</td>
+						</tr>
+						<tr>
+							<td><code>volume</code></td>
+							<td>gibt die Lautstärke zurück oder legt Neue fest</td>
+						</tr>
+						<tr>
+							<td><code>paused</code></td>
+							<td>zeigt ob die Datei pausiert oder legt es fest</td>
+						</tr>
+					</table>
+					<h7>Für noch mehr JavaScript:&nbsp;&nbsp; <a href="http://www.w3schools.com/tags/ref_av_dom.asp" target="_blank">hier</a> oder <a href="http://www.chipwreck.de/blog/2010/03/01/html-5-video-dom-attributes-and-events/" target="_blank">hier</a> klicken!</h7>
+					</section>
+					
+					<section>
+						<h5><div class="colored">Code-Beispiel</div></h5>
+						<div class="codebsp"><code><p>
+						    &nbsp;&nbsp; &lt;audio id="audio"&gt;<br/>
+   							&nbsp;&nbsp; &nbsp;&nbsp;&lt;source src="audio-bsp.m4a" type="audio/x-aac" /&gt;<br/>
+   							&nbsp;&nbsp; &nbsp;&nbsp;&lt;source src="audio-bsp.mp3" type="audio/mpeg" /&gt;<br/>
+   							&nbsp;&nbsp; &nbsp;&nbsp;&lt;source src="audio-bsp.ogg" type="audio/ogg" /&gt;<br/>
+							&nbsp;&nbsp; &nbsp;&nbsp;&lt;p&gt;Dieser Browser unterstützt HTML5 audio nicht&lt;/p&gt;<br/>
+						&nbsp;&nbsp; &lt;/audio&gt;<br/><br/>
+						
+						&nbsp;&nbsp; &lt;div id="buttonbar"&gt;<br/>
+						    &nbsp;&nbsp; &nbsp;&nbsp;&lt;button id="rew" onclick="skip(-10)"&gt;&lt;&lt;</button><br/>
+						    &nbsp;&nbsp; &nbsp;&nbsp;&lt;button id="play" onclick="vidplay()"&gt;&gt;</button><br/>
+						    &nbsp;&nbsp; &nbsp;&nbsp;&lt;button id="fastFwd" onclick="skip(10)"&gt;&gt;&gt;</button><br/>
+						&nbsp;&nbsp; &lt;/div&gt;<br/><br/>         
+						
+						&nbsp;&nbsp; &lt;script type="text/javascript"&gt;<br/>
+						   
+						   &nbsp;&nbsp;&nbsp; function vidplay() {<br/>
+						   		&nbsp;&nbsp;&nbsp;&nbsp;var audio = document.getElementById('audio');<br/>
+						   		&nbsp;&nbsp;&nbsp;&nbsp;var button = document.getElementById('play');<br/>
+						   		&nbsp;&nbsp;&nbsp;&nbsp;if(audio.paused) {<br/>
+						   			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audio.play();<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button.textContent = "||";<br/>
+							    &nbsp;&nbsp;&nbsp;&nbsp;else {<br/>
+						   			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audio.pause();<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button.textContent = ">";<br/>
+							    &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+						   &nbsp;&nbsp;&nbsp;}<br/>
+						   
+						   &nbsp;&nbsp;&nbsp;function skip(value) {<br/>
+						        &nbsp;&nbsp;&nbsp;&nbsp;var video = document.getElementById('audio');<br/>
+						        &nbsp;&nbsp;&nbsp;&nbsp;video.currentTime += value;<br/>
+						   &nbsp;&nbsp;&nbsp;}<br/>      
+						&nbsp;&nbsp;&lt;/script&gt;<br/></p>
+						</code>
+						</div>
+						
+						<br/>
+						<div id="control">
+						<audio id="audio">
+   							<source src="loop-02.m4a" type="audio/x-aac" />
+   							<source src="http://perlenidee.de/uni/audio/audio-bsp.mp3" type="audio/mpeg" />
+   							<source src="http://perlenidee.de/uni/audio/audio-bsp.ogg" type="audio/ogg" />
+							<p>Dieser Browser unterstützt HTML5 audio nicht</p>
+						</audio>
+						
+						<div id="buttonbar">
+						    <button id="rew" onclick="skip(-10)">&lt;&lt;</button>
+						    <button id="play" onclick="vidplay()">&gt;</button>
+						    <button id="fastFwd" onclick="skip(10)">&gt;&gt;</button>
+						</div>         
+						
+						<script type="text/javascript">
+						   
+						   function vidplay() {
+						   		var audio = document.getElementById('audio');
+						   		var button = document.getElementById('play');
+						   		if(audio.paused) {
+						   			audio.play();
+									button.textContent = "||";
+							   } else {
+						   			audio.pause();
+									button.textContent = ">";
+							   }
+						   }
+						   
+						   function skip(value) {
+						        var video = document.getElementById('audio');
+						        video.currentTime += value;
+						   }      
+						</script>
+						</div>
+
+					</section>
+				
+				</section>
+			
+				<section>
+						<h3>&lt;picture&gt;-Element<br/><br/></h3>
+						<h5><div class="colored">Warum nicht img? </div>Vorteile von &lt;picture&gt;</h5>
+
+						<ul class="picture">
+							<li>Bisheriges Verfahren: Einbindung durch &lt;img&gt; und Viewport-Anpassung durch CSS</li>
+							<li>Nachteil: Auch bei mobilen Geräten Einbindung hochauflösender Bilder (unnötig lange Ladezeiten)</li></br>
+							<li>&lt;picture&gt; ermöglicht alternative Bildquellen für verschiedene Viewports<br> --> <div class="colored">Ideal für responsives Design!</div></li>
+							<li>Bei fehlender Browserunterstützung: Fallback-Funktion (Angabe des üblichen img-Bildes)</li>
+							<li>Nachteil: Bislang lediglich von Chrome Chanary (Dev. Version) unterstützt!</li>
+						</ul>
+				</section>
+
+			
+			
+				<section>
+				<h3>Live-Übung</h3>
+				<p>Erstellen Sie eine Seite und binden Sie auf dieser eine Videodatei und eine Audiodatei ein. 
+				<small><div class="colored">(Browserkompatibilität muss gewährleistet sein!)</div></small></p>
+				<div class="kleiner"><p>Das Audiomaterial soll dauerhaft im Hintergrund laufen und nur bei Start des Videos pausieren.</p>
+				<p>Das &lt;video&gt;-Element darf nicht das Attribut <code>controls</code> verwenden, stattdessen sollen mit
+				JavaScript Buttons erstellt werden für folgende Funktionen:</p></div>
+				<ul class="picture">
+					<li>Play/Pause/Stop</li>
+					<li>Vorspulen/Zurückspulen</li>
+					<li>Lautstärkeregelung</li>
+				</ul>
+				</section>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
