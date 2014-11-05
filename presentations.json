@@ -56,17 +56,17 @@
 			"title" : "Social Media Livesession",
 			"authors" : ["Dajana Jeyaratnam", "Sophie Stelzer"]
 		},
-<<<<<<< HEAD
+
 		"2014-11-06 Medienformate-Livesession/praesentation.html":
 		{
 			"title" : "Medienformate Livesession",
 			"authors" : ["Oliver Haarmann", "Maximilian Huhn"]
-=======
+		},
+
 		"2014-11-06-seo-livesession/index.html":
 		{
 			"title" : "SEO Livesession",
 			"authors" : ["Roman Seibt", "Markus Ernst"]
->>>>>>> SEO-LIVESESSION
 		}
 	}
 }
