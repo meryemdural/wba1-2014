@@ -1,4 +1,3 @@
-
 body {
     overflow: hidden;
     font-family: avenir next, arial;
@@ -23,7 +22,6 @@ a {
     bottom: 0px;
     width: 20%;
     cursor: pointer;
-    font-size: 16pt;
     height: 40px;
     line-height: 40px;
 }
@@ -38,17 +36,9 @@ a {
     background: #428bca;
     color: #ffb600;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
 }
-.content:before {
-    content: '';
-    position: fixed;
-    width: 100%;
-    height: 40px;
-    background: 428bca;
-    z-index: 9;
-    bottom: 0;
-}
+
 
 #st-control-1, #st-control-1 + a {
     left: 0;
@@ -120,39 +110,22 @@ a {
 
 .st-panel h2 {
     color: #428bca;
-    text-shadow: 1px 1px 1px rgba(66,139,202,0.3);
-    position: absolute;
+    text-shadow: 2px 1px 1px rgba(66,139,202,0.3);
     font-size: 46px;
     font-weight: 900;
-    width: 80%;
-    left: 10%;
     text-align: center;
     line-height: 50px;
-    margin: -70px 0 0 0;
-    padding: 0;
-    top: 25%;
     -webkit-backface-visibility: hidden;
 }
 
 
 .st-panel p {
-    position: absolute;
     font-size: 16px;
     line-height: 22px;
-    z-index: 2;
-    padding: 0;
-    width: 50%;
-    left: 25%;
-    top: 28%;
-    margin: 10px 0 0 0;
 }
 
 .st-panel ul{
-    list-style: none;  
-    position: absolute;
-    width: 50%;
-    left: 23%;
-    top: 30%;
+    list-style: none;
 }
 
 
@@ -190,4 +163,33 @@ a {
 	-o-transform: translateY(-400%);
 	-ms-transform: translateY(-400%);
 	transform: translateY(-400%);
+}
+.text 
+{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    height: 80%;
+    width: 80%;
+    
+}
+
+text {
+    
+}
+
+#auswählen 
+{
+    background-color: #428cba;
+    color: #F0F0F0;
+    font-size: 12px;
+    height: 60px;
+    width: 180px;
+    float: left; 
+    margin-right: 40%;
+}
+
+li 
+{
+    padding: 20px;
 }
