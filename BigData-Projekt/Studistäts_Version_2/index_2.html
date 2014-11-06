@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="studistaets_2.css">
-    <script src="JSON%20Auslese%20Test/Statistik.js"></script>
-    <script src="JSON%20Auslese%20Test/jquery-2.1.1.js"></script>
-    <script src="JSON%20Auslese%20Test/jquery.js"></script>
-    <script src="JSON%20Auslese%20Test/Chart.js-master/Chart.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="JsonAufruf.js"></script>
+    <script type="text/javascript" src="JSON Auslese Test/Statistik.js"></script>
+    <script src="../Chart.js-master/Chart.js"></script>
     <title>Studistäts - Vergleichen Sie die Studiengänge der FH Köln</title>
 </head>
 <body>
@@ -71,7 +71,8 @@
                    <p>Vergleichen wir die verschiedenen Studiengänge in unseren 16 Bundesländern
                     </p>
 
-                       <button onclick="ChartActive();" id="button">Teststatistik</button>
+                       <button onclick="ChartActive()" id="button2">Teststatistik</button>
+
                        <div id="canvas-holder">
                        <canvas id="chart-area" height="250" width="500"/>
                        </div>
