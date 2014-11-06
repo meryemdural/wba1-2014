@@ -1,0 +1,10 @@
+﻿
+.favorite_button {
+    background-image: url(../favorite_button_image/3d-yellow-star.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 30px;
+    color: white;
+    font: bold 14px 'Trebuchet MS';
+    cursor: pointer;
+}
