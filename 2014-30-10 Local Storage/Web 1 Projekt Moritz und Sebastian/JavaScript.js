@@ -7,15 +7,18 @@ var wrap = "<div id='imgThumbnail'>";
 var textWrap = "<div id='thumbnailTextWrap'>";
 
 var price = {
-    id1: 159,
-    id2: 129
+    id1: 10,
+    id2: 15
 };
 
 var pictures = {
     filePath1: "images/worlds_end.jpg",
     filePath2: "images/home_front.jpg",
     filePath3: "images/grand_master.jpg",
-    filePath4: "images/machete_kills.jpg"
+    filePath4: "images/machete_kills.jpg",    
+    filePath5: "images/the_godfather.jpg",
+    filePath6: "images/schindlers_list.jpg"
+
 };
 
 var titteler = {
@@ -23,6 +26,8 @@ var titteler = {
     tittel2: "Homefront",
     tittel3: "Yi dai zong shi",
     tittel4: "Machete Kills",
+    tittel5: "The Godfather",
+    tittel6: "Schindler's List"
   
 };
 
@@ -30,7 +35,10 @@ var beskrivelse = {
     info1: "Five friends who reunite in an attempt to top their epic pub crawl from 20 years earlier unwittingly become humankind's only hope for survival",
     info2: "A former DEA agent moves his family to a quiet town, where he soon tangles with a local meth druglord.",
     info3: "The story of martial-arts master Ip Man, the man who trained Bruce Lee.",
-    info4: "The U.S. government recruits Machete to battle his way through Mexico in order to take down an arms dealer who looks to launch a weapon into space."
+    info4: "The U.S. government recruits Machete to battle his way through Mexico in order to take down an arms dealer who looks to launch a weapon into space.",
+    info5: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    info6: "In Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis."
+    
 };
 
 var actionPriser = $(document).ready(function () {
@@ -43,6 +51,8 @@ var actionBilder = $(document).ready(function () {
     $("#flexImgBox2").append("<img src=" + pictures.filePath2 + " />");
     $("#flexImgBox3").append("<img src=" + pictures.filePath3 + " />");
     $("#flexImgBox4").append("<img src=" + pictures.filePath4 + " />");
+    $("#flexImgBox5").append("<img src=" + pictures.filePath5 + " />");
+    $("#flexImgBox6").append("<img src=" + pictures.filePath6 + " />");
 });
 
 var actionTittel = $(document).ready(function () {
@@ -50,6 +60,8 @@ var actionTittel = $(document).ready(function () {
     $(".seksjonsTittel2").filter(":nth-child(1)").append(titteler.tittel2);
     $(".seksjonsTittel3").filter(":nth-child(1)").append(titteler.tittel3);
     $(".seksjonsTittel4").filter(":nth-child(1)").append(titteler.tittel4);
+    $(".seksjonsTittel5").filter(":nth-child(1)").append(titteler.tittel5);
+    $(".seksjonsTittel6").filter(":nth-child(1)").append(titteler.tittel6);
 });
 
 var actionTittel = $(document).ready(function () {
@@ -57,18 +69,23 @@ var actionTittel = $(document).ready(function () {
     $(".info2").append(beskrivelse.info2);
     $(".info3").append(beskrivelse.info3);
     $(".info4").append(beskrivelse.info4);
+    $(".info5").append(beskrivelse.info5);
+    $(".info6").append(beskrivelse.info6);
 });
 
 var ddSlider = $(document).ready(function () {
 
-    var dfault = $("#Sjul").click(function () {
-        $("#SlideUpDown").slideUp("slow");
-    });
-
-
-    var ntdfault = $("#arrowDown").click(function () {
-        $("#SlideUpDown").slideDown("slow");
-    });
+    
+    $("#arrowDown").click(function () {
+        if ($("#SlideUpDown").is(":hidden")) {
+            $("div").slideDown("slow");
+            $("#arrowDown").css("transform:rotate(180deg)");
+        } else {
+            $("#SlideUpDown").slideUp("slow");
+            $("#arrowDown").css("transform:rotate(90deg)");
+        }
+        });
+   
 });
 
 
@@ -103,6 +120,22 @@ var ddInput = $(document).ready(function () {
         $("#afterthis").after(
            horizontalline + wrap + "<img src=" + pictures.filePath4 + " />" + "</div>" +
            textWrap + "<p id='tittel'>" + titteler.tittel4 +
+           "</p><p class='thumbnailpris'>Kr " + price.id1 + " </p>" +
+           "<div id='slettKnapp'></div>" + "</div>"
+       );
+    });
+    var knapp5 = $(".buyBtn5").click(function () {
+        $("#afterthis").after(
+           horizontalline + wrap + "<img src=" + pictures.filePath5 + " />" + "</div>" +
+           textWrap + "<p id='tittel'>" + titteler.tittel5 +
+           "</p><p class='thumbnailpris'>Kr " + price.id2 + " </p>" +
+           "<div id='slettKnapp'></div>" + "</div>"
+       );
+    });
+    var knapp6 = $(".buyBtn6").click(function () {
+        $("#afterthis").after(
+           horizontalline + wrap + "<img src=" + pictures.filePath6 + " />" + "</div>" +
+           textWrap + "<p id='tittel'>" + titteler.tittel6 +
            "</p><p class='thumbnailpris'>Kr " + price.id1 + " </p>" +
            "<div id='slettKnapp'></div>" + "</div>"
        );

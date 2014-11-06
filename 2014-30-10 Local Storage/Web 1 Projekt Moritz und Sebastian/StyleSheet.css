@@ -7,12 +7,12 @@
 }
 
 body {
-     width:1000px;
+     width:1010px;
      height:auto;
      margin:auto;
      background-repeat:no-repeat;
-     background-image:url(images/platekompaniet.png);   
-     background-position:1% 0%;
+     /*background-image:url(images/platekompaniet.png);   */
+     background-position:0% 0%;
      border:solid 1px #E8E8E8;
      border-right-style:none;
      border-left-style:none;
@@ -31,18 +31,28 @@ body {
 
 #ml-mainWrapper {
 margin:120px auto;
-width:960px;
-height:460px;
+width:1000px;
+height:auto; /*460px*/
 position:relative;
 border-radius:5px;
+border-bottom-color:rgba(215, 44, 44, 0);
+border-bottom-style: none;
 
+}
+
+#ml-action-nyheter{
+    height:200px;
+}
+
+#ml-action-nyheter-sub {
+
+    height:auto;
 }
 
 #ml-action-nyheter, #ml-action-nyheter-sub{
     top:20px;
     margin:10px 10px auto;
-    width:80%;
-    height:200px;
+    width:78%;
     border-radius:2px;
     position:relative;
     padding-top:10px;
@@ -84,7 +94,7 @@ h3 {
 }
 
 
-.buyBtn1, .buyBtn2,.buyBtn3,.buyBtn4, #handlekurv{
+.buyBtn1, .buyBtn2,.buyBtn3,.buyBtn4,.buyBtn5,.buyBtn6, #basket{
 background-image: url(images/cart.png);
 background-repeat: no-repeat;
 background-position: left;
@@ -94,18 +104,18 @@ font: bold 14px 'Trebuchet MS';
 cursor: pointer;
 
 }
-.buyBtn1, .buyBtn2,.buyBtn3,.buyBtn4 {
+.buyBtn1, .buyBtn2,.buyBtn3,.buyBtn4, .buyBtn5,.buyBtn6 {
 background-color:red;
 padding-left: 30px;
 border: 1px solid red;
--webkit-border-radius: 4px;
+-webkit-border-radius: 2px;
 margin:-10px auto;
 
 /*background:-webkit-linear-gradient(top, red 0%, red 100%); for å gjøre den mer knapp aktig, men har høyre z index en background-image*/
 
 }
 
- #handlekurv {   
+ #basket {   
     top:80px;
     z-index:1;
     left:800px;
@@ -130,7 +140,7 @@ margin:-10px auto;
     border-left:1px solid white;
 }
 
-#gåtilkassen {
+#idProfil {
     
     color:white;
     position:absolute;
@@ -183,7 +193,7 @@ transform:rotate(90deg);
     cursor:pointer;
 }
 
-#textWrap #Sjul, #gåtilkassen2 {
+#textWrap #Sjul, #payment {
         font-size:10px;
         display:inline-block;
     }
@@ -216,3 +226,6 @@ background-size:20px;
 cursor:pointer;
 bottom:10px; left:160px; position:relative;
 }
+
+
+
