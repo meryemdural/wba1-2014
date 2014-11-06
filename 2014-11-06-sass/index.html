@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SASS von Tobi und Anatol</title>
+
+		<meta name="description" content="Presentation zu CSS/SCSS/SASS">
+		<meta name="author" content="Tobias Szuminski">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                
+				<section>
+					<h1>SASS</h1>
+					<h3>Livesession zu CSS Präprozessoren </h3>
+					<p>
+						<small>Created by Tobias Szuminski & Anatol Walger</small>
+					</p>
+                    <img src="img/logo.png" alt="SASS LOGO"> </img>
+				</section>
+                
+                <section>
+                    <h2><u>Map</u></h2><br>
+                    <ul>
+                        <li>Sass Einführung</li>
+                        <li>Installation</li>
+                        <li>Einstieg
+                            <ul>
+                                <li>Variabeln</li>
+                                <li>Dynamisches Layout</li>
+                                <li>Nesting</li>
+                                <li>@import</li>
+                               
+                           
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            
+                <section>
+                    <h2><u>Map</u></h2><br>
+                    <ul>
+                       <li>@extend</li>
+                                  <li>@mixin</li>
+                                   <li>@mixin vs. @extend</li>
+                                <li>Sass Funktionen</li>
+                                   <li>Fazit</li>
+                    </ul>
+                    <br><br>
+                    <p>Und zum Abschluss noch eine Übung :) </p>
+                </section>
+            
+                <section>
+                    <h2><u>SASS</u></h2><br>
+                    <ul>
+                        <li>Syntactically Awesome Stylesheet</li>
+                        <li>2007 </li>
+                        <li>Hampton Catlin</li>
+                        <li>Natalie Weizenbaum</li>
+                    </ul>
+                </section>
+            
+                 <section>
+                    <h2><u>SASS Compiler</u></h2><br>
+                    <ul>
+                        <li>Auto Formatierung</li>
+                        <li>weniger Schreibarbeit</li>
+                        <li>Besserer Workflow</li>
+                        <li>Ruby wird benötigt</li>
+                        
+                    </ul>
+                </section>
+                    
+                <section>
+                    <section>
+                        <h2><u>Installieren</u></h2><br>
+                        <p>Für die Installation wird Ruby vorausgesetzt. Unter Mac OS ist dies vorinstalliert.</p><br>
+                        <ul>
+                            <li>ruby -v </li>
+                            <li>Mac einfach weiter</li>
+                            <li>Windows scroll down</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2><u>Windows Install</u></h2>
+                        <ul>
+                            <li><a href="http://rubyinstaller.org/downloads/" target="_blank"> Ruby Windows Download hier</a></li>
+                            <li>Downloaden und installieren</li>
+                            <li>In der Kommandozeile mit ruby -v testen</li>
+                        </ul>
+                    </section>
+                </section>
+            
+                <section>
+                <h2><u>SASS installieren</u></h2><br>
+                    <ul>
+                        <li>MacOS Terminal</li>
+                        <ul><li>sudo gem install sass</li></ul>
+                        <li>Windows CMD</li>
+                        <ul><li>gem install sass</li></ul>
+                    </ul><br><br>
+                    <p>Noch einmal testen mit sass -v</p>
+                </section>
+        
+                <section>
+                <h2><u>SASS Befehle</u></h2><br>
+                    <ul>
+                        <li>Manuelle Konvertierung </li>
+                        <ul><li><code>sass main.scss main.css</code></li></ul>
+                        <li>Automatische Konvertierung</li>
+                        <ul><li><code>sass --watch main.scss:main.css</code></li></ul>
+                        <li>Ordner Auto Konvertierung</li>
+                        <ul><li><code>sass --watch "Ordner"</code></li></ul>
+                        <li>Styling Optionen</li>
+                        <ul><li><code>sass --style nested/expanded/compact/compressed</code></li></ul>
+                        
+                    </ul><br><br>
+                    <p>Livebeispiel</p>
+                    <p>Scout ohne Console</p>   
+                </section>
+                
+                <section>
+                <h2><u>SASS vs. SCSS</u></h2><br>
+                    <ul>
+                        <li> SASS benötigt keine <code>; {  }</code></li>
+                        <li> SASS muss immer korrekt eingerückt werden (auch Leerzeichen)</li>
+                     
+                        <li> SCSS (Sassy CSS) ist einfacher zu verstehen, sehr an CSS angelehnt</li>
+                    </ul><br><br><br>
+                    <a href="http://sassmeister.com/gist/788871d2832d33377c20" target="_blank">Beispiel Sassmeister</a>
+                    
+                        
+                </section>
+                
+                 <section>
+                <h2><u>Unterschiede zwischen SCSS und CSS</u></h2><br>
+                    <ul>
+                        <li>Dateiendungen .sass und .scss aktuell nicht von Browsern lesbar</li>
+                         <li>CSS ist leichter zu verstehen</li>
+                         <li>Bereits kompilierte Dateien im Cache</li>
+                         <li>// Kommentare nur in SASS bzw. SCSS lesbar</li>  
+                         <li>/* */ Kommentar auch im CSS Code sichtbar</li>
+                          <li>SASS/SCSS Code besser geeignet für größere Projekte mit vielen wiederholenden Elementen</li>
+
+                    </ul><br><br><br>
+                    <a href="http://sassmeister.com/gist/aa412887bf5d7590bc38" target="_blank">Beispiel Sassmeister</a>
+                    
+                        
+                </section>
+        
+                 <section>
+                    <h2><u>Variablen</u></h2>
+                    <h6>Variablen anlegen</h6></h1>
+                    <br><br>
+                    <ul><center>
+                        <code>$meineVariable: #FFFFFF;</code><br><br>
+                        "$" + "Name" +  ":"   +   "Wert"  + ";"
+                   </center><br><li>Globale und lokale Variablen</li>
+                   <li>Mögliche Werte: Pixel, Prozent, Farben, etc.</li>
+                    <li>Alle Grundrechenarten (+,-,*,/)</li> 
+                     </ul>
+                </section>
+    
+                <section>
+                    <h2><u>Variablen</u></h2>
+                    <h6>Variablen benutzen</h6></h1>
+                    <br><br>
+                    <ul><li><center>
+                        <code>background-color: $meineVariable;</code><br><br /><br />
+                        "Selektor" + ":" + "$" + "Name" + ";"
+                   </center></li></ul>
+                    <a href="http://sassmeister.com/gist/d68503e424f5d345daf4" target="_blank"> 
+                        <br><br><br>
+                        Beispiel Sassmeister</a>
+                </section>
+                
+                <section>
+                    <h2><u>Dynamisches Layout</u></h2>
+        
+                    <br><br>
+                    <ul><li>
+	                   Berechnungen direkt im Code möglich
+                    </li>
+                    <li>
+	                    Alle Grundrechenarten (+,-,*,/)
+                    </li>
+       
+                    <li>Proportionen beibehalten</li>                     </ul>
+                    <a href="http://sassmeister.com/gist/051022813b8527a63716" target="_blank">
+                        <br><br><br>
+                        Beispiel Sassmeister</a>
+                </section>
+                
+        
+                 <section>
+                    <h2><u>Nesting</u></h2>
+                    <br><br>
+                    <ul>
+                        <li>Verschachtelte Selektoren</li>
+                        <li>Domänen definieren</li>
+                        <li>angesprochenes Element genauer spezifizieren</li>
+                        <li>Code wird lesbarer und individueller</li>
+                       
+                        <li>Problem: viele Selektoren werden wiederholt</li>
+                        <li>DRY (Don't repeat yourself)</li>
+                        <li>Inception Rule (nicht weiter als 4 Ebenen gehen)</li>
+                    </ul>
+                     <br><br>
+                     <a href="http://sassmeister.com/gist/4af194b71733ff4bb83e" target="_blank">Beispiel Sassmeister</a><br />
+                     <a href="http://sassmeister.com/gist/6d1eb42c453314863ed0" target="_blank">Negativbeispiel</a>
+                     
+                </section>
+    
+				 <section>
+                    <h2><u>@import</u></h2>
+                    <br><br>
+                    <center><code>Syntax: @import "Dateiname";</code></center>
+                    <br />
+                    <ul>
+                    	<li>erweitert CSS @import um SASS und SCSS Dateien</li>
+                    	<li>SASS und SCSS Dateien mit Unterstrich im Namen nicht in CSS Code importiert</li>
+                        <li>zu viele Style-Dateien verursachen unnötige HTTP Requests</li>
+                        <li>SASS kann kleinere Style Dateien in eine große Style Datei verschmelzen</li>
+                        
+                    </ul>
+                </section>
+    
+                <section>
+                    <h2><u>@extend</u></h2>
+                    <br><br>
+                    <ul>
+                        <li>Code sollte semantisch sein (blue_button != checkout_button)</li>
+                        <li>fasst Selektoren mit gleichen Attributen zusammen</li>
+                        <li>Attribute können überschrieben werden</li>
+                        <li>Placeholder Selektor (%) macht @extend unsichtbar im CSS</li>
+                    </ul>
+                     <br><br>
+                     <a href="http://sassmeister.com/gist/ccba140dfc260678201d" target="_blank">Beispiel Sassmeister</a>
+                </section>
+                
+                <section>
+                    <h2><u>@mixin</u></h2>
+                    <h6>Mixin anlegen</h6>
+                    <br><br>
+                    <center>
+                            <code>@mixin MinxinName(Argumente) {}</code><br><br>
+                            "@" + "mixin" + "MixinName" (+ "Argumente") + "{Inhalt}"<br><br> 
+                    </center>
+                    <ul><li>Funktion ähnlich zu @extend</li>
+                    <li>Attribute und Werte können nicht überschrieben werden</li>
+                    <li>Argumente optional</li>
+                    <li>Default Werte direkt in Argumenten</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2><u>@mixin</u></h2>
+                    <h6>Mixin verwenden</h6>
+                    <br><br>
+                    <center>
+                            <code>@include MinxinName(Argumente);</code><br><br>
+                            "@" + "MixinName" (+ "Argumente") + ";"<br><br>
+                        
+                        <a href="http://sassmeister.com/gist/c9a398454d41e0519a06" target="_blank">Beispiel Sassmeister</a>
+                    </center>
+                </section>
+    
+                
+    
+                <section>
+                     <h2><u>@mixin vs. @extend</u></h2>
+                    <h6>Wann verwendet man was?</h6>
+                    <br><br>
+                    <center>
+                        <a href="http://sassmeister.com/gist/39f72a243e8f378d072a" target="_blank">Beispiel Sassmeister</a>
+                    </center>
+                </section>
+                
+    
+                <section>
+                <h2><u>Sass Funktionen</u></h2>
+                   <br />
+                    <center>
+                            <code>lighten($color,$amount);</code><br />
+                            <code>darken($color,$amount);</code>
+                            <br><br>
+                             <a href="http://sassmeister.com/gist/f88586eab138a8b0930a" target="_blank">Beispiel Sassmeister</a>
+                          <br />
+                           <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html" target="_blank">Weitere Funktionen</a>
+                       
+                    </center>
+
+                </section>
+                
+                 <section>
+                <h1><u>Fazit</u></h1>
+                   <br />
+                    
+
+                </section>
+        
+				<section data-transition-speed="slow">
+					<h1>THE END</h1>
+					<h3>Danke für eure Aufmerksamkeit :) </h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
