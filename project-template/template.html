@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-
-  <meta charset="UTF-8">
-
-  <title>CodePen - Pen</title>
-
-</head>
-
-<body>
-
-  <!DOCTYPE html>
 <!--[if lt IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
@@ -19,75 +6,103 @@
 <!--[if gt IE 9]><!--> <html> <!--<![endif]-->
     <head>
         {MobileAppHeaders}
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
         {block:Description}
         <meta name="description" content="{MetaDescription}">
         {/block:Description}
 
-        {block:Hidden}
+        <!--Template-Optionen: Farben-->
+        <meta name="color:Profile Bar" content="#7c0">
+        <meta name="color:Profile Accent" content="#d16">
+        <meta name="color:Body" content="#000">
+        <meta name="color:Body Accent" content="#d16">
+        <meta name="color:Post" content="#fff">
+        <meta name="color:Links" content="#d16">
+        
+        <!--Template-Optionen: Bilder-->
+        <meta name="image: Background" content="">
+        
+        <!--I/O-Optionen-->
         <meta name="if:Sliding header" content="1">
         <meta name="if:Collapse navigation" content="1">
         <meta name="if:Endless scrolling" content="1">
-        <meta name="select:Layout" content="regular" title="Regular">
-        <meta name="select:Layout" content="narrow" title="Narrow">
-        <meta name="select:Layout" content="grid" title="Grid">
-        <meta name="text:Disqus shortname" content="">
-        <meta name="text:Google analytics ID" content="">
-        <meta name="text:Github username" content="">
-        <meta name="text:Facebook username" content="">
-        {/block:Hidden}
+        <meta name="if:Show Social" content="1">
+        
+        <!--Social-Verknüpfungen-->
+        <meta name="text:Github" content="">
+        <meta name="text:Facebook" content="">
+        <meta name="text:Twitter" content="">
+        <meta name="text:Google Plus" content="">
+
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="shortcut icon" href="{Favicon}">
         <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
-
-        <link rel="stylesheet" href="http://static.tumblr.com/vr9xgox/PuGmmhqcs/normalize.css">
-        <link rel="stylesheet" href="http://static.tumblr.com/vr9xgox/qE8n2yg06/optica-icons.css">
         <link rel="stylesheet" href="http://static.tumblr.com/hriofhd/NYxndttbj/main.css">
-
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
         <!-- HTML5 Shiv -->
         <!--[if lt IE 9]>
             <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
         <![endif]-->
         <style>
-            body {
-                background-color: {BackgroundColor};
+        
+            a{
+                text-decoration: none;
+                color:{color:Links};
             }
-
+            body {
+                background-color: {color:Body};
+                background: url({image: Background});
+            }
+            
             .jumbotron{
                 margin-left: auto;
                 margin-right: auto;
                 max-width: 100%;
                 position: relative;
             }
-
+            
             .main {
-                background-color: white;
+                background-color: {color:Body};
                 margin-left: auto;
                 margin-right: auto;
                 width: 80%;
             }
-
+            
             .profile {
-                background-color: {TitleColor};
+                background-color: {color:Profile Bar};
                 position: fixed;
                 border-radius: 0 0 25px 0;
-                padding: 50px;
+                padding: 25px;
             }
-
+            
             .container{
-                border-bottom: 1px solid {AccentColor};
-
+                border-bottom: 1px solid {color:Profile Accent};
+                
             }
-
+            
             .content{
                 position: relative;
                 margin-left: 25%;
             }
-
+            
+            .social li{
+                margin: 15px 10px 15px 0px;
+                list-style: none;
+                display: inline;
+                position: relative;
+                right: 15%;
+            }
+            
+            #posts li{
+                background: {color:Post};
+                padding: 15px;
+                margin: 15px 0 15px 25px;
+            }
+            
         </style>
     </head>
     <body>
@@ -98,8 +113,10 @@
                         <div class="loader-bg"></div>
                 {/block:ShowHeaderImage}
             </div>
-
+            
+            <!--PROFIL-->
             <div class="profile">
+                <!--OWNER BAR-->
                 <div class="container">
                     <img src="{PortraitURL-128}"/>
                     <h3>{Title}</h3>
@@ -107,16 +124,51 @@
                         <p id="description">{Description}</p>
                     {/block:Description}
                 </div>
+                <!--SOCIAL-->
                 <div class="container">
-                    <ul class="social">
-                        <li>Facebook</li>
-                        <li>Social</li>
-                        <li>etc</li>
-                    </ul>
+                        <ul class="social">
+                            <li>
+                                <a href="/archive">
+                                    <i class="fa fa-archive"></i>
+                                </a>
+                            </li>
+                            {block:ifShowSocial}
+                                {block:ifFacebook}
+                                    <li>
+                                        <a href="http://wwww.facebook.com/{text:Facebook}">
+                                            <i class="fa fa-facebook-square"></i>
+                                        </a>
+                                    </li>
+                                {/block:ifFacebook}
+                                {block:ifGithub}
+                                    <li>
+                                        <a href="http://www.github.com/{text:Github}">
+                                            <i class="fa fa-github
+                                            "></i>
+                                        </a>
+                                    </li>
+                                {/block:ifGithub}
+                                {block:ifTwitter}
+                                    <li>
+                                        <a href="http://www.twitter.com/{text:Twitter}">
+                                            <i class="fa fa-twitter-square"></i>
+                                        </a>
+                                    </li>
+                                {/block:ifTwitter}
+                                {block:ifGooglePlus}
+                                    <li>
+                                        <a href="http://plus.google.com/+{text:Google Plus}">
+                                            <i class="fa fa-google-plus-square"></i>
+                                        </a>
+                                    </li>             
+                                {/block:ifGooglePlus}
+                            {/block:ifShowSocial}
+                        </ul>
+                        
                 </div>
             </div>
             <div class="content">
-                <ol id="posts">
+                <ol id="posts" style="list-style: none">
                     {block:Posts}
                         {block:Text}
                             <li class="post text">
@@ -221,12 +273,7 @@
                 {block:NextPage}
                     <a href="{NextPage}">Next &#187;</a>
                 {/block:NextPage}
-
-            <a href="/archive">Archive</a>
-        </p>
+            </p>
     </body>
 </html>
 
-</body>
-
-</html>
