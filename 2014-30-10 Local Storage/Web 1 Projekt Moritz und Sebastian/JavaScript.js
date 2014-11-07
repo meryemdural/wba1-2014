@@ -1,5 +1,5 @@
 ﻿$(window).load(function () {
-    $("#SlideUpDown").hide();
+    $("#ChartDropDown").hide();
 });
 
 var horizontalline = "<hr/>";
@@ -76,13 +76,13 @@ var actionTittel = $(document).ready(function () {
 var ddSlider = $(document).ready(function () {
 
     
-    $("#arrowDown").click(function () {
-        if ($("#SlideUpDown").is(":hidden")) {
+    $("#arrowChart").click(function () {
+        if ($("#ChartDropDown").is(":hidden")) {
             $("div").slideDown("slow");
-            $("#arrowDown").css("transform:rotate(180deg)");
+            $("#arrowChart").css("transform:rotate(180deg)");
         } else {
-            $("#SlideUpDown").slideUp("slow");
-            $("#arrowDown").css("transform:rotate(90deg)");
+            $("#ChartDropDown").slideUp("slow");
+            $("#arrowChart").css("transform:rotate(90deg)");
         }
         });
    

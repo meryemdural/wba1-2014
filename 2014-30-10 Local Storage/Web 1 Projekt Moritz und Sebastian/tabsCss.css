@@ -1,53 +1,46 @@
 ﻿/*----- Tabs and other stuff-----*/
 
-
-#ml-tab-header {
+.tab-header {
     position: absolute;
 }
 
 
-#ml-tab-header form input {
-    height:20px;
-}
-
-#ml-tab-header form input, 
-    #ml-tab-header input[value="Suchen"]{
-         display:inline-block;
-}
-
-#ml-tab-header form input {
+.search-inputs {
     top: 82px;
     left: 350px;
     position: relative;
+    display: inline-block;
 }
 
-#ml-tab-header input[value="Suchen"] {
+
+.search-button {
     width: 75px;
     height: 38px;
-    border-radius: 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     background-color: orange;
     text-decoration: underline;
     font-weight: bold;
     font-size: 14px;
     color: white;
-    display: inline-block;
 }
 
-#ml-tab-header input[id="topSearchField"] {
+.search-field {
     width: 300px;
     height: 32px;
-    border-radius: 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     font-size: 14px;
-    display: inline-block;
 }
 
-
-#ml-tab-header .tabs .tab-links li {
+.tab-header .tabs .tab-links li {
     display: inline-block;
     top: 29px;
     left: -35px;
     margin-bottom: 100px;
     position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .tabs {
@@ -55,8 +48,6 @@
     display:inline-block;
 }
  
-    /*----- Tab Links -----*/
-    /* Clearfix */
 .tab-links:after {
     display: block;
     clear: both;
@@ -80,10 +71,10 @@
     transition: all linear 0.15s;
 }
 
-    .tab-links a:hover {
-        background: #BB3124;
-        text-decoration: none;
-    }
+.tab-links a:hover {
+    background: #BB3124;
+    text-decoration: none;
+}
 
 li.active a, li.active a:hover {
     background: #fff;
@@ -94,15 +85,5 @@ li.active a, li.active a:hover {
 .tab-content {
     padding: 15px;
     border-radius: 3px;
-    box-shadow: -1px 1px 1px #000000;
-    box-shadow: -1px 1px 1px rgba(0,0,0,0.15);
     background: #fff;
 }
-
-.tab {
-    display: none;
-}
-
-    .tab.active {
-        display: block;
-    }

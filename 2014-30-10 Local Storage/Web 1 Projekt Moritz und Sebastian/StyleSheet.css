@@ -1,6 +1,5 @@
 ﻿html {
-    /*background-image: -webkit-linear-gradient(top, #E8E8E8, white );*/
-    background: #f7f6fb;
+    background: #dfdee5;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -20,15 +19,7 @@ body {
     position: relative;
 }
 
-#ml-mainWrapper {
-    /*-webkit-box-shadow: inset 0 1px 5px #C8C8C8, 0 1px 10px white;*/
-}
-
-#ml-action-nyheter, #ml-action-nyheter-sub {
-    /*-webkit-box-shadow: 0 1px 4px #585858, 0 1px 10px white;*/
-}
-
-#ml-mainWrapper {
+.highlights-page {
     margin: 120px auto;
     width: 1000px;
     height: auto; /*460px*/
@@ -39,40 +30,30 @@ body {
     border-bottom-style: none;
 }
 
-#ml-action-nyheter {
+.favoriten-section {
     height: 200px;
 }
 
-#ml-action-nyheter-sub {
-
+.highlights-section {
     height:auto;
 }
 
-#ml-action-nyheter, #ml-action-nyheter-sub {
+.favoriten-section, .highlights-section {
     top: 20px;
     margin: 10px 10px auto;
-    width: 78%;
+    width: 98%;
     border-radius: 2px;
     position: relative;
     padding-top: 10px;
 }
 
-header p {
+.category-separator p {
     margin: -10px 0 10px auto;
-    background-color: #899;
-    background: -webkit-linear-gradient(top, #aac 0, #88a 100%);
-    border-radius: 2px;
+    background: #3C4D82;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     color: white;
     font-size: 20px;
-}
-
-aside img {
-    width: 160px;
-    height: 300px;
-    bottom: 410px;
-    right: -790px;
-    position: relative;
-    z-index: -100;
 }
 
 
@@ -92,7 +73,7 @@ h3 {
 }
 
 
-.buyBtn1, .buyBtn2, .buyBtn3, .buyBtn4, .buyBtn5, .buyBtn6, #basket {
+.buyBtn1, .buyBtn2, .buyBtn3, .buyBtn4, .buyBtn5, .buyBtn6, .user-menu {
     background-image: url(images/cart.png);
     background-repeat: no-repeat;
     background-position: left;
@@ -111,15 +92,14 @@ h3 {
     /*background:-webkit-linear-gradient(top, red 0%, red 100%); for å gjøre den mer knapp aktig, men har høyre z index en background-image*/
 }
 
-#basket {
-    top: 80px;
+.user-menu {
+    top: 117px;
     z-index: 1;
     left: 800px;
-    height: 30px;
+    height: 35px;
     width: 197px;
     position: relative;
     background-color: orange;
-    -webkit-box-shadow: 1px 1px 1px black;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -134,55 +114,45 @@ h3 {
     border-left: 1px solid white;
 }
 
-#idProfil {
+.profil-menu {
     color: white;
     position: absolute;
     top: -7px;
     left: 93px;
 }
 
-#arrowleft, #arrowDown {
+
+.arrow-profile, .arrow-chart {
     color: white;
     font: bold 25px 'arial, verdana';
     position: relative;
-}
-
-#arrowleft {
-    left: 180px;
-    bottom: 46px;
-}
-
-#arrowDown {
-    left: -28px;
-    bottom: 8px;
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
 }
 
+.arrow-profile {
+    left: 90px;
+    bottom: -50px;
+
+}
+
+.arrow-chart {
+    left: -28px;
+    bottom: 5px;
+}
 
 
-#SlideUpDown {
+
+.drop-down-menu {
     color: black;
-    width: 187px;
+    width: 186px;
     height: auto;
     top: 30px;
     position: absolute;
-    border-radius: 2px;
     padding: 5px;
-    background-image: -webkit-linear-gradient(top, white, #F0F0F0 );
-    background-repeat: no-repeat;
-    box-shadow: 1px 1px 1px;
+    background-color: white;
+    box-shadow: 0 1px 1px;
 }
-
-#Sjul {
-    cursor:pointer;
-}
-
-#textWrap #Sjul, #payment {
-    font-size: 10px;
-    display: inline-block;
-}
-
 
 #imgThumbnail {
     height: 100px;
