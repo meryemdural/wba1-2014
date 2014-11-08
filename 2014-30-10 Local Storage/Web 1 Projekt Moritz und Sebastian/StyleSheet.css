@@ -59,11 +59,10 @@ body {
 
 .price {
     padding-right: 20px;
-    padding-top: 2px;
+    padding-top: 1px;
     padding-bottom: 3px;
-    border-radius: 3px;
-    background-color: #C0C0C0;
-    font: bold 15px 'Trebuchet MS';
+    background-color: #d2d2d2;
+    font: bold 14px 'Trebuchet MS';
 }
 
 h3 {
@@ -73,7 +72,7 @@ h3 {
 }
 
 
-.buyBtn1, .buyBtn2, .buyBtn3, .buyBtn4, .buyBtn5, .buyBtn6, .user-menu {
+.buy-button, .user-menu {
     background-image: url(images/cart.png);
     background-repeat: no-repeat;
     background-position: left;
@@ -83,13 +82,11 @@ h3 {
     cursor: pointer;
 }
 
-.buyBtn1, .buyBtn2, .buyBtn3, .buyBtn4, .buyBtn5, .buyBtn6 {
-    background-color: red;
+.buy-button {
+    background-color: #BB3124;
     padding-left: 30px;
-    border: 1px solid red;
-    -webkit-border-radius: 2px;
+    border: 1px solid #BB3124;
     margin: -10px auto;
-    /*background:-webkit-linear-gradient(top, red 0%, red 100%); for å gjøre den mer knapp aktig, men har høyre z index en background-image*/
 }
 
 .user-menu {
@@ -104,7 +101,7 @@ h3 {
     border-top-right-radius: 5px;
 }
 
-#vLine {
+.vLine {
     width: 1px;
     height: 20px;
     left: 80px;
@@ -154,31 +151,31 @@ h3 {
     box-shadow: 0 1px 1px;
 }
 
-#imgThumbnail {
+.imgThumbnail {
     height: 100px;
     width: 185px;
     margin-bottom: -90px;
-    -webkit-box-shadow: 0 1px 4px 1px #585858;
+    -webkit-box-shadow: 0 1px 2px 1px #585858;
 }
 
-#imgThumbnail img {
+.imgThumbnail img {
     max-height: 100px;
     max-width: 100px;
     box-shadow: 1px 1px 4px;
 }
 
 
-#tittel, .thumbnailpris {
+.title, .price-info {
     display: block;
     bottom: 20px;
     left: 75px;
     position: relative;
 }
 
-#slettKnapp {
+.item-delete {
     width: 20px;
     height: 20px;
-    background: url(images/søppel.png);
+    background: url(images/trash.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px;

@@ -1,0 +1,27 @@
+﻿.search-inputs {
+    top: 82px;
+    left: 350px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.search-button {
+    width: 75px;
+    height: 38px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: orange;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+
+.search-field {
+    width: 300px;
+    height: 32px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 14px;
+}
