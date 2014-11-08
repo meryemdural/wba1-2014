@@ -1,37 +1,37 @@
 $(window).ready(function(){
-    $("#selectDiv").click(function(){
+    $("#button2").click(function(){
         var jsLang = $('#selectDiv :selected').val();
             switch (jsLang) {
-        case "Baden-WÂ¸rttemberg":
-            $.getJSON("JSON/studienanfanger_studienfach_bundeslander.json", function(data0){
-            myDoughnut.segments[0].value = parseInt(data0.semester[1]["Deutsche MÃ¤nnlich"]);
-            myDoughnut.segments[1].value = parseInt(data0.semester[1]["Deutsche Weiblich"]);
-            myDoughnut.segments[2].value = parseInt(data0.semester[1]["Deutsche Insgesamt"]);
+        case "Baden-Württemberg":
+            var index = $('#selectDiv2 :selected').val();
+            $.getJSON("../JSON/baden_wurttemberg.json", function(data0){
+           console.log(index);
+            myDoughnut.segments[0].value = parseInt(data0.BadenWurttemberg[index]["Deutsche Männlich"]);
+            myDoughnut.segments[1].value = parseInt(data0.BadenWurttemberg[index]["Deutsche Weiblich"]);
+            myDoughnut.segments[2].value = parseInt(data0.BadenWurttemberg[index]["Deutsche Insgesamt"]);
             myDoughnut.segments[0].label = "Deutsche Männlich";
             myDoughnut.segments[1].label = "Deutsche Weiblich";
             myDoughnut.segments[2].label = "Deutsche Insgesamt";
+            
             myDoughnut.update();
             });
             break;
         case "Bayern":
-            $.getJSON("JSON/studienanfanger_studienfach_bundeslander.json", function(data0){
-            myDoughnut.segments[0].value = parseInt(data0.semester[8]["Deutsche MÃ¤nnlich"]);
-            myDoughnut.segments[1].value = parseInt(data0.semester[8]["Deutsche Weiblich"]);
-            myDoughnut.segments[2].value = parseInt(data0.semester[8]["Deutsche Insgesamt"]);
+            var index = $('#selectDiv2 :selected').val();
+            $.getJSON("../JSON/bayern.json", function(data0){
+            
+            myDoughnut.segments[0].value = parseInt(data0.Bayern[index]["Deutsche Männlich"]);
+            myDoughnut.segments[1].value = parseInt(data0.Bayern[index]["Deutsche Weiblich"]);
+            myDoughnut.segments[2].value = parseInt(data0.Bayern[index]["Deutsche Insgesamt"]);
             myDoughnut.segments[0].label = "Deutsche Männlich";
             myDoughnut.segments[1].label = "Deutsche Weiblich";
             myDoughnut.segments[2].label = "Deutsche Insgesamt";
+            
             myDoughnut.update();
             });
             break;
-        case "mootools":
-            alert('mootools Wins!');
-            break;     
-        case "dojo":
-            alert('dojo Wins!');
-            break;
         default:
-            alert('Nobody Wins!');
+            alert('Keine Datenbank vorhanden!');
         }
 
     });

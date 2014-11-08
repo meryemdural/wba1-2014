@@ -7,10 +7,8 @@
     <script src="JSON Auslese Test/Statistik.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="JsonAufruf.js"></script>
-    <script src="JSON Auslese Test/jquery.js"></script>
     <script type="text/javascript" src="JSON Auslese Test/Statistik.js"></script>
     <script src="../Chart.js-master/Chart.js"></script>
-    <script src="JSON Auslese Test/Chart.js-master/Chart.js"></script>
     <title>Studistäts - Vergleichen Sie die Studiengänge der FH Köln</title>
 </head>
 <body>
@@ -99,8 +97,8 @@
                          <p>Bundesländer:</p>
                             <p>
                                 <select name="Bundesländer" size="5" onchange="ChartActive()" id="selectDiv">
-                                    <option value="Baden-WÂ¸rttemberg">Baden-Würtemberg</option>
-                                    <option value="Nord-Rhein-Westfalen">Nord-Rhein-Westfalen</option>
+                                    <option value="Baden-Württemberg">Baden-Würtemberg</option>
+                                    <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
                                     <option value="Bremen">Bremen</option>
                                     <option value="Hamburg">Hamburg</option>
                                     <option value="Niedersachsen">Niedersachsen</option>
@@ -117,7 +115,29 @@
                                     <option value="Bayern">Bayern</option>
                                 </select>
                             </p>
+                        <p>Semester:</p>
+                            <p>
+                                <select name="Semester" size="5" id="selectDiv2">
+                                    <option value="0">WS 98/99</option>
+                                    <option value="1">WS 99/00</option>
+                                    <option value="2">WS 00/01</option>
+                                    <option value="2">WS 01/02</option>
+                                    <option value="3">WS 02/03</option>
+                                    <option value="4">WS 03/04</option>
+                                    <option value="5">WS 04/05</option>
+                                    <option value="6">WS 05/06</option>
+                                    <option value="7">WS 06/07</option>
+                                    <option value="8">WS 07/08</option>
+                                    <option value="9">WS 08/09</option>
+                                    <option value="10">WS 09/10</option>
+                                    <option value="11">WS 10/11</option>
+                                    <option value="12">WS 11/12</option>
+                                    <option value="13">WS 12/13</option>
+                                    <option value="14">WS 13/14</option>
+                                </select>
+                            </p>
                        
+                       <button id="button2" onclick="">OK</button>
                        </div>
                        
                </section>
