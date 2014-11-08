@@ -43,86 +43,122 @@
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
         <link rel="stylesheet" href="http://static.tumblr.com/hriofhd/NYxndttbj/main.css">
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <link rel="text/javascript" href="https://www.dropbox.com/s/b88dla2343ly6fz/jquery.js">
         <!-- HTML5 Shiv -->
         <!--[if lt IE 9]>
             <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
         <![endif]-->
         <style>
         
-            a{
-                text-decoration: none;
-                color:{color:Links};
-            }
             body {
                 background-color: {color:Body};
                 background: url({image: Background});
+                background-attachment:fixed;
             }
             
-            .jumbotron{
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 100%;
-                position: relative;
-            }
-            
-            .main {
-                background-color: {color:Body};
+            .wrapper {
                 margin-left: auto;
                 margin-right: auto;
                 width: 80%;
             }
             
-            .profile {
-                background-color: {color:Profile Bar};
+            .profile{
+                background-color:{color:Profile Bar};
+                max-width:134px;
+                padding:15px;
+                border-radius: 0px 0px 20px 20px;
                 position: fixed;
-                border-radius: 0 0 25px 0;
-                padding: 25px;
+                float: left;
             }
             
-            .container{
-                border-bottom: 1px solid {color:Profile Accent};
-                
+            .profile img{
+                border: 2px solid {color:Profile Accent};
+                margin-bottom:10px;
             }
-            
-            .content{
-                position: relative;
-                margin-left: 25%;
-            }
-            
-            .social li{
-                margin: 15px 10px 15px 0px;
+            .profile li{
                 list-style: none;
                 display: inline;
-                position: relative;
-                right: 15%;
+            }
+            .profile .container{
+                border-bottom: 1px solid {color:Profile Accent};
+            }
+            
+            a{
+                text-decoration: none;
+                color:{color:Links};
+            }
+            
+            .content ul{
+                list-style: none;
+            }
+            
+            #empty{
+                height: 100%;
+                margin: 50% 0 75% 0;
+                text-align: center;
+                color: black;
             }
             
             #posts li{
                 background: {color:Post};
                 padding: 15px;
+                width: 80%;
                 margin: 15px 0 15px 25px;
+                float: right;
+                list-style: none;
+            }
+            
+            /*LIKE & REBLOG-->*/
+            .like_and_reblog_buttons {
+                border: 1px solid #e8e8e8;
+                border-radius: 3px;
+                list-style: none;
+            }
+
+            .like_and_reblog_buttons li {
+                float: left;
+                margin: 0;
+                padding: 7px 15px;
+                height: 20px;
+            }
+
+            .like_and_reblog_buttons li:first-child {
+                border-right: 1px solid #e8e8e8;
             }
             
         </style>
+        
+        <script type="script/javascript">
+        /*$(document).ready(function(){
+            var stickyNavTop=$('.profile').offset().top;
+            var stickyNav=function(){
+                var scrollTop=$(window).scrollTop();
+            
+                if(scrollTop>=stickyNavTop){
+                    $('.profile').addClass('sticky');
+                }
+                else {
+                    $('.profile').removeClass('sticky');
+                }
+            };
+            
+            stickyNav();
+            
+            $(window).scroll(function() {
+                stickyNav();
+            }); 
+        });
+            */
+        </script>
     </head>
     <body>
-        <div class=main>
-            <div class="jumbotron">
-                {block:ShowHeaderImage}
-                        <img class="jumbotron" src="{HeaderImage}" alt=""/>
-                        <div class="loader-bg"></div>
-                {/block:ShowHeaderImage}
-            </div>
-            
+        <div class="wrapper">
+        
             <!--PROFIL-->
             <div class="profile">
                 <!--OWNER BAR-->
                 <div class="container">
                     <img src="{PortraitURL-128}"/>
-                    <h3>{Title}</h3>
-                    {block:Description}
-                        <p id="description">{Description}</p>
-                    {/block:Description}
                 </div>
                 <!--SOCIAL-->
                 <div class="container">
@@ -166,105 +202,148 @@
                         </ul>
                         
                 </div>
+                <div class="container">
+                    {block:Following}
+                    Blogs I follow:
+                    <ul>{block:Followed}
+                        <li>
+                            <img src="{FollowedPortraitURL-48}"/>
+                                <a href="{FollowedURL}">{FollowedName}</a>
+                        </li>{/block:Followed}
+                    </ul>{/block:Following}
+                </div>
             </div>
             <div class="content">
-                <ol id="posts" style="list-style: none">
-                    {block:Posts}
-                        {block:Text}
-                            <li class="post text">
-                                {block:Title}
-                                    <h3><a href="{Permalink}">{Title}</a></h3>
-                                {/block:Title}{Body}
-                            </li>
-                        {/block:Text}
-                        {block:Photo}
-                            <li class="post photo">
-                                <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
-                                {block:Caption}
-                                    <div class="caption">{Caption}</div>
-                                {/block:Caption}
-                            </li>
-                        {/block:Photo}
-                        {block:Panorama}
-                            <li class="post panorama">
-                                {LinkOpenTag}
-                                    <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
-                                {LinkCloseTag}
-                                {block:Caption}
-                                    <div class="caption">
-                                        {Caption}
-                                    </div>
-                                {/block:Caption}
-                            </li>
-                        {/block:Panorama}
-                        {block:Photoset}
-                            <li class="post photoset">
-                                {Photoset-500}
-                                {block:Caption}
-                                    <div class="caption">
-                                        {Caption}
-                                    </div>
-                                {/block:Caption}
-                            </li>
-                        {/block:Photoset}
-                        {block:Quote}
-                            <li class="post quote">
-                                "{Quote}"
-                                {block:Source}
-                                    <div class="source">
-                                        {Source}
-                                    </div>
-                                {/block:Source}
-                            </li>
-                        {/block:Quote}
-                        {block:Link}
-                            <li class="post link">
-                                <a href="{URL}" class="link" {Target}>{Name}</a>
-                                {block:Description}
-                                    <div class="description">
-                                        {Description}
-                                    </div>
-                                {/block:Description}
-                            </li>
-                        {/block:Link}
-                        {block:Chat}
-                            <li class="post chat">
-                                {block:Title}
-                                    <h3><a href="{Permalink}">{Title}</a></h3>
-                                {/block:Title}
-                                <ul class="chat">
-                                    {block:Lines}
-                                        <li class="{Alt} user_{UserNumber}">
-                                            {block:Label}
-                                                <span class="label">{Label}</span>
-                                            {/block:Label}{Line}
-                                        </li>
-                                    {/block:Lines}
-                                </ul>
-                            </li>
-                        {/block:Chat}
-                        {block:Video}
-                            <li class="post video">
-                                {Video-500}
-                                {block:Caption}
-                                    <div class="caption">
-                                        {Caption}
-                                    </div>
-                                {/block:Caption}
-                            </li>
-                        {/block:Video}
-                        {block:Audio}
-                            <li class="post audio">
-                                {AudioEmbed}
-                                {block:Caption}
-                                    <div class="caption">
-                                        {Caption}
-                                    </div>
-                                {/block:Caption}
-                            </li>
-                        {/block:Audio}
-                    {/block:Posts}
-                </ol>
+            <ul>
+                <li>
+                    <div id="empty">
+                        <h3>{Title}</h3>
+                        {block:Description}
+                            <p id="description">{Description}</p>
+                        {/block:Description}
+                        Scroll Down.
+                    </div>
+                </li>
+                <li>
+                    <ol id="posts">
+                        {block:Posts}
+                            {block:Text}
+                                <li class="post text">
+                                    {block:Title}
+                                        <h3><a href="{Permalink}">{Title}</a></h3>
+                                    {/block:Title}{Body}
+                                    {ReblogButton}
+                                    {LikeButton}
+                                </li>
+                            {/block:Text}
+                            {block:Photo}
+                                <li class="post photo">
+                                    <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                                    {block:Caption}
+                                        <div class="caption">{Caption}</div>
+                                    {/block:Caption}
+                                    {ReblogButton}
+                                    {LikeButton}
+                                </li>
+                            {/block:Photo}
+                            {block:Panorama}
+                                <li class="post panorama">
+                                    {LinkOpenTag}
+                                        <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                                    {LinkCloseTag}
+                                    {block:Caption}
+                                        <div class="caption">
+                                            {Caption}
+                                        </div>
+                                    {/block:Caption}
+                                    {ReblogButton}
+                                    {LikeButton}
+                                </li>
+                            {/block:Panorama}
+                            {block:Photoset}
+                                <li class="post photoset">
+                                    {Photoset-500}
+                                    {block:Caption}
+                                        <div class="caption">
+                                            {Caption}
+                                        </div>
+                                    {/block:Caption}
+                                    {ReblogButton}
+                                    {LikeButton}
+                                </li>
+                            {/block:Photoset}
+                            {block:Quote}
+                                <li class="post quote">
+                                    "{Quote}"
+                                    {block:Source}
+                                        <div class="source">
+                                            {Source}
+                                        </div>
+                                    {/block:Source}
+                                    {ReblogButton}
+                                    {LikeButton}
+                                </li>
+                            {/block:Quote}
+                            {block:Link}
+                                <li class="post link">
+                                    <a href="{URL}" class="link" {Target}>{Name}</a>
+                                    {block:Description}
+                                        <div class="description">
+                                            {Description}
+                                        </div>
+                                    {/block:Description}
+                                    {ReblogButton}
+                                    {LikeButton}
+                                </li>
+                            {/block:Link}
+                            {block:Chat}
+                                <li class="post chat">
+                                    {block:Title}
+                                        <h3><a href="{Permalink}">{Title}</a></h3>
+                                    {/block:Title}
+                                    {ReblogButton}
+                                    {LikeButton}
+                                    <ul class="chat">
+                                        {block:Lines}
+                                            <li class="{Alt} user_{UserNumber}">
+                                                {block:Label}
+                                                    <span class="label">{Label}</span>
+                                                {/block:Label}{Line}
+                                            </li>
+                                        {/block:Lines}
+                                    </ul>
+                                    
+                                </li>
+                            {/block:Chat}
+                            {block:Video}
+                                <li class="post video">
+                                    {Video-500}
+                                    {block:Caption}
+                                        <div class="caption">
+                                            {Caption}
+                                        </div>
+                                    {/block:Caption}
+                                    {ReblogButton}
+                                    {LikeButton}
+                                </li>
+                            {/block:Video}
+                            {block:Audio}
+                                <li class="post audio">
+                                    {AudioEmbed}
+                                    {block:Caption}
+                                        <div class="caption">
+                                            {Caption}
+                                        </div>
+                                    {/block:Caption}
+                                    {ReblogButton}
+                                    {LikeButton}
+                                </li>
+                            {/block:Audio}
+                            
+                        {/block:Posts}
+                    </ol>
+                </li>
+            </ul>
             </div>
             <p id="footer">
                 {block:PreviousPage}
@@ -276,4 +355,3 @@
             </p>
     </body>
 </html>
-
