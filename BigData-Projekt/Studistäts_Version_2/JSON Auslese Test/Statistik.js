@@ -1,15 +1,15 @@
 var doughnutData = [
 				{
 					value: 1,
-					color: "#F7464A",
-					highlight: "#FF5A5E",
-					label: "Red"
+					color: "#46BFBD",
+					highlight: "#46BFBD",
+					label: "Green"
 				},
 				{
 					value: 1,
-					color: "#46BFBD",
-					highlight: "#5AD3D1",
-					label: "Green"
+					color: "#F7464A",
+					highlight: "#F7464A",
+					label: "Red"
 				},
 				{
 					value: 1,

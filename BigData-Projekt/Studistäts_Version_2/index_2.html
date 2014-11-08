@@ -71,11 +71,34 @@
                    <p>Vergleichen wir die verschiedenen Studiengänge in unseren 16 Bundesländern
                     </p>
 
-                       <button onclick="ChartActive()" id="button2">Teststatistik</button>
+                      <!-- <button onclick="ChartActive()" id="button2">Teststatistik</button>-->
 
                        <div id="canvas-holder">
                        <canvas id="chart-area" height="250" width="500"/>
                        </div>
+                       
+                         <p>Bundesländer:</p>
+                            <p>
+                                <select name="Bundesländer" size="5" onchange="ChartActive()" id="selectDiv">
+                                    <option value="Baden-WÂ¸rttemberg">Baden-Würtemberg</option>
+                                    <option value="Nord-Rhein-Westfalen">Nord-Rhein-Westfalen</option>
+                                    <option value="Bremen">Bremen</option>
+                                    <option value="Hamburg">Hamburg</option>
+                                    <option value="Niedersachsen">Niedersachsen</option>
+                                    <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
+                                    <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
+                                    <option value="Schleswig-Holstein">Schleswig-Holstein</option>
+                                    <option value="Brandenburg">Brandenburg</option>
+                                    <option value="Berlin">Berlin</option>
+                                    <option value="Sachsen">Sachsen</option>
+                                    <option value="Thüringen">Thüringen</option>
+                                    <option value="Hessen">Hessen</option>
+                                    <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+                                    <option value="Saarland">Saarland</option>
+                                    <option value="Bayern">Bayern</option>
+                                </select>
+                            </p>
+                       
                        </div>
                        
                </section>
