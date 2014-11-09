@@ -1,28 +1,43 @@
 $(window).ready(function(){
     $("#button2").click(function(){
+        // Vorherige Daten löschen um Überschneidung der Charts zu vermeiden
+        $("#chart-area").remove();
+        // Danach den leeren Container wieder hinzufügen für die neuen Daten
+        $("#canvas-holder").append('<canvas id="chart-area" height="250" width="500"/>');
+        
         var jsLang = $('#selectDiv :selected').val();
             switch (jsLang) {
         case "Baden-Württemberg":
-            var index = $('#selectDiv2 :selected').val();
+            var index1 = $('#selectDiv2 :selected').val();
+            var index2 = $('#selectDiv3 :selected').val();
+            // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
             $.getJSON("../JSON/baden_wurttemberg.json", function(data0){
-           console.log(index);
-            myDoughnut.segments[0].value = parseInt(data0.BadenWurttemberg[index]["Deutsche Männlich"]);
-            myDoughnut.segments[1].value = parseInt(data0.BadenWurttemberg[index]["Deutsche Weiblich"]);
-            myDoughnut.segments[2].value = parseInt(data0.BadenWurttemberg[index]["Deutsche Insgesamt"]);
+            // Prüfen ob die Daten vorhanden sind, Hier reicht die Überprüfung der ersten Variable
+           if((data0.BadenWurttemberg[index1+index2]["Deutsche Männlich"])==="-") alert("Keine Daten vorhanden!");
+            ChartActive();
+            // Setzen der neuen Werte und Beschriftungen
+            myDoughnut.segments[0].value = parseInt(data0.BadenWurttemberg[index1+index2]["Deutsche Männlich"]);
+            myDoughnut.segments[1].value = parseInt(data0.BadenWurttemberg[index1+index2]["Deutsche Weiblich"]);
+            myDoughnut.segments[2].value = parseInt(data0.BadenWurttemberg[index1+index2]["Deutsche Insgesamt"]);
             myDoughnut.segments[0].label = "Deutsche Männlich";
             myDoughnut.segments[1].label = "Deutsche Weiblich";
             myDoughnut.segments[2].label = "Deutsche Insgesamt";
-            
+            // Aktualisiert die Doughnut-Chart
             myDoughnut.update();
             });
             break;
         case "Bayern":
-            var index = $('#selectDiv2 :selected').val();
+            var index3 = $('#selectDiv2 :selected').val();
+            var index4 = $('#selectDiv3 :selected').val();
+            var neu = parseInt(index3) + parseInt(index4);
+            console.log(neu);
+            console.log(index3+index4);
             $.getJSON("../JSON/bayern.json", function(data0){
-            
-            myDoughnut.segments[0].value = parseInt(data0.Bayern[index]["Deutsche Männlich"]);
-            myDoughnut.segments[1].value = parseInt(data0.Bayern[index]["Deutsche Weiblich"]);
-            myDoughnut.segments[2].value = parseInt(data0.Bayern[index]["Deutsche Insgesamt"]);
+            if(data0.Bayern[neu]["Deutsche Männlich"]=="-") alert("Keine Daten vorhanden!");
+            ChartActive();
+            myDoughnut.segments[0].value = parseInt(data0.Bayern[neu]["Deutsche Männlich"]);
+            myDoughnut.segments[1].value = parseInt(data0.Bayern[neu]["Deutsche Weiblich"]);
+            myDoughnut.segments[2].value = parseInt(data0.Bayern[neu]["Deutsche Insgesamt"]);
             myDoughnut.segments[0].label = "Deutsche Männlich";
             myDoughnut.segments[1].label = "Deutsche Weiblich";
             myDoughnut.segments[2].label = "Deutsche Insgesamt";

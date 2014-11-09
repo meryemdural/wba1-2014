@@ -91,12 +91,25 @@
                            </li>
                        </ul>
                        <div id="canvas-holder">
-                       <canvas id="chart-area" height="250" width="500"/>
+                       <canvas id="chart-area" height="250" width="250"/>
                        </div>
-                       
-                         <p>Bundesländer:</p>
+                       <div id="Stundiengänge">   
+                        <p>Studiengänge:</p>
                             <p>
-                                <select name="Bundesländer" size="5" onchange="ChartActive()" id="selectDiv">
+                                <select name="Studiengänge" size="5" id="selectDiv3">
+                                    <option value="0">Bioinformatik</option>
+                                    <option value="1">Informatik</option>
+                                    <option value="2">Ingenieurinformatik/Technische Informatik</option>
+                                    <option value="3">Medieninformatik</option>
+                                    <option value="4">Medizinische Informatik</option>
+                                    <option value="5">Wirtschaftsinformatik</option>
+                                </select>
+                            </p>
+                            </div> 
+                       <div id="Bundesländer">  
+                       <p>Bundesländer:</p>
+                            <p>
+                                <select name="Bundesländer" size="5" onchange="" id="selectDiv">
                                     <option value="Baden-Württemberg">Baden-Würtemberg</option>
                                     <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
                                     <option value="Bremen">Bremen</option>
@@ -115,29 +128,32 @@
                                     <option value="Bayern">Bayern</option>
                                 </select>
                             </p>
+                        </div>
+                       <div id="Semester">
                         <p>Semester:</p>
                             <p>
                                 <select name="Semester" size="5" id="selectDiv2">
                                     <option value="0">WS 98/99</option>
-                                    <option value="1">WS 99/00</option>
-                                    <option value="2">WS 00/01</option>
-                                    <option value="2">WS 01/02</option>
-                                    <option value="3">WS 02/03</option>
-                                    <option value="4">WS 03/04</option>
-                                    <option value="5">WS 04/05</option>
-                                    <option value="6">WS 05/06</option>
-                                    <option value="7">WS 06/07</option>
-                                    <option value="8">WS 07/08</option>
-                                    <option value="9">WS 08/09</option>
-                                    <option value="10">WS 09/10</option>
-                                    <option value="11">WS 10/11</option>
-                                    <option value="12">WS 11/12</option>
-                                    <option value="13">WS 12/13</option>
-                                    <option value="14">WS 13/14</option>
+                                    <option value="7">WS 99/00</option>
+                                    <option value="14">WS 00/01</option>
+                                    <option value="21">WS 01/02</option>
+                                    <option value="27">WS 02/03</option>
+                                    <option value="34">WS 03/04</option>
+                                    <option value="41">WS 04/05</option>
+                                    <option value="48">WS 05/06</option>
+                                    <option value="55">WS 06/07</option>
+                                    <option value="62">WS 07/08</option>
+                                    <option value="69">WS 08/09</option>
+                                    <option value="76">WS 09/10</option>
+                                    <option value="83">WS 10/11</option>
+                                    <option value="90">WS 11/12</option>
+                                    <option value="97">WS 12/13</option>
+                                    <option value="104">WS 13/14</option>
                                 </select>
                             </p>
+                        </div>
                        
-                       <button id="button2" onclick="">OK</button>
+                       <button id="button2" onclick="">Daten abschicken</button>
                        </div>
                        
                </section>

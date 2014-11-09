@@ -194,6 +194,29 @@ div {
 
 #canvas-holder {
     height: 250px;
-    width: 500px;
+    width: 250px;
     float: right;
+    clear:both;
 }
+
+
+
+#Stundiengänge {
+    float: left;
+    padding-right: 15px;
+    clear:both;
+}
+
+#Bundesländer {
+    float: left;
+    padding-right: 15px;
+}
+
+
+
+
+
+
+
+
+
