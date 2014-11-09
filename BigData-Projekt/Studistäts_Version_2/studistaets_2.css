@@ -165,31 +165,13 @@ a {
 	transform: translateY(-400%);
 }
 
-.text 
+.sektionen .text 
 {
     position: absolute;
     left: 10%;
     top: 10%;
     height: 80%;
-    width: 80%;
-    
-}
-
-li 
-{
-    padding: 0px;
-}
-
-.Semester{
-    
-}
-
-div {
-    
-}
-
-div {
-    
+    width: 80%;   
 }
 
 #canvas-holder {
@@ -197,3 +179,6 @@ div {
     width: 500px;
     float: right;
 }
+
+
+
