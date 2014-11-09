@@ -11,6 +11,8 @@ $(window).ready(function(){
             var index1 = $('#selectDiv2 :selected').val();
             var index2 = $('#selectDiv3 :selected').val();
             var neu = parseInt(index1) + parseInt(index2);
+            console.log(index2+index1);
+            console.log(neu);
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
             $.getJSON("../JSON/baden_wurttemberg.json", function(data0){
             // Prüfen ob die Daten vorhanden sind, Hier reicht die Überprüfung der ersten Variable
