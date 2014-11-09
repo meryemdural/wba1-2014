@@ -1,4 +1,6 @@
-﻿html {
+﻿/*Put global styles here*/
+
+html {
     background: #dfdee5;
     width: 100%;
     height: 100%;
@@ -11,7 +13,6 @@ body {
     height: auto;
     margin: auto;
     background-repeat: no-repeat;
-    /*background-image:url(images/platekompaniet.png);   */
     background-position: 0 0;
     border-right-style: none;
     border-left-style: none;
@@ -19,32 +20,10 @@ body {
     position: relative;
 }
 
-.highlights-page {
-    margin: 120px auto;
-    width: 1000px;
-    height: auto; /*460px*/
+h3 {
     position: relative;
-    border-radius: 5px;
-    border-bottom-color: #d72c2c;
-    border-bottom-color: rgba(215, 44, 44, 0);
-    border-bottom-style: none;
-}
-
-.favoriten-section {
-    height: 200px;
-}
-
-.highlights-section {
-    height:auto;
-}
-
-.favoriten-section, .highlights-section {
-    top: 20px;
-    margin: 10px 10px auto;
-    width: 98%;
-    border-radius: 2px;
-    position: relative;
-    padding-top: 10px;
+    top: -23px;
+    text-align: match-parent;
 }
 
 .category-separator p {
@@ -56,7 +35,6 @@ body {
     font-size: 20px;
 }
 
-
 .price {
     padding-right: 20px;
     padding-top: 1px;
@@ -65,13 +43,7 @@ body {
     font: bold 14px 'Trebuchet MS';
 }
 
-h3 {
-    position: relative;
-    top: -23px;
-    text-align: match-parent;
-}
-
-
+/*Shared Code between the default buy button and the User Menu bar for displaying the chart icon*/
 .buy-button, .user-menu {
     background-image: url(images/cart.png);
     background-repeat: no-repeat;
@@ -88,102 +60,4 @@ h3 {
     border: 1px solid #BB3124;
     margin: -10px auto;
 }
-
-.user-menu {
-    top: 117px;
-    z-index: 1;
-    left: 800px;
-    height: 35px;
-    width: 197px;
-    position: relative;
-    background-color: orange;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.vLine {
-    width: 1px;
-    height: 20px;
-    left: 80px;
-    top: 5px;
-    position: relative;
-    background-color: white;
-    border-left: 1px solid white;
-}
-
-.profil-menu {
-    color: white;
-    position: absolute;
-    top: -7px;
-    left: 93px;
-}
-
-
-.arrow-profile, .arrow-chart {
-    color: white;
-    font: bold 25px 'arial, verdana';
-    position: relative;
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-}
-
-.arrow-profile {
-    left: 90px;
-    bottom: -50px;
-
-}
-
-.arrow-chart {
-    left: -28px;
-    bottom: 5px;
-}
-
-
-
-.drop-down-menu {
-    color: black;
-    width: 186px;
-    height: auto;
-    top: 30px;
-    position: absolute;
-    padding: 5px;
-    background-color: white;
-    box-shadow: 0 1px 1px;
-}
-
-.imgThumbnail {
-    height: 100px;
-    width: 185px;
-    margin-bottom: -90px;
-    -webkit-box-shadow: 0 1px 2px 1px #585858;
-}
-
-.imgThumbnail img {
-    max-height: 100px;
-    max-width: 100px;
-    box-shadow: 1px 1px 4px;
-}
-
-
-.title, .price-info {
-    display: block;
-    bottom: 20px;
-    left: 75px;
-    position: relative;
-}
-
-.item-delete {
-    width: 20px;
-    height: 20px;
-    background: url(images/trash.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 20px;
-    cursor: pointer;
-    bottom: 10px;
-    left: 160px;
-    position: relative;
-}
-
-
 

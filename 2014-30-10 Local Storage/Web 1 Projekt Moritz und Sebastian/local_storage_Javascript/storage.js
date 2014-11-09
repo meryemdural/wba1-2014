@@ -1,4 +1,6 @@
-﻿$(document).ready(function () {
+﻿// Main document for Local Storage Logic
+
+$(document).ready(function () {
 
 
     if (localStorage.getItem('userName') === '' || localStorage.getItem('userName') === null) {

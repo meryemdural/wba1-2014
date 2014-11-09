@@ -2,7 +2,7 @@
 <html>
     <head>
 
-        <title>Video Laden</title>
+        <title>Video Webstore</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="StyleSheet.css"/>
         <link rel="stylesheet" href="Fexboxes/flexboxes.css" />
@@ -11,9 +11,11 @@
         <link rel="stylesheet" href="Tabs/Tabs.css"/>
         <link rel="stylesheet" href="FavoriteButton/FavoriteButton.css"/>
         <link rel="stylesheet" href="UserMenu/UserMenu.css"/>
+        <link rel="stylesheet" href="HighlightsPage/hightlightsPage.css"/>
     </head>
     <body>
         
+        <!-- Header should be equal on all pages-->
         <header>
             <div class="user-menu">
                 <div class="vLine"></div>
@@ -64,9 +66,9 @@
                     
                     <!-- For some strange reason I am not able to design this very first box not the same as the others. Will not be fixed. -->
                     <div class="flexBox1">
-                        <div class="flexImgBox1" />
+                        <div id="flexImgBox1" class="flex-img-box"/>
                     </div>
-                    <div class="flexRest1">
+                    <div class="flex-rest">
                         <h3 id="movieTitle1"></h3>
                         <p id="info1"></p>
                         <span class="price"></span>
@@ -75,8 +77,8 @@
                 </div>
 
                 <div class="flexBox2">
-                    <div class="flexImgBox2"></div>
-                    <div class="flexRest2">
+                    <div id="flexImgBox2" class="flex-img-box"></div>
+                    <div class="flex-rest">
                         <h3 id="movieTitle2"></h3>
                         <p id="info2"></p>
                         <span class="price"></span>
@@ -92,8 +94,8 @@
 
                 <div>
                     <div class="flexBox3">
-                        <div class="flexImgBox3"></div>
-                        <div class="flexRest3">
+                        <div id="flexImgBox3" class="flex-img-box"></div>
+                        <div class="flex-rest">
                             <h3 id="movieTitle3"></h3>
                             <p id="info3"></p>
                             <span class="price"></span>
@@ -102,8 +104,8 @@
                     </div>
 
                     <div class="flexBox4">
-                        <div class="flexImgBox4"></div>
-                        <div class="flexRest4">
+                        <div id="flexImgBox4" class="flex-img-box"></div>
+                        <div class="flex-rest">
                             <h3 id="movieTitle4"></h3>
                             <p id="info4"></p>
                             <span class="price"></span>
@@ -114,8 +116,8 @@
 
                 <div>
                     <div class="flexBox5">
-                        <div class="flexImgBox5"></div>
-                        <div class="flexRest5">
+                        <div id="flexImgBox5" class="flex-img-box"></div>
+                        <div class="flex-rest">
                             <h3 id="movieTitle5"></h3>
                             <p id="info5"></p>
                             <span class="price"></span>
@@ -123,8 +125,8 @@
                         </div>
                     </div>
                     <div class="flexBox6">
-                        <div class="flexImgBox6"></div>
-                        <div class="flexRest6">
+                        <div id="flexImgBox6" class="flex-img-box"></div>
+                        <div class="flex-rest">
                             <h3 id="movieTitle6"></h3>
                             <p id="info6"></p>
                             <span class="price"></span>
@@ -142,6 +144,9 @@
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
         <script type="text/javascript" src="JavaScript.js"></script>
         <script src="FavoriteButton/FavoriteButton.js"></script>
+        
+        <!-- This actually runs the Local Storage Stuff-->
+        <script src="local_storage_Javascript/storage.js"></script>
 
     </body>
 </html>

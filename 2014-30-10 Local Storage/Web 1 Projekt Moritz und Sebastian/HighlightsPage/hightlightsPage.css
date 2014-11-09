@@ -1,0 +1,25 @@
+﻿/*Style specific for Highlights Page goes here*/
+
+.favoriten-section {
+    height: 200px;
+}
+
+.highlights-section {
+    height:auto;
+}
+
+.favoriten-section, .highlights-section {
+    top: 20px;
+    margin: 10px 10px auto;
+    width: 98%;
+    border-radius: 2px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.highlights-page {
+    margin: 120px auto;
+    width: 1000px;
+    height: auto;
+    position: relative;
+}

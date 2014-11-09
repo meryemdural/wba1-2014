@@ -1,14 +1,16 @@
-﻿
+﻿/* As favorite button has its own logic put style into different file too. Add style for it here*/
+
+
 .favorite_button {
     background-image: url("../images/3d-yellow-star.png");
     background-repeat: no-repeat;
     background-position: left;
     background-size: 30px;
     background-color: orangered;
-    text-align-last: right;
-    height: 22px;
     color: white;
+    height: 21px;
     font: bold 14px 'Trebuchet MS';
     cursor: pointer;
-    margin-left: 2px;
+    border: 0;
+    margin-left: 2px
 }

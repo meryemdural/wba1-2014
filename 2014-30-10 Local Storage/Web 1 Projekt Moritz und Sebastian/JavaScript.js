@@ -1,4 +1,5 @@
-﻿$(window).load(function () {
+﻿/* Hides Chart on page load */
+$(window).load(function () {
     $("#ChartDropDown").hide();
 });
 
@@ -47,12 +48,12 @@ var actionPrice = $(document).ready(function () {
 });
 
 var actionBilder = $(document).ready(function () { 
-    $(".flexImgBox1").append("<img src="  + pictures.filePath1 + " />");
-    $(".flexImgBox2").append("<img src=" + pictures.filePath2 + " />");
-    $(".flexImgBox3").append("<img src=" + pictures.filePath3 + " />");
-    $(".flexImgBox4").append("<img src=" + pictures.filePath4 + " />");
-    $(".flexImgBox5").append("<img src=" + pictures.filePath5 + " />");
-    $(".flexImgBox6").append("<img src=" + pictures.filePath6 + " />");
+    $("#flexImgBox1").append("<img src="  + pictures.filePath1 + " />");
+    $("#flexImgBox2").append("<img src=" + pictures.filePath2 + " />");
+    $("#flexImgBox3").append("<img src=" + pictures.filePath3 + " />");
+    $("#flexImgBox4").append("<img src=" + pictures.filePath4 + " />");
+    $("#flexImgBox5").append("<img src=" + pictures.filePath5 + " />");
+    $("#flexImgBox6").append("<img src=" + pictures.filePath6 + " />");
 });
 
 var actionTitle = $(document).ready(function () {
