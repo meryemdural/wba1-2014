@@ -165,31 +165,13 @@ a {
 	transform: translateY(-400%);
 }
 
-.text 
+.sektionen .text 
 {
     position: absolute;
     left: 10%;
     top: 10%;
     height: 80%;
-    width: 80%;
-    
-}
-
-li 
-{
-    padding: 0px;
-}
-
-.Semester{
-    
-}
-
-div {
-    
-}
-
-div {
-    
+    width: 80%;   
 }
 
 #canvas-holder {
@@ -201,6 +183,7 @@ div {
 
 
 
+<<<<<<< HEAD
 #Stundiengänge {
     float: left;
     padding-right: 15px;
@@ -220,3 +203,5 @@ div {
 
 
 
+=======
+>>>>>>> origin/BigData-Projekt
