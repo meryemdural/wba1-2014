@@ -17,7 +17,7 @@ $(window).ready(function(){
             $.getJSON("../JSON/baden_wurttemberg.json", function(data0){
             // Prüfen ob die Daten vorhanden sind, Hier reicht die Überprüfung der ersten Variable
            if((data0.BadenWurttemberg[neu]["Deutsche Männlich"])==="-") alert("Keine Daten vorhanden!");
-            ChartActive();
+           else{ ChartActive();
             // Setzen der neuen Werte und Beschriftungen
             myDoughnut.segments[0].value = parseInt(data0.BadenWurttemberg[neu]["Deutsche Männlich"]);
             myDoughnut.segments[1].value = parseInt(data0.BadenWurttemberg[neu]["Deutsche Weiblich"]);
@@ -26,7 +26,7 @@ $(window).ready(function(){
             myDoughnut.segments[1].label = "Deutsche Weiblich";
             myDoughnut.segments[2].label = "Deutsche Insgesamt";
             // Aktualisiert die Doughnut-Chart
-            myDoughnut.update();
+            myDoughnut.update();}
             });
             break;
         case "Bayern":
@@ -37,7 +37,7 @@ $(window).ready(function(){
             console.log(index3+index4);
             $.getJSON("../JSON/bayern.json", function(data0){
             if(data0.Bayern[neu]["Deutsche Männlich"]=="-") alert("Keine Daten vorhanden!");
-            ChartActive();
+            else {ChartActive();
             myDoughnut.segments[0].value = parseInt(data0.Bayern[neu]["Deutsche Männlich"]);
             myDoughnut.segments[1].value = parseInt(data0.Bayern[neu]["Deutsche Weiblich"]);
             myDoughnut.segments[2].value = parseInt(data0.Bayern[neu]["Deutsche Insgesamt"]);
@@ -45,7 +45,45 @@ $(window).ready(function(){
             myDoughnut.segments[1].label = "Deutsche Weiblich";
             myDoughnut.segments[2].label = "Deutsche Insgesamt";
             
-            myDoughnut.update();
+            myDoughnut.update();}
+            });
+            break;            
+        case "Berlin":
+            var index3 = $('#selectDiv2 :selected').val();
+            var index4 = $('#selectDiv3 :selected').val();
+            var neu = parseInt(index3) + parseInt(index4);
+            console.log(neu);
+            console.log(index3+index4);
+            $.getJSON("../JSON/berlin.json", function(data0){
+            if(data0.Berlin[neu]["Deutsche Männlich"]=="-") alert("Keine Daten vorhanden!");
+            else {ChartActive();
+            myDoughnut.segments[0].value = parseInt(data0.Berlin[neu]["Deutsche Männlich"]);
+            myDoughnut.segments[1].value = parseInt(data0.Berlin[neu]["Deutsche Weiblich"]);
+            myDoughnut.segments[2].value = parseInt(data0.Berlin[neu]["Deutsche Insgesamt"]);
+            myDoughnut.segments[0].label = "Deutsche Männlich";
+            myDoughnut.segments[1].label = "Deutsche Weiblich";
+            myDoughnut.segments[2].label = "Deutsche Insgesamt";
+            
+            myDoughnut.update();}
+            });
+            break;
+        case "Brandenburg":
+            var index3 = $('#selectDiv2 :selected').val();
+            var index4 = $('#selectDiv3 :selected').val();
+            var neu = parseInt(index3) + parseInt(index4);
+            console.log(neu);
+            console.log(index3+index4);
+            $.getJSON("../JSON/brandenburg.json", function(data0){
+            if(data0.Brandenburg[neu]["Deutsche Männlich"]=="-") alert("Keine Daten vorhanden!");
+            else {ChartActive();
+            myDoughnut.segments[0].value = parseInt(data0.Brandenburg[neu]["Deutsche Männlich"]);
+            myDoughnut.segments[1].value = parseInt(data0.Brandenburg[neu]["Deutsche Weiblich"]);
+            myDoughnut.segments[2].value = parseInt(data0.Brandenburg[neu]["Deutsche Insgesamt"]);
+            myDoughnut.segments[0].label = "Deutsche Männlich";
+            myDoughnut.segments[1].label = "Deutsche Weiblich";
+            myDoughnut.segments[2].label = "Deutsche Insgesamt";
+            
+            myDoughnut.update();}
             });
             break;
         default:
