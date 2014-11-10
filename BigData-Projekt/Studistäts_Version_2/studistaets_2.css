@@ -177,13 +177,9 @@ a {
 #canvas-holder {
     height: 250px;
     width: 250px;
-    float: right;
-    clear:both;
 }
 
 
-
-<<<<<<< HEAD
 #Stundiengänge {
     float: left;
     padding-right: 15px;
@@ -194,14 +190,18 @@ a {
     float: left;
     padding-right: 15px;
 }
+#Semester {
+    float: left;
+    padding-right: 15px;
+}
 
+#button2 {
+    float: left;
+    padding-right: 15px;
+    margin-top: 15px;
+}
 
-
-
-
-
-
-
-
-=======
->>>>>>> origin/BigData-Projekt
+#Bundesländer2 {
+    float: left;
+    padding-right: 15px;
+}
