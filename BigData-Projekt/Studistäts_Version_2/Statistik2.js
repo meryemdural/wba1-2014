@@ -22,5 +22,5 @@ var doughnutData1 = [
 
 			function ChartActive1(){
 				var ctx1 = document.getElementById("chart-area1").getContext("2d");
-				var myDoughnutChart = new Chart(ctx1).Doughnut(doughnutData1,true);
+				window.myDoughnut1 = new Chart(ctx1).Doughnut(doughnutData, true);
 			};
