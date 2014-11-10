@@ -1,54 +1,65 @@
 body {
-    margin:auto;
+    margin: auto;
     background-color: #fff;
 }
-
 * {
-    font-family: 'PT Sans',Geneva, Arial, Tahoma, Verdana, sans-serif;
+    font-family: 'PT Sans', Geneva, Arial, Tahoma, Verdana, sans-serif;
     font-size: 13px;
     font-weight: 400;
     color: #000;
     line-height: 15px;
+    box-sizing: border-box;
 }
-
 /* Bilder automatisch responsiv skalieren lassen */
-img {
-	max-width: 100%;
-	height: auto;
-}
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 /* Haupt-Struktur */
 
 #wrap {
-    padding-top:15px;
-    padding-left:52px;
+    padding-top: 15px;
+    padding-left: 52px;
     max-width: 712px;
-
 }
-
 #main {
-    margin:0;
-    paddding:0;
+    margin: 0;
+    paddding: 0;
 }
-
+.float {
+    float: left;
+    display: block;
+}
 /* ------- HEADER -------- */
 
 header {
     margin: 0;
     padding-bottom: 16px;
+    display: none;
 }
-
 .mainlogo {
     margin-left: -20px;
 }
+/* - MI an der FH Köln - */
 
+.sublogo {
+    float: right;
+    margin: 20px 0px 20px 27px;
+}
+.sublogo > p {
+    font-size: 12px;
+}
+.pink {
+    font-size: 12px;
+    font-weight: 600;
+    color: #d16;
+}
 #startbild {
     border-top: 4px solid #70c000;
     position: relative;
     margin-top: 15px;
-
 }
-
 #startbild .bu {
     position: absolute;
     left: 50%;
@@ -60,23 +71,20 @@ header {
     width: 50%;
     height: 73px;
 }
-
 /* Bildunterschrift */
+
 .bu .myriad {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.385em;
     padding: 8px;
-    margin:0;
+    margin: 0;
     text-transform: uppercase;
-
 }
-
 .myriadklein {
     padding: 4px;
     padding-bottom: 8px;
-    margin:0;
+    margin: 0;
 }
-
 /* Navigation */
 
 #nav_wrap ul li {
@@ -84,492 +92,537 @@ header {
     background: none;
     padding: 0;
 }
-
 #nav_wrap ul {
-float: left;
-width: 170px;
-margin: 0 10px 0 0;
-padding: 0;
+    float: left;
+    width: 21.8%;
+    margin: 0 10px 0 0;
+    padding: 0;
 }
-
-#nav_wrap a{
-	display: block;
-	border: none;
+#nav_wrap a {
+    display: block;
+    border: none;
 }
-
-#nav_wrap a:hover{
-	background: #d16;
-	color: #fff !important;
-	border: none;
+#nav_wrap a:hover {
+    background: #d16;
+    color: #fff !important;
+    border: none;
 }
-
-#nav_wrap a:visited{
-	border: none;
+#nav_wrap a:visited {
+    border: none;
 }
-
 #nav_wrap * {
     color: #d16;
 }
-
 #nav_wrap {
-    width:109.5%;
-    height:93px;
+    width: 109.5%;
+    height: 93px;
 }
-
 /* Basic Einstellungen: Links */
 
 a {
-	color: #000;	
-	border-bottom: dotted 1px #d16;
-	text-decoration:none;
+    color: #000;
+    border-bottom: dotted 1px #d16;
+    text-decoration: none;
 }
 a:visited {
-	color: #666;
-	border-bottom: dotted 1px #d16;
+    color: #666;
+    border-bottom: dotted 1px #d16;
 }
-
-
-a:hover{
-	color: #75bf0d;
+a:hover {
+    color: #75bf0d;
 }
-
 /* Basic Einstellungen: Headlines */
 
-h1, h2,h3,h4,h5,h6{
-	font-size: 11px;
-	font-weight: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 0.846em;
+    font-weight: normal;
 }
-
 h1 {
-background: #d16;
-color: #fff !important;
-font-size: 11px;
-font-weight: bold;
-padding: 2px;
-padding-left: 5px;
-padding-right: 5px;
-margin-top:0;
-text-transform: uppercase;
-margin-bottom: 15px;
-float: left;
-letter-spacing: 1px;
+    background: #d16;
+    color: #fff !important;
+    font-weight: bold;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 0;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    float: left;
+    letter-spacing: 1px;
 }
-
-
-h2.balkengruen, span.balkengruen, h2.balkenblau, span.balkenblau{
-	background: #77cc00;
-	color: #fff !important;
-	font-size: 11px;
-	font-weight: normal;
-	padding: 2px;
-	padding-left: 5px;
-	text-transform: uppercase;
-	margin-bottom: 15px;
-	letter-spacing: 1px;
+h2.balkengruen,
+span.balkengruen,
+h2.balkenblau,
+span.balkenblau {
+    background: #77cc00;
+    color: #fff !important;
+    font-size: 0.846em;
+    font-weight: normal;
+    padding: 2px;
+    padding-left: 5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
-
-h2.balkengruen a, h2.balkengrau a{
-	color: #d16;
+h2.balkengruen a,
+h2.balkengrau a {
+    color: #d16;
 }
-
-h2.balkenblau, span.balkenblau{
-	background: #77aabb;
+h2.balkenblau,
+span.balkenblau {
+    background: #77aabb;
 }
-
-h2.balkengrau, span.balkengrau{
-	background: #442211;
-	color: #fff !important;
-	font-size: 11px;
-	font-weight: normal;
-	padding: 2px;
-	padding-left: 5px;
-	text-transform: uppercase;
-	margin-bottom: 15px;
-	letter-spacing: 1px;
+h2.balkengrau,
+span.balkengrau {
+    background: #442211;
+    color: #fff !important;
+    font-size: 0.846em;
+    font-weight: normal;
+    padding: 2px;
+    padding-left: 5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
-
-h3, h3 a {
+h3,
+h3 a {
     display: block;
     margin-bottom: 4px;
     font-weight: 600;
     color: #000;
 }
 
+.readmore {
+    font-size: 1.231em;
+    background-color: #d16;
+    color: #fff;
+    width: 100%;
+    padding:5px;
+    display: none;
+}
+
 /* --------- Hauptcontainer --------- */
 
 /* Wiki-Spalte */
 
-.wiki div .author, .wiki div .datum, .wiki div .bezug, .wiki .art, .wiki .studiengang, .wiki .ansprechpartner {
+.wiki div .author,
+.wiki div .datum,
+.wiki div .bezug,
+.wiki .art,
+.wiki .studiengang,
+.wiki .ansprechpartner {
     display: inline;
     padding-right: 0;
 }
-
 .wiki div + div {
     border-top: solid 1px #b4a7a0;
 }
-
 .wiki div {
     padding-top: 4px;
     padding-bottom: 8px;
 }
-
-input, textarea 
-{
-	background: #F3F6ED;
-	border: #75bf0d 1px solid;
-	margin: 0;
-	padding: 2px;
-	font-size: 11px;
+input,
+textarea {
+    background: #F3F6ED;
+    border: #75bf0d 1px solid;
+    margin: 0;
+    padding: 2px;
+    font-size: 0.846em;
 }
-
-
 .zeile {
     width: 101.1%;
     clear: both;
-padding-bottom: 16px;
+    padding-bottom: 16px;
 }
-
-.clear, span.clear {
-display: block;
-clear: both;
+.clear,
+span.clear {
+    display: block;
+    clear: both;
 }
-
 p.startnews {
-position: relative;
-
+    position: relative;
 }
-
 .zweifach {
-width: 48.8%;
-margin-right: 8px;
-margin-top:0;
+    width: 48.8%;
+    margin-right: 8px;
+    margin-top: 0;
 }
-
 .zweifach p {
-padding-right: 8px;
+    padding-right: 8px;
 }
-
 .float {
-float: left;
-display: block;
+    float: left;
+    display: block;
 }
-
-p.startnews a{
-	display: block;
-	position: relative;
+p.startnews a {
+    display: block;
+    position: relative;
 }
-
-p.startnews img{
-	border: solid 1px #b4a7a0;
+p.startnews img {
+    border: solid 1px #b4a7a0;
 }
-
-p.startnews a, p.startnews a:visited{
-	border: none;
+p.startnews a,
+p.startnews a:visited {
+    border: none;
 }
-
 .fade {
-  opacity: 0.6;
-   }
-
-   .fade:hover {
-        opacity: 1;
-   transition: opacity .25s ease-in-out;
-   -moz-transition: opacity .25s ease-in-out;
-   -webkit-transition: opacity .25s ease-in-out;
-      
-      }
-
+    opacity: 0.6;
+}
+.fade:hover {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
 p.startnews strong {
-display: block;
-position: absolute;
-bottom: 13px;
-left: 0;
-margin: 1px;
-background: #fff;
-color: #77cc00;
-padding: 2px;
-font-weight: normal;
-padding-right: 5px;
+    display: block;
+    position: absolute;
+    bottom: 13px;
+    left: 0;
+    margin: 1px;
+    background: #fff;
+    color: #77cc00;
+    padding: 2px;
+    font-weight: normal;
+    padding-right: 5px;
 }
-
 .linkbox {
-border: solid 1px #77cc00;
-width: 47.2%;
-height: 90px;
-padding: 5px;
-text-align: right;
-display:block;
-position:relative;
+    border: solid 1px #77cc00;
+    width: 48.2%;
+    height: 90px;
+    padding: 5px;
+    text-align: right;
+    display: block;
+    position: relative;
 }
-
-.linkbox *{
-	color: #77cc00 !important;
+.linkbox * {
+    color: #77cc00 !important;
 }
-
-.linkbox a::before{
-    height:75px;
-    display:block;
-    content:"";}
-
-.linkbox:hover{border: solid 1px #d16;  }
-.linkbox *:hover{color: #d16 !important;  }
-
-.termine { 
-	padding-top: 4px;
-	padding-bottom: 4px;
+.linkbox a::before {
+    height: 65px;
+    display: block;
+    content: "";
+}
+.linkbox:hover {
+    border: solid 1px #d16;
+}
+.linkbox *:hover {
+    color: #d16 !important;
+}
+.termine {
+    padding-top: 4px;
+    padding-bottom: 4px;
     margin-bottom: 10px;
-	position: relative;
+    position: relative;
+    min-height: 60px;
 }
-
 .termine + .termine {
-	border-top: solid 1px #e4f5cc;
+    border-top: solid 1px #e4f5cc;
 }
-
-.termine .datum, .termine .beschreibung{
-	display: block;
-	float: left;
-	width: 47.8%;
+.termine .datum,
+.termine .beschreibung {
+    display: block;
+    float: left;
+    width: 47.8%;
 }
-
-.termine .datum{
-	text-transform: uppercase;
-	color: #77cc00;
-	margin-right: 8px;
+.termine .datum {
+    text-transform: uppercase;
+    color: #77cc00;
+    margin-right: 8px;
 }
-
 div#themen {
-width: 101.2%;
+    width: 101.2%;
 }
-
-
 /* dieses div hat eine feste Breite, weil die Spalten beim "fluiden" nicht nebeneinander stehen soll */
-div#themen div{
-	float: left;
-	width: 23.8%;
-	/*height: 200px;*/
-	margin-right: 8px;
-	margin-bottom: 8px;
-}
 
-div#themen .titel, 
+div#themen div {
+    float: left;
+    width: 23.8%;
+    /*height: 200px;*/
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+div#themen .titel,
 div#themen .ansprechpartner,
 div#themen .art,
-div#themen .studiengang{
-	display: inline;
-	padding-right: 2px;
+div#themen .studiengang {
+    display: inline;
+    padding-right: 2px;
 }
-
 .halb {
     width: 86px;
     margin-right: 8px;
 }
-
 /* Boxen mit farbigen Hintergruenden */
-.bg_braun{ background: #f2ebe6; }
-.bg_gruen{ background: #e4f5cc; }
 
+.bg_braun {
+    background: #f2ebe6;
+}
+.bg_gruen {
+    background: #e4f5cc;
+}
 /* linien */
-.linieoben_pink{ border-top: solid 1px #d16; }
-.linieoben_braun{ border-top: solid 1px #b4a7a0; }
 
-.linieoben_pink, .linieoben_braun{
-	padding-top: 4px;
-	margin-top: 8px;
+.linieoben_pink {
+    border-top: solid 1px #d16;
 }
-
-.linieunten_pink{
-	border-bottom: solid 1px #d16;
-}
-
-.linieunten_blau{
-	border-bottom: solid 1px #77aabb;
-}
-
-.linieunten_braun{
-	border-bottom: solid 1px #b4a7a0;
-}
-
-
-
-.linieoben_pink, .linieoben_braun {
-    padding-top: 4px;
-    margin-top: 8px;
-}
-
 .linieoben_braun {
     border-top: solid 1px #b4a7a0;
 }
-
+.linieoben_pink,
+.linieoben_braun {
+    padding-top: 4px;
+    margin-top: 8px;
+}
+.linieunten_pink {
+    border-bottom: solid 1px #d16;
+}
+.linieunten_blau {
+    border-bottom: solid 1px #77aabb;
+}
+.linieunten_braun {
+    border-bottom: solid 1px #b4a7a0;
+}
+.linieoben_pink,
+.linieoben_braun {
+    padding-top: 4px;
+    margin-top: 8px;
+}
+.linieoben_braun {
+    border-top: solid 1px #b4a7a0;
+}
 /* Feste Breite, weil es beim Kleinmachen alleine in der Zeile stehen soll */
+
 .einfach {
     width: 172px;
     margin-right: 8px;
 }
-
 .kontaktfooter {
     width: 101.2%;
     min-height: 108px;
 }
-
 /* -------- FOOTER --------- */
 
 footer {
-padding: 2px 0;
-clear: both;
-color: #999;
-border-top: solid 3px #77cc00;
-padding-bottom: 16px;
-width: 100%;
+    padding: 2px 0;
+    clear: both;
+    color: #999;
+    border-top: solid 3px #77cc00;
+    padding-bottom: 16px;
+    width: 100%;
 }
-
 footer p#copy {
-padding-bottom: 16px;
+    padding-bottom: 16px;
 }
-
-
-nav a#pull {  
-    display: none;  
-}       
-
-
-
-/* --------- IPHONE 5 Portrait und Landscape -------- */
-@media only screen and (max-width : 320px) {  
-    nav li {  
-        display: block;  
-        float: none;  
-        width: 100%;  
-    }  
-    nav li a {  
-        border-bottom: 1px solid #576979;  
-    }  
-    div#themen div{
-	float: left;
-	width: 100%;
-	/*height: 200px;*/
-	margin-right: 8px;
-	margin-bottom: 8px;
+nav a#pull {
+    display: none;
 }
-    
-      #nav_wrap {
-    width:93%;
-    height:93px;
+/* --------- IPHONE 5 Portrait und Landscape -*/
+
+@media only screen and (max-width: 320px) {
+    nav li {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    nav li a {
+        border-bottom: 1px solid #576979;
+    }
+    div#themen div {
+        float: left;
+        width: 100%;
+        /*height: 200px;*/
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+    #nav_wrap {
+        width: 93%;
+        height: 93px;
+    }
+    .sublogo {
+        float: left;
+    }
+    .linkbox {
+        width: 352px;
+    }
+    h2 {
+        font-size: 1.231em;
+    }
+    .mainlogo {
+        margin-left: -20px;
+    }
+    #nav_wrap {
+        width: 100%;
+        height: 30px;
+    }
 }
-} 
-
-
-@media only screen 
-and (min-width : 320px) 
-and (max-width : 568px) {
+@media only screen and (max-width: 568px) {
     /* Zweispaltigkeit in eine Spalte verwandeln */
     .zweifach {
         width: 100%;
     }
-    
-    #wrap {
-        padding-left:22px;
-    }
-
-     nav {  
-        margin-top:10px; 
+    nav {
+        margin-top: 10px;
         margin-bottom: 30px;
-    }  
-    nav ul {  
-        display: none;  
-        height: auto;  
-    }  
-    nav a#pull {  
-        display: block;  
+    }
+    nav ul {
+        display: none;
+        height: auto;
+    }
+    nav a#pull {
+        display: block;
         background-color: #d16;
-        color:#fff;
-        position: relative; 
+        color: #fff;
+        position: absolute;
         padding: 10px;
-    }  
-    nav a#pull:after {  
-        content:"";  
-        background: url('nav-icon.png') no-repeat;  
-        width: 30px;  
-        height: 30px;  
-        display: inline-block;  
-        position: absolute;  
-        right: 15px;  
-        top: 10px;  
-    }  
+        width: 95%;
+    }
+    nav a#pull:after {
+        content: "";
+        background: url('../img/nav-icon.svg') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
     #startbild .bu {
-        position:static;
-        width:100%;
+        position: static;
+        width: 100%;
     }
-    
-    div#themen div{
-	float: left;
-	width: 100%;
-	/*height: 200px;*/
-	margin-right: 8px;
-	margin-bottom: 8px;
+    div#themen div {
+        float: left;
+        width: 100%;
+        /*height: 200px;*/
+        margin-right: 8px;
+        margin-bottom: 8px;
     }
-    
     #nav_wrap {
-    width:100%;
+        width: 100%;
+        height: 30px;
     }
-    
     #nav_wrap a {
-    background: #d16;
-    color: #fff !important;
-    padding: 10px;
-        margin-top:3px;
+        background: #d16;
+        color: #fff !important;
+        padding: 10px;
+        margin-top: 3px;
     }
-    
     #nav_wrap .firstul {
-        margin-top:35px;
+        margin-top: 40px;
     }
-    
     #nav_wrap .lastul {
-    margin-bottom: 10px;
+        margin-bottom: 10px;
     }
-    
     #nav_wrap ul {
-    width: 90%;
+        width: 100%;
     }
-    
     /* ---- mit Position:absolute haben wir getrickst und den Navigationspunkt rausgenommen -----*/
     .mobilehide {
-    visibility: hidden;
-    position: absolute;
+        visibility: hidden;
+        position: absolute;
     }
-
+    h1 {
+        width: 100%;
+    }
+    h1,
+    h2.balkengruen,
+    h2.balkengrau,
+    h3 a{
+        font-size: 1.231em;
+    }
+    #wrap {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .mainlogo {
+        margin-left: 0px;
+    }
+    .sublogo {
+        float: left;
+    }
+    .linkbox {
+        width: 352px;
+    }
+    .kontaktfooter {
+        min-height: 208px;
+    }
+    /*---------- ALLE BILDER AUSTAUSCHEN IN DOPPELTER AUFLÖSUNG -------- */
+    span[id=teaserbild1] {
+        display: block;
+        background-image: url(../img/teaserbilder/da_medieninformatik_filmfestival.jpg) !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        width: 350px !important;
+        height: 100px !important;
+    }
+    span[id=teaserbild2] {
+        display: block;
+        background-image: url(../img/teaserbilder/da_opitz_preis.jpg) !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        width: 350px !important;
+        height: 100px !important;
+    }
+    span[id=teaserbild3] {
+        display: block;
+        background-image: url(../img/teaserbilder/da_vortrag_christian_solmecke.jpg) !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        width: 350px !important;
+        height: 100px !important;
+    }
+    span[id=teaserbild4] {
+        display: block;
+        background-image: url(../img/teaserbilder/da_vortrag_tobias_schiwek.jpg) !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        width: 350px !important;
+        height: 100px !important;
+    }
+    span[id=teaserbild5] {
+        display: block;
+        background-image: url(../img/teaserbilder/da_nacht_der_technik_2013.jpg) !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        width: 350px !important;
+        height: 100px !important;
+    }
+    img[id=switchbild] {
+        display: none !important;
+    }
+    .disnone {
+    display: none;
+    }
+    .readmore {
+    display: block;
+    }
 }
-
-
-@media only screen 
-and (min-width : 569px)
-and (max-width : 767px)  {
+@media only screen and (min-width: 569px) and (max-width: 767px) {
     /* Zweispaltigkeit in eine Spalte verwandeln */
     .zweifach {
-        width: 46%;
+        width: 100%;
     }
-     
-    #wrap {
-    padding-left:22px;
+    div#themen div {
+        float: left;
+        width: 100%;
+        /*height: 200px;*/
+        margin-right: 8px;
+        margin-bottom: 8px;
     }
-    
-     div#themen div{
-	float: left;
-	width: 100%;
-	/*height: 200px;*/
-	margin-right: 8px;
-	margin-bottom: 8px;
+    .kontaktfooter {
+        min-height: 180px;
+    }
 }
-
-}
-
 /* ------- IPAD MINI in portrait und landscape ------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)
-and (-webkit-min-device-pixel-ratio: 1)  { 
-     .zweifach {
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .zweifach {
         width: 33%;
     }
-
-
 }

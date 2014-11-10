@@ -1,12 +1,12 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Medieninformatik an der FH Köln // Willkommen // Startseite </title>
-    
+    <title>Medieninformatik an der FH Köln // Willkommen // Startseite</title>
+
     <!-- Unser Zeichensatz -->
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    
+
     <!-- Ein paar Metadaten -->
     <meta name="Content-Language" content="de" />
     <meta name="keywords" lang="de" content="Medieninformatik, FH, Köln" />
@@ -17,140 +17,209 @@
     user-scalable = zoomen ja o. nein? // initial-scale = der anfängliche Zoomgrad; 1.0 = 1:1 Darstellung */
     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    
+
     <!-- Unser CSS einbinden-->
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <!-- Fonts einbinden -->
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    
-    
-<!-- JQUERY -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <!--- DER BUTTON "MEHR ERFAHREN": Wenn man die Website auf dem Smartphone öffnet (Breakpoint (max-width: 568px)), 
+            dann wird der Teasertext NICHT angezeigt. Stattdessen ist da ein Button mit "mehr erfahren". Wenn man dort draufklickt,
+dann erscheint der Text und der Button verschwindet. Umgesetzt mit Jquery. #clickwiki(x) und #awiki(x) beachten.--->
     <script>
-       $(function() {
-			var pull 		= $('#pull');
-				menu 		= $('nav ul');
-				menuHeight	= menu.height();
+        $(document).ready(function () {
+            $("header").fadeIn("slow", function () {});
+            
+            $("#clickwiki1").click(function () {
+                $("#awiki1").fadeIn("slow", function () {});
+                $("#clickwiki1").fadeOut("slow", function () {});
 
-			$(pull).on('click', function(e) {
-				e.preventDefault();
-				menu.slideToggle();
-			});
+            });
+            
+            $("#clickwiki2").click(function () {
+                $("#awiki2").fadeIn("slow", function () {});
+                $("#clickwiki2").fadeOut("slow", function () {});
 
-			$(window).resize(function(){
-        		var w = $(window).width();
-        		if(w > 320 && menu.is(':hidden')) {
-        			menu.removeAttr('style');
-        		}
-    		});
-		});
-     
+            });
+            
+            $("#clickwiki3").click(function () {
+                $("#awiki3").fadeIn("slow", function () {});
+                $("#clickwiki3").fadeOut("slow", function () {});
+
+            });
+            
+            $("#clickwiki4").click(function () {
+                $("#awiki4").fadeIn("slow", function () {});
+                $("#clickwiki4").fadeOut("slow", function () {});
+
+            });
+        });
+        
+
     </script>
-    
-    </head>
-    
+
+
+<!--- Jquery Schnipsel für die Navigation (bei breakpoint max-width 568) - Auf und zuklappen-Funktion --->
+    <script>
+        $(function () {
+            var pull = $('#pull');
+            menu = $('nav ul');
+            menuHeight = menu.height();
+
+            $(pull).on('click', function (e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+
+            $(window).resize(function () {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+
+</head>
+
 <body>
     <div id="wrap">
-    
+
         <header>
-            
-            <div class="mainlogo">
+
+            <div class="mainlogo float">
                 <img alt="Fachhochschule Köln Cologne University of Applied Sciences Logo" src="img/logo.svg">
             </div>
-            
-            <div class="sublogo"></div>
-            
+
+            <div class="sublogo">
+                <p>Medieninformatik
+                    <br /><span class="pink">an der Fachhochschule K&ouml;ln</span>
+                </p>
+            </div>
+            <br style="clear:both;">
+
             <div id="startbild">
                 <img alt="Box mit Symbolen der Medieninformatik" src="img/startheaderbild.jpg">
                 <div class="bu">
                     <p class="myriad">Showcase 2014</p>
                     <p class="myriadklein">
-                        Damit Ihr schonmal einen kurzen Einblick erhaltet, was Euch erwartet, hier 
+                        Damit Ihr schonmal einen kurzen Einblick erhaltet, was Euch erwartet, hier
                         <a href="#">weitere Informationen</a>.
-                    
+
                     </p>
                 </div>
             </div>
-            
+
             <nav id="nav_wrap">
-                
-                
+
+
                 <ul class="firstul">
-                    <li><a href="#">Startseite</a></li>
-                    <li><a href="#">Leute</a></li>
-                    <li><a href="#">Räume & Ressourcen</a></li>
-                    <li><a href="#">Showcase</a></li>
-                    <li><a href="#">Medieninformatik?</a></li>
+                    <li class="mobilehide"><a href="index.html">Startseite</a>
+                    </li>
+                    <li><a href="leute.html">Leute</a>
+                    </li>
+                    <li><a href="#">Räume & Ressourcen</a>
+                    </li>
+                    <li><a href="#">Showcase</a>
+                    </li>
+                    <li><a href="#">Medieninformatik?</a>
+                    </li>
                 </ul>
-                
+
                 <ul>
-                    <li><a href="#">Bachelor</a></li>
-                    <li><a href="#">Master</a></li>
-                    <li class="mobilehide"><a href="#">ASS Training</a></li>
-                    <li class="mobilehide"><a href="#">RTL/CBC Preis</a></li>
+                    <li><a href="#">Bachelor</a>
+                    </li>
+                    <li><a href="#">Master</a>
+                    </li>
+                    <li class="mobilehide"><a href="#">ASS Training</a>
+                    </li>
+                    <li class="mobilehide"><a href="#">RTL/CBC Preis</a>
+                    </li>
                 </ul>
-                
+
                 <ul class="lastul">
-                    <li><a href="#">Kooperationsmöglichkeiten</a></li>
-                    <li><a href="#">Forschungsthemen</a></li>
+                    <li><a href="#">Kooperationsmöglichkeiten</a>
+                    </li>
+                    <li><a href="#">Forschungsthemen</a>
+                    </li>
                 </ul>
-                
+
                 <ul>
-                    <li class="mobilehide"><a href="#">Wiki</a></li>
-                    <li class="mobilehide"><a href="#">Designguide</a></li>
+                    <li class="mobilehide"><a href="#">Wiki</a>
+                    </li>
+                    <li class="mobilehide"><a href="#">Designguide</a>
+                    </li>
                 </ul>
-                 <a href="#" id="pull">Menu</a>  
-                
+                <a href="#" id="pull">Menu</a> 
+
             </nav>
-            
+
         </header>
-    
+
         <div id="main">
-            
+
             <div class="zeile">
                 <h1>Berichte, Events und mehr</h1>
                 <div class="clear">
-                    
+
                     <p class="startnews float zweifach">
-                        <a href="#"><img src="img/teaserbilder/medieninformatik_filmfestival.jpg" alt="Medieninformatik Filmfestival 2014" class="fade">
-                        <strong>Medieninformatik Filmfestival 2014</strong></a>
+                        <!--- BILDSWITCHER: span id="medieninformatikfilmfestival" - damit das Bild bei mobilen Geräten in ein Bild mit doppelter Auflösung ausgetauscht wird -->
+                        <a href="#">
+                            <span id="teaserbild1"><img id="switchbild" src="img/teaserbilder/medieninformatik_filmfestival.jpg" alt="Medieninformatik Filmfestival 2014" class="fade"></span> 
+                            <strong>Medieninformatik Filmfestival 2014</strong>
+                        </a>
                     </p>
-                    
+
                     <p class="startnews float zweifach">
-                        <a href="#"><img src="img/teaserbilder/opitz_preis.jpg" alt="Opitz-Preis 2014: Alle drei Geehrten aus dem Studienbereich Medieninformatik. Wir freuen uns!" class="fade"></a>
-                        <strong>Opitz-Preis 2014: Alle drei GEehrten aus dem Studienbereich Medieninformatik. Wir freuen uns!</strong>
+                        <a href="#">
+                            <span id="teaserbild2">
+                            <img id="switchbild" src="img/teaserbilder/opitz_preis.jpg" alt="Opitz-Preis 2014: Alle drei Geehrten aus dem Studienbereich Medieninformatik. Wir freuen uns!" class="fade"></span>
+                            <strong>Opitz-Preis 2014: Alle drei GEehrten aus dem Studienbereich Medieninformatik. Wir freuen uns!</strong>
+                        </a>
                     </p>
-                    
+
                     <p class="startnews float zweifach">
-                        <a href="#"><img src="img/teaserbilder/vortrag_christian_solmecke.jpg" alt="Vortrag Christian Solmecke" class="fade"></a>
-                        <strong>Vortrag Christian Solmecke</strong>
+                        <a href="#">
+                            <span id="teaserbild3">
+                            <img id="switchbild" src="img/teaserbilder/vortrag_christian_solmecke.jpg" alt="Vortrag Christian Solmecke" class="fade"></span>
+                            <strong>Vortrag Christian Solmecke</strong>
+                        </a>
                     </p>
-                    
+
                     <p class="startnews float zweifach">
-                        <a href="#"><img src="img/teaserbilder/vortrag_tobias_schiwek.jpg" alt="Vortrag Tobias Schiwek" class="fade"></a>
-                        <strong>Vortrag Tobias Schiwek</strong>
+                        <a href="#">
+                            <span id="teaserbild4">
+                            <img id="switchbild" src="img/teaserbilder/vortrag_tobias_schiwek.jpg" alt="Vortrag Tobias Schiwek" class="fade"></span>
+                            <strong>Vortrag Tobias Schiwek</strong>
+                        </a>
                     </p>
-                    
+
                     <p class="startnews float zweifach">
-                        <a href="#"><img src="img/teaserbilder/nacht_der_technik_2013.jpg" alt="Nacht der Technik 2013" class="fade"></a>
-                        <strong>Nacht der Technik 2013</strong>
+                        <a href="#">
+                            <span id="teaserbild5">
+                            <img id="switchbild" src="img/teaserbilder/nacht_der_technik_2013.jpg" alt="Nacht der Technik 2013" class="fade"></span>
+                            <strong>Nacht der Technik 2013</strong>
+                        </a>
                     </p>
-                    
+
                     <p class="startnews float zweifach linkbox">
                         <a href="#">weitere Berichte</a>
                     </p>
-                    
+
                 </div>
             </div>
-            
+
             <div class="zeile">
-                
+
                 <div class="float zweifach">
                     <h2 class="balkengruen">Neues aus dem <a href="#">Semantic Mediawiki</a></h2>
                     <div class="wiki">
-                        
+
                         <div class="artikel_wiki">
                             <h3>
                                 <a href="#wpf">WPF Modellierung kontextsensitiver Sicherheit WiSe 14/15 Termin 29.10.</a>
@@ -159,7 +228,7 @@
                             <p class="datum">23.10.2014</p>
                             <p class="author">Kristian Fischer</p>
                         </div>
-                        
+
                         <div class="artikel_wiki">
                             <h3>
                                 <a href="#Profil2">Profil 2 Projektarbeit - Evaluation von Mobile Learning Systemen</a>
@@ -168,7 +237,7 @@
                             <p class="datum">10.10.2014</p>
                             <p class="author">Christopher Messner</p>
                         </div>
-                        
+
                         <div class="artikel_wiki">
                             <h3>
                                 <a href="#Medienrecht">Medienrecht Kickoff 2014/15</a>
@@ -177,88 +246,103 @@
                             <p class="datum">09.10.2014</p>
                             <p class="author">Mario Winter</p>
                         </div>
-                        
-                    </div>                    
+
+                    </div>
                 </div>
 
                 <div class="float zweifach last">
                     <h2 class="balkengrau">Termine</h2>
-                    
+
                     <div class="termine">
-                        
-                        <p class="termine" onclick="#Projekte_auszeichnungen">
-                            <a href="#Projekte_auszeichnungen">
-                                <span class="datum"></span>
-                                <span class="beschreibung"></span>
-                            </a>
-                            <br class="clear">
-                        </p>
-                        
+
+
                         <p class="termine">
                             <a href="#Projekte_auszeichnungen">
                                 <span class="datum">Hier bekommen ausgezeichnete Projekte ihre Auszeichnung</span>
                                 <span class="beschreibung">Am 21.10.2014 findet der Showcase der Medieninformatik statt.</span>
                             </a>
                         </p>
-                        
+
                         <p class="termine">
                             <a href="#Erstsemester">
                                 <span class="datum">Wir heißen die Erstsemester herzlich willkommen</span>
                                 <span class="beschreibung">Am 26. September findet die Erstsemesterbegrüßung im Stadttheater Gummersbach statt und am 25./26.09 folgt diesbezüglich noch eine Bibliotheksführung.</span>
                             </a>
                         </p>
-                        
+
                     </div>
                 </div>
-            <div class="clear"></div>
+                <div class="clear"></div>
             </div>
-            
+
             <div>
                 <h2 class="balkengruen">Sie suchen einen Job?</h2>
             </div>
             
+            
+
             <div id="themen">
-                
+
                 <div class="artikel_wiki">
                     <h3>
                         <a href="#AusschreibungPraktikum">Neue Ausschreibung Praktikum in Berlin</a>
                     </h3>
+                    <div id="clickwiki1" class="readmore">
+                        Mehr erfahren
+                    </div>
+                    <span id="awiki1" class="disnone">
                     <p>Edenspiekermann sucht talentierte Praktikanten (Interaction Design / Web Development) für ihr Büro in Berlin. Näheres siehe Jobbörse</p>
                     <p class="datum">8.10.2014</p>
                     <p class="author">Christiane Gruenloh</p>
+                        </span>
                 </div>
-            
+
                 <div class="artikel_wiki">
                     <h3>
                         <a href="#StellenausschreibungParkplatz">Neue Stellenausschreibungen von Parkplatz-gesucht in München</a>
                     </h3>
+                    <div id="clickwiki2" class="readmore">
+                        Mehr erfahren
+                    </div>
+                    <span id="awiki2" class="disnone">
                     <p>Parkplatz-gesucht UG in München schreibt mehrere Stellen im Bereich Mobile Development und Web Development aus. Nähere Infos siehe Jobbörse.</p>
                     <p class="datum">17.09.2014</p>
                     <p class="author">Christiane Gruenloh</p>
+                        </span>
                 </div>
-           
-        
+
+
                 <div class="artikel_wiki">
                     <h3>
                         <a href="#StellenausschreibungParkplatz">Neue Stellenausschreibungen studentische Hilfskraft</a>
                     </h3>
-                    <p>PDas Gesundheits- und Bildungszentrum Oberberg sucht eine studentische Hilfskraft im Bereich E-Learning / Ilias. Mehr Infos siehe Jobbörse.</p>
-                    <p class="datum">15.09.2014</p>
-                    <p class="author">Christiane Gruenloh</p>
+                    <div id="clickwiki3" class="readmore">
+                        Mehr erfahren
+                    </div>
+                    <span id="awiki3" class="disnone">
+                        <p>Das Gesundheits- und Bildungszentrum Oberberg sucht eine studentische Hilfskraft im Bereich E-Learning / Ilias. Mehr Infos siehe Jobbörse.</p>
+                        <p class="datum">15.09.2014</p>
+                        <p class="author">Christiane Gruenloh</p>
+                    </span>
                 </div>
-                
-                 <div class="artikel_wiki">
+
+                <div class="artikel_wiki">
                     <h3>
                         <a href="#StellenausschreibungParkplatz">Neue Stellenausschreibung: Web Designer - Software Developer</a>
                     </h3>
+                    <div id="clickwiki4" class="readmore">
+                        Mehr erfahren
+                    </div>
+                    <span id="awiki4" class="disnone">
                     <p>Unternehmensgründer sucht für die technische Umsetzung seines Projektes einen Web Designer /Software Developer (m/w). Nähere Infos siehe Jobbörse.</p>
                     <p class="datum">9.09.2014</p>
                     <p class="author">Christiane Gruenloh</p>
+                        </span>
                 </div>
-            
+
             </div>
-            
-            
+
+
             <div class="linieoben_braun bg_braun kontaktfooter clear">
                 <div class="float zweifach">
                     <img class="float halb" src="img/footer/christiane_gruenloh.jpg" alt="Christiane Grünloh (M.Sc.)">
@@ -267,28 +351,28 @@
                         <a href="#christiane">Christiane Grünloh (M.Sc.)</a>
                     </p>
                 </div>
-                
+
                 <div class="float einfach last">
-                <br class="spacer">
+                    <br class="spacer">
                 </div>
                 <p class="float einfach last">
                     <a href="http://twitter.com/micologne">
-                        <img src="img/footer/twitter.svg" class="float halb" alt="Folge uns auf Twitter">
-                        Folge uns auf Twitter
+                        <img src="img/footer/twitter.svg" class="float halb" alt="Folge uns auf Twitter">Folge uns auf Twitter
                     </a>
                 </p>
             </div>
-            
-    
+
+
         </div>
-    
+
         <footer>
             <p id="copy">
-            © 2000 - 2014 FH Köln
-                <a href="href="http://kord.klickmeister.com/cgi-bin/k2/kunden/medieninformatik/k2.pl/k2.pl/1413791428?PKM_Seite=545&S_Aktion=_quickedit&S_PKM=527&S_Sprachkuerzel=de&S_AktiveSprache=de&FKM_PDB_Langkey=1031&FKM_PDB_TU=1"">&nbsp;</a>
+                © 2000 - 2014 FH Köln
+
             </p>
         </footer>
     </div>
-    
+
 </body>
+
 </html>

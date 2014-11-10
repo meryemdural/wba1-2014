@@ -49,6 +49,30 @@ Die Präsentation ist klar, nachvollziehbar und zeigt den Umsetzungsprozess und 
         
         <!-- Fonts einbinden -->
         <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        
+          <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <!--- Jquery Schnipsel für die Navigation (bei breakpoint max-width 568) - Auf und zuklappen-Funktion --->
+    <script>
+        $(function () {
+            var pull = $('#pull');
+            menu = $('nav ul');
+            menuHeight = menu.height();
+
+            $(pull).on('click', function (e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+
+            $(window).resize(function () {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+        
     </head>
     
     
@@ -65,32 +89,50 @@ Die Präsentation ist klar, nachvollziehbar und zeigt den Umsetzungsprozess und 
 
         <br style="clear:both;">
         <!-- Navigation -->
-        <nav id="nav_wrap">
-                <ul>
-                    <li><a href="index.html">Startseite</a></li>
-                    <li><a href="Leute.html">Leute</a></li>
-                    <li><a href="#">Räume & Ressourcen</a></li>
-                    <li><a href="#">Showcase</a></li>
-                    <li><a href="#">Medieninformatik?</a></li>
+         <nav id="nav_wrap">
+
+
+                <ul class="firstul">
+                    <li><a href="index.html">Startseite</a>
+                    </li>
+                    <li class="mobilehide"><a href="leute.html">Leute</a>
+                    </li>
+                    <li><a href="#">Räume & Ressourcen</a>
+                    </li>
+                    <li><a href="#">Showcase</a>
+                    </li>
+                    <li><a href="#">Medieninformatik?</a>
+                    </li>
                 </ul>
-                
+
                 <ul>
-                    <li><a href="#">Bachelor</a></li>
-                    <li><a href="#">Master</a></li>
-                    <li><a href="#">ASS Training</a></li>
-                    <li><a href="#">RTL/CBC Preis</a></li>
+                    <li><a href="#">Bachelor</a>
+                    </li>
+                    <li><a href="#">Master</a>
+                    </li>
+                    <li class="mobilehide"><a href="#">ASS Training</a>
+                    </li>
+                    <li class="mobilehide"><a href="#">RTL/CBC Preis</a>
+                    </li>
                 </ul>
-                
+
+                <ul class="lastul">
+                    <li><a href="#">Kooperationsmöglichkeiten</a>
+                    </li>
+                    <li><a href="#">Forschungsthemen</a>
+                    </li>
+                </ul>
+
                 <ul>
-                    <li><a href="#">Kooperationsmöglichkeiten</a></li>
-                    <li><a href="#">Forschungsthemen</a></li>
+                    <li class="mobilehide"><a href="#">Wiki</a>
+                    </li>
+                    <li class="mobilehide"><a href="#">Designguide</a>
+                    </li>
                 </ul>
-                
-                <ul>
-                    <li><a href="#">Wiki</a></li>
-                    <li><a href="#">Designguide</a></li>
-                </ul>
+                <a href="#" id="pull">Menu</a> 
+
             </nav>
+
             
         <div id="content">
             <div id="indexseite">

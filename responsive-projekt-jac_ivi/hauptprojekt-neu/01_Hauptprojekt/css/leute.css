@@ -1,326 +1,220 @@
 /* /////// CSS fuer die Unterseite "Leute" /////// */
 
 /* Allgemeines wie Logo, Abstände, Schriften, ect. */
+
 /***************************************************/
 
-body{
-	background: #ffffff;
+body {
+    background: #ffffff;
 }
-
-
 /* -jedes Element!- */
-*{
-    font-family: 'PT Sans',Geneva, Arial, Tahoma, Verdana, sans-serif;
-	font-size: 13px;
-	font-weight: 400;
-	color:#000000;
-	line-height:15px;
-	margin: 0;
-	padding: 0;
+
+* {
+    font-family: 'PT Sans', Geneva, Arial, Tahoma, Verdana, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 15px;
+    margin: 0;
+    padding: 0;
 }
-
-
 /* - Fh Köln-Logo - */
-.mainlogo{
+
+.mainlogo {
     margin: 20px 0px 20px 27px;
-    float:left;
+    float: left;
 }
-
-
-/* - MI an der FH Köln - */
-.sublogo{
-    float:right;
-    margin: 20px 0px 20px 27px;
+.block {
+    display: block;
 }
-
-
-.sublogo > p{
-	font-size: 12px;
+.dreifach {
+    width: 526px;
+    margin-right: 8px;
 }
-
-
-.pink{
-    font-size: 12px;
-    font-weight: 600;
-    color: #d16;
+.last {
+    margin-right: 0;
 }
-
-
-.float{
-	float: left;
-	display: block;
+a {
+    color: #000000;
+    border-bottom: dotted 1px #d16;
+    text-decoration: none;
 }
-
-
-.block{
-	display: block;
-}
-
-
-.dreifach{
-	width: 526px;
-	margin-right: 8px;
-}
-
-
-.last{
-	margin-right: 0;
-}
-
-
-a{
-    color: #000000;	
-	border-bottom: dotted 1px #d16;
-	text-decoration:none;
-}
-
-
 a:visited {
-	color: #666666;
-	border-bottom: dotted 1px #d16;
+    color: #666666;
+    border-bottom: dotted 1px #d16;
 }
-
-
-a:hover{
-	color: #75bf0d;
+a:hover {
+    color: #75bf0d;
 }
-
-
-
 /* Hauptcontainer */
+
 /******************/
 
-
-#indexseite .index_veranstaltung{
-	width: 164px;
-	height: 164px;
-	margin-right: 8px;
-	margin-bottom: 8px;
-	padding: 4px;
-	float: left;
-	overflow: hidden;
-	position: relative;
+#indexseite .index_veranstaltung {
+    width: 164px;
+    height: 164px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 4px;
+    float: left;
+    overflow: hidden;
+    position: relative;
 }
-
-
-#indexseite .vierzig_prozent{ 
-    background:#b4a7a0 !important;
+#indexseite .vierzig_prozent {
+    background: #b4a7a0 !important;
 }
-
-
-#indexseite .vierzig_prozent a{
-	border-bottom: dotted 1px #ffffff;
+#indexseite .vierzig_prozent a {
+    border-bottom: dotted 1px #ffffff;
 }
-
-
-#indexseite .vierzig_prozent a:hover{ 
+#indexseite .vierzig_prozent a:hover {
     border-bottom: solid 1px #dd1166;
 }
-
-
-#indexseite .index_veranstaltung *{
-	color: #fff;
+#indexseite .index_veranstaltung * {
+    color: #fff;
 }
-
-
-#indexseite h2.index, .box_rahmen{
-	width: 162px;
-	height: 162px;
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	border: solid 1px #dd1166;
-	padding: 4px;
-	display: block;
+#indexseite h2.index,
+.box_rahmen {
+    width: 162px;
+    height: 162px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: solid 1px #dd1166;
+    padding: 4px;
+    display: block;
 }
-
-#indexseite .index_veranstaltung p a:hover{
-	border-bottom: solid 1px #dd1166;
+#indexseite .index_veranstaltung p a:hover {
+    border-bottom: solid 1px #dd1166;
 }
-
-
 /* Bilder automatisch responsiv skalieren lassen */
-img { 
+
+img {
     border: none;
     max-width: 100%;
-	height: auto;
+    height: auto;
 }
-
-
-#content{
-    width:109.5%;
-	margin-left: 52px;
-	margin-top: 12px;
+#content {
+    width: 109.5%;
+    margin-left: 52px;
+    margin-top: 12px;
 }
-
-
-.zeile{
-	clear: both;	
-	padding-bottom: 16px;
+.zeile {
+    clear: both;
+    padding-bottom: 16px;
 }
-
-
-.einfach{
-	width: 24%;
-	margin-right: 8px;
+.einfach {
+    width: 24%;
+    margin-right: 8px;
 }
-
-
-
 /* Überschriften */
+
 /*****************/
 
-h1,h2,h3,h4,h5,h6{
-	font-size: 11px;
-	font-weight: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 11px;
+    font-weight: normal;
 }
-
-
-h1{
-	background: #d16;
-	color: #fff !important;
-	font-size: 11px;
-	font-weight: bold;
-	padding: 2px;
-	padding-left: 5px;
-	padding-right: 5px;
-	text-transform: uppercase;
-	margin-bottom: 15px;
-	float: left;
-	letter-spacing: 1px;
+h1 {
+    background: #d16;
+    color: #fff !important;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    float: left;
+    letter-spacing: 1px;
 }
-
-
-h2, h2 strong{
-	color: #77cc00;
+h2,
+h2 strong {
+    color: #77cc00;
 }
-
-
-p{
-	padding-bottom: 15px;
+p {
+    padding-bottom: 15px;
 }
-
-
-
 /* Navigation */
+
 /**************/
 
-#nav_wrap{
-    width:109.5%;
-    height:93px;
+#nav_wrap {
+    width: 109.5%;
+    height: 93px;
 }
-
-#nav_wrap ul{
-	float: left;
+#nav_wrap ul {
+    float: left;
     width: 170px;
     margin-right: 10px;
 }
-	
-
-#nav_wrap ul li{
-	display: block; 
-	background: none;
-	padding: 0;
+#nav_wrap ul li {
+    display: block;
+    background: none;
+    padding: 0;
 }
-
-
-#nav_wrap a{
-	display: block;
-	border: none;
+#nav_wrap a {
+    display: block;
+    border: none;
 }
-
-
-#nav_wrap a:hover{
-	background: #d16;
-	color: #fff !important;
-	padding-left: 2px;
-	border: none;
+#nav_wrap a:hover {
+    background: #d16;
+    color: #fff !important;
+    padding-left: 2px;
+    border: none;
 }
-
-
-#nav_wrap a:visited{
-	border: none;
+#nav_wrap a:visited {
+    border: none;
 }
-
-
-#nav_wrap *{
-	color: #d16; }
-
-
-
+#nav_wrap * {
+    color: #d16;
+}
 /* Footer */
+
 /**********/
 
 footer {
-	padding: 2px 0;
-	clear: both;
-	color: #999;
-	border-top: solid 3px #77cc00;	
-	margin-left: 50px;
-	padding-bottom: 16px;
-	width: 720px;
+    padding: 2px 0;
+    clear: both;
+    color: #999;
+    border-top: solid 3px #77cc00;
+    margin-left: 50px;
+    padding-bottom: 16px;
+    width: 720px;
 }
-
-
-footer p#copy{
-	padding-bottom: 16px;
+footer p#copy {
+    padding-bottom: 16px;
 }
-
-
-
 /* --------- IPHONE 5 Portrait und Landscape -------- */
-@media only screen and (max-width : 320px) {  
-        #content{
-	margin-left: 0px;
-        }
-    footer {
-    margin-left: 0px;
-    }
-    
-     .sublogo {
-    float:left;
-     }
-}
 
-@media only screen 
-and (min-width : 320px) 
-and (max-width : 568px) {
-        #content{
-	margin-left: 0px;
-        }
-    
-    footer {
-    margin-left: 0px;
+@media only screen and (max-width: 320px) {
+    #content {
+        margin-left: 0px;
     }
-    
-    .sublogo {
-    float:left;
-     }
-      
-}
-
-@media only screen 
-and (min-width : 569px)
-and (max-width : 767px)  {
-    #content{
-	margin-left: 0px;
-}
     footer {
-    margin-left: 0px;
+        margin-left: 0px;
     }
-    .sublogo {
-    float:left;
-     }
-    
-    
-    
-   
 }
-
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+    #content {
+        margin-left: 0px;
+    }
+    footer {
+        margin-left: 0px;
+    }
+}
+@media only screen and (min-width: 569px) and (max-width: 767px) {
+    #content {
+        margin-left: 0px;
+    }
+    footer {
+        margin-left: 0px;
+    }
+}
 /* ------- IPAD MINI in portrait und landscape ------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)
-and (-webkit-min-device-pixel-ratio: 1)  {
 
-}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
