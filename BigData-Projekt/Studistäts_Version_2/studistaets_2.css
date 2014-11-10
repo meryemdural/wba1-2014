@@ -177,6 +177,7 @@ a {
 #canvas-holder {
     height: 250px;
     width: 250px;
+    float: left;
 }
 
 
@@ -204,4 +205,11 @@ a {
 #Bundesländer2 {
     float: left;
     padding-right: 15px;
+}
+
+#canvas-holder1 {
+    height: 250px;
+    width: 250px;
+    margin-left: 550px;
+    float: left;
 }

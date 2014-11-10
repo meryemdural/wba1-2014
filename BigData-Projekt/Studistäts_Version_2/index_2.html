@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="studistaets_2.css">
     <script src="JSON Auslese Test/Statistik.js"></script>
+    <script src="Statistik2.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="JsonAufruf.js"></script>
+    <script src="JsonAufruf.js"></script>   
     <script type="text/javascript" src="JSON Auslese Test/Statistik.js"></script>
     <script src="../Chart.js-master/Chart.js"></script>
     <title>Studistäts - Vergleichen Sie die Studiengänge der FH Köln</title>
@@ -65,8 +67,11 @@
                         <p>Hier werden die Studienanfänger der Informatik mit den gesamten Studienfächern auf Bundeslandebene verglichen. <br><br>
                        Zum Beispiel: Anteil der Allgemeinen Informatikeranfänger in Baden-Würthenberg im Vergleich zu allen Studienanfängern in Baden-Würthenberg
                        </p>
-                            <div id="canvas-holder">
+                       <div id="canvas-holder">
                        <canvas id="chart-area" height="250" width="250"/>
+                       </div>
+                       <div id="canvas-holder1">
+                       <canvas id="chart-area1" height="250" width="250"/>
                        </div>
                        <div id="Stundiengänge">   
                         <p>Studiengänge:</p>
@@ -107,7 +112,7 @@
                 <div id="Bundesländer2">  
                        <p>Bundesland 2:</p>
                             <p>
-                                <select name="Bundesländer" size="5" onchange="" id="selectDiv">
+                                <select name="Bundesländer" size="5" onchange="" id="selectDiv1">
                                     <option value="Baden-Württemberg">Baden-Würtemberg</option>
                                     <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
                                     <option value="Bremen">Bremen</option>
