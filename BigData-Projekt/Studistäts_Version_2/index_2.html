@@ -47,27 +47,72 @@
                         <h2>Studiengänge</h2>
                         <p>In Deutschland angebotene Studiengänge sind:   
                         </p>
-                        <ul>
-                            <li>Allgmeine Informatik</li>
-                            <li>Technische Informatik</li>
-                            <li>Bio-Informatik</li>
-                            <li>Medieninformatik</li>
-                            <li>Wirtschaftsinformatik</li>
-                            <li>Medizinische Informatik</li>
-                        </ul>
-                       <p>Hier werden zum einen die Statistiken der Studiengänge Bundesweit aufgeführt. Zum anderen werden hier die Studiengänge untereinander verglichen um den Anteil des jeweiligen Studienganges an der Gesamtanzahl aller Studiengänge zu ermitteln. <br>
-                       Zum Beispiel: Anteil von Medieninformatikern Bundesweit in Semester 13/14.</p>
                        
-                                              <div id="canvas-holder">
-                       <canvas id="chart-area" height="250" width="250"/>
+                                              <div id="Bundesland">  
+                       <p>Bundesland:</p>
+                            <p>
+                                <select name="Bundesländer" size="5" onchange="" id="Bundes_Doughnut">
+                                    <option value="Baden-Württemberg">Baden-Würtemberg</option>
+                                    <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
+                                    <option value="Bremen">Bremen</option>
+                                    <option value="Hamburg">Hamburg</option>
+                                    <option value="Niedersachsen">Niedersachsen</option>
+                                    <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
+                                    <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
+                                    <option value="Schleswig-Holstein">Schleswig-Holstein</option>
+                                    <option value="Brandenburg">Brandenburg</option>
+                                    <option value="Berlin">Berlin</option>
+                                    <option value="Sachsen">Sachsen</option>
+                                    <option value="Thüringen">Thüringen</option>
+                                    <option value="Hessen">Hessen</option>
+                                    <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+                                    <option value="Saarland">Saarland</option>
+                                    <option value="Bayern">Bayern</option>
+                                </select>
+                            </p>
+                        </div>
+                       <button id="button2">Daten abschicken</button>
+                       
+                       <div id="canvas-holder-1">
+                       <canvas id="chart-area-1" height="150" width="150"/>
                        </div>
-                       <div id="canvas-holder1">
-                       <canvas id="chart-area1" height="250" width="250"/>
+                       <div id="canvas-holder-2">
+                       <canvas id="chart-area-2" height="150" width="150"/>
                        </div>
-                       <div id="Stundiengänge">   
+                       <div id="canvas-holder-3">
+                       <canvas id="chart-area-3" height="150" width="150"/>
+                       </div>
+                       <div id="canvas-holder-4">
+                       <canvas id="chart-area-4" height="150" width="150"/>
+                       </div>
+                       <div id="canvas-holder-5">
+                       <canvas id="chart-area-5" height="150" width="150"/>
+                       </div>
+                       <div id="canvas-holder-6">
+                       <canvas id="chart-area-6" height="150" width="150"/>
+                       </div>
+
+                       
+                    </div>
+               </section>
+               
+               <section class="st-panel" id="st-panel-3">
+                   <div class="text">
+                        <h2>Bundesländer</h2>
+
+                        
+                        <p>Hier werden die Studienanfänger der Informatik mit den gesamten Studienfächern auf Bundeslandebene verglichen. <br><br>
+                       Zum Beispiel: Anteil der Allgemeinen Informatikeranfänger in Baden-Würthenberg im Vergleich zu allen Studienanfängern in Baden-Würthenberg
+                       </p>
+                        
+                       <div id="canvas-holder-10">
+                       <canvas id="chart-area-LineChart" height="500" width="500"/>
+                       </div>
+                       
+                <div id="Stundiengänge">   
                         <p>Studiengänge:</p>
                             <p>
-                                <select name="Studiengänge" size="5" id="selectDiv3">
+                                <select name="Studiengänge" size="5" id="Stud_LineChart">
                                     <option value="0">Bioinformatik</option>
                                     <option value="1">Informatik</option>
                                     <option value="2">Ingenieurinformatik/Technische Informatik</option>
@@ -80,7 +125,7 @@
                        <div id="Bundesländer">  
                        <p>Bundesland 1:</p>
                             <p>
-                                <select name="Bundesländer" size="5" onchange="" id="selectDiv">
+                                <select name="Bundesländer" size="5" onchange="" id="Bundes_LineChart">
                                     <option value="Baden-Württemberg">Baden-Würtemberg</option>
                                     <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
                                     <option value="Bremen">Bremen</option>
@@ -103,7 +148,7 @@
                 <div id="Bundesländer2">  
                        <p>Bundesland 2:</p>
                             <p>
-                                <select name="Bundesländer" size="5" onchange="" id="selectDiv1">
+                                <select name="Bundesländer" size="5" onchange="" id="Bundes2_LineChart">
                                     <option value="Baden-Württemberg">Baden-Würtemberg</option>
                                     <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
                                     <option value="Bremen">Bremen</option>
@@ -122,49 +167,8 @@
                                     <option value="Bayern">Bayern</option>
                                 </select>
                             </p>
-                        </div>
-                       <div id="Semester">
-                        <p>Semester:</p>
-                            <p>
-                                <select name="Semester" size="5" id="selectDiv2">
-                                    <option value="0">WS 98/99</option>
-                                    <option value="7">WS 99/00</option>
-                                    <option value="14">WS 00/01</option>
-                                    <option value="21">WS 01/02</option>
-                                    <option value="28">WS 02/03</option>
-                                    <option value="35">WS 03/04</option>
-                                    <option value="42">WS 04/05</option>
-                                    <option value="49">WS 05/06</option>
-                                    <option value="56">WS 06/07</option>
-                                    <option value="63">WS 07/08</option>
-                                    <option value="70">WS 08/09</option>
-                                    <option value="77">WS 09/10</option>
-                                    <option value="84">WS 10/11</option>
-                                    <option value="91">WS 11/12</option>
-                                    <option value="98">WS 12/13</option>
-                                    <option value="105">WS 13/14</option>
-                                </select>
-                            </p>
-                        </div>
-                       
-                       <button id="button2">Daten abschicken</button>
-                       
-                    </div>
-               </section>
-               
-               <section class="st-panel" id="st-panel-3">
-                   <div class="text">
-                        <h2>Bundesländer</h2>
-
-                        
-                        <p>Hier werden die Studienanfänger der Informatik mit den gesamten Studienfächern auf Bundeslandebene verglichen. <br><br>
-                       Zum Beispiel: Anteil der Allgemeinen Informatikeranfänger in Baden-Würthenberg im Vergleich zu allen Studienanfängern in Baden-Würthenberg
-                       </p>
-                        
-                       <div id="canvas-holder2">
-                       <canvas id="chart-area2" height="250" width="250"/>
-                       </div>
-                       <button onclick="ChartActive2()">Daten abschicken</button>
+                        </div>                       
+                       <button id="button1" onclick="ChartActive2()">Daten abschicken</button>
                     </div>
                </section>  
                    

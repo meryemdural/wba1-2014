@@ -1,5 +1,5 @@
 $(window).ready(function(){
-    $("#button2").click(function(){
+    $("#button1").click(function(){
         // Vorherige Daten löschen um Überschneidung der Charts zu vermeiden
         $("#chart-area").remove();
         // Danach den leeren Container wieder hinzufügen für die neuen Daten
