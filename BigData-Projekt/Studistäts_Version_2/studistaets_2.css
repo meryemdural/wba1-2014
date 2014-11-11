@@ -1,3 +1,4 @@
+<!-- Allgemeine Styles -->
 body {
     overflow: hidden;
     font-family: avenir next, arial;
@@ -7,6 +8,45 @@ body {
 a {
     text-decoration: none;
 }
+/*----------------------------------------------------------*/
+/*-- Panels sind die einzelnen "Unterseiten" der Webseite. -*/
+
+.st-panel {
+    background: #F0F0F0;
+    overflow: hidden;
+}
+
+.st-panel h2 {
+    color: #428bca;
+    text-shadow: 2px 1px 1px rgba(66,139,202,0.3);
+    font-size: 46px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 50px;
+    -webkit-backface-visibility: hidden;
+}
+/*----------------------------------------------------------*/
+/*-- .text ist für die Anordnung des Textes verantwortlich -*/
+
+.sektionen .text {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    height: 80%;
+    width: 80%;   
+}
+
+
+.st-panel p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.st-panel ul{
+    list-style: none;
+}
+
+/*-- Klasse, welche alle anderen Klassen beinhaltet. Regelt die Höhe und Breite der einzelnen Sektionen und Panels -*/
 
 .content {
     position: absolute;
@@ -26,6 +66,8 @@ a {
     line-height: 40px;
 }
 
+/*-- Sorgt dafür, dass die Radio-Buttons nicht sichtbar sind, jedoch anstatt des Ankers gedrückt werden -*/
+
 .content > input {
     opacity: 0;
     z-index: 100;
@@ -39,6 +81,7 @@ a {
     font-size: 14px;
 }
 
+/*-- Anordnung der Navigationsleiste am Boden der Seite--*/
 
 #st-control-1, #st-control-1 + a {
     left: 0;
@@ -103,31 +146,14 @@ a {
     -webkit-backface-visibility: hidden;
 }
 
-.st-panel {
-    background: #F0F0F0;
-    overflow: hidden;
-}
 
-.st-panel h2 {
-    color: #428bca;
-    text-shadow: 2px 1px 1px rgba(66,139,202,0.3);
-    font-size: 46px;
-    font-weight: 900;
-    text-align: center;
-    line-height: 50px;
-    -webkit-backface-visibility: hidden;
-}
-
-
-.st-panel p {
-    font-size: 16px;
-    line-height: 22px;
-}
-
-.st-panel ul{
-    list-style: none;
-}
-
+/* Dieser Abschnitt regelt den Seitenwechsel, wenn man eine "Unterseite" in der 
+    Navigationsleiste antippt. 
+    Der Quelltext wird folgendermaßen gelesen: 
+    Wenn beispielsweise "#st-control-2" als "checked" markiert wird
+    soll ".sektion" und all seine Tochterelemente sich zur position 100% auf der Y-Achse "transformieren" (bewegen).
+    100%, da jedes Panel 100% des Screens anzeigt und somit die komplette Anzeigefläche blockiert. 
+*/
 
 #st-control-1:checked ~ .sektionen {
 	-webkit-transform: translateY(0%);
@@ -165,49 +191,12 @@ a {
 	transform: translateY(-400%);
 }
 
-.sektionen .text 
-{
-    position: absolute;
-    left: 10%;
-    top: 10%;
-    height: 80%;
-    width: 80%;   
-}
-
+/*-- canvas-holder beinhalten die Charts. Hier wird die größe des jeweiligen Charts geregelt --*/
 #canvas-holder {
     height: 250px;
     width: 250px;
     float: left;
 }
-
-
-#Stundiengänge {
-    float: left;
-    padding-right: 15px;
-    clear:both;
-}
-
-#Bundesländer {
-    float: left;
-    padding-right: 15px;
-}
-#Semester {
-    float: left;
-    padding-right: 15px;
-}
-
-#button2 {
-    float: left;
-    padding-right: 15px;
-    margin-top: 15px;
-}
-
-#Bundesländer2 {
-    float: left;
-    padding-right: 15px;
-}
-
-
 
 #canvas-holder-1 {
     height: 250px;
@@ -252,3 +241,34 @@ a {
     padding-right: 125px;
     float: left;
 }
+
+/*-- Auswahlboxen für die initialisierung der Charts. --*/
+#Stundiengänge {
+    float: left;
+    padding-right: 15px;
+    clear:both;
+}
+
+#Bundesländer {
+    float: left;
+    padding-right: 15px;
+}
+#Semester {
+    float: left;
+    padding-right: 15px;
+}
+
+#button2 {
+    float: left;
+    padding-right: 15px;
+    margin-top: 15px;
+}
+
+#Bundesländer2 {
+    float: left;
+    padding-right: 15px;
+}
+
+
+
+
