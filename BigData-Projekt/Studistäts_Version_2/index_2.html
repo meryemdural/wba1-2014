@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="studistaets_2.css">
     <script src="JSON Auslese Test/Statistik.js"></script>
     <script src="Statistik2.js"></script>
+    <script src="Statistik_LineChart.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="JsonAufruf.js"></script>
     <script src="JsonAufruf2.js"></script>   
@@ -56,18 +57,8 @@
                         </ul>
                        <p>Hier werden zum einen die Statistiken der Studiengänge Bundesweit aufgeführt. Zum anderen werden hier die Studiengänge untereinander verglichen um den Anteil des jeweiligen Studienganges an der Gesamtanzahl aller Studiengänge zu ermitteln. <br>
                        Zum Beispiel: Anteil von Medieninformatikern Bundesweit in Semester 13/14.</p>
-                    </div>
-               </section>
-               
-               <section class="st-panel" id="st-panel-3">
-                   <div class="text">
-                        <h2>Bundesländer</h2>
-
-                        
-                        <p>Hier werden die Studienanfänger der Informatik mit den gesamten Studienfächern auf Bundeslandebene verglichen. <br><br>
-                       Zum Beispiel: Anteil der Allgemeinen Informatikeranfänger in Baden-Würthenberg im Vergleich zu allen Studienanfängern in Baden-Würthenberg
-                       </p>
-                       <div id="canvas-holder">
+                       
+                                              <div id="canvas-holder">
                        <canvas id="chart-area" height="250" width="250"/>
                        </div>
                        <div id="canvas-holder1">
@@ -156,7 +147,24 @@
                             </p>
                         </div>
                        
-                       <button id="button2">Daten abschicken</button> 
+                       <button id="button2">Daten abschicken</button>
+                       
+                    </div>
+               </section>
+               
+               <section class="st-panel" id="st-panel-3">
+                   <div class="text">
+                        <h2>Bundesländer</h2>
+
+                        
+                        <p>Hier werden die Studienanfänger der Informatik mit den gesamten Studienfächern auf Bundeslandebene verglichen. <br><br>
+                       Zum Beispiel: Anteil der Allgemeinen Informatikeranfänger in Baden-Würthenberg im Vergleich zu allen Studienanfängern in Baden-Würthenberg
+                       </p>
+                        
+                       <div id="canvas-holder2">
+                       <canvas id="chart-area2" height="250" width="250"/>
+                       </div>
+                       <button onclick="ChartActive2()">Daten abschicken</button>
                     </div>
                </section>  
                    
@@ -184,6 +192,7 @@
                                 </ul>
                            </li>
                        </ul>
+
                        
                        </div>
                </section>
