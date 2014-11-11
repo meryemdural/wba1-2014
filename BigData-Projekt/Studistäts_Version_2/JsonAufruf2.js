@@ -11,22 +11,13 @@ $(window).ready(function(){
             var index1 = $('#selectDiv2 :selected').val();
             var index2 = $('#selectDiv3 :selected').val();
             var neu = parseInt(index1) + parseInt(index2);
-            console.log(index2+index1);
-            console.log(neu);
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
             $.getJSON("../JSON/baden_wurttemberg.json", function(data0){
+            
             // Prüfen ob die Daten vorhanden sind, Hier reicht die Überprüfung der ersten Variable
-           if((data0.BadenWurttemberg[neu]["Deutsche Männlich"])==="-") alert("Keine Daten vorhanden!");
-           else{ ChartActive();
-            // Setzen der neuen Werte und Beschriftungen
-            myDoughnut.segments[0].value = parseInt(data0.BadenWurttemberg[neu]["Deutsche Männlich"]);
-            myDoughnut.segments[1].value = parseInt(data0.BadenWurttemberg[neu]["Deutsche Weiblich"]);
-            myDoughnut.segments[2].value = parseInt(data0.BadenWurttemberg[neu]["Deutsche Insgesamt"]);
-            myDoughnut.segments[0].label = "Deutsche Männlich";
-            myDoughnut.segments[1].label = "Deutsche Weiblich";
-            myDoughnut.segments[2].label = "Deutsche Insgesamt";
+            myLineChart.datasets[0].points[0].value = ;
             // Aktualisiert die Doughnut-Chart
-            myDoughnut.update();}
+            myDoughnut.update();
             });
             break;
         case "Bayern":

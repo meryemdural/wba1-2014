@@ -1,4 +1,4 @@
-﻿$(window).ready(function(){
+$(window).ready(function(){
     $("#button2").click(function(){
         // Vorherige Daten löschen um Überschneidung der Charts zu vermeiden
         $("#chart-area-1").remove();
@@ -30,6 +30,7 @@
         case "Baden-Württemberg":
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
             $.getJSON("../JSON/baden_wurttemberg.json", function(data0){
+                $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
             // Prüfen ob die Daten vorhanden sind, Hier reicht die Überprüfung der ersten Variable
 
                 
@@ -89,6 +90,7 @@
             myDoughnut4.update();
             myDoughnut5.update();
             myDoughnut6.update();
+                });
             });
             break;
         case "Bayern":
