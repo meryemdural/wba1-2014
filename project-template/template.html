@@ -49,7 +49,7 @@
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     <link rel="stylesheet" href="http://static.tumblr.com/hriofhd/NYxndttbj/main.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="text/javascript" href="https://www.dropbox.com/s/b88dla2343ly6fz/jquery.js">
+    <link rel="text/javascript" href="http://static.tumblr.com/h9bvas4/dglnevirs/jquery.js">
     <!-- HTML5 Shiv -->
     <!--[if lt IE 9]>
     <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
@@ -109,7 +109,9 @@
         height: 100%;
         margin: 50% 0 75% 0;
         text-align: center;
-        color: black;
+        font-size: 45px;
+        color: white;
+        background: none;
     }
 
     .posts li{
@@ -170,6 +172,14 @@
     
 
 </style>
+
+<script src="http://static.tumblr.com/h9bvas4/dglnevirs/jquery.js"></script>
+<script src="http://static.tumblr.com/h9bvas4/vv2nevmkh/jquery.als-1.7.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+    });
+</script>
 
 </head>
 
@@ -242,14 +252,12 @@
                     </div>
             </div>
                 <div class="content">
-                    <ul>
-                        <li>
-                            <div id="empty">
-                                    Scroll Down.
-                            </div>
-                        </li>
-                        <li>
                             <ol class="posts">
+                                <li id="empty">
+                                    <div id="empty-content">
+                                    Scroll Down.
+                                    </div>
+                                </li>
                                 {block:Posts}
                                 {block:Text}
                                 <li class="post text">
@@ -392,8 +400,6 @@
                                 {/block:Audio}
                                 {/block:Posts}
                             </ol>
-                        </li>
-                    </ul>
                 </div>
                 
             <p id="footer">
@@ -404,15 +410,6 @@
                     <a href="{NextPage}">Next &#187;</a>
                     {/block:NextPage}
             </p>
-            
-            <!--Javascript-->
-            
-            <script type="text/JavaScript">
-                $(document).ready(function(){
-                   alert("Ready"); 
-                });
-            </script>
-            
 </body>
 
 </html>
