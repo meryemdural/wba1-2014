@@ -13,7 +13,7 @@
     height: 38px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: orange;
+    background-color: #FF5500;
     text-decoration: underline;
     font-weight: bold;
     font-size: 14px;
@@ -35,7 +35,7 @@
     height: 35px;
     width: 197px;
     position: relative;
-    background-color: orange;
+    background-color: #FF5500;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -101,7 +101,7 @@
 .item-delete {
     width: 20px;
     height: 20px;
-    background: url(images/trash.png);
+    background: url(../images/trash.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px;
