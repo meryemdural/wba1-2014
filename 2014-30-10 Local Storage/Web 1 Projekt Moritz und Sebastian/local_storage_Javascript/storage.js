@@ -7,10 +7,10 @@ $(document).ready(function () {
 
         var uname = prompt('Enter Your Name');
         localStorage.setItem('userName', uname);
-        document.getElementById(userName).innerHTML = uname;
+        document.getElementById('profilName').innerHTML = uname;
     
     } else {
-        document.getElementById('idProfil').innerHTML = localStorage.getItem('userName');
+        document.getElementById('profilName').innerHTML = localStorage.getItem('userName');
     }
     
 });
