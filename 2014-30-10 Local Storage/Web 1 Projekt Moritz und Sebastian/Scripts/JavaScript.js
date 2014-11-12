@@ -32,10 +32,8 @@ var ddSlider = $(document).ready(function () {
    
 });
 
-
 var logout = $(document).ready(function () {
-
-
+    
     $("#arrowProfile").click(function () {
         localStorage.removeItem('currentUser');
         document.getElementById('profilName').innerHTML = localStorage.getItem('currentUser');
@@ -43,6 +41,8 @@ var logout = $(document).ready(function () {
     });
 
 });
+
+
 
 
 

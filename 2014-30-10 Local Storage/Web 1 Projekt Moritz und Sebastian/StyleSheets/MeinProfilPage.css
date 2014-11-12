@@ -14,3 +14,28 @@
     height: auto;
     position: relative;
 }
+
+.profil-container {
+
+    width:400px;
+    height:500px;
+    display:inline-table;
+    padding:20px;
+}
+
+.profil-titel {
+    font-family: "Times New Roman", Times, serif;
+    display:grid;   
+}
+
+.profil-img {
+
+    height:300px;
+    width:200px;
+
+}
+.profil-desc {
+    font-family: "Times New Roman", Times, serif;
+    display:block;
+
+}

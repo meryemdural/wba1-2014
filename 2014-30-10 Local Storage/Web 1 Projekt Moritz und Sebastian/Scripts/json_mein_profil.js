@@ -19,9 +19,9 @@ $(document).ready(function () {
             return;
         }
 
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 6; i++) {
             if (localStorage.getItem(currentUser + 'Favorit' + i) === "true") {
-                Add(i)
+                Add(i);
             }
         }
     }
@@ -29,9 +29,9 @@ $(document).ready(function () {
 
 function Add(index) {
     $('.favorit-section').append(
-             '<div class="mezzomix_ist_geil">' +
-                   '<h2 class="mein_profil_titel">' + result.Filme[index].titel + '</h2>' +
-                   '<img class="mein_profil_img" src=' + result.Filme[index].picture + ' />' +
-                    '<p class="mein_profil_desc"> ' + result.Filme[index].description + '</p>' +
-               '<div>'  );
+             '<div class="profil-container">' +
+                   '<h2 class="profil-titel">' + result.Filme[index].titel + '</h2>' +
+                   '<img class="profil-img" src=' + result.Filme[index].picture + ' />' +
+                    '<p class="profil-desc"> ' + result.Filme[index].description + '</p>' +
+               '<div>');
 }

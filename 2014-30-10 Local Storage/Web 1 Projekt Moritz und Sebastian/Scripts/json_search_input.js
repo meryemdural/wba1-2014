@@ -1,36 +1,40 @@
-﻿$(document).ready(function () {
+﻿$(document).ready(function() {
 
 
- $('.search-button').click(function () {
+    $('.search-button').click(function() {
 
-     var textInput = $('#topSearchField').val();
-     
-       var data_file = "../json_Filme/json_Filme.json";
+        var textInput = $('#topSearchField').val();
 
-            $.ajax({
-                type: "GET",
-                url: data_file,
-                dataType: 'json',
-                contentType: "application/json; charset=utf-8",
-                success: OnSuccess,
-                error: OnError
-            });
+        var data_file = "../json_Filme/json_Filme.json";
 
-            function OnSuccess(results) {
-                for (var i = 0; i < results.Filme.length; i++) {
+        $.ajax({
+            type: "GET",
+            url: data_file,
+            dataType: 'json',
+            contentType: "application/json; charset=utf-8",
+            success: OnSuccess,
+            error: OnError
+        });
 
-                    if (results.Filme[i].titel.toLowerCase() === textInput.toLowerCase()) {
-                        $(".search-button").after(
-                            '<select class="search_dropdown">' +
-                                 ' <option value=' + textInput + '> ' + results.Filme[i].titel + ' </option>' +
-                           ' </select>' +
-                            "");
-                        break;
-                    }
+        function OnSuccess(results) {
+            for (var i = 0; i < results.Filme.length; i++) {
+
+                if (results.Filme[i].titel.toLowerCase() === textInput.toLowerCase()) {
+                    $(".search-button").after(
+                        '<button class="search_dropdown" id"test">' +
+                            ' <option value=' + textInput + '> ' + results.Filme[i].titel + ' </option>' +
+                            ' </button>');
+                    break;
                 }
             }
-            function OnError(err) {
-                alert(err.status + " - " + err.statusText);
-            }
-      });
- });
+        }
+
+        function OnError(err) {
+            alert(err.status + " - " + err.statusText);
+        }
+    });
+
+    $('.search-button').focusout(function () {
+        $('.search_dropdown').remove();
+    });
+});
