@@ -190,7 +190,6 @@ $(window).ready(function(){
                             $.getJSON("../JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
-
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
                             var ws4 = parseFloat(data2.bayern[parseInt(index1)+parseInt(21)]["Insgesamt"]).toFixed(2); 
                             var ws5 = parseFloat(data2.bayern[parseInt(index1)+parseInt(28)]["Insgesamt"]).toFixed(2);

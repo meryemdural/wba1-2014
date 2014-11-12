@@ -145,6 +145,7 @@ select {
     color: #428bca;
 }
 
+/*-- Das Dreieck über dem Aktivem Navigationsleistenelement --*/
 .content > input:checked + a:after,
 .content > input:checked:hover + a:after {
     bottom: 100%;
@@ -163,7 +164,6 @@ select {
 .content > input:hover + a {
     background: #ffb600;
     color: #428bca;
-
 }
 
 .sektionen,
@@ -239,7 +239,7 @@ select {
     padding-left: 0px; 
     margin-left: 0px;
     padding-right: 125px;
-    float: left;
+    float: right;
 }
 
 #canvas-holder-2 {
@@ -299,11 +299,12 @@ select {
 
 
 .canvas_slider {
+    overflow-y: scroll; 
     position: absolute;
     height: 260px;
     padding-top: 10px;
     width: 520px;
-    left: 32%;
+    left: 20%;
     top: 23%;
     border: 1px solid #428cba;
     box-shadow: 1px 4px 1px #ccc;
