@@ -287,13 +287,14 @@ select {
 
 
 .canvas_slider {
-    overflow-y: scroll;
-    overflow-x: hidden;
     position: absolute;
-    height: inherit;
-    width: 45%;
-    left: 30%;
-    top: 23%
+    height: 260px;
+    padding-top: 10px;
+    width: 520px;
+    left: 32%;
+    top: 23%;
+    border: 1px solid #428cba;
+    box-shadow: 1px 4px 1px #ccc;
 }
 
 
@@ -310,5 +311,11 @@ select {
 }
 
 button:active {
+    position: relative;
     margin-top: 1px;
+}
+
+#canvas-holder-1 , #canvas-holder-2 , #canvas-holder-3 , #canvas-holder-4 , #canvas-holder-5 , #canvas-holder-6 {
+    position: absolute;
+    left: 90px;
 }

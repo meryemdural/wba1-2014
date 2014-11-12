@@ -19,7 +19,7 @@ var data = {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19, 86, 27, 100, 50, 60, 80, 90, 45, 55,12,25,29]
+            data: [60, 70, 20, 30, 10, 50, 1, 70, 900, 0, 0, 0, 0, 0, 0, 0]
         }
     ]
 };
