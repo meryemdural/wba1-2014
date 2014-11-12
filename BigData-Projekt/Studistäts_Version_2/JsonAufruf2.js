@@ -1,9 +1,9 @@
 $(window).ready(function(){
     $("#button1").click(function(){
         // Vorherige Daten löschen um Überschneidung der Charts zu vermeiden
-        $("#chart-area").remove();
+        $("#chart-area-LineChart").remove();
         // Danach den leeren Container wieder hinzufügen für die neuen Daten
-        $("#canvas-holder").append('<canvas id="chart-area" height="250" width="500"/>');
+        $("#canvas-holder-10").append('<canvas id="chart-area-LineChart" height="300" width="800"/>');
         
         var jsLang = $('#Bundes_LineChart :selected').val();
             switch (jsLang) {
@@ -15,8 +15,74 @@ $(window).ready(function(){
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
             $.getJSON("../JSON/baden_wurttemberg.json", function(data0){
                  $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+                     switch(jslang){
+                     case "baden_wurttemberg":
+                             var neu = 0;
+                             break;
+                    case "bayern":
+                             var neu = 15;
+                             break;
+                    case "berlin":
+                             var neu = 31;
+                             break;
+                    case "brandenburg":
+                             var neu = 47;
+                             break;
+                    case "bremen":
+                             var neu = 63;
+                             break;
+                    case "hamburg":
+                             var neu = 79;
+                             break;
+                    case "hessen":
+                             var neu = ;
+                             break;
+                    case "mecklenburg_vorpopmmern":
+                             var neu = 7;
+                             break;
+                    case "niedersachsen":
+                             var neu = 8;
+                             break;
+                    case "nordrhein_westfalen":
+                             var neu = 9;
+                             break;
+                    case "rheinland_pfalz":
+                             var neu = 10;
+                             break;
+                    case "saarland":
+                             var neu = ;
+                             break;
+                    case "sachsen_anhalt":
+                             var neu = 0;
+                             break;
+                    case "sachsen":
+                             var neu = 0;
+                             break;
+                    case "schleswig_holstein":
+                             var neu = 0;
+                             break;
+                    case "thuringen":
+                             var neu = 0;
+                             break;
+                    }
+                         var a = parseInt(data1.Studienanfaenger_Bundesland[neu]["Insgesamt"]);
+                         var b = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(1)]["Insgesamt"]);
+                         var c = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(2)]["Insgesamt"]);
+                         var d = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(3)]["Insgesamt"]);
+                         var e = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(4)]["Insgesamt"]);
+                         var f = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(5)]["Insgesamt"]);
+                         var g = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(6)]["Insgesamt"]);
+                         var h = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(7)]["Insgesamt"]);
+                         var i = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(8)]["Insgesamt"]);
+                         var j = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(9)]["Insgesamt"]);
+                         var k = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(10)]["Insgesamt"]);
+                         var l = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(11)]["Insgesamt"]);
+                         var m = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(12)]["Insgesamt"]);
+                         var n = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(13)]["Insgesamt"]);
+                         var o = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(14)]["Insgesamt"]);
+                         var p = parseInt(data1.Studienanfaenger_Bundesland[neu+parseInt(15)]["Insgesamt"]);
+                        
                      
-                         
                          var jslang1 = index3;
                         switch(jslang1){ 
                          case "baden_wurttemberg":
@@ -39,23 +105,40 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             $.getJSON("../JSON/bayern.json", function(data2){
-                            var ws1 = parseInt(data2.bayern[index1]["Insgesamt"]); 
-                            var ws2 = parseInt(data2.bayern[index1+1]["Insgesamt"]); 
-                            var ws3 = parseInt(data2.bayern[index1+2]["Insgesamt"]);
-                            var ws4 = parseInt(data2.bayern[index1+3]["Insgesamt"]); 
-                            var ws5 = parseInt(data2.bayern[index1+4]["Insgesamt"]);
-                            var ws6 = parseInt(data2.bayern[index1+5]["Insgesamt"]);
-                            var ws7 = parseInt(data2.bayern[index1+6]["Insgesamt"]); 
-                            var ws8 = parseInt(data2.bayern[index1+7]["Insgesamt"]); 
-                            var ws9 = parseInt(data2.bayern[index1+8]["Insgesamt"]); 
-                            var ws10 = parseInt(data2.bayern[index1+9]["Insgesamt"]); 
-                            var ws11 = parseInt(data2.bayern[index1+10]["Insgesamt"]); 
-                            var ws12 = parseInt(data2.bayern[index1+11]["Insgesamt"]); 
-                            var ws13 = parseInt(data2.bayern[index1+12]["Insgesamt"]); 
-                            var ws14 = parseInt(data2.bayern[index1+13]["Insgesamt"]); 
-                            var ws15 = parseInt(data2.bayern[index1+14]["Insgesamt"]); 
-                            var ws16 = parseInt(data2.bayern[index1+15]["Insgesamt"]);
-                            });
+                            var ws1 = parseInt(data2.bayern[0]["Insgesamt"]); 
+                            var ws2 = parseInt(data2.bayern[1]["Insgesamt"]); 
+                            var ws3 = parseInt(data2.bayern[2]["Insgesamt"]);
+                            var ws4 = parseInt(data2.bayern[3]["Insgesamt"]); 
+                            var ws5 = parseInt(data2.bayern[4]["Insgesamt"]);
+                            var ws6 = parseInt(data2.bayern[5]["Insgesamt"]);
+                            var ws7 = parseInt(data2.bayern[6]["Insgesamt"]); 
+                            var ws8 = parseInt(data2.bayern[7]["Insgesamt"]); 
+                            var ws9 = parseInt(data2.bayern[8]["Insgesamt"]); 
+                            var ws10 = parseInt(data2.bayern[9]["Insgesamt"]); 
+                            var ws11 = parseInt(data2.bayern[10]["Insgesamt"]); 
+                            var ws12 = parseInt(data2.bayern[11]["Insgesamt"]); 
+                            var ws13 = parseInt(data2.bayern[12]["Insgesamt"]); 
+                            var ws14 = parseInt(data2.bayern[13]["Insgesamt"]); 
+                            var ws15 = parseInt(data2.bayern[14]["Insgesamt"]); 
+                            var ws16 = parseInt(data2.bayern[15]["Insgesamt"]);
+                             console.log(ws1,ws2,ws3);   
+            myLineChart.datasets[1].points[0].value = parseInt(((ws1 * 100) / a));
+            myLineChart.datasets[1].points[1].value = parseInt(((ws2 * 100) / b));
+            myLineChart.datasets[1].points[2].value = parseInt(((ws3 * 100) / c));
+            myLineChart.datasets[1].points[3].value = parseInt(((ws4 * 100) / d));
+            myLineChart.datasets[1].points[4].value = parseInt(((ws5 * 100) / e));
+            myLineChart.datasets[1].points[5].value = parseInt(((ws6 * 100) / f));
+            myLineChart.datasets[1].points[6].value = parseInt(((ws7 * 100) / g));
+            myLineChart.datasets[1].points[7].value = parseInt(((ws8 * 100) / h));
+            myLineChart.datasets[1].points[8].value = parseInt(((ws9 * 100) / i));
+            myLineChart.datasets[1].points[9].value = parseInt(((ws10 * 100) / j));
+            myLineChart.datasets[1].points[10].value = parseInt(((ws11 * 100) / k));
+            myLineChart.datasets[1].points[11].value = parseInt(((ws12 * 100) / l));
+            myLineChart.datasets[1].points[12].value = parseInt(((ws13 * 100) / m));
+            myLineChart.datasets[1].points[13].value = parseInt(((ws14 * 100) / n));
+            myLineChart.datasets[1].points[14].value = parseInt(((ws15 * 100) / o));
+            myLineChart.datasets[1].points[15].value = parseInt(((ws16 * 100) / p));
+                            })
                          break;
                          case "berlin":
                             var ws1 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
@@ -249,22 +332,7 @@ $(window).ready(function(){
                          var funfzehnte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
                          var sechzehnte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
                          console.log(erste,zweite,dritte);
-                         var a = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var b = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var c = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var d = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var e = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var f = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var g = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var h = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var i = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var j = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var k = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var l = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var m = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var n = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var o = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
-                         var p = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+
             // Prüfen ob die Daten vorhanden sind, Hier reicht die Überprüfung der ersten Variable
             myLineChart.datasets[0].points[0].value = parseInt(((erste * 100) / a));
             myLineChart.datasets[0].points[1].value = parseInt(((zweite * 100) / b));
@@ -282,28 +350,14 @@ $(window).ready(function(){
             myLineChart.datasets[0].points[13].value = parseInt(((vierzehnte * 100) / n));
             myLineChart.datasets[0].points[14].value = parseInt(((funfzehnte * 100) / o));
             myLineChart.datasets[0].points[15].value = parseInt(((sechzehnte * 100) / p));
-                         
-            myLineChart.datasets[1].points[0].value = parseInt(((ws1 * 100) / a));
-            myLineChart.datasets[1].points[1].value = parseInt(((ws2 * 100) / b));
-            myLineChart.datasets[1].points[2].value = parseInt(((ws3 * 100) / c));
-            myLineChart.datasets[1].points[3].value = parseInt(((ws4 * 100) / d));
-            myLineChart.datasets[1].points[4].value = parseInt(((ws5 * 100) / e));
-            myLineChart.datasets[1].points[5].value = parseInt(((ws6 * 100) / f));
-            myLineChart.datasets[1].points[6].value = parseInt(((ws7 * 100) / g));
-            myLineChart.datasets[1].points[7].value = parseInt(((ws8 * 100) / h));
-            myLineChart.datasets[1].points[8].value = parseInt(((ws9 * 100) / i));
-            myLineChart.datasets[1].points[9].value = parseInt(((ws10 * 100) / j));
-            myLineChart.datasets[1].points[10].value = parseInt(((ws11 * 100) / k));
-            myLineChart.datasets[1].points[11].value = parseInt(((ws12 * 100) / l));
-            myLineChart.datasets[1].points[12].value = parseInt(((ws13 * 100) / m));
-            myLineChart.datasets[1].points[13].value = parseInt(((ws14 * 100) / n));
-            myLineChart.datasets[1].points[14].value = parseInt(((ws15 * 100) / o));
-            myLineChart.datasets[1].points[15].value = parseInt(((ws16 * 100) / p));  
+                      
+  
                         // Aktualisiert die Doughnut-Chart
                          myLineChart.update();
+                     ;
                      });
                  });
-        
+            
             break;
         case "bayern":
             var index3 = $('#selectDiv2 :selected').val();
