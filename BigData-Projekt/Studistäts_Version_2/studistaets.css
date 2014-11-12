@@ -21,6 +21,17 @@ button {
     box-shadow: 0 3px 0 #ccc;
 }
 
+#Bundes2_LineChart {
+    background: #428cba;
+    color: #F0F0F0;
+    box-shadow: 0 3px 0 #3979A0;
+}
+
+#Bundes_LineChart {
+    background: #ffb600;
+    box-shadow: 0 3px 0 #BF8800;
+}
+
 select {
     padding:4px;
     margin: 0;
@@ -274,6 +285,7 @@ select {
 #Bundeslander {
     padding-right: 15px;
 }
+
 #Semester {
     float: left;
     padding-right: 15px;
@@ -310,12 +322,8 @@ select {
     position: absolute;
 }
 
+/* erzeugt einen "Klick" Effekt beim Drücken des Buttons */
 button:active {
     position: relative;
     margin-top: 1px;
-}
-
-#canvas-holder-1 , #canvas-holder-2 , #canvas-holder-3 , #canvas-holder-4 , #canvas-holder-5 , #canvas-holder-6 {
-    position: absolute;
-    left: 90px;
 }
