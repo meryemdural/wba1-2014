@@ -2,7 +2,7 @@
 body {
     overflow: hidden;
     font-family: avenir next, arial;
-    color: #8b8b8b;
+    color: #444;
 }
 
 a {
@@ -24,7 +24,6 @@ a {
     font-weight: 900;
     text-align: center;
     line-height: 50px;
-    -webkit-backface-visibility: hidden;
 }
 
 
@@ -40,7 +39,7 @@ a {
 
 
 .st-panel p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
 }
 
@@ -240,14 +239,11 @@ a {
 }
 
 /*-- Auswahlboxen für die initialisierung der Charts. --*/
-#Stundiengänge {
-    float: left;
+#Stundiengange {
     padding-right: 15px;
-    clear:both;
 }
 
-#Bundesländer {
-    float: left;
+#Bundeslander {
     padding-right: 15px;
 }
 #Semester {
@@ -259,13 +255,67 @@ a {
     float: left;
     padding-right: 15px;
     margin-top: 15px;
+    background: #428cba;
+    color: #444;
 }
 
-#Bundesländer2 {
-    float: left;
+#Bundeslander2 {
     padding-right: 15px;
 }
 
 
 
 
+
+.canvas_slider {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    height: inherit;
+    width: 45%;
+    left: 30%;
+    top: 23%
+}
+
+
+
+select {
+    padding:3px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc;
+    -moz-box-shadow: 0 3px 0 #ccc;
+    box-shadow: 0 3px 0 #ccc;
+    background: #428cba;
+    color: #ffb600;
+    border:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+
+.auswahl {
+    position: absolute;
+}
+
+#canvas-holder-10 {
+    margin-left: 20%;
+}
+
+#chart-area-LineChart {
+    position: absolute;
+}
+
+button {
+    padding: 3px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius: 4px;
+    background: #428cba;
+    color: #ffb600;
+    border: none;
+    box-shadow: 0 3px 0 #ccc;
+}

@@ -33,7 +33,7 @@
                <section class="st-panel" id="st-panel-1">
                    <div class="text">
                    <h2>Willkommen auf Studistäts!</h2>
-                   <p>Studistäts gibt auskunft, listet und vergleicht die in Deutschland eingetragenen Studiengänge der Informatik miteinander. </p>
+                   <p>Studistäts gibt auskunft, listet und vergleicht die in Deutschland eingetragenen Studiengänge der Informatik miteinander.</p>
                     </div>
                </section>
                
@@ -43,10 +43,10 @@
                         <p>In Deutschland angebotene Studiengänge sind:   
                         </p>
                        
-                                              <div id="Bundesland">  
+                    <div id="Bundesland">  
                        <p>Bundesland:</p>
                             <p>
-                                <select name="Bundesländer" size="5" onchange="" id="Bundes_Doughnut">
+                                <select name="Bundesländer" id="Bundes_Doughnut">
                                     <option value="baden_wurttemberg">Baden-Würtemberg</option>
                                     <option value="nordrhein_westfalen">Nordrhein-Westfalen</option>
                                     <option value="bremen">Bremen</option>
@@ -68,27 +68,28 @@
                         </div>
                        <button id="button2">Daten abschicken</button>
                        
+                    <div class="canvas_slider">
                        <div id="canvas-holder-1">
-                       <canvas id="chart-area-1" height="150" width="150"/>
+                            <canvas id="chart-area-1" height="150" width="150"/>
                        </div>
                        <div id="canvas-holder-2">
-                       <canvas id="chart-area-2" height="150" width="150"/>
+                            <canvas id="chart-area-2" height="150" width="150"/>
                        </div>
                        <div id="canvas-holder-3">
-                       <canvas id="chart-area-3" height="150" width="150"/>
+                            <canvas id="chart-area-3" height="150" width="150"/>
                        </div>
                        <div id="canvas-holder-4">
-                       <canvas id="chart-area-4" height="150" width="150"/>
+                            <canvas id="chart-area-4" height="150" width="150"/>
                        </div>
                        <div id="canvas-holder-5">
-                       <canvas id="chart-area-5" height="150" width="150"/>
+                            <canvas id="chart-area-5" height="150" width="150"/>
                        </div>
                        <div id="canvas-holder-6">
-                       <canvas id="chart-area-6" height="150" width="150"/>
+                            <canvas id="chart-area-6" height="150" width="150"/>
                        </div>
-
-                       
                     </div>
+                       
+                </div>
                </section>
                
                <section class="st-panel" id="st-panel-3">
@@ -101,26 +102,27 @@
                        </p>
                         
                        <div id="canvas-holder-10">
-                       <canvas id="chart-area-LineChart" height="500" width="500"/>
+                       <canvas id="chart-area-LineChart" height="300" width="800px"></canvas>
                        </div>
-                       
-                <div id="Stundiengänge">   
+                <div class="auswahl">  
+                    <div id="Stundiengange">   
                         <p>Studiengänge:</p>
                             <p>
-                                <select name="Studiengänge" size="5" id="Stud_LineChart">
+                                <select name="Studiengänge" id="Stud_LineChart">
                                     <option value="0">Bioinformatik</option>
                                     <option value="1">Informatik</option>
-                                    <option value="2">Ingenieurinformatik/Technische Informatik</option>
+                                    <option value="2">Technische Informatik</option>
                                     <option value="3">Medieninformatik</option>
                                     <option value="4">Medizinische Informatik</option>
                                     <option value="5">Wirtschaftsinformatik</option>
                                 </select>
                             </p>
-                            </div> 
-                       <div id="Bundesländer">  
+                    </div>
+                    
+                    <div id="Bundeslander">  
                        <p>Bundesland 1:</p>
                             <p>
-                                <select name="Bundesländer" size="5" onchange="" id="Bundes_LineChart">
+                                <select name="Bundesländer" id="Bundes_LineChart">
                                     <option value="baden_wurttemberg">Baden-Würtemberg</option>
                                     <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
                                     <option value="Bremen">Bremen</option>
@@ -139,11 +141,12 @@
                                     <option value="Bayern">Bayern</option>
                                 </select>
                             </p>
-                        </div>
-                <div id="Bundesländer2">  
+                    </div>
+                    
+                    <div id="Bundeslander2">  
                        <p>Bundesland 2:</p>
                             <p>
-                                <select name="Bundesländer" size="5" onchange="" id="Bundes2_LineChart">
+                                <select name="Bundesländer" id="Bundes2_LineChart">
                                     <option value="baden_wurttemberg">Baden-Würtemberg</option>
                                     <option value="nordrhein_westfalen">Nordrhein-Westfalen</option>
                                     <option value="bremen">Bremen</option>
@@ -164,7 +167,8 @@
                             </p>
                         </div>                       
                        <button id="button1">Daten abschicken</button>
-                    </div>
+                 </div>    
+                </div>
                </section>  
             
                <section class="st-panel" id="st-panel-4">
