@@ -1,4 +1,4 @@
-<!-- Allgemeine Styles -->
+/*-- Allgemeine Styles --*/
 body {
     overflow: hidden;
     font-family: avenir next, arial;
@@ -8,9 +8,10 @@ body {
 a {
     text-decoration: none;
 }
+
+
 /*----------------------------------------------------------*/
 /*-- Panels sind die einzelnen "Unterseiten" der Webseite. -*/
-
 .st-panel {
     background: #F0F0F0;
     overflow: hidden;
@@ -25,13 +26,14 @@ a {
     line-height: 50px;
     -webkit-backface-visibility: hidden;
 }
+
+
 /*----------------------------------------------------------*/
 /*-- .text ist für die Anordnung des Textes verantwortlich -*/
-
 .sektionen .text {
     position: absolute;
     left: 10%;
-    top: 0;
+    top: 2%;
     height: 80%;
     width: 80%;   
 }
@@ -46,8 +48,8 @@ a {
     list-style: none;
 }
 
-/*-- Klasse, welche alle anderen Klassen beinhaltet. Regelt die Höhe und Breite der einzelnen Sektionen und Panels -*/
-
+/*-- Klasse, welche alle anderen Klassen beinhaltet. 
+    Regelt die Höhe und Breite der einzelnen Sektionen und Panels -*/
 .content {
     position: absolute;
     width: 100%;
@@ -60,10 +62,10 @@ a {
 .content > input {
     position: fixed;
     bottom: 0px;
-    width: 20%;
+    width: 25%;
     cursor: pointer;
-    height: 40px;
-    line-height: 40px;
+    height: 30px;
+    line-height: 30px;
 }
 
 /*-- Sorgt dafür, dass die Radio-Buttons nicht sichtbar sind, jedoch anstatt des Ankers gedrückt werden -*/
@@ -88,20 +90,15 @@ a {
 }
 
 #st-control-2, #st-control-2 + a {
-    left: 20%;
+    left: 25%;
 }
 
 #st-control-3, #st-control-3 + a {
-    left: 40%;
+    left: 50%;
 }
 
 #st-control-4, #st-control-4 + a {
-    left: 60%;
-}
-
-
-#st-control-5, #st-control-5 + a {
-    left: 80%;
+    left: 75%;
 }
 
 .content > input:checked + a,
