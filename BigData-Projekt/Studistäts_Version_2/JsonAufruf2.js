@@ -18,11 +18,12 @@ $(window).ready(function(){
                      $.getJSON("../JSON/"+ neu +".json", function(data2){
                          var erste = parseInt(data0.baden_wurttemberg[3]["Insgesamt"]);
                          var zweite = parseInt(data1.Studienanfaenger_Bundesland[0]["Insgesamt"]);
+                         var dritte = parseInt(data0.neu[0]["Insgesamt"]);
                          console.log(erste);
                          console.log(zweite);
             // Prüfen ob die Daten vorhanden sind, Hier reicht die Überprüfung der ersten Variable
             myLineChart.datasets[0].points[0].value = parseInt(((erste * 100) / zweite)*100);
-            myLineChart.datasets[1].points[0].value = (parseInt(data0.neu[0]["Insgesamt"])*100) / parseInt(data1.Studienanfaenger_Bundesland[0]["Insgesamt"]);
+            myLineChart.datasets[1].points[0].value = ((zweite*100) / zweite)*100;
             // Aktualisiert die Doughnut-Chart
             myLineChart.update();
                      });

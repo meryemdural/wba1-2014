@@ -27,7 +27,7 @@ $(window).ready(function(){
         
         var jsLang = $('#Bundes_Doughnut :selected').val();
             switch (jsLang) {
-        case "Baden-Württemberg":
+        case "baden_wurttemberg":
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
             $.getJSON("../JSON/baden_wurttemberg.json", function(data0){
                
@@ -36,49 +36,49 @@ $(window).ready(function(){
                 
             // Setzen der neuen Werte und Beschriftungen
                 ChartActive1();
-                myDoughnut1.segments[0].value = parseInt(data0.BadenWurttemberg[105]["Deutsche Männlich"]);
-                myDoughnut1.segments[1].value = parseInt(data0.BadenWurttemberg[105]["Deutsche Weiblich"]);
-                myDoughnut1.segments[2].value = parseInt(data0.BadenWurttemberg[105]["Deutsche Insgesamt"]);
+                myDoughnut1.segments[0].value = parseInt(data0.baden_wurttemberg[105]["Deutsche Männlich"]);
+                myDoughnut1.segments[1].value = parseInt(data0.baden_wurttemberg[105]["Deutsche Weiblich"]);
+                myDoughnut1.segments[2].value = parseInt(data0.baden_wurttemberg[105]["Deutsche Insgesamt"]);
                 myDoughnut1.segments[0].label = "Deutsche Männlich";
                 myDoughnut1.segments[1].label = "Deutsche Weiblich";
                 myDoughnut1.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive2();
-                myDoughnut2.segments[0].value = parseInt(data0.BadenWurttemberg[106]["Deutsche Männlich"]);
-                myDoughnut2.segments[1].value = parseInt(data0.BadenWurttemberg[106]["Deutsche Weiblich"]);
-                myDoughnut2.segments[2].value = parseInt(data0.BadenWurttemberg[106]["Deutsche Insgesamt"]);
+                myDoughnut2.segments[0].value = parseInt(data0.baden_wurttemberg[106]["Deutsche Männlich"]);
+                myDoughnut2.segments[1].value = parseInt(data0.baden_wurttemberg[106]["Deutsche Weiblich"]);
+                myDoughnut2.segments[2].value = parseInt(data0.baden_wurttemberg[106]["Deutsche Insgesamt"]);
                 myDoughnut2.segments[0].label = "Deutsche Männlich";
                 myDoughnut2.segments[1].label = "Deutsche Weiblich";
                 myDoughnut2.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive3();
-                myDoughnut3.segments[0].value = parseInt(data0.BadenWurttemberg[107]["Deutsche Männlich"]);
-                myDoughnut3.segments[1].value = parseInt(data0.BadenWurttemberg[107]["Deutsche Weiblich"]);
-                myDoughnut3.segments[2].value = parseInt(data0.BadenWurttemberg[107]["Deutsche Insgesamt"]);
+                myDoughnut3.segments[0].value = parseInt(data0.baden_wurttemberg[107]["Deutsche Männlich"]);
+                myDoughnut3.segments[1].value = parseInt(data0.baden_wurttemberg[107]["Deutsche Weiblich"]);
+                myDoughnut3.segments[2].value = parseInt(data0.baden_wurttemberg[107]["Deutsche Insgesamt"]);
                 myDoughnut3.segments[0].label = "Deutsche Männlich";
                 myDoughnut3.segments[1].label = "Deutsche Weiblich";
                 myDoughnut3.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive4();
-                myDoughnut4.segments[0].value = parseInt(data0.BadenWurttemberg[108]["Deutsche Männlich"]);
-                myDoughnut4.segments[1].value = parseInt(data0.BadenWurttemberg[108]["Deutsche Weiblich"]);
-                myDoughnut4.segments[2].value = parseInt(data0.BadenWurttemberg[108]["Deutsche Insgesamt"]);
+                myDoughnut4.segments[0].value = parseInt(data0.baden_wurttemberg[108]["Deutsche Männlich"]);
+                myDoughnut4.segments[1].value = parseInt(data0.baden_wurttemberg[108]["Deutsche Weiblich"]);
+                myDoughnut4.segments[2].value = parseInt(data0.baden_wurttemberg[108]["Deutsche Insgesamt"]);
                 myDoughnut4.segments[0].label = "Deutsche Männlich";
                 myDoughnut4.segments[1].label = "Deutsche Weiblich";
                 myDoughnut4.segments[2].label = "Deutsche Insgesamt";
             
                 ChartActive5();
-                myDoughnut5.segments[0].value = parseInt(data0.BadenWurttemberg[109]["Deutsche Männlich"]);
-                myDoughnut5.segments[1].value = parseInt(data0.BadenWurttemberg[109]["Deutsche Weiblich"]);
-                myDoughnut5.segments[2].value = parseInt(data0.BadenWurttemberg[109]["Deutsche Insgesamt"]);
+                myDoughnut5.segments[0].value = parseInt(data0.baden_wurttemberg[109]["Deutsche Männlich"]);
+                myDoughnut5.segments[1].value = parseInt(data0.baden_wurttemberg[109]["Deutsche Weiblich"]);
+                myDoughnut5.segments[2].value = parseInt(data0.baden_wurttemberg[109]["Deutsche Insgesamt"]);
                 myDoughnut5.segments[0].label = "Deutsche Männlich";
                 myDoughnut5.segments[1].label = "Deutsche Weiblich";
                 myDoughnut5.segments[2].label = "Deutsche Insgesamt";
 
                 ChartActive6();
-                myDoughnut6.segments[0].value = parseInt(data0.BadenWurttemberg[110]["Deutsche Männlich"]);
-                myDoughnut6.segments[1].value = parseInt(data0.BadenWurttemberg[110]["Deutsche Weiblich"]);
-                myDoughnut6.segments[2].value = parseInt(data0.BadenWurttemberg[110]["Deutsche Insgesamt"]);
+                myDoughnut6.segments[0].value = parseInt(data0.baden_wurttemberg[110]["Deutsche Männlich"]);
+                myDoughnut6.segments[1].value = parseInt(data0.baden_wurttemberg[110]["Deutsche Weiblich"]);
+                myDoughnut6.segments[2].value = parseInt(data0.baden_wurttemberg[110]["Deutsche Insgesamt"]);
                 myDoughnut6.segments[0].label = "Deutsche Männlich";
                 myDoughnut6.segments[1].label = "Deutsche Weiblich";
                 myDoughnut6.segments[2].label = "Deutsche Insgesamt";
@@ -92,53 +92,53 @@ $(window).ready(function(){
             myDoughnut6.update();
             });
             break;
-        case "Bayern":
+        case "bayern":
             $.getJSON("../JSON/bayern.json", function(data0){
                         // Setzen der neuen Werte und Beschriftungen
                 ChartActive1();
-                myDoughnut1.segments[0].value = parseInt(data0.Bayern[105]["Deutsche Männlich"]);
-                myDoughnut1.segments[1].value = parseInt(data0.Bayern[105]["Deutsche Weiblich"]);
-                myDoughnut1.segments[2].value = parseInt(data0.Bayern[105]["Deutsche Insgesamt"]);
+                myDoughnut1.segments[0].value = parseInt(data0.bayern[105]["Deutsche Männlich"]);
+                myDoughnut1.segments[1].value = parseInt(data0.bayern[105]["Deutsche Weiblich"]);
+                myDoughnut1.segments[2].value = parseInt(data0.bayern[105]["Deutsche Insgesamt"]);
                 myDoughnut1.segments[0].label = "Deutsche Männlich";
                 myDoughnut1.segments[1].label = "Deutsche Weiblich";
                 myDoughnut1.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive2();
-                myDoughnut2.segments[0].value = parseInt(data0.Bayern[106]["Deutsche Männlich"]);
-                myDoughnut2.segments[1].value = parseInt(data0.Bayern[106]["Deutsche Weiblich"]);
-                myDoughnut2.segments[2].value = parseInt(data0.Bayern[106]["Deutsche Insgesamt"]);
+                myDoughnut2.segments[0].value = parseInt(data0.bayern[106]["Deutsche Männlich"]);
+                myDoughnut2.segments[1].value = parseInt(data0.bayern[106]["Deutsche Weiblich"]);
+                myDoughnut2.segments[2].value = parseInt(data0.bayern[106]["Deutsche Insgesamt"]);
                 myDoughnut2.segments[0].label = "Deutsche Männlich";
                 myDoughnut2.segments[1].label = "Deutsche Weiblich";
                 myDoughnut2.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive3();
-                myDoughnut3.segments[0].value = parseInt(data0.Bayern[107]["Deutsche Männlich"]);
-                myDoughnut3.segments[1].value = parseInt(data0.Bayern[107]["Deutsche Weiblich"]);
-                myDoughnut3.segments[2].value = parseInt(data0.Bayern[107]["Deutsche Insgesamt"]);
+                myDoughnut3.segments[0].value = parseInt(data0.bayern[107]["Deutsche Männlich"]);
+                myDoughnut3.segments[1].value = parseInt(data0.bayern[107]["Deutsche Weiblich"]);
+                myDoughnut3.segments[2].value = parseInt(data0.bayern[107]["Deutsche Insgesamt"]);
                 myDoughnut3.segments[0].label = "Deutsche Männlich";
                 myDoughnut3.segments[1].label = "Deutsche Weiblich";
                 myDoughnut3.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive4();
-                myDoughnut4.segments[0].value = parseInt(data0.Bayern[108]["Deutsche Männlich"]);
-                myDoughnut4.segments[1].value = parseInt(data0.Bayern[108]["Deutsche Weiblich"]);
-                myDoughnut4.segments[2].value = parseInt(data0.Bayern[108]["Deutsche Insgesamt"]);
+                myDoughnut4.segments[0].value = parseInt(data0.bayern[108]["Deutsche Männlich"]);
+                myDoughnut4.segments[1].value = parseInt(data0.bayern[108]["Deutsche Weiblich"]);
+                myDoughnut4.segments[2].value = parseInt(data0.bayern[108]["Deutsche Insgesamt"]);
                 myDoughnut4.segments[0].label = "Deutsche Männlich";
                 myDoughnut4.segments[1].label = "Deutsche Weiblich";
                 myDoughnut4.segments[2].label = "Deutsche Insgesamt";
             
                 ChartActive5();
-                myDoughnut5.segments[0].value = parseInt(data0.Bayern[109]["Deutsche Männlich"]);
-                myDoughnut5.segments[1].value = parseInt(data0.Bayern[109]["Deutsche Weiblich"]);
-                myDoughnut5.segments[2].value = parseInt(data0.Bayern[109]["Deutsche Insgesamt"]);
+                myDoughnut5.segments[0].value = parseInt(data0.bayern[109]["Deutsche Männlich"]);
+                myDoughnut5.segments[1].value = parseInt(data0.bayern[109]["Deutsche Weiblich"]);
+                myDoughnut5.segments[2].value = parseInt(data0.bayern[109]["Deutsche Insgesamt"]);
                 myDoughnut5.segments[0].label = "Deutsche Männlich";
                 myDoughnut5.segments[1].label = "Deutsche Weiblich";
                 myDoughnut5.segments[2].label = "Deutsche Insgesamt";
 
                 ChartActive6();
-                myDoughnut6.segments[0].value = parseInt(data0.Bayern[110]["Deutsche Männlich"]);
-                myDoughnut6.segments[1].value = parseInt(data0.Bayern[110]["Deutsche Weiblich"]);
-                myDoughnut6.segments[2].value = parseInt(data0.Bayern[110]["Deutsche Insgesamt"]);
+                myDoughnut6.segments[0].value = parseInt(data0.bayern[110]["Deutsche Männlich"]);
+                myDoughnut6.segments[1].value = parseInt(data0.bayern[110]["Deutsche Weiblich"]);
+                myDoughnut6.segments[2].value = parseInt(data0.bayern[110]["Deutsche Insgesamt"]);
                 myDoughnut6.segments[0].label = "Deutsche Männlich";
                 myDoughnut6.segments[1].label = "Deutsche Weiblich";
                 myDoughnut6.segments[2].label = "Deutsche Insgesamt";
@@ -152,53 +152,53 @@ $(window).ready(function(){
             myDoughnut6.update();
             });
             break;
-        case "Brandenburg":
+        case "brandenburg":
             $.getJSON("../JSON/brandenburg.json", function(data0){
              // Setzen der neuen Werte und Beschriftungen
                 ChartActive1();
-                myDoughnut1.segments[0].value = parseInt(data0.Brandenburg[105]["Deutsche Männlich"]);
-                myDoughnut1.segments[1].value = parseInt(data0.Brandenburg[105]["Deutsche Weiblich"]);
-                myDoughnut1.segments[2].value = parseInt(data0.Brandenburg[105]["Deutsche Insgesamt"]);
+                myDoughnut1.segments[0].value = parseInt(data0.brandenburg[105]["Deutsche Männlich"]);
+                myDoughnut1.segments[1].value = parseInt(data0.brandenburg[105]["Deutsche Weiblich"]);
+                myDoughnut1.segments[2].value = parseInt(data0.brandenburg[105]["Deutsche Insgesamt"]);
                 myDoughnut1.segments[0].label = "Deutsche Männlich";
                 myDoughnut1.segments[1].label = "Deutsche Weiblich";
                 myDoughnut1.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive2();
-                myDoughnut2.segments[0].value = parseInt(data0.Brandenburg[106]["Deutsche Männlich"]);
-                myDoughnut2.segments[1].value = parseInt(data0.Brandenburg[106]["Deutsche Weiblich"]);
-                myDoughnut2.segments[2].value = parseInt(data0.Brandenburg[106]["Deutsche Insgesamt"]);
+                myDoughnut2.segments[0].value = parseInt(data0.brandenburg[106]["Deutsche Männlich"]);
+                myDoughnut2.segments[1].value = parseInt(data0.brandenburg[106]["Deutsche Weiblich"]);
+                myDoughnut2.segments[2].value = parseInt(data0.brandenburg[106]["Deutsche Insgesamt"]);
                 myDoughnut2.segments[0].label = "Deutsche Männlich";
                 myDoughnut2.segments[1].label = "Deutsche Weiblich";
                 myDoughnut2.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive3();
-                myDoughnut3.segments[0].value = parseInt(data0.Brandenburg[107]["Deutsche Männlich"]);
-                myDoughnut3.segments[1].value = parseInt(data0.Brandenburg[107]["Deutsche Weiblich"]);
-                myDoughnut3.segments[2].value = parseInt(data0.Brandenburg[107]["Deutsche Insgesamt"]);
+                myDoughnut3.segments[0].value = parseInt(data0.brandenburg[107]["Deutsche Männlich"]);
+                myDoughnut3.segments[1].value = parseInt(data0.brandenburg[107]["Deutsche Weiblich"]);
+                myDoughnut3.segments[2].value = parseInt(data0.brandenburg[107]["Deutsche Insgesamt"]);
                 myDoughnut3.segments[0].label = "Deutsche Männlich";
                 myDoughnut3.segments[1].label = "Deutsche Weiblich";
                 myDoughnut3.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive4();
-                myDoughnut4.segments[0].value = parseInt(data0.Brandenburg[108]["Deutsche Männlich"]);
-                myDoughnut4.segments[1].value = parseInt(data0.Brandenburg[108]["Deutsche Weiblich"]);
-                myDoughnut4.segments[2].value = parseInt(data0.Brandenburg[108]["Deutsche Insgesamt"]);
+                myDoughnut4.segments[0].value = parseInt(data0.brandenburg[108]["Deutsche Männlich"]);
+                myDoughnut4.segments[1].value = parseInt(data0.brandenburg[108]["Deutsche Weiblich"]);
+                myDoughnut4.segments[2].value = parseInt(data0.brandenburg[108]["Deutsche Insgesamt"]);
                 myDoughnut4.segments[0].label = "Deutsche Männlich";
                 myDoughnut4.segments[1].label = "Deutsche Weiblich";
                 myDoughnut4.segments[2].label = "Deutsche Insgesamt";
             
                 ChartActive5();
-                myDoughnut5.segments[0].value = parseInt(data0.Brandenburg[109]["Deutsche Männlich"]);
-                myDoughnut5.segments[1].value = parseInt(data0.Brandenburg[109]["Deutsche Weiblich"]);
-                myDoughnut5.segments[2].value = parseInt(data0.Brandenburg[109]["Deutsche Insgesamt"]);
+                myDoughnut5.segments[0].value = parseInt(data0.brandenburg[109]["Deutsche Männlich"]);
+                myDoughnut5.segments[1].value = parseInt(data0.brandenburg[109]["Deutsche Weiblich"]);
+                myDoughnut5.segments[2].value = parseInt(data0.brandenburg[109]["Deutsche Insgesamt"]);
                 myDoughnut5.segments[0].label = "Deutsche Männlich";
                 myDoughnut5.segments[1].label = "Deutsche Weiblich";
                 myDoughnut5.segments[2].label = "Deutsche Insgesamt";
 
                 ChartActive6();
-                myDoughnut6.segments[0].value = parseInt(data0.Brandenburg[110]["Deutsche Männlich"]);
-                myDoughnut6.segments[1].value = parseInt(data0.Brandenburg[110]["Deutsche Weiblich"]);
-                myDoughnut6.segments[2].value = parseInt(data0.Brandenburg[110]["Deutsche Insgesamt"]);
+                myDoughnut6.segments[0].value = parseInt(data0.brandenburg[110]["Deutsche Männlich"]);
+                myDoughnut6.segments[1].value = parseInt(data0.brandenburg[110]["Deutsche Weiblich"]);
+                myDoughnut6.segments[2].value = parseInt(data0.brandenburg[110]["Deutsche Insgesamt"]);
                 myDoughnut6.segments[0].label = "Deutsche Männlich";
                 myDoughnut6.segments[1].label = "Deutsche Weiblich";
                 myDoughnut6.segments[2].label = "Deutsche Insgesamt";
@@ -212,52 +212,52 @@ $(window).ready(function(){
             myDoughnut6.update();
             });
             break;
-        case "Hessen":
+        case "hessen":
             $.getJSON("../JSON/hessen.json", function(data0){
                 ChartActive1();
-                myDoughnut1.segments[0].value = parseInt(data0.Hessen[105]["Deutsche Männlich"]);
-                myDoughnut1.segments[1].value = parseInt(data0.Hessen[105]["Deutsche Weiblich"]);
-                myDoughnut1.segments[2].value = parseInt(data0.Hessen[105]["Deutsche Insgesamt"]);
+                myDoughnut1.segments[0].value = parseInt(data0.hessen[105]["Deutsche Männlich"]);
+                myDoughnut1.segments[1].value = parseInt(data0.hessen[105]["Deutsche Weiblich"]);
+                myDoughnut1.segments[2].value = parseInt(data0.hessen[105]["Deutsche Insgesamt"]);
                 myDoughnut1.segments[0].label = "Deutsche Männlich";
                 myDoughnut1.segments[1].label = "Deutsche Weiblich";
                 myDoughnut1.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive2();
-                myDoughnut2.segments[0].value = parseInt(data0.Hessen[106]["Deutsche Männlich"]);
-                myDoughnut2.segments[1].value = parseInt(data0.Hessen[106]["Deutsche Weiblich"]);
-                myDoughnut2.segments[2].value = parseInt(data0.Hessen[106]["Deutsche Insgesamt"]);
+                myDoughnut2.segments[0].value = parseInt(data0.hessen[106]["Deutsche Männlich"]);
+                myDoughnut2.segments[1].value = parseInt(data0.hessen[106]["Deutsche Weiblich"]);
+                myDoughnut2.segments[2].value = parseInt(data0.hessen[106]["Deutsche Insgesamt"]);
                 myDoughnut2.segments[0].label = "Deutsche Männlich";
                 myDoughnut2.segments[1].label = "Deutsche Weiblich";
                 myDoughnut2.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive3();
-                myDoughnut3.segments[0].value = parseInt(data0.Hessen[107]["Deutsche Männlich"]);
-                myDoughnut3.segments[1].value = parseInt(data0.Hessen[107]["Deutsche Weiblich"]);
-                myDoughnut3.segments[2].value = parseInt(data0.Hessen[107]["Deutsche Insgesamt"]);
+                myDoughnut3.segments[0].value = parseInt(data0.hessen[107]["Deutsche Männlich"]);
+                myDoughnut3.segments[1].value = parseInt(data0.hessen[107]["Deutsche Weiblich"]);
+                myDoughnut3.segments[2].value = parseInt(data0.hessen[107]["Deutsche Insgesamt"]);
                 myDoughnut3.segments[0].label = "Deutsche Männlich";
                 myDoughnut3.segments[1].label = "Deutsche Weiblich";
                 myDoughnut3.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive4();
-                myDoughnut4.segments[0].value = parseInt(data0.Hessen[108]["Deutsche Männlich"]);
-                myDoughnut4.segments[1].value = parseInt(data0.Hessen[108]["Deutsche Weiblich"]);
-                myDoughnut4.segments[2].value = parseInt(data0.Hessen[108]["Deutsche Insgesamt"]);
+                myDoughnut4.segments[0].value = parseInt(data0.hessen[108]["Deutsche Männlich"]);
+                myDoughnut4.segments[1].value = parseInt(data0.hessen[108]["Deutsche Weiblich"]);
+                myDoughnut4.segments[2].value = parseInt(data0.hessen[108]["Deutsche Insgesamt"]);
                 myDoughnut4.segments[0].label = "Deutsche Männlich";
                 myDoughnut4.segments[1].label = "Deutsche Weiblich";
                 myDoughnut4.segments[2].label = "Deutsche Insgesamt";
             
                 ChartActive5();
-                myDoughnut5.segments[0].value = parseInt(data0.Hessen[109]["Deutsche Männlich"]);
-                myDoughnut5.segments[1].value = parseInt(data0.Hessen[109]["Deutsche Weiblich"]);
-                myDoughnut5.segments[2].value = parseInt(data0.Hessen[109]["Deutsche Insgesamt"]);
+                myDoughnut5.segments[0].value = parseInt(data0.hessen[109]["Deutsche Männlich"]);
+                myDoughnut5.segments[1].value = parseInt(data0.hessen[109]["Deutsche Weiblich"]);
+                myDoughnut5.segments[2].value = parseInt(data0.hessen[109]["Deutsche Insgesamt"]);
                 myDoughnut5.segments[0].label = "Deutsche Männlich";
                 myDoughnut5.segments[1].label = "Deutsche Weiblich";
                 myDoughnut5.segments[2].label = "Deutsche Insgesamt";
 
                 ChartActive6();
-                myDoughnut6.segments[0].value = parseInt(data0.Hessen[110]["Deutsche Männlich"]);
-                myDoughnut6.segments[1].value = parseInt(data0.Hessen[110]["Deutsche Weiblich"]);
-                myDoughnut6.segments[2].value = parseInt(data0.Hessen[110]["Deutsche Insgesamt"]);
+                myDoughnut6.segments[0].value = parseInt(data0.hessen[110]["Deutsche Männlich"]);
+                myDoughnut6.segments[1].value = parseInt(data0.hessen[110]["Deutsche Weiblich"]);
+                myDoughnut6.segments[2].value = parseInt(data0.hessen[110]["Deutsche Insgesamt"]);
                 myDoughnut6.segments[0].label = "Deutsche Männlich";
                 myDoughnut6.segments[1].label = "Deutsche Weiblich";
                 myDoughnut6.segments[2].label = "Deutsche Insgesamt";
@@ -271,55 +271,52 @@ $(window).ready(function(){
             myDoughnut6.update();
             });
             break;
-        case "Nordrhein-Westfalen":
-            var index1 = $('#Stud_Doughnut :selected').val();
-            var neu = parseInt(105) + parseInt(index1);
-            console.log(neu);
-            $.getJSON("../JSON/nordrhein-westfalen.json", function(data0){
+        case "nordrhein_westfalen":
+            $.getJSON("../JSON/nordrhein_westfalen.json", function(data0){
                             ChartActive1();
-                myDoughnut1.segments[0].value = parseInt(data0.Nordrhein_Westfalen[105]["Deutsche Männlich"]);
-                myDoughnut1.segments[1].value = parseInt(data0.Nordrhein_Westfalen[105]["Deutsche Weiblich"]);
-                myDoughnut1.segments[2].value = parseInt(data0.Nordrhein_Westfalen[105]["Deutsche Insgesamt"]);
+                myDoughnut1.segments[0].value = parseInt(data0.nordrhein_westfalen[105]["Deutsche Männlich"]);
+                myDoughnut1.segments[1].value = parseInt(data0.nordrhein_westfalen[105]["Deutsche Weiblich"]);
+                myDoughnut1.segments[2].value = parseInt(data0.nordrhein_westfalen[105]["Deutsche Insgesamt"]);
                 myDoughnut1.segments[0].label = "Deutsche Männlich";
                 myDoughnut1.segments[1].label = "Deutsche Weiblich";
                 myDoughnut1.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive2();
-                myDoughnut2.segments[0].value = parseInt(data0.Nordrhein_Westfalen[106]["Deutsche Männlich"]);
-                myDoughnut2.segments[1].value = parseInt(data0.Nordrhein_Westfalen[106]["Deutsche Weiblich"]);
-                myDoughnut2.segments[2].value = parseInt(data0.Nordrhein_Westfalen[106]["Deutsche Insgesamt"]);
+                myDoughnut2.segments[0].value = parseInt(data0.nordrhein_westfalen[106]["Deutsche Männlich"]);
+                myDoughnut2.segments[1].value = parseInt(data0.nordrhein_westfalen[106]["Deutsche Weiblich"]);
+                myDoughnut2.segments[2].value = parseInt(data0.nordrhein_westfalen[106]["Deutsche Insgesamt"]);
                 myDoughnut2.segments[0].label = "Deutsche Männlich";
                 myDoughnut2.segments[1].label = "Deutsche Weiblich";
                 myDoughnut2.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive3();
-                myDoughnut3.segments[0].value = parseInt(data0.Nordrhein_Westfalen[107]["Deutsche Männlich"]);
-                myDoughnut3.segments[1].value = parseInt(data0.Nordrhein_Westfalen[107]["Deutsche Weiblich"]);
-                myDoughnut3.segments[2].value = parseInt(data0.Nordrhein_Westfalen[107]["Deutsche Insgesamt"]);
+                myDoughnut3.segments[0].value = parseInt(data0.nordrhein_westfalen[107]["Deutsche Männlich"]);
+                myDoughnut3.segments[1].value = parseInt(data0.nordrhein_westfalen[107]["Deutsche Weiblich"]);
+                myDoughnut3.segments[2].value = parseInt(data0.nordrhein_westfalen[107]["Deutsche Insgesamt"]);
                 myDoughnut3.segments[0].label = "Deutsche Männlich";
                 myDoughnut3.segments[1].label = "Deutsche Weiblich";
                 myDoughnut3.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive4();
-                myDoughnut4.segments[0].value = parseInt(data0.Nordrhein_Westfalen[108]["Deutsche Männlich"]);
-                myDoughnut4.segments[1].value = parseInt(data0.Nordrhein_Westfalen[108]["Deutsche Weiblich"]);
-                myDoughnut4.segments[2].value = parseInt(data0.Nordrhein_Westfalen[108]["Deutsche Insgesamt"]);
+                myDoughnut4.segments[0].value = parseInt(data0.nordrhein_westfalen[108]["Deutsche Männlich"]);
+                myDoughnut4.segments[1].value = parseInt(data0.nordrhein_westfalen[108]["Deutsche Weiblich"]);
+                myDoughnut4.segments[2].value = parseInt(data0.nordrhein_westfalen[108]["Deutsche Insgesamt"]);
                 myDoughnut4.segments[0].label = "Deutsche Männlich";
                 myDoughnut4.segments[1].label = "Deutsche Weiblich";
                 myDoughnut4.segments[2].label = "Deutsche Insgesamt";
             
                 ChartActive5();
-                myDoughnut5.segments[0].value = parseInt(data0.Nordrhein_Westfalen[109]["Deutsche Männlich"]);
-                myDoughnut5.segments[1].value = parseInt(data0.Nordrhein_Westfalen[109]["Deutsche Weiblich"]);
-                myDoughnut5.segments[2].value = parseInt(data0.Nordrhein_Westfalen[109]["Deutsche Insgesamt"]);
+                myDoughnut5.segments[0].value = parseInt(data0.nordrhein_westfalen[109]["Deutsche Männlich"]);
+                myDoughnut5.segments[1].value = parseInt(data0.nordrhein_westfalen[109]["Deutsche Weiblich"]);
+                myDoughnut5.segments[2].value = parseInt(data0.nordrhein_westfalen[109]["Deutsche Insgesamt"]);
                 myDoughnut5.segments[0].label = "Deutsche Männlich";
                 myDoughnut5.segments[1].label = "Deutsche Weiblich";
                 myDoughnut5.segments[2].label = "Deutsche Insgesamt";
 
                 ChartActive6();
-                myDoughnut6.segments[0].value = parseInt(data0.Nordrhein_Westfalen[110]["Deutsche Männlich"]);
-                myDoughnut6.segments[1].value = parseInt(data0.Nordrhein_Westfalen[110]["Deutsche Weiblich"]);
-                myDoughnut6.segments[2].value = parseInt(data0.Nordrhein_Westfalen[110]["Deutsche Insgesamt"]);
+                myDoughnut6.segments[0].value = parseInt(data0.nordrhein_westfalen[110]["Deutsche Männlich"]);
+                myDoughnut6.segments[1].value = parseInt(data0.nordrhein_westfalen[110]["Deutsche Weiblich"]);
+                myDoughnut6.segments[2].value = parseInt(data0.nordrhein_westfalen[110]["Deutsche Insgesamt"]);
                 myDoughnut6.segments[0].label = "Deutsche Männlich";
                 myDoughnut6.segments[1].label = "Deutsche Weiblich";
                 myDoughnut6.segments[2].label = "Deutsche Insgesamt";
@@ -333,52 +330,52 @@ $(window).ready(function(){
             myDoughnut6.update();
             });
             break;
-        case "Saarland":
+        case "saarland":
             $.getJSON("../JSON/saarland.json", function(data0){
                          ChartActive1();
-                myDoughnut1.segments[0].value = parseInt(data0.Saarland[105]["Deutsche Männlich"]);
-                myDoughnut1.segments[1].value = parseInt(data0.Saarland[105]["Deutsche Weiblich"]);
-                myDoughnut1.segments[2].value = parseInt(data0.Saarland[105]["Deutsche Insgesamt"]);
+                myDoughnut1.segments[0].value = parseInt(data0.saarland[105]["Deutsche Männlich"]);
+                myDoughnut1.segments[1].value = parseInt(data0.saarland[105]["Deutsche Weiblich"]);
+                myDoughnut1.segments[2].value = parseInt(data0.saarland[105]["Deutsche Insgesamt"]);
                 myDoughnut1.segments[0].label = "Deutsche Männlich";
                 myDoughnut1.segments[1].label = "Deutsche Weiblich";
                 myDoughnut1.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive2();
-                myDoughnut2.segments[0].value = parseInt(data0.Saarland[106]["Deutsche Männlich"]);
-                myDoughnut2.segments[1].value = parseInt(data0.Saarland[106]["Deutsche Weiblich"]);
-                myDoughnut2.segments[2].value = parseInt(data0.Saarland[106]["Deutsche Insgesamt"]);
+                myDoughnut2.segments[0].value = parseInt(data0.saarland[106]["Deutsche Männlich"]);
+                myDoughnut2.segments[1].value = parseInt(data0.saarland[106]["Deutsche Weiblich"]);
+                myDoughnut2.segments[2].value = parseInt(data0.saarland[106]["Deutsche Insgesamt"]);
                 myDoughnut2.segments[0].label = "Deutsche Männlich";
                 myDoughnut2.segments[1].label = "Deutsche Weiblich";
                 myDoughnut2.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive3();
-                myDoughnut3.segments[0].value = parseInt(data0.Saarland[107]["Deutsche Männlich"]);
-                myDoughnut3.segments[1].value = parseInt(data0.Saarland[107]["Deutsche Weiblich"]);
-                myDoughnut3.segments[2].value = parseInt(data0.Saarland[107]["Deutsche Insgesamt"]);
+                myDoughnut3.segments[0].value = parseInt(data0.saarland[107]["Deutsche Männlich"]);
+                myDoughnut3.segments[1].value = parseInt(data0.saarland[107]["Deutsche Weiblich"]);
+                myDoughnut3.segments[2].value = parseInt(data0.saarland[107]["Deutsche Insgesamt"]);
                 myDoughnut3.segments[0].label = "Deutsche Männlich";
                 myDoughnut3.segments[1].label = "Deutsche Weiblich";
                 myDoughnut3.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive4();
-                myDoughnut4.segments[0].value = parseInt(data0.Saarland[108]["Deutsche Männlich"]);
-                myDoughnut4.segments[1].value = parseInt(data0.Saarland[108]["Deutsche Weiblich"]);
-                myDoughnut4.segments[2].value = parseInt(data0.Saarland[108]["Deutsche Insgesamt"]);
+                myDoughnut4.segments[0].value = parseInt(data0.saarland[108]["Deutsche Männlich"]);
+                myDoughnut4.segments[1].value = parseInt(data0.saarland[108]["Deutsche Weiblich"]);
+                myDoughnut4.segments[2].value = parseInt(data0.saarland[108]["Deutsche Insgesamt"]);
                 myDoughnut4.segments[0].label = "Deutsche Männlich";
                 myDoughnut4.segments[1].label = "Deutsche Weiblich";
                 myDoughnut4.segments[2].label = "Deutsche Insgesamt";
             
                 ChartActive5();
-                myDoughnut5.segments[0].value = parseInt(data0.Saarland[109]["Deutsche Männlich"]);
-                myDoughnut5.segments[1].value = parseInt(data0.Saarland[109]["Deutsche Weiblich"]);
-                myDoughnut5.segments[2].value = parseInt(data0.Saarland[109]["Deutsche Insgesamt"]);
+                myDoughnut5.segments[0].value = parseInt(data0.saarland[109]["Deutsche Männlich"]);
+                myDoughnut5.segments[1].value = parseInt(data0.saarland[109]["Deutsche Weiblich"]);
+                myDoughnut5.segments[2].value = parseInt(data0.saarland[109]["Deutsche Insgesamt"]);
                 myDoughnut5.segments[0].label = "Deutsche Männlich";
                 myDoughnut5.segments[1].label = "Deutsche Weiblich";
                 myDoughnut5.segments[2].label = "Deutsche Insgesamt";
 
                 ChartActive6();
-                myDoughnut6.segments[0].value = parseInt(data0.Saarland[110]["Deutsche Männlich"]);
-                myDoughnut6.segments[1].value = parseInt(data0.Saarland[110]["Deutsche Weiblich"]);
-                myDoughnut6.segments[2].value = parseInt(data0.Saarland[110]["Deutsche Insgesamt"]);
+                myDoughnut6.segments[0].value = parseInt(data0.saarland[110]["Deutsche Männlich"]);
+                myDoughnut6.segments[1].value = parseInt(data0.saarland[110]["Deutsche Weiblich"]);
+                myDoughnut6.segments[2].value = parseInt(data0.saarland[110]["Deutsche Insgesamt"]);
                 myDoughnut6.segments[0].label = "Deutsche Männlich";
                 myDoughnut6.segments[1].label = "Deutsche Weiblich";
                 myDoughnut6.segments[2].label = "Deutsche Insgesamt";
@@ -392,52 +389,52 @@ $(window).ready(function(){
             myDoughnut6.update();
             });
             break;
-        case "Sachsen-Anhalt":
-            $.getJSON("../JSON/sachsen-anhalt.json", function(data0){
+        case "sachsen_anhalt":
+            $.getJSON("../JSON/sachsen_anhalt.json", function(data0){
                          ChartActive1();
-                myDoughnut1.segments[0].value = parseInt(data0.Sachsen_Anhalt[105]["Deutsche Männlich"]);
-                myDoughnut1.segments[1].value = parseInt(data0.Sachsen_Anhalt[105]["Deutsche Weiblich"]);
-                myDoughnut1.segments[2].value = parseInt(data0.Sachsen_Anhalt[105]["Deutsche Insgesamt"]);
+                myDoughnut1.segments[0].value = parseInt(data0.sachsen_anhalt[105]["Deutsche Männlich"]);
+                myDoughnut1.segments[1].value = parseInt(data0.sachsen_anhalt[105]["Deutsche Weiblich"]);
+                myDoughnut1.segments[2].value = parseInt(data0.sachsen_anhalt[105]["Deutsche Insgesamt"]);
                 myDoughnut1.segments[0].label = "Deutsche Männlich";
                 myDoughnut1.segments[1].label = "Deutsche Weiblich";
                 myDoughnut1.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive2();
-                myDoughnut2.segments[0].value = parseInt(data0.Sachsen_Anhalt[106]["Deutsche Männlich"]);
-                myDoughnut2.segments[1].value = parseInt(data0.Sachsen_Anhalt[106]["Deutsche Weiblich"]);
-                myDoughnut2.segments[2].value = parseInt(data0.Sachsen_Anhalt[106]["Deutsche Insgesamt"]);
+                myDoughnut2.segments[0].value = parseInt(data0.sachsen_anhalt[106]["Deutsche Männlich"]);
+                myDoughnut2.segments[1].value = parseInt(data0.sachsen_anhalt[106]["Deutsche Weiblich"]);
+                myDoughnut2.segments[2].value = parseInt(data0.sachsen_anhalt[106]["Deutsche Insgesamt"]);
                 myDoughnut2.segments[0].label = "Deutsche Männlich";
                 myDoughnut2.segments[1].label = "Deutsche Weiblich";
                 myDoughnut2.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive3();
-                myDoughnut3.segments[0].value = parseInt(data0.Sachsen_Anhalt[107]["Deutsche Männlich"]);
-                myDoughnut3.segments[1].value = parseInt(data0.Sachsen_Anhalt[107]["Deutsche Weiblich"]);
-                myDoughnut3.segments[2].value = parseInt(data0.Sachsen_Anhalt[107]["Deutsche Insgesamt"]);
+                myDoughnut3.segments[0].value = parseInt(data0.sachsen_anhalt[107]["Deutsche Männlich"]);
+                myDoughnut3.segments[1].value = parseInt(data0.sachsen_anhalt[107]["Deutsche Weiblich"]);
+                myDoughnut3.segments[2].value = parseInt(data0.sachsen_anhalt[107]["Deutsche Insgesamt"]);
                 myDoughnut3.segments[0].label = "Deutsche Männlich";
                 myDoughnut3.segments[1].label = "Deutsche Weiblich";
                 myDoughnut3.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive4();
-                myDoughnut4.segments[0].value = parseInt(data0.Sachsen_Anhalt[108]["Deutsche Männlich"]);
-                myDoughnut4.segments[1].value = parseInt(data0.Sachsen_Anhalt[108]["Deutsche Weiblich"]);
-                myDoughnut4.segments[2].value = parseInt(data0.Sachsen_Anhalt[108]["Deutsche Insgesamt"]);
+                myDoughnut4.segments[0].value = parseInt(data0.sachsen_anhalt[108]["Deutsche Männlich"]);
+                myDoughnut4.segments[1].value = parseInt(data0.sachsen_anhalt[108]["Deutsche Weiblich"]);
+                myDoughnut4.segments[2].value = parseInt(data0.sachsen_anhalt[108]["Deutsche Insgesamt"]);
                 myDoughnut4.segments[0].label = "Deutsche Männlich";
                 myDoughnut4.segments[1].label = "Deutsche Weiblich";
                 myDoughnut4.segments[2].label = "Deutsche Insgesamt";
             
                 ChartActive5();
-                myDoughnut5.segments[0].value = parseInt(data0.Sachsen_Anhalt[109]["Deutsche Männlich"]);
-                myDoughnut5.segments[1].value = parseInt(data0.Sachsen_Anhalt[109]["Deutsche Weiblich"]);
-                myDoughnut5.segments[2].value = parseInt(data0.Sachsen_Anhalt[109]["Deutsche Insgesamt"]);
+                myDoughnut5.segments[0].value = parseInt(data0.sachsen_anhalt[109]["Deutsche Männlich"]);
+                myDoughnut5.segments[1].value = parseInt(data0.sachsen_anhalt[109]["Deutsche Weiblich"]);
+                myDoughnut5.segments[2].value = parseInt(data0.sachsen_anhalt[109]["Deutsche Insgesamt"]);
                 myDoughnut5.segments[0].label = "Deutsche Männlich";
                 myDoughnut5.segments[1].label = "Deutsche Weiblich";
                 myDoughnut5.segments[2].label = "Deutsche Insgesamt";
 
                 ChartActive6();
-                myDoughnut6.segments[0].value = parseInt(data0.Sachsen_Anhalt[110]["Deutsche Männlich"]);
-                myDoughnut6.segments[1].value = parseInt(data0.Sachsen_Anhalt[110]["Deutsche Weiblich"]);
-                myDoughnut6.segments[2].value = parseInt(data0.Sachsen_Anhalt[110]["Deutsche Insgesamt"]);
+                myDoughnut6.segments[0].value = parseInt(data0.sachsen_anhalt[110]["Deutsche Männlich"]);
+                myDoughnut6.segments[1].value = parseInt(data0.sachsen_anhalt[110]["Deutsche Weiblich"]);
+                myDoughnut6.segments[2].value = parseInt(data0.sachsen_anhalt[110]["Deutsche Insgesamt"]);
                 myDoughnut6.segments[0].label = "Deutsche Männlich";
                 myDoughnut6.segments[1].label = "Deutsche Weiblich";
                 myDoughnut6.segments[2].label = "Deutsche Insgesamt";
@@ -451,52 +448,52 @@ $(window).ready(function(){
             myDoughnut6.update();
             });
             break;
-        case "Schleswig-Holstein":
-            $.getJSON("../JSON/schleswig-holstein.json", function(data0){
+        case "schleswig_holstein":
+            $.getJSON("../JSON/schleswig_holstein.json", function(data0){
                         ChartActive1();
-                myDoughnut1.segments[0].value = parseInt(data0.Schleswig_Holstein[105]["Deutsche Männlich"]);
-                myDoughnut1.segments[1].value = parseInt(data0.Schleswig_Holstein[105]["Deutsche Weiblich"]);
-                myDoughnut1.segments[2].value = parseInt(data0.Schleswig_Holstein[105]["Deutsche Insgesamt"]);
+                myDoughnut1.segments[0].value = parseInt(data0.schleswig_holstein[105]["Deutsche Männlich"]);
+                myDoughnut1.segments[1].value = parseInt(data0.schleswig_holstein[105]["Deutsche Weiblich"]);
+                myDoughnut1.segments[2].value = parseInt(data0.schleswig_holstein[105]["Deutsche Insgesamt"]);
                 myDoughnut1.segments[0].label = "Deutsche Männlich";
                 myDoughnut1.segments[1].label = "Deutsche Weiblich";
                 myDoughnut1.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive2();
-                myDoughnut2.segments[0].value = parseInt(data0.Schleswig_Holstein[106]["Deutsche Männlich"]);
-                myDoughnut2.segments[1].value = parseInt(data0.Schleswig_Holstein[106]["Deutsche Weiblich"]);
-                myDoughnut2.segments[2].value = parseInt(data0.Schleswig_Holstein[106]["Deutsche Insgesamt"]);
+                myDoughnut2.segments[0].value = parseInt(data0.schleswig_holstein[106]["Deutsche Männlich"]);
+                myDoughnut2.segments[1].value = parseInt(data0.schleswig_holstein[106]["Deutsche Weiblich"]);
+                myDoughnut2.segments[2].value = parseInt(data0.schleswig_holstein[106]["Deutsche Insgesamt"]);
                 myDoughnut2.segments[0].label = "Deutsche Männlich";
                 myDoughnut2.segments[1].label = "Deutsche Weiblich";
                 myDoughnut2.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive3();
-                myDoughnut3.segments[0].value = parseInt(data0.Schleswig_Holstein[107]["Deutsche Männlich"]);
-                myDoughnut3.segments[1].value = parseInt(data0.Schleswig_Holstein[107]["Deutsche Weiblich"]);
-                myDoughnut3.segments[2].value = parseInt(data0.Schleswig_Holstein[107]["Deutsche Insgesamt"]);
+                myDoughnut3.segments[0].value = parseInt(data0.schleswig_holstein[107]["Deutsche Männlich"]);
+                myDoughnut3.segments[1].value = parseInt(data0.schleswig_holstein[107]["Deutsche Weiblich"]);
+                myDoughnut3.segments[2].value = parseInt(data0.schleswig_holstein[107]["Deutsche Insgesamt"]);
                 myDoughnut3.segments[0].label = "Deutsche Männlich";
                 myDoughnut3.segments[1].label = "Deutsche Weiblich";
                 myDoughnut3.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive4();
-                myDoughnut4.segments[0].value = parseInt(data0.Schleswig_Holstein[108]["Deutsche Männlich"]);
-                myDoughnut4.segments[1].value = parseInt(data0.Schleswig_Holstein[108]["Deutsche Weiblich"]);
-                myDoughnut4.segments[2].value = parseInt(data0.Schleswig_Holstein[108]["Deutsche Insgesamt"]);
+                myDoughnut4.segments[0].value = parseInt(data0.schleswig_holstein[108]["Deutsche Männlich"]);
+                myDoughnut4.segments[1].value = parseInt(data0.schleswig_holstein[108]["Deutsche Weiblich"]);
+                myDoughnut4.segments[2].value = parseInt(data0.schleswig_holstein[108]["Deutsche Insgesamt"]);
                 myDoughnut4.segments[0].label = "Deutsche Männlich";
                 myDoughnut4.segments[1].label = "Deutsche Weiblich";
                 myDoughnut4.segments[2].label = "Deutsche Insgesamt";
             
                 ChartActive5();
-                myDoughnut5.segments[0].value = parseInt(data0.Schleswig_Holstein[109]["Deutsche Männlich"]);
-                myDoughnut5.segments[1].value = parseInt(data0.Schleswig_Holstein[109]["Deutsche Weiblich"]);
-                myDoughnut5.segments[2].value = parseInt(data0.Schleswig_Holstein[109]["Deutsche Insgesamt"]);
+                myDoughnut5.segments[0].value = parseInt(data0.schleswig_holstein[109]["Deutsche Männlich"]);
+                myDoughnut5.segments[1].value = parseInt(data0.schleswig_holstein[109]["Deutsche Weiblich"]);
+                myDoughnut5.segments[2].value = parseInt(data0.schleswig_holstein[109]["Deutsche Insgesamt"]);
                 myDoughnut5.segments[0].label = "Deutsche Männlich";
                 myDoughnut5.segments[1].label = "Deutsche Weiblich";
                 myDoughnut5.segments[2].label = "Deutsche Insgesamt";
 
                 ChartActive6();
-                myDoughnut6.segments[0].value = parseInt(data0.Schleswig_Holstein[110]["Deutsche Männlich"]);
-                myDoughnut6.segments[1].value = parseInt(data0.Schleswig_Holstein[110]["Deutsche Weiblich"]);
-                myDoughnut6.segments[2].value = parseInt(data0.Schleswig_Holstein[110]["Deutsche Insgesamt"]);
+                myDoughnut6.segments[0].value = parseInt(data0.schleswig_holstein[110]["Deutsche Männlich"]);
+                myDoughnut6.segments[1].value = parseInt(data0.schleswig_holstein[110]["Deutsche Weiblich"]);
+                myDoughnut6.segments[2].value = parseInt(data0.schleswig_holstein[110]["Deutsche Insgesamt"]);
                 myDoughnut6.segments[0].label = "Deutsche Männlich";
                 myDoughnut6.segments[1].label = "Deutsche Weiblich";
                 myDoughnut6.segments[2].label = "Deutsche Insgesamt";
@@ -510,52 +507,52 @@ $(window).ready(function(){
             myDoughnut6.update();
             });
             break;
-        case "Thüringen":
+        case "thuringen":
             $.getJSON("../JSON/thuringen.json", function(data0){
                 ChartActive1();
-                myDoughnut1.segments[0].value = parseInt(data0.Thüringen[105]["Deutsche Männlich"]);
-                myDoughnut1.segments[1].value = parseInt(data0.Thüringen[105]["Deutsche Weiblich"]);
-                myDoughnut1.segments[2].value = parseInt(data0.Thüringen[105]["Deutsche Insgesamt"]);
+                myDoughnut1.segments[0].value = parseInt(data0.thuringen[105]["Deutsche Männlich"]);
+                myDoughnut1.segments[1].value = parseInt(data0.thuringen[105]["Deutsche Weiblich"]);
+                myDoughnut1.segments[2].value = parseInt(data0.thuringen[105]["Deutsche Insgesamt"]);
                 myDoughnut1.segments[0].label = "Deutsche Männlich";
                 myDoughnut1.segments[1].label = "Deutsche Weiblich";
                 myDoughnut1.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive2();
-                myDoughnut2.segments[0].value = parseInt(data0.Thüringen[106]["Deutsche Männlich"]);
-                myDoughnut2.segments[1].value = parseInt(data0.Thüringen[106]["Deutsche Weiblich"]);
-                myDoughnut2.segments[2].value = parseInt(data0.Thüringen[106]["Deutsche Insgesamt"]);
+                myDoughnut2.segments[0].value = parseInt(data0.thuringen[106]["Deutsche Männlich"]);
+                myDoughnut2.segments[1].value = parseInt(data0.thuringen[106]["Deutsche Weiblich"]);
+                myDoughnut2.segments[2].value = parseInt(data0.thuringen[106]["Deutsche Insgesamt"]);
                 myDoughnut2.segments[0].label = "Deutsche Männlich";
                 myDoughnut2.segments[1].label = "Deutsche Weiblich";
                 myDoughnut2.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive3();
-                myDoughnut3.segments[0].value = parseInt(data0.Thüringen[107]["Deutsche Männlich"]);
-                myDoughnut3.segments[1].value = parseInt(data0.Thüringen[107]["Deutsche Weiblich"]);
-                myDoughnut3.segments[2].value = parseInt(data0.Thüringen[107]["Deutsche Insgesamt"]);
+                myDoughnut3.segments[0].value = parseInt(data0.thuringen[107]["Deutsche Männlich"]);
+                myDoughnut3.segments[1].value = parseInt(data0.thuringen[107]["Deutsche Weiblich"]);
+                myDoughnut3.segments[2].value = parseInt(data0.thuringen[107]["Deutsche Insgesamt"]);
                 myDoughnut3.segments[0].label = "Deutsche Männlich";
                 myDoughnut3.segments[1].label = "Deutsche Weiblich";
                 myDoughnut3.segments[2].label = "Deutsche Insgesamt";
                 
                 ChartActive4();
-                myDoughnut4.segments[0].value = parseInt(data0.Thüringen[108]["Deutsche Männlich"]);
-                myDoughnut4.segments[1].value = parseInt(data0.Thüringen[108]["Deutsche Weiblich"]);
-                myDoughnut4.segments[2].value = parseInt(data0.Thüringen[108]["Deutsche Insgesamt"]);
+                myDoughnut4.segments[0].value = parseInt(data0.thuringen[108]["Deutsche Männlich"]);
+                myDoughnut4.segments[1].value = parseInt(data0.thuringen[108]["Deutsche Weiblich"]);
+                myDoughnut4.segments[2].value = parseInt(data0.thuringen[108]["Deutsche Insgesamt"]);
                 myDoughnut4.segments[0].label = "Deutsche Männlich";
                 myDoughnut4.segments[1].label = "Deutsche Weiblich";
                 myDoughnut4.segments[2].label = "Deutsche Insgesamt";
             
                 ChartActive5();
-                myDoughnut5.segments[0].value = parseInt(data0.Thüringen[109]["Deutsche Männlich"]);
-                myDoughnut5.segments[1].value = parseInt(data0.Thüringen[109]["Deutsche Weiblich"]);
-                myDoughnut5.segments[2].value = parseInt(data0.Thüringen[109]["Deutsche Insgesamt"]);
+                myDoughnut5.segments[0].value = parseInt(data0.thuringen[109]["Deutsche Männlich"]);
+                myDoughnut5.segments[1].value = parseInt(data0.thuringen[109]["Deutsche Weiblich"]);
+                myDoughnut5.segments[2].value = parseInt(data0.thuringen[109]["Deutsche Insgesamt"]);
                 myDoughnut5.segments[0].label = "Deutsche Männlich";
                 myDoughnut5.segments[1].label = "Deutsche Weiblich";
                 myDoughnut5.segments[2].label = "Deutsche Insgesamt";
 
                 ChartActive6();
-                myDoughnut6.segments[0].value = parseInt(data0.Thüringen[110]["Deutsche Männlich"]);
-                myDoughnut6.segments[1].value = parseInt(data0.Thüringen[110]["Deutsche Weiblich"]);
-                myDoughnut6.segments[2].value = parseInt(data0.Thüringen[110]["Deutsche Insgesamt"]);
+                myDoughnut6.segments[0].value = parseInt(data0.thuringen[110]["Deutsche Männlich"]);
+                myDoughnut6.segments[1].value = parseInt(data0.thuringen[110]["Deutsche Weiblich"]);
+                myDoughnut6.segments[2].value = parseInt(data0.thuringen[110]["Deutsche Insgesamt"]);
                 myDoughnut6.segments[0].label = "Deutsche Männlich";
                 myDoughnut6.segments[1].label = "Deutsche Weiblich";
                 myDoughnut6.segments[2].label = "Deutsche Insgesamt";
