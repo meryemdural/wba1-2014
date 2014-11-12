@@ -3,8 +3,6 @@ $(window).load(function () {
     $("#ChartDropDown").hide();
 });
 
-
-
 var horizontalline = "<hr/>";
 var wrap = "<div class='imgThumbnail'>";
 var textWrap = "<div id='thumbnailTextWrap'>";
@@ -45,20 +43,6 @@ var logout = $(document).ready(function () {
     });
 
 });
-
-var remove = $(document).ready(function () {
-
-    $(".item-delete").click(function () {
-    
-        $("imgThumbnail thumbnailTextWrap").empty();
-
-        //????????????????????????????????????????? o_0
-
-    });
-
-});
-
-
 
 
 
