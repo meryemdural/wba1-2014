@@ -1,15 +1,16 @@
 ﻿<!DOCTYPE html>
+
 <html>
-    <head runat="server">
+    <head>
         <title>Video Webstore</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="StyleSheet.css"/>
-        <link rel="stylesheet" href="Fexboxes/flexboxes.css" />
-        <link rel="stylesheet" href="StrapOn.css" />
-        <link rel="stylesheet" href="Tabs/Tabs.css"/>
-        <link rel="stylesheet" href="FavoriteButton/FavoriteButton.css"/>
-        <link rel="stylesheet" href="UserMenu/UserMenu.css"/>
-        <link rel="stylesheet" href="MeinProfilPage/MeinProfilPage.css"/>
+        <link rel="stylesheet" href="StyleSheets/globalStyles.css" />
+        <link rel="stylesheet" href="StyleSheets/flexboxes.css" />
+        <link rel="stylesheet" href="StyleSheets/StrapOn.css" />
+        <link rel="stylesheet" href="StyleSheets/Tabs.css" />
+        <link rel="stylesheet" href="StyleSheets/FavoriteButton.css" />
+        <link rel="stylesheet" href="StyleSheets/UserMenu.css" />
+        <link rel="stylesheet" href="StyleSheets/KatalogPage.css" />
     </head>
     <body>
         <header>
@@ -41,11 +42,11 @@
                             <a href="videoLaden_main.html">Highlights</a>
                         </li>
                         <!-- Due time reasons not implented-->
-                        <li>
-                            <a href="#tab2">Katalog</a>
-                        </li>
                         <li class="active">
-                            <a href="videoLade-Profil.html">Mein Profil</a>
+                            <a href="videoLaden_Katalog.html">Katalog</a>
+                        </li>
+                        <li>
+                            <a href="videoLaden-Profil.html">Mein Profil</a>
                         </li>
                     </ul>
                 </div>
@@ -54,10 +55,10 @@
         </header>
         
         
-        <div id="MeinProfilPage" class="mein-profil-page">
-            <div class="favorit-section">
+        <div id="MeinKatalogPage" class="katalog-page">
+            <div class="filme-section">
                 <div class="category-separator">
-                    <p>Favoriten</p>
+                    <p>Filme</p>
                 </div>
             </div>
         </div>
@@ -65,10 +66,11 @@
         <script type="text/javascript" src="JQueryRAW/jquery-1.11.1.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="JavaScript.js"></script>
-        <script src="FavoriteButton/FavoriteButton.js"></script>
+        <script type="text/javascript" src="Scripts/JavaScript.js"></script>
+        <script src="Scripts/FavoriteButton.js"></script>
         
         <!-- This actually runs the Local Storage Stuff-->
         <script src="local_storage_Javascript/storage.js"></script>
+        
     </body>
 </html>

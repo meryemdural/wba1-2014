@@ -45,7 +45,7 @@ h3 {
 
 /*Shared Code between the default buy button and the User Menu bar for displaying the chart icon*/
 .buy-button, .user-menu {
-    background-image: url(images/cart.png);
+    background-image: url(../images/cart.png);
     background-repeat: no-repeat;
     background-position: left;
     background-size: 30px;
