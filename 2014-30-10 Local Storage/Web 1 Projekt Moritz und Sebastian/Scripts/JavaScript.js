@@ -3,6 +3,8 @@ $(window).load(function () {
     $("#ChartDropDown").hide();
 });
 
+
+
 var horizontalline = "<hr/>";
 var wrap = "<div class='imgThumbnail'>";
 var textWrap = "<div id='thumbnailTextWrap'>";
@@ -30,6 +32,18 @@ var ddSlider = $(document).ready(function () {
         }
         });
    
+});
+
+
+var logout = $(document).ready(function () {
+
+
+    $("#arrowProfile").click(function () {
+        localStorage.removeItem('currentUser');
+        document.getElementById('profilName').innerHTML = localStorage.getItem('currentUser');
+        location.reload();
+    });
+
 });
 
 var remove = $(document).ready(function () {

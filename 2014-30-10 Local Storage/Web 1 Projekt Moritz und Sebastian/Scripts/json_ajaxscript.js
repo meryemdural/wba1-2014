@@ -1,11 +1,9 @@
-﻿
-var data_file = "../json_Filme/json_Filme.json";
-
+﻿var jsonMovies = "../json_Filme/json_Filme.json";
 $(document).ready(function () {
 
     $.ajax({
         type: "GET",
-        url: data_file,
+        url:  jsonMovies,
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
         success: OnSuccess, 
@@ -35,7 +33,6 @@ $(document).ready(function () {
             $("#info4").append(results.Filme[3].description);
             $("#info5").append(results.Filme[4].description);
             $("#info6").append(results.Filme[5].description);
-
 
             $("#buyBtn1").click(function () {
                 $("#afterthis").after(
@@ -95,4 +92,5 @@ $(document).ready(function () {
         alert(err.status + " - " + err.statusText);
     }
 });
+
 
