@@ -15,22 +15,297 @@ $(window).ready(function(){
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
             $.getJSON("../JSON/baden_wurttemberg.json", function(data0){
                  $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
-                     $.getJSON("../JSON/"+ neu +".json", function(data2){
-                         var erste = parseInt(data0.baden_wurttemberg[3]["Insgesamt"]);
-                         var zweite = parseInt(data1.Studienanfaenger_Bundesland[0]["Insgesamt"]);
-                         var dritte = parseInt(data0.neu[0]["Insgesamt"]);
-                         console.log(erste);
-                         console.log(zweite);
+                     
+                         
+                         var jslang1 = index3;
+                        switch(jslang1){ 
+                         case "baden_wurttemberg":
+                            var ws1 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws2 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws3 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws4 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws5 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws6 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws7 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws8 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws9 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws10 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws11 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws12 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws13 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws14 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws15 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws16 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                         break;
+                         case "bayern":
+                            $.getJSON("../JSON/bayern.json", function(data2){
+                            var ws1 = parseInt(data2.bayern[index1]["Insgesamt"]); 
+                            var ws2 = parseInt(data2.bayern[index1+1]["Insgesamt"]); 
+                            var ws3 = parseInt(data2.bayern[index1+2]["Insgesamt"]);
+                            var ws4 = parseInt(data2.bayern[index1+3]["Insgesamt"]); 
+                            var ws5 = parseInt(data2.bayern[index1+4]["Insgesamt"]);
+                            var ws6 = parseInt(data2.bayern[index1+5]["Insgesamt"]);
+                            var ws7 = parseInt(data2.bayern[index1+6]["Insgesamt"]); 
+                            var ws8 = parseInt(data2.bayern[index1+7]["Insgesamt"]); 
+                            var ws9 = parseInt(data2.bayern[index1+8]["Insgesamt"]); 
+                            var ws10 = parseInt(data2.bayern[index1+9]["Insgesamt"]); 
+                            var ws11 = parseInt(data2.bayern[index1+10]["Insgesamt"]); 
+                            var ws12 = parseInt(data2.bayern[index1+11]["Insgesamt"]); 
+                            var ws13 = parseInt(data2.bayern[index1+12]["Insgesamt"]); 
+                            var ws14 = parseInt(data2.bayern[index1+13]["Insgesamt"]); 
+                            var ws15 = parseInt(data2.bayern[index1+14]["Insgesamt"]); 
+                            var ws16 = parseInt(data2.bayern[index1+15]["Insgesamt"]);
+                            });
+                         break;
+                         case "berlin":
+                            var ws1 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws2 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws3 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws4 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws5 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws6 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws7 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws8 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws9 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws10 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws11 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws12 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws13 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws14 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws15 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws16 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                         break;
+                         case "brandenburg":
+                            var ws1 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws2 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws3 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws4 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws5 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws6 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws7 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws8 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws9 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws10 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws11 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws12 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws13 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws14 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws15 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws16 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                         break;
+                         case "bremen":
+                            var ws1 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws2 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws3 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws4 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws5 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws6 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws7 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws8 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws9 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws10 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws11 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws12 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws13 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws14 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws15 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws16 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                         break;
+                         case "hamburg":
+                            var ws1 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws2 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws3 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws4 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws5 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws6 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws7 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws8 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws9 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws10 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws11 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws12 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws13 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws14 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws15 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws16 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                         break;
+                         case "hessen":
+                            var ws1 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws2 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws3 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws4 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws5 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws6 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws7 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws8 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws9 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws10 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws11 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws12 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws13 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws14 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws15 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws16 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                         break;
+                         case "mecklenburg_vorpommern":
+                            var ws1 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws2 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws3 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws4 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws5 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws6 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws7 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws8 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws9 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws10 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws11 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws12 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws13 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws14 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws15 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws16 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                         break;
+                         case "niedersachsen":
+                            var ws1 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws2 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws3 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws4 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws5 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws6 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws7 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws8 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws9 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws10 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws11 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws12 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws13 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws14 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws15 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws16 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                         break;
+                         case "nordrhein_westfalen":
+                            var ws1 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws2 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws3 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws4 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws5 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws6 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws7 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws8 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws9 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws10 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws11 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws12 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws13 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws14 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws15 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws16 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                         break;
+                         case "rheinland-pfalz":
+                            var ws1 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws2 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws3 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws4 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws5 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws6 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                            var ws7 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws8 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws9 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws10 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws11 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws12 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws13 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws14 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws15 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]); 
+                            var ws16 = parseInt(data2.baden_wurttemberg[index1]["Insgesamt"]);
+                         break;
+                         case "saarland":
+                         break;
+                         case "sachsen_anhalt":
+                         break;
+                         case "schleswig_holstein":
+                         break;
+                         case "thuringen":
+                         break;
+                         case "sachsen":
+                         break;
+                         default:
+                         break;
+                        }
+                         var erste = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var zweite = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var dritte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var vierte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var funfte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var sechste = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var siebte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var achte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var neunte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var zehnte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var elfte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var zwolfte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var dreizehnte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var vierzehnte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var funfzehnte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var sechzehnte = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         console.log(erste,zweite,dritte);
+                         var a = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var b = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var c = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var d = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var e = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var f = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var g = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var h = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var i = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var j = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var k = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var l = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var m = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var n = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var o = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
+                         var p = parseInt(data1.Studienanfaenger_Bundesland[5]["Insgesamt"]);
             // Prüfen ob die Daten vorhanden sind, Hier reicht die Überprüfung der ersten Variable
-            myLineChart.datasets[0].points[0].value = parseInt(((erste * 100) / zweite)*100);
-            myLineChart.datasets[1].points[0].value = ((zweite*100) / zweite)*100;
-            // Aktualisiert die Doughnut-Chart
-            myLineChart.update();
+            myLineChart.datasets[0].points[0].value = parseInt(((erste * 100) / a));
+            myLineChart.datasets[0].points[1].value = parseInt(((zweite * 100) / b));
+            myLineChart.datasets[0].points[2].value = parseInt(((dritte * 100) / c));
+            myLineChart.datasets[0].points[3].value = parseInt(((vierte * 100) / d));
+            myLineChart.datasets[0].points[4].value = parseInt(((funfte * 100) / e));
+            myLineChart.datasets[0].points[5].value = parseInt(((sechste * 100) / f));
+            myLineChart.datasets[0].points[6].value = parseInt(((siebte * 100) / g));
+            myLineChart.datasets[0].points[7].value = parseInt(((achte * 100) / h));
+            myLineChart.datasets[0].points[8].value = parseInt(((neunte * 100) / i));
+            myLineChart.datasets[0].points[9].value = parseInt(((zehnte * 100) / j));
+            myLineChart.datasets[0].points[10].value = parseInt(((elfte * 100) / k));
+            myLineChart.datasets[0].points[11].value = parseInt(((zwolfte * 100) / l));
+            myLineChart.datasets[0].points[12].value = parseInt(((dreizehnte * 100) / m));
+            myLineChart.datasets[0].points[13].value = parseInt(((vierzehnte * 100) / n));
+            myLineChart.datasets[0].points[14].value = parseInt(((funfzehnte * 100) / o));
+            myLineChart.datasets[0].points[15].value = parseInt(((sechzehnte * 100) / p));
+                         
+            myLineChart.datasets[1].points[0].value = parseInt(((ws1 * 100) / a));
+            myLineChart.datasets[1].points[1].value = parseInt(((ws2 * 100) / b));
+            myLineChart.datasets[1].points[2].value = parseInt(((ws3 * 100) / c));
+            myLineChart.datasets[1].points[3].value = parseInt(((ws4 * 100) / d));
+            myLineChart.datasets[1].points[4].value = parseInt(((ws5 * 100) / e));
+            myLineChart.datasets[1].points[5].value = parseInt(((ws6 * 100) / f));
+            myLineChart.datasets[1].points[6].value = parseInt(((ws7 * 100) / g));
+            myLineChart.datasets[1].points[7].value = parseInt(((ws8 * 100) / h));
+            myLineChart.datasets[1].points[8].value = parseInt(((ws9 * 100) / i));
+            myLineChart.datasets[1].points[9].value = parseInt(((ws10 * 100) / j));
+            myLineChart.datasets[1].points[10].value = parseInt(((ws11 * 100) / k));
+            myLineChart.datasets[1].points[11].value = parseInt(((ws12 * 100) / l));
+            myLineChart.datasets[1].points[12].value = parseInt(((ws13 * 100) / m));
+            myLineChart.datasets[1].points[13].value = parseInt(((ws14 * 100) / n));
+            myLineChart.datasets[1].points[14].value = parseInt(((ws15 * 100) / o));
+            myLineChart.datasets[1].points[15].value = parseInt(((ws16 * 100) / p));  
+                        // Aktualisiert die Doughnut-Chart
+                         myLineChart.update();
                      });
                  });
-            });
+        
             break;
-        case "Bayern":
+        case "bayern":
             var index3 = $('#selectDiv2 :selected').val();
             var index4 = $('#selectDiv3 :selected').val();
             var neu = parseInt(index3) + parseInt(index4);
