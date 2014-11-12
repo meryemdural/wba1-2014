@@ -16,7 +16,7 @@ function ausgabe(){
 function addBlockSize1(content){
 	if(k.length > 0){
 		if(f[posx][posy] ==1){
-			f[posx][posy] = "<div class=\"small\">" + content + "</div>"; //Element in einem div in Ausgabe array einfuegen
+			f[posx][posy] = $('<div></div>').attr("class", "small").html(content);; //Element in einem div in Ausgabe array einfuegen
 			k.splice(0,1); //Element aus Element-Liste entfernen
 			return true;
 		}
