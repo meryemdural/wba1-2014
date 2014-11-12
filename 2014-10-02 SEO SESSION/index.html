@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Title of presentation -->
+    <title>SEO Livesession - Wissen wie</title>
+    <!-- Short description of presentation -->
+    <meta name="description" content="SEO is der geilste shit">
+    <!-- Author of presentation -->
+    <meta name="author" content="Markus Ernst and Roman Seibt">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+    <link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- Can be monokai, solarized_dark, solarized_light, sunburst, tomorrow-night-bright, zenburn -->
+    <link rel="stylesheet" href="../revealjs-framework/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>Web-basierte Anwendungen 1</h1>
+          <h2>Search Engine Optimization <br>Livession</h2>
+
+          <p>6. November 2014</p>
+
+          
+
+          <p style="margin-top:5%"><h3> Team </h3> Markus Ernst<br>
+          Roman Seibt<br><br><br> <h3>Betreuer:</h3>M.Sc. Stephan Pavlovic, M.Sc. Jan Kus<br><br/>
+
+          <p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+          Campus Gummersbach</p>
+        </p>
+        </section>
+
+        <section>
+          <section>
+            <h2>Ablauf</h2>
+            <p><strong>Einleitung</strong></p>
+              <ul class="fragment roll-in">
+              <li>Definition & Funktionsweise einer Suchmaschine</li>
+              <li>Was ist SEO?</li>
+              </ul>
+              <p class="fragment roll-in"><strong>Hauptteil</strong></p>
+              <ul class="fragment roll-in">
+              <li>Off Page Optimierung</li>
+              <li>On Page Optimierung</li>
+              </ul>
+
+              <p class="fragment roll-in"><strong>Schluss</strong></p>
+                <ul class= "fragment roll-in">
+              <li>Fazit</li>
+              <li>Hands On</li>
+              <li>Quellen</li>
+                  </ul>
+
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Ablauf</h2>
+            <p style="color:green; font-weight:bold;">Einleitung</p>
+              <ul>
+              <li>Definition & Funktionsweise einer Suchmaschine</li>
+              <li>Was ist SEO?</li>
+              </ul>
+              <p><strong>Hauptteil</strong></p>
+              <ul>
+              <li>Off Page Optimierung</li>
+              <li>On Page Optimierung</li>
+              </ul>
+
+              <p><strong>Schluss</strong></p>
+                <ul>
+              <li>Fazit</li>
+              <li>Hands On</li>
+              <li>Quellen</li>
+                  </ul>
+            </section>
+          </section>
+
+          <section>
+              <h3>Einleitung </h3> 
+              <h2>Defintion einer Suchmaschine</h2> 
+              <h3 data-markdown>
+                <script type="text/template">
+                >Eine Suchmaschine ist ein Programm zu Recherche von Dokumenten,<br> die in einem Computer oder einem Computernetzwerk wie zum Beispiel dem World-Wide-Web gespeichert sind.
+                </script>
+              </h3>
+               <p style="position:relative; left: 85%;"> www.wikipedia.org </p>
+            </section>
+
+
+            <section>
+              <h3>Einleitung</h3>
+              <h2>Was ist SEO?</h2>
+              <ul>
+                  <li class="fragment roll-in">Search Engine Optimization == Suchmaschinenoptimierung</li>
+              <li class="fragment roll-in">Maßnahmen um eine Webseite im Suchmaschinenranking auf hohen Plätzen erschienen zu lassen</li>
+              <li class="fragment roll-in">On-Page Optimierung</li>
+              <li class="fragment roll-in">Off-Page Optimierung</li>
+                </ul>
+              </section>
+
+        
+          <section>
+            <h2>Ablauf</h2>
+            <p><strong>Einleitung</strong></p>
+              <ul>
+              <li>Definition & Funktionsweise einer Suchmaschine</li>
+              <li>Was ist SEO?</li>
+              </ul>
+              <p style="color:green; font-weight:bold;">Hauptteil</p>
+              <ul>
+              <li>Off Page Optimierung</li>
+              <li>On Page Optimierung</li>
+              </ul>
+
+              <p><strong>Schluss</strong></p>
+                <ul>
+              <li>Fazit</li>
+              <li>Hands On</li>
+              <li>Quellen</li>
+                  </ul>
+
+          </section>
+
+         <section>
+              <h3>On-page Optimierung </h3> 
+              <h2>Standard Domain</h2> 
+           <ul>
+                  <li class="fragment roll-in">Wahl eines inhaltsbeschreibenden Domain Namens <br> Bestenfalls Keywords mit Bindestrichen verbinden <br>
+                  Z.B. Sparkasse-koelnbonn.de
+                  </li>
+              <li class="fragment roll-in">Eindeutige immer verfügbare Adresse </li>
+               <li class="fragment roll-in">Wichtig: Wahl des TLD an Sprache anpassen, Länderspezifisch oder International <br>
+                (Top Level Domain z.B. .com oder .de) </li>
+              <li class="fragment roll-in">Wahl des Providers: <br>
+                  <ul>
+                    <li>Muss entsprechende Programmiersprachen unterstützen
+                      </li>
+                    <li>Verfügbarkeit des benötigten Datenvolumens</li>
+                    <li>Große bewährte Hoster werden häufig bevorzugt</li>
+                  </ul>
+             </ul>
+           
+            </section>
+
+          <section>
+              <h3>On-page Optimierung </h3> 
+              <h2>URL- & Seitenaufbau</h2> 
+           <ul>
+                  <li class="fragment roll-in">Stringente Namensvergabe der Unterseiten, die die Inhalte beschreibt</li>
+              <li class="fragment roll-in">Klar und einfach definierte Adressen ohne Sonderzeichen
+              </li>
+              <li class="fragment roll-in">Nachvollziehbarer Aufbau des Menüs sowie der Navigation
+              </li>
+              <li class="fragment roll-in">HTML oder Text<br> 
+                <ul><strong>Niemals</strong> Bilder als Menü oder Link verwenden !! </li></ul>
+                     
+            </ul>
+          </section>
+
+
+          <section>
+              <h3>On-page Optimierung </h3> 
+              <h2>Sitemap</h2> 
+           <ul>
+              <li class="fragment roll-in">Ist der hierarchische Aufbau einer Internetseite</li>
+              <li class="fragment roll-in">Flache Seitenhierarchie: <br>
+                 <ul><strong>Nicht</strong> zu viele Ebenen verwenden !! </li>  
+                 </ul>  
+              <h1>DAS BILD</h1>
+              <li class="fragment roll-in">Gute Sitemap unterstützt schnelle Suche der Crawler
+                <ul>Bei einigen Suchmaschinen (z.B. Google) kann man Sitemaps einreichen um eine leichtere Idexierung zu ermöglichen</ul>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+              <h3>On-page Optimierung </h3> 
+              <h2>Content</h2> 
+           <ul>
+              <li class="fragment roll-in"><strong>Wichtigster (!)</strong> Ranking Faktor
+              </li>
+              <li class="fragment roll-in">Keywords in Texten verwenden ohne es zu übertreiben!  (Keyword-Dichte 2-4%) <br>
+                <ul>Bei versuchter Manipulation der Ergebnisse kann man sogar vom Index verbannt werden</ul>
+              </li>
+              <li class="fragment roll-in">Im Text verschiedene Schlüsselwörter verwenden
+              </li>
+              <li class="fragment roll-in">Sauberen HTML-Code verwenden <br> <ul> Crawler lesen HTML Strukturen (z.B. h1,h2,strong(...))</ul> 
+              </li>
+            </ul>
+            <h1> Grafik Suchmaschinenoptimierung =! Benutzerfreundlichkeit</h1>
+          </section>
+        
+         <section>
+              <h3>On-page Optimierung </h3> 
+              <h2>Bilder</h2> 
+           <ul>
+              <li class="fragment roll-in">Möglichst kleine Dateigröße
+              </li>
+              <li class="fragment roll-in">Alternativer Text (Alt-Text) und Titel für Bilder hinzufügen</li>
+    
+              <h1>Wie geht das? -Grafik</h1>
+            </ul>
+          </section>
+
+           <section>
+              <h3>On-page Optimierung </h3> 
+              <h2>Title / Meta-Tags</h2> 
+           <ul>
+             <li class="fragment roll-in">Title ist einer der wichtigsten On-Page-Rankingfaktoren</li>
+             <li class="fragment roll-in">Ist häufig Bestandteil des Titels des Snippets der Suchmaschinen</li>
+             <li class="fragment roll-in">Idealerweise zwei bis drei Schlüsselwörter im Title 
+             <br> 
+             <ul><strong>Achtung!:</strong> Kein Keywordstuffing</ul></li>
+              <li class="fragment roll-in">Meta-Tags sollen den Inhalt beschreiben,<br> sind aber durch viel Missbrauch in der Wichtigkeit gesunken 
+              </li>
+              <li class="fragment roll-in">Meta-Tag Description ist häufig der Inhalt des Snippets:<br>
+              <ul>Sollte zum Anklicken anregen</ul>
+              </li>
+              <h1> Beispiel </h1>
+             
+    
+              <h1>Wie geht das? -Grafik</h1>
+            </ul>
+          </section>
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <section>
+              <h2>Einleitung</h2>
+              <h3>Webverzeichnisse</h3>
+              <ul>
+                <li class="fragment roll-in">Sammlung als "Katalog" von Webseiten</li>
+              <li class="fragment roll-in">Sortiert nach verschiedenen Themen</li>
+              <li class="fragment roll-in">Hands On</li>
+                </ul>
+              </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class="center" data-background="#77aabb">
+            <pre><code>&lt;section data-background="#77aabb"&gt;
+
+&lt;/section&gt;</code></pre>
+          </section>
+
+          <section data-background="#442211">
+            <pre><code>&lt;section data-background="#442211"&gt;
+
+&lt;/section&gt;</code></pre>
+          </section>
+
+          <section data-background-image="images/github-mac.png" data-background-position="top center">
+            <pre><code>&lt;section data-background="images/background.jpg" data-background-position="top center"&gt;
+
+&lt;/section&gt;</code></pre>
+          </section>
+
+        </section>
+
+        <section>
+          <h2>Fragments</h2>
+          <p class="fragment grow">grow</p>
+          <p class="fragment shrink">shrink</p>
+          <p class="fragment roll-in">roll-in</p>
+          <p class="fragment fade-out">fade-out</p>
+          <p class="fragment highlight-red">highlight-red</p>
+          <p class="fragment highlight-green">highlight-green</p>
+          <p class="fragment highlight-blue">highlight-blue</p>
+        </section>
+
+        <section>
+          <h2>Fragmented <strong>Views</strong></h2>
+          <p>Hit the next arrow...</p>
+          <p class="fragment" data-fragment-index="0">... to step through ...</p>
+          <ol>
+            <li class="fragment" data-fragment-index="1"><code>any type</code></li>
+            <li class="fragment" data-fragment-index="2"><em>of view</em></li>
+            <li class="fragment" data-fragment-index="3"><strong>fragments</strong></li>
+          </ol>
+        </section>
+
+
+        <section>
+          <h2>Images</h2>
+
+          <img class="align-center fragment roll-in" src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
+        </section>
+
+        <section>
+          <h2>Code syntax highlighting</h2>
+
+          <pre><code data-trim>
+&lt;?php
+echo 'Hello World!';
+?&gt;
+          </code></pre>
+
+          <pre><code data-trim>
+$ ruby -e "puts 'Hello world'"
+Hello world
+          </code></pre>
+
+          <pre><code data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;body&gt;
+&lt;/html&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <section>
+            <h2>Tables</h2>
+            <table>
+              <tr>
+                <th>Foo</th>
+                <th>Bar</th>
+              </tr>
+              <tr>
+                <td>Zelle 1 1</td>
+                <td>Zelle 1 2</td>
+              </tr>
+              <tr>
+                <td>Zelle 2 1</td>
+                <td>Zelle 2 2</td>
+              </tr>
+            </table>
+          </section>
+
+          <section>
+          <h2>Tables <strong>Latin Character Tests</strong></h2>
+            <table>
+              <tbody>
+                <tr>
+                  <td>!</td>
+                  <td>"</td>
+                  <td>#</td>
+                  <td>$</td>
+                  <td>%</td>
+                  <td>&amp;</td>
+                  <td>'</td>
+                  <td>(</td>
+                  <td>)</td>
+                  <td>*</td>
+                </tr>
+                <tr>
+                  <td>+</td>
+                  <td>,</td>
+                  <td>-</td>
+                  <td>.</td>
+                  <td>/</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>:</td>
+                  <td>;</td>
+                  <td>&gt;</td>
+                  <td>=</td>
+                  <td>&lt;</td>
+                </tr>
+                <tr>
+                  <td>?</td>
+                  <td>@</td>
+                  <td>A</td>
+                  <td>B</td>
+                  <td>C</td>
+                  <td>D</td>
+                  <td>E</td>
+                  <td>F</td>
+                  <td>G</td>
+                  <td>H</td>
+                </tr>
+                <tr>
+                  <td>I</td>
+                  <td>J</td>
+                  <td>K</td>
+                  <td>L</td>
+                  <td>M</td>
+                  <td>N</td>
+                  <td>O</td>
+                  <td>P</td>
+                  <td>Q</td>
+                  <td>R</td>
+                </tr>
+                <tr>
+                  <td>S</td>
+                  <td>T</td>
+                  <td>U</td>
+                  <td>V</td>
+                  <td>W</td>
+                  <td>X</td>
+                  <td>Y</td>
+                  <td>Z</td>
+                  <td>[</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>]</td>
+                  <td>^</td>
+                  <td>_</td>
+                  <td>`</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>c</td>
+                  <td>d</td>
+                  <td>e</td>
+                  <td>f</td>
+                </tr>
+                <tr>
+                  <td>g</td>
+                  <td>h</td>
+                  <td>i</td>
+                  <td>j</td>
+                  <td>k</td>
+                  <td>l</td>
+                  <td>m</td>
+                  <td>n</td>
+                  <td>o</td>
+                  <td>p</td>
+                </tr>
+                <tr>
+                  <td>q</td>
+                  <td>r</td>
+                  <td>s</td>
+                  <td>t</td>
+                  <td>u</td>
+                  <td>v</td>
+                  <td>w</td>
+                  <td>x</td>
+                  <td>y</td>
+                  <td>z</td>
+                </tr>
+                <tr>
+                  <td>{</td>
+                  <td>|</td>
+                  <td>}</td>
+                  <td>~</td>
+                </tr>
+                </tbody>
+              </table>
+          </section>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+          ## Markdown Support
+
+          Für die, die Markdown lieben.
+          Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
+          die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
+
+          > This is a blockquote. Lorem ipsum dolor sit amet,
+          > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+          > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+          ```
+          ## Markdown support
+
+          Für die, die Markdown lieben.
+          Informationen gibt es [hier](https://github.com/hakimel/reveal.js#markdown),
+          die Syntax [hier](http://daringfireball.net/projects/markdown/syntax).
+
+          > This is a blockquote. Lorem ipsum dolor sit amet,
+          > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+          > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+          ```
+          </script>
+        </section>
+
+        <!-- End of slides container. -->
+
+      </div>
+
+    </div>
+
+    <script src="../revealjs-framework/lib/js/head.min.js"></script>
+    <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: false,
+        width: 1000,
+
+        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+        transitionSpeed: 'fast', // default/fast/slow
+        backgroundTransition: 'none', // default/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Title of presentation -->
+    <title>Barrierfreiheit im Internet </title>
+    <!-- Short description of presentation -->
+    <meta name="description" content="Barrierefreiheit im Internet Livesession">
+    <!-- Author of presentation -->
+    <meta name="author" content="Daniel Hildebrandt, Sebastian Seibt">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="reveal.min.css">
+    <link rel="stylesheet" href="medieninformatik.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- Can be monokai, solarized_dark, solarized_light, sunburst, tomorrow-night-bright, zenburn -->
+    <link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+
+
+
+
+
+
+        <section>
+          <h1>Web-basierte Anwendungen 1</h1>
+          <h2>Barrierefreiheit im Internet </h2>
+          <p>6. November 2014</p>
+          <p>
+           Studiengang Medieninformatik an der Fachhochschule Köln
+           </br>
+           Campus Gummersbach
+          </p>
+        </br></br>
+          <p> Daniel Hildebrandt</p>
+          <p>Sebastian Seibt</p>
+        </section>
+
+        <section>
+
+          <h1>Themenübersicht</h1>
+          <li class="fragment" data-fragment-index="1">
+          Barrierefreiheit im Allgemeinen</li>
+          <li class="fragment" data-fragment-index="1">
+          Barrierefreiheit im Internet</li>
+          <li class="fragment" data-fragment-index="1">
+          WCAG 2.0</li>
+          <li class="fragment" data-fragment-index="1">
+          Sehschwächen</li>
+          <li class="fragment" data-fragment-index="1">
+          Hörschwächen</li>
+          <li class="fragment" data-fragment-index="1">
+          motorische Einschränkungen</li>
+          <li class="fragment" data-fragment-index="1">
+          Umsetzungsbeispiele</li>
+          <li class="fragment" data-fragment-index="1">
+          Übungsaufgabe</li>
+          <li class="fragment" data-fragment-index="1">
+          Nützliche Links</li>
+          <li class="fragment" data-fragment-index="1">
+           Quellenangaben</li>
+
+        </section>
+
+
+        <section>
+        <h1>Barrierefreiheit im Allgemeinen</h1>
+        <h3>Barrieren</h3>
+        <p class="fragment" data-fragment-index="1">Definition laut Duden:"Absperrung, die jemanden oder etwas von etwas fernhält"</p>
+        <p class="fragment" data-fragment-index="2">Barrieren im Alltag</p>
+        <ul>
+          <li class="fragment" data-fragment-index="3">Rollstuhlfahrer &gt Treppen</li>
+          <li class="fragment" data-fragment-index="4">Blinde &gt Ampeln</li>
+          <li class="fragment" data-fragment-index="5">Gehörlose &gt Kino</li>
+        </ul>
+        </section>
+
+        <section>
+        <h1>Barrierefreiheit im Allgemeinen</h1>
+        <h3> Formen der Behinderung</h3>
+         <p class="fragment" data-fragment-index="1">Physische Behinderungen</p>
+           <ul><li class="fragment" data-fragment-index="2">Lähmungen, Amputationen, Parkinson</li></ul>
+         <p class="fragment" data-fragment-index="3">Sinnesbehinderungen</p>
+           <ul><li class="fragment" data-fragment-index="4">Sehschwäche, Gehörlosigkeit, Taubblindheit</li></ul>
+         <p class="fragment" data-fragment-index="5">Psychische Behinderungen</p>
+            <ul><li class="fragment" data-fragment-index="6">Bipolare Störung, Burnout-Syndrom, ADHS</li></ul>
+         <p class="fragment" data-fragment-index="7">Geistige Behinderungen</p>
+            <ul><li class="fragment" data-fragment-index="8">Autismus</li></ul>
+         <p class="fragment" data-fragment-index="9">Lernbehinderungen</p>
+            <ul><li class="fragment" data-fragment-index="10">stärkere Ausprägung als Lernschwäche</li></ul>
+         </section>
+
+
+
+         <section>
+          <h1>Barrierfreiheit im Internet</h1>
+          <h3 class="fragment" data-fragment-index="1">Das Internet uneingeschränkt verfügbar machen</h3>
+          <p class="fragment" data-fragment-index="2">Mehrkanal Prinzip</p>
+            <ul><li class="fragment" data-fragment-index="3">Eine Aktion auf mindestens zwei verschiedene Arten ausführbar machen</li></ul>
+          <p class="fragment" data-fragment-index="4">Prinzip der Selbstständigkeit</p>
+            <ul><li class="fragment" data-fragment-index="5">Menschen mit Behinderungen können ihre Aufgaben selbständig und ohne Hilfe bewältigen</li></ul>
+          </section>
+
+
+        <section>
+          <h1>Web Content Accessibility Guidelines 2.0</h1>
+            <h3>WCAG 2.0</h3>
+          <p class="fragment" data-fragment-index="1">1.0 war ab 1999 Empfehlungsstandard</p>
+          <p class="fragment" data-fragment-index="2">2.0 trat am 11. Dezember 2008 in Kraft </p>
+          <p class="fragment" data-fragment-index="3">offizieller Standard von WC3</p>
+            <ul><li class="fragment" data-fragment-index="4">Richtlinien für die Erstellung Barrierefreier Websites</li>
+            <li class="fragment" data-fragment-index="5">Von der <strong>WAI</strong> ins Leben gerufen</li></ul>
+          <p class="fragment" data-fragment-index="6">Web Accessibility Initiative</p>
+            <ul><li class="fragment" data-fragment-index="7"><strong>WAI</strong> setzt sich für Barrierefreiheit im Web ein</li></ul>
+
+        </section>
+        
+        <section>
+          <h1>Web Content Accessibility Guidelines 2.0</h1>
+           <h3>Vier Prinzipien von WCAG 2.0</h3>
+          <ol>
+          <li class="fragment" data-fragment-index="1">Wahrnehmbar</li>
+            <ul><li class="fragment" data-fragment-index="2">Inhalte sollten so gestaltet werden, dass sie für jeden klar sichtbar sind</li></ul>
+          <li class="fragment" data-fragment-index="3">Bedienbar</li>
+            <ul><li class="fragment" data-fragment-index="4">Elemente der Benutzerschnitstelle und Navigation sollen einfach bedient werden können</li></ul>
+          <li class="fragment" data-fragment-index="5">Verständlich</li>
+            <ul><li class="fragment" data-fragment-index="6">Alle Inhalte müssen leicht zu verstehen sein</li></ul>
+          <li class="fragment" data-fragment-index="7">Robust</li>
+            <ul><li class="fragment" data-fragment-index="8">Inhalte müssen belastbar sein und mit assistierenden Techniken zuverlässig kompatibel sein</li></ul>
+          </ol></br></br>
+          <p class="fragment" data-fragment-index="9">Den vier Prinzipien sind insgesamt zwölf Richtlinien untergeordnet, die die vier Prinzipien ausführlicher definieren</p>
+        </section>
+
+        <section>
+          <h1>Web Content Accessibility Guidelines 2.0</h1>
+            <h3>Konformitätsstufen</h3>
+          <p class="fragment" data-fragment-index="1">Bewertung einer Website nach den Guidelines des <strong>WCAG 2.0</strong></p>
+            <ul>
+            <li class="fragment" data-fragment-index="2">Man unterscheidet drei Konformitätsstufen: A, AA und AAA</li>
+            <li class="fragment" data-fragment-index="3">Die Erfolgskriterien sind im <strong>WCAG 2.0</strong> genau definiert</li></ul>
+            <p class="fragment" data-fragment-index="4">A ist die niedrigste Stufe und es müssen nur die mit A gekennzeichneten Kriterien erfüllt werden</p>
+            <p class="fragment" data-fragment-index="5">Um eine AA Konformitätsstufe zu erreichen, müssen sämtliche A und AA Erfolgskriterien erreicht werden</p>
+            <p class="fragment" data-fragment-index="6">AAA ist die höchste Stufe und berücksichtigt sämtliche Erfolgskriterien des <strong>WCAG 2.0</strong></p>
+            
+          </section>
+
+          <section>
+            <h1>BITV 2.0</h1>
+              <h3>Barrierefreie Informationstechnik-Verordnung 2.0</h3>
+            <p class="fragment" data-fragment-index="1">Übernimmt im Wesentlichen die Richtlinien des <strong>WCAG 2.0</strong></p>
+              <ul><li class="fragment" data-fragment-index="2">Trat am 22. September 2011 in Kraft</li></ul>
+            <p class="fragment" data-fragment-index="3">Nennt Mindestvorraussetzungen wie Bundesbehörden ihre Internetauftritte barrierefrei gestalten sollen</p>
+            <p class="fragment" data-fragment-index="4">Nach <strong>BITV 2.0</strong> müssen mindestens die Kriterien der Konformitätsstufen A und AA erfüllt werden</p>
+            <p class="fragment" data-fragment-index="5"><strong>BITV 2.0</strong> definiert eigene Prioritätsstufen die von denen des <strong>WCAG 2.0</strong> abgeleitet werden
+              <ul><li class="fragment" data-fragment-index="6">Prioritätsstufe  I = Komformitätsstufe  AA des <strong>WCAG 2.0</strong></li>
+              <li class="fragment" data-fragment-index="7">Prioritätsstufe II = Komformitätsstufe AAA des <strong>WCAG 2.0</strong></li></ul>
+          </section>
+
+
+        <section>
+          <h1>Sehbehinderungen</h1>
+          <li class="fragment" data-fragment-index="1"><strong>Partiell-funktionale Sehbehinderungen:</strong> Farbenblindheit oder Nachtblindheit</li>
+          <li class="fragment" data-fragment-index="2"><strong>Sehbehinderung:</strong> nicht mehr als 30% Sehkraft </li>
+          <li class="fragment" data-fragment-index="3"><strong>hochgradige Sehbehinderung:</strong> nicht mehr als 5% Sehkraft </li>
+          <li class="fragment" data-fragment-index="4"><strong>Blind:</strong> weniger als 2% Sehkraft</li>
+          <li class="fragment" data-fragment-index="5"><strong>Amaurose:</strong> keine Lichtwahrnehmung mehr</li>
+        </section>
+
+
+
+        <section>
+          <h1>Unterstützung bei Farbenblindheit</h1>
+          <p class="fragment" data-fragment-index="1">Kontraste helfen bei der Unterscheidung von Objekten auf dem Bildschirm</p>
+          <p class="fragment" data-fragment-index="2">Nicht alle Kontraste funktionieren bei den verschiedenen Arten von Farbenblindheit </p>
+          <li class="fragment" data-fragment-index="3" style="margin-left: 50px"> <strong> <a href="http://gmazzocato.altervista.org/colorwheel/wheel.php">Accessibility Color Wheel</a></strong></li>
+          <p class="fragment" data-fragment-index="4">Links in Fließtexten dürfen nicht nur durch eine andere Farbe gekennzeichnet sein</p>
+            <img class="fragment" data-fragment-index="5" "align-center" src="images/Flamingonormaljpg.jpg" width="300" height="300">
+            <img class="fragment" data-fragment-index="6" "align-center" src="images/Flamingofarbenblind.jpg" width="300" height="300">
+            <img class="fragment" data-fragment-index="7" "align-center" src="images/Flamingogrünblind.jpg" width="300" height="300"></br>
+            <font class="fragment" data-fragment-index="7" size=-0.5> Quelle:http://de.wikipedia.org/wiki/Farbenblindheit</font>
+           </section>
+
+        <section>
+          <h1>Unterstützung bei unscharfer/eingeschränkter Sicht</h1>
+          <p>Skalierbarkeit der Seite</p>
+          <ul style="margin-left: 50px">
+          <li class="fragment" data-fragment-index="1">Schriftgröße sollte ohne externe Tools (Bildschirmlupe) veränderbar sein  </li>
+          <li class="fragment" data-fragment-index="2"> Horizontales Scrollen bei Skalierung oder niedriger Auflösung reduzieren oder sogar vermeiden </li>
+          <li class="fragment" data-fragment-index="3">Layout sollte sich ggf. der Veränderung anpassen</li></ul>
+          <p class="fragment" data-fragment-index="4"><strong>Beispiel grauer Star und Diabetische Retinopathie</strong></p>
+
+            <img class="fragment" data-fragment-index="5" "align-center" src="images/normalsicht.jpg" width="250" height="250">
+            <img class="fragment" data-fragment-index="6" "align-center" src="images/starsicht.jpg" width="250" height="250">
+            <img class="fragment" data-fragment-index="7" "align-center" src="images/diabetessicht.jpg" width="250" height="250"></br>          
+            <font class="fragment" data-fragment-index="7" size=-0.5> Quelle: http://www.absv.de/sehbehinderungs-simulator0</font>
+          
+        </section>
+
+        
+        <section>
+          <h1>Unterstützung bei Blindheit/Amaurose</h1>
+          <h3>Screenreader</h3>
+          <li class="fragment" data-fragment-index="1">Software die Bildschirminhalt vorliest oder an eine Braillezeile weitergibt</li>
+          <li class="fragment" data-fragment-index="2">Nur über die Tastatur bedienbar</li>
+          <li class="fragment" data-fragment-index="3">Aufwändig in der Bedienung</li>
+          <li class="fragment" data-fragment-index="4"><strong>JAWS</strong> und <strong>NVDA</strong> sind die meist verbreitete Screenreader-Software</li>
+          <li class="fragment" data-fragment-index="5"><strong>JAWS</strong> ist kostenpflichtig; ca.1200€ für eine Schüler/Studenten Lizenz, Pro-Version sogar 3000€ </li>
+          <li class="fragment" data-fragment-index="6"> <strong>NVDA</strong> ist Open Source und somit kostenfrei</li>
+        </section>
+
+        <section>
+          <h1>Unterstützung bei Blindheit/Amaurose</h1>          
+          <h3>Braillezeile</h3>
+          <li class="fragment" data-fragment-index="1"> Kann Bildschirminhalte in <strong>Computerbraille</strong> darstellen </li>
+          <li class="fragment" data-fragment-index="2">Wird in der Regel von einem <strong>Screenreader</strong> angesteuert </li>
+          <li class="fragment" data-fragment-index="3">Eine Braillezeile mit 40 Zeichen liegt bei ungefähr 5000€ Neupreis </li>
+          <p class="fragment" data-fragment-index="4">
+            <img "align-center" src="images/Braillezeile.jpg"></br>
+            <font size=-0.5> Quelle:http://de.wikipedia.org/wiki/Braillezeile#mediaviewer/File:Refreshable_Braille_display.jpg </font>
+          </p>
+        </section>
+
+
+
+        
+        <section>
+          <h1>Unterstützung bei Blindheit/Amaurose</h1>
+          <h3>Screenreader Anforderungen</h3>
+            <li class="fragment" data-fragment-index="1">Der Screenreader liest die Seite linear, dem <strong>HTML-Code</strong> entsprechend</li>
+            <li class="fragment" data-fragment-index="2">Veranschaulichung mithilfe von  <strong> <a href="http://www.kk-software.de/Lynxview.html?url=http%3A%2F%2Fwww.fh-koeln.de%2F&submit01=Anzeigen">LYNX</strong></a> am Beispiel der <strong> <a href="https://www.fh-koeln.de/">FH-Köln Homepage</strong></a> </li>
+            <li class="fragment" data-fragment-index="3">Bild und Videobeschreibungen sind essentiell</li>
+            <li class="fragment" data-fragment-index="4">Abkürzungen sollten mit dem &ltabbr&gt Tag versehen werden </li>
+            <li class="fragment" data-fragment-index="5">Inkorrekte Verwendung des Überschriften Tags kann für Probleme sorgen (&lth1&gt &lth2&gt etc.) </li>
+            <pre  class="fragment" data-fragment-index="6"><code class="html">
+            <h3>Überschrift der Seite</h3>
+            <h2>Artikelüberschrift</h2>
+            <h1>Kapitelüberschrift</h1>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+             tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            <h1>Kapitelüberschrift</h1>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+             tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            </a></code></pre>
+        </section>
+
+        <section>
+          <h1>Hörschwächen</h1>
+            <h3>Formen von Hörschwächen</h3>
+            <p class="fragment" data-fragment-index="1">Schwerhörigkeit</p>
+              <ul><li class="fragment" data-fragment-index="2">leichtgradig Schwerhörig</li>
+              <li class="fragment" data-fragment-index="3">mittelgradig Schwerhörig</li>
+              <li class="fragment" data-fragment-index="4">hochgradig Schwerhörig</li></ul>
+            <p class="fragment" data-fragment-index="5">Gehörlose Menschen</p>
+              <ul><li class="fragment" data-fragment-index="6">praktisch Taub</li>
+              <li class="fragment" data-fragment-index="7">absolut Taub</li></ul>
+          </section>
+
+          <section>
+            <h1>Hörschwächen</h1>
+              <h3>Probleme beim lesen von geschriebener Sprache</h3>
+                <p class="fragment" data-fragment-index="1">Das <strong>BITV 2.0</strong> schlägt vor, Texte in einfacher Sprache zu verfassen</p>
+                <p class="fragment" data-fragment-index="2">Regeln für einfache Sprache</p>
+                  <ul><li class="fragment" data-fragment-index="3">Schreiben in kurzen Sätzen</li>
+                  <li class="fragment" data-fragment-index="4">Verwenden von Alltagssprache</li>
+                  <li class="fragment" data-fragment-index="5">Klare Schriftart z.b. Arial, Calibri</li>
+                  <li class="fragment" data-fragment-index="6">Fremdwörter so gut es geht vermeiden</li>
+                  <li class="fragment" data-fragment-index="7">Schriftgröße mindestens 14</li>
+                  <li class="fragment" data-fragment-index="8">Bilder zur Unterstützung des Textverständnis</li></ul>
+          </section>
+
+          <section>
+            <h1>Hörschwächen</h1>
+              <h3>Probleme bei Videos</h3>
+                <p class="fragment" data-fragment-index="1">Hörbehinderte Personen können dem Inhalt von Videos selten folgen</p>
+                 <p class="fragment" data-fragment-index="2">Lösungen:</p> 
+                  <ul><li class="fragment" data-fragment-index="3">einschaltbarer Untertitel</li>
+                  <li class="fragment" data-fragment-index="4">Audiodiskreption</li>
+                  <li class="fragment" data-fragment-index="5">Übersetzung in Gebärdensprache</li></ul>
+          </section>
+
+        <section>
+          <h1>Unterstützung bei motorischen Behinderungen</h1>
+          <h3>Allgemeine Hilfen</h3>
+          <li class="fragment" data-fragment-index="1">Große Button sind bei Maus-/Touch-Bedienung leichter anzuwählen</li>
+          <li class="fragment" data-fragment-index="2">Mouseoverinteraktion kann beim ungenauer Kontrolle der Maus schwierigkeiten bereiten</li>
+          <li class="fragment" data-fragment-index="3">Große Entfernungen zwischen den Button vermeiden</li>         
+
+        </section>
+
+        <section>
+          <h1>Unterstützung bei motorischen Behinderungen</h1>
+          <h3>Tastaturbedienung vereinfachen</h3>
+          <p class="fragment" data-fragment-index="1">Sichtbarkeit des aktuell ausgewählten Objekts/Links gut sichtbar darstellen</p>
+          <p class="fragment" data-fragment-index="2"><strong>title</strong>-Attribut (Darstellung von Tooltips) kann in den meisten Browsern nicht über die Tastatur aufgerufen werden</p>
+          <p class="fragment" data-fragment-index="3">Die Navigation über die Tab-Taste kann über das <strong>tabindex</strong>-Attribut nach belieben gestaltet werden</p> 
+          <ul>
+          <li class="fragment" data-fragment-index="4">Darauf achten, dass dies nach einer einfachen Logik funktioniert</li>
+          <li class="fragment" data-fragment-index="5">Zum Beispiel von links nach rechts und von oben nach unten</li>
+          <li class="fragment" data-fragment-index="6">Oder wichtige Elemente wie z.b. die Navigation früh ansteuern</li>
+          </ul>
+        </br> </br>
+          <p class="fragment" data-fragment-index="7">Javascript sollte keine für die Tastaturnavigation wichtigen Eingaben abfangen</p>
+          <p class="fragment" data-fragment-index="8">Auch wichtig für Personen die aus anderen Gründen auf eine Tastaturbedienung angewiesen sind</p>         
+        </section>
+
+
+        <section>
+          <h1>Codebeispiele</h1>
+          <h3>Bilder und Screenreader</h3>
+            <p class="fragment" data-fragment-index="1">Um ein Bild für blinde Personen zu beschreiben, liest der Screenreader den Text in dem &ltalt&gt Attribut vor</p>
+            <pre class="fragment" data-fragment-index="2"><code class="html">
+  <p><img src="https://www.google.de/images/srpr/logo11w.png" alt="Google Logo"></p>        
+            </a class="fragment" data-fragment-index="3"></code></pre>
+            <p class="fragment" data-fragment-index="4">Da sich Bilder von einem Screenreader nicht interpretieren lassen, würde der Screenreader ohne die &ltalt&gt-Info direkt zu dem nächsten Objekt springen, in dem Fall liest er die Information im &ltalt&gt Tag aus und gibt diese wieder.</p>
+            <div class="fragment" data-fragment-index="5"><img src="https://www.google.de/images/srpr/logo11w.png" alt="Google Logo"></div>
+
+          <p></p>
+        </section>
+
+        <section>
+          <h1>Codebeispiele</h1>
+          <h3>Links kennzeichnen</h3>
+          <p class="fragment" data-fragment-index="1">Personen mit Sehschwächen (insbesondere Farbenblinde) können Probleme haben, Links zu erkennen die nur durch eine andere Farbe gekennzeichnet sind. Besonders schwer fällt es den Betroffenen bei Links innerhalb von Fließtexten. </p>
+          
+          <pre class="fragment" data-fragment-index="2"><code class="html">
+          Lösung für einen einzelnen Link:
+          <u><a href="http://wikipedia.de/">Wikipedia</a></u>
+          </code></pre>
+          <u class="fragment" data-fragment-index="3"><a href="http://wikipedia.de/">Wikipedia</a></u>
+          <pre class="fragment" data-fragment-index="4"><code class="css">
+            Lösung für alle Links auf der Seite (css)
+            a:link { text-decoration:underline; }
+          </code></pre>
+          <p class="fragment" data-fragment-index="5">Man könnte die Schrift auch kursiv oder fett darstellen, aber das Unterstreichen von Links hat sich im laufe der Jahre im Web etabliert. Wikipedia zum Beispiel hat das Unterstreichen von Links nur bei Mouseover aktiviert.</p>
+        </section>
+
+        <section>
+          <h1>Codebeispiele</h1>
+          <h3>Navigation über die Tab-Taste verändern</h3>
+          <p class="fragment" data-fragment-index="1">Um die Navigation über die Tab-Taste Barrierefrei zu optimieren, kann man die Reihenfolge der zu wählenden Tabs über den <strong>tabindex </strong> bestimmen</p>
+          <pre class="fragment" data-fragment-index="2"><code class="html">
+            <p>
+            <a href="http://wikipedia.de/" tabindex="4">Wikipedia</a><br>
+            <a href="http://www.chefkoch.de/" tabindex="2">Chefkoch</a><br>
+            <a href="http://www.rottentomatoes.com/" tabindex="1">Rotten Tomatoes</a><br>
+            <a href="www.lufthansa.com/" tabindex="3">Lufthansa</a>
+            </p>
+          </code></pre>
+            <p class="fragment" data-fragment-index="3">Nun sollte Rotten Tomatoes als erstes markiert werden, danach Chefkoch, dann Lufthansa und im Anschluss Wikipedia. Es lassen sich Zahlen zwischen 0 und 32,767 vergeben</p>
+            <p class="fragment" data-fragment-index="4">
+            <a href="http://wikipedia.de/" tabindex="4">Wikipedia</a><br>
+            <a href="http://www.chefkoch.de/" tabindex="2">Chefkoch</a><br>
+            <a href="http://www.rottentomatoes.com/" tabindex="1">Rotten Tomatoes</a><br>
+            <a href="www.lufthansa.com/" tabindex="3">Lufthansa</a>
+            </p>
+
+        </section>
+
+        <section>
+          <h1>Codebeispiele</h1>
+          <h3>Abkürzungen</h3>
+          <p class="fragment" data-fragment-index="1">Abkürzungen sollten mit &ltabbr&gt Tags versehen werden, damit ein Screenreader diese Aussprechen kann und nicht versucht die Abkürzung als eigenes Wort vorzulesen</p>
+          <pre class="fragment" data-fragment-index="2"><code class="html">
+            Falsch:
+            <p>Die EU ist pleite</p>
+            Richtig:
+            <p>Die <abbr title="Europäische Union">EU</abbr>
+            ist pleite.</p>
+          </code></pre>
+          <p class="fragment" data-fragment-index="3">In dem Falsch-Beispiel würde der Screenreader versuchen EU als ein Wort auszusprechen, bei dem Richtig Beispiel liest der Screenreader Europäische Union vor</p>
+        </section>
+
+        <section>
+          <h1>Nützliche Links</h1>
+          <li> <strong> <a href="http://webaim.org/simulations/screenreader"><u>Screenreader Simulator</u></a></strong></li>
+          <li> <strong> <a href="http://www.w3.org/Translations/WCAG20-de/"><u>WCAG 2.0</u></a></strong></li>
+          <li> <strong> <a href="http://gmazzocato.altervista.org/colorwheel/wheel.php"><u>Accessibility Color Wheel</u></a></strong></li>
+          <li> <strong> <a href="http://www.kk-software.de/Lynxview.html"><u>Lynx Viewer</u></a></strong></li>
+          <li> <strong> <a href="http://www.sign-lang.uni-hamburg.de/esign/overview.html"><u>Projekt zur virtuellen Simulation von Gebärdensprache</u></a></strong></li>
+          <li> <strong> <a href="http://webanywhere.cs.washington.edu/"><u>Web-Screenreader</u></a></strong></li>
+        </section>
+
+
+
+        
+          
+
+
+
+        <section>
+          <h1>Quellenangaben</h1>
+          <font size=5>
+            <p>http://www.bitvtest.de/</p>
+            <p>http://www.w3.org/Translations/WCAG20-de/</p>
+            <p>http://die.netzspielwiese.de/blog/barrierefreiheit/2006-03/barrierefreiheit-von-webseiten-testen</p>
+            <p>http://www.barrierefreies-webdesign.de/knowhow/</p>
+            <p>http://de.wikipedia.org/wiki/Barrierefreie-Informationstechnik-Verordnung</p>
+            <p>https://www.fbi.fh-koeln.de/institut/projekte/BF/liste.htm#tutorials</p>
+            <p>http://webaim.org/simulations/</p>
+            <p>http://www.bsvsh.org/index.php?menuid=101&reporeid=165</p>
+            <p>http://www.die-barrierefreie-website.de/grundlagen/tastaturbedienung.html</p>
+            <p>http://webaim.org/intro/</p>
+            <p>http://de.wikipedia.org/wiki/Braillezeile</p>
+            <p>http://de.wikipedia.org/wiki/Barrierefreies_Internet</p>
+            <p>http://de.wikipedia.org/wiki/Farbenblindheit</p>
+            <p>http://de.onpage.org/wiki/Barrierefreies_Internet</p>
+            <p>http://www.w3.org</p>
+          </font>
+        </section>
+
+        <section></br></br></br></br></br></br></br></br>
+          <h1 style="margin-left: 150px">Vielen Dank für eure Aufmerksamkeit</h1>
+
+        </section>
+        
+        <section>
+          <h1>Übung</h1>
+            <p>In dem Barrierefreiheit Livesession Ordner befindet sich der Übungsordner mit einer veränderten Version der CSS Übungslösung vom 16. Oktober. Diese soll unter Verwendung von CSS und HTML Barrierefrei angepasst werden.</p>
+          </br>
+          </br>
+            <p>Da die Navigation über die Tab-Taste einwandfrei und logisch funktioniert, ändert diese bitte so, dass sie sich von unten nach oben vorarbeitet. (10 veränderungen reichen)</p>
+
+        </section>
+
+        
+
+        <!-- End of slides container. -->
+
+      </div>
+
+    </div>
+
+    <script src="../revealjs-framework/lib/js/head.min.js"></script>
+    <script src="../revealjs-framework/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: false,
+        width: 1000,
+
+        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+        transitionSpeed: 'fast', // default/fast/slow
+        backgroundTransition: 'none', // default/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

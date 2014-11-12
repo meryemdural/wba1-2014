@@ -1,0 +1,29 @@
+body {
+	background-color:#FFFFFF;
+	font-family:calibri;
+}
+
+#wrapper {
+	margin:0px auto;
+	width:1095px;
+	text-align:justify;
+}
+
+#background {
+	background-image:url(source.png);
+	background-position:top left;
+	background-repeat:no-repeat;
+	min-height:343px;
+}
+
+img#circle {
+	border-radius:77px;
+	border:4px solid #DEDEDE;
+	position:relative;
+	top:40px;
+	left:112px;
+}
+
+img#circle:hover {
+
+}
