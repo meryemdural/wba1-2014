@@ -5,19 +5,28 @@ $(window).ready(function(){
         // Danach den leeren Container wieder hinzufügen für die neuen Daten
         $("#canvas-holder").append('<canvas id="chart-area" height="250" width="500"/>');
         
-        var jsLang = $('#selectDiv :selected').val();
+        var jsLang = $('#Bundes_LineChart :selected').val();
             switch (jsLang) {
-        case "Baden-Württemberg":
-            var index1 = $('#selectDiv2 :selected').val();
-            var index2 = $('#selectDiv3 :selected').val();
-            var neu = parseInt(index1) + parseInt(index2);
+        case "baden_wurttemberg":
+            var index1 = $('#Stud_LineChart :selected').val();
+            var index3 = $('#Bundes2_LineChart :selected').val();
+            var neu = index3;
+            ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
             $.getJSON("../JSON/baden_wurttemberg.json", function(data0){
-            
+                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+                     $.getJSON("../JSON/"+ neu +".json", function(data2){
+                         var erste = parseInt(data0.baden_wurttemberg[3]["Insgesamt"]);
+                         var zweite = parseInt(data1.Studienanfaenger_Bundesland[0]["Insgesamt"]);
+                         console.log(erste);
+                         console.log(zweite);
             // Prüfen ob die Daten vorhanden sind, Hier reicht die Überprüfung der ersten Variable
-            myLineChart.datasets[0].points[0].value = ;
+            myLineChart.datasets[0].points[0].value = parseInt(((erste * 100) / zweite)*100);
+            myLineChart.datasets[1].points[0].value = (parseInt(data0.neu[0]["Insgesamt"])*100) / parseInt(data1.Studienanfaenger_Bundesland[0]["Insgesamt"]);
             // Aktualisiert die Doughnut-Chart
-            myDoughnut.update();
+            myLineChart.update();
+                     });
+                 });
             });
             break;
         case "Bayern":

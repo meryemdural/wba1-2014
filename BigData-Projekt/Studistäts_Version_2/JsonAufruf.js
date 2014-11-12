@@ -30,7 +30,7 @@ $(window).ready(function(){
         case "Baden-Württemberg":
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
             $.getJSON("../JSON/baden_wurttemberg.json", function(data0){
-                $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+               
             // Prüfen ob die Daten vorhanden sind, Hier reicht die Überprüfung der ersten Variable
 
                 
@@ -90,7 +90,6 @@ $(window).ready(function(){
             myDoughnut4.update();
             myDoughnut5.update();
             myDoughnut6.update();
-                });
             });
             break;
         case "Bayern":
