@@ -9,8 +9,12 @@
     $.each(list, function(index, data) {
 
         $(this).click(function() {
-
             alert("geklickd" + index + "");
+            if (localStorage.getItem('film'+index) == null || localStorage.getItem('film'+index) == '') {
+                localStorage.setItem('film' + index, "isFavorite");
+            } else {
+                localStorage.removeItem('film' + index);
+            }
         });
     });
 });

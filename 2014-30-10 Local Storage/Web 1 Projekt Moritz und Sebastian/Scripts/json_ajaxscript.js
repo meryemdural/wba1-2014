@@ -1,11 +1,9 @@
-﻿
-var data_file = "../json_Filme/json_Filme.json";
-
+﻿var jsonMovies = "../json_Filme/json_Filme.json";
 $(document).ready(function () {
 
     $.ajax({
         type: "GET",
-        url: data_file,
+        url:  jsonMovies,
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
         success: OnSuccess, 
@@ -44,4 +42,5 @@ $(document).ready(function () {
         alert(err.status + " - " + err.statusText);
     }
 });
+
 
