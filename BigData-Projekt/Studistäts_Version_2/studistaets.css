@@ -2,13 +2,41 @@
 body {
     overflow: hidden;
     font-family: avenir next, arial;
-    color: #444;
+    color: #888;
 }
 
 a {
     text-decoration: none;
 }
 
+button {
+    padding: 8px 20px;
+    margin: 0;
+    -webkit-border-radius:18px;
+    -moz-border-radius:18px;
+    border-radius: 18px;
+    background: #fff;
+    color: #888;
+    border: none;
+    box-shadow: 0 3px 0 #ccc;
+}
+
+select {
+    padding:4px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc;
+    -moz-box-shadow: 0 3px 0 #ccc;
+    box-shadow: 0 3px 0 #ccc;
+    background: #fff;
+    color: #888;
+    border:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
 
 /*----------------------------------------------------------*/
 /*-- Panels sind die einzelnen "Unterseiten" der Webseite. -*/
@@ -251,20 +279,11 @@ a {
     padding-right: 15px;
 }
 
-#button2 {
-    float: left;
-    padding-right: 15px;
-    margin-top: 15px;
-    background: #428cba;
-    color: #444;
-}
+
 
 #Bundeslander2 {
     padding-right: 15px;
 }
-
-
-
 
 
 .canvas_slider {
@@ -278,24 +297,6 @@ a {
 }
 
 
-
-select {
-    padding:3px;
-    margin: 0;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius:4px;
-    -webkit-box-shadow: 0 3px 0 #ccc;
-    -moz-box-shadow: 0 3px 0 #ccc;
-    box-shadow: 0 3px 0 #ccc;
-    background: #428cba;
-    color: #ffb600;
-    border:none;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
-}
-
 .auswahl {
     position: absolute;
 }
@@ -308,14 +309,6 @@ select {
     position: absolute;
 }
 
-button {
-    padding: 3px;
-    margin: 0;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius: 4px;
-    background: #428cba;
-    color: #ffb600;
-    border: none;
-    box-shadow: 0 3px 0 #ccc;
+button:active {
+    margin-top: 1px;
 }
