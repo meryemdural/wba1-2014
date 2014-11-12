@@ -101,7 +101,7 @@ $(document).ready(function() {
             //If user is logged in load movies in chart into dropdown when dropping down. When dropping up remove those items from list but not from local stroage
         } else {
             if ($("#ChartDropDown").is(":hidden")) {
-                for (var i = 0; i < 6; i++) {
+                for (var i = 0; i < result.Filme.length; i++) {
                     if (localStorage.getItem(currentUser + 'FilmInChart' + i) === "true") {
                         $("#afterthis").after(AddInfo(i));
                     }

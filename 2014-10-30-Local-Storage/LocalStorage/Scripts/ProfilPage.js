@@ -20,7 +20,7 @@ $(document).ready(function () {
         }
 
         //Get all Favorites
-        for (var i = 0; i < 6; i++) {
+        for (var i = 0; i < result.Filme.length; i++) {
             if (localStorage.getItem(currentUser + 'Favorit' + i) === "true") {
                 Add(i);
             }
