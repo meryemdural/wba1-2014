@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Webstore</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="StyleSheets/GlobalStyles.css" />
+        <link rel="stylesheet" href="StyleSheets/Flexboxes.css" />
+        <link rel="stylesheet" href="StyleSheets/StrapOn.css" />
+        <link rel="stylesheet" href="StyleSheets/Tabs.css" />
+        <link rel="stylesheet" href="StyleSheets/FavoriteButton.css" />
+        <link rel="stylesheet" href="StyleSheets/UserMenu.css" />
+        <link rel="stylesheet" href="StyleSheets/MeinProfilPage.css" />
+        <link rel="stylesheet" href="StyleSheets/SearchDropdown.css" />
+    </head>
+    <body>
+        <header>
+            <div class="user-menu">
+                <div class="vLine"></div>
+                <p id="profilName" class="profil-menu"></p>
+                <p id="arrowProfile" class="arrow-profile">&raquo;</p>
+                <p id="arrowChart" class="arrow-chart">&raquo;</p>
+
+                <div id="ChartDropDown" class="drop-down-menu">
+                    <p id="afterthis">Einkaufswagen</p>
+                    <hr />
+                    <p id="payment">Zur Kasse gehen &raquo;</p>
+                </div>
+
+            </div>
+
+            <div class="tab-header">
+
+                <form class="search-inputs">
+                    <input id="topSearchField" type="text" placeholder="Suchen..." required class="search-field">
+                    <input type="button" value="Suchen" class="search-button">
+                </form>
+
+
+                <div class="tabs">
+                    <ul class="tab-links">
+                        <li>
+                            <a href="videoLaden-Heiglights.html">Highlights</a>
+                        </li>
+                        <!-- Due time reasons not implented-->
+                        <li>
+                            <a href="videoLaden-Katalog.html">Katalog</a>
+                        </li>
+                        <li class="active">
+                            <a href="videoLaden-Profil.html">Mein Profil</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+        
+        
+        <div id="MeinProfilPage" class="mein-profil-page">
+            <div class="favorit-section">
+                <div class="category-separator">
+                    <p>Favoriten</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mein_profil_container"></div>
+
+        <script type="text/javascript" src="JQueryRAW/jquery-1.11.1.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="Scripts/JavaScript.js"></script>
+        <script src="Scripts/FavoriteButton.js"></script>
+        
+        <!-- This actually runs the Local Storage Stuff-->
+        <script src="Scripts/Login.js"></script>
+        <script src="Scripts/SearchInput.js"></script>
+        <script src="Scripts/ProfilPage.js"></script>
+        <script src="Scripts/Einkaufswagen.js"></script>
+    </body>
+</html>

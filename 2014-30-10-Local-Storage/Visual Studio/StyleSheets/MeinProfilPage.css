@@ -1,0 +1,40 @@
+﻿.favorit-section {
+    top: 20px;
+    margin: 10px 10px auto;
+    width: 98%;
+    border-radius: 2px;
+    position: relative;
+    padding-top: 10px;
+    height:200px;
+}
+
+.mein-profil-page {
+    margin: 120px auto;
+    width: 1000px;
+    height: auto;
+    position: relative;
+}
+
+.profil-container {
+
+    width:400px;
+    height:500px;
+    display:inline-table;
+    padding:20px;
+}
+
+.profil-titel {
+    font-family: "Times New Roman", Times, serif;  
+}
+
+.profil-img {
+
+    height:300px;
+    width:200px;
+
+}
+.profil-desc {
+    font-family: "Times New Roman", Times, serif;
+    display:block;
+
+}

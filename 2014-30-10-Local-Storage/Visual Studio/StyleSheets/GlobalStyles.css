@@ -1,0 +1,68 @@
+﻿/*Put global styles here*/
+
+html {
+    background: #dfdee5;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+body {
+    width: 1010px;
+    height: auto;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+    position: relative;
+}
+
+h3 {
+    position: relative;
+    top: -23px;
+    text-align: match-parent;
+}
+
+.category-separator p {
+    margin: -10px 0 10px auto;
+    background: #3C4D82;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: white;
+    font-size: 20px;
+}
+
+.price {
+    padding-right: 20px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    background-color: #d2d2d2;
+    font: bold 14px 'Trebuchet MS';
+}
+
+/*Shared Code between the default buy button and the User Menu bar for displaying the chart icon*/
+.buy-button, .user-menu {
+    background-image: url(../images/cart.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 30px;
+    color: white;
+    font: bold 14px 'Trebuchet MS';
+    cursor: pointer;
+}
+
+.buy-button {
+    background-color: #BB3124;
+    padding-left: 30px;
+    border: 1px solid #BB3124;
+    margin: -10px auto;
+}
+
+/*I know its useless but i want to keep my Refactoring tool shut up*/
+.ChartContainer {
+    border: 0;
+}
+

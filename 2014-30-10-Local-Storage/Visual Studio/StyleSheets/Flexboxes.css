@@ -1,0 +1,51 @@
+﻿/* A Flexboox is a container for structured grouped elements */
+
+
+.flexBox3{position:relative; left:0;   bottom:-23px;}
+.flexBox2{position:relative; left:380px; bottom:180px;}
+.flexBox4{position:relative; left:380px; bottom:158px;}
+.flexBox5{position:relative; left:0; bottom:120px;}
+.flexBox6{position:relative; left:380px; bottom:300px;}
+
+.flexBox1, .flexBox2, .flexBox3, .flexBox4, .flexBox5, .flexBox6{
+    display: -moz-box; /* Firefox */
+    display: -webkit-box; /* Safari and Chrome */
+    display: -ms-box; /* Internet Explorer 10 */
+    width: 380px;
+}
+
+.flex-img-box {
+    -moz-box-flex: 1.0; /* Firefox */
+    -webkit-box-flex: 1.0; /* Safari and Chrome */
+    -ms-flex: 1.0; /* Internet Explorer 10 */
+}
+
+.flex-img-box img {
+    max-height: 160px;
+    max-width: 160px;
+    min-height: 175px;
+    min-width: 120px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.flex-rest {
+    -moz-box-flex: 2.0; /* Firefox */
+    -webkit-box-flex: 2.0; /* Safari and Chrome */
+    -ms-flex: 2.0; /* Internet Explorer 10 */
+}
+
+
+.flex-rest p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    text-justify: inter-word;
+    break-after: avoid-column;
+    word-wrap: break-word;
+    width: 240px;
+    height: 75px;
+    position: relative;
+    bottom: 20px;
+}
+

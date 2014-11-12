@@ -1,0 +1,97 @@
+﻿{
+    "Filme": [
+        {
+            "id": 1000,
+            "FSK": 16,
+            "typ": "film",
+            "favorit": "true",
+            "gesehen": "true",
+            "genere": "Action",
+            "bewertung": "0",
+            "regie": "",
+            "jahr": "2011",
+            "titel": "The World's End",
+            "description": "Five friends who reunite in an attempt to top their epic pub crawl from 20 years earlier unwittingly become humankind's only hope for survival",
+            "picture": "../LocalStorage/images/worlds_end.jpg",
+            "preis": "15"
+        },
+        {
+            "id": 1001,
+            "FSK": 16,
+            "typ": "film",
+            "favorit": "true",
+            "gesehen": "true",
+            "genere": "Action",
+            "bewertung": "0",
+            "regie": "",
+            "jahr": "2011",
+            "titel": "Homefront",
+            "description": "A former DEA agent moves his family to a quiet town, where he soon tangles with a local meth druglord",
+            "picture": "../LocalStorage/images/home_front.jpg",
+            "preis": "10"
+        },
+        {
+            "id": 1002,
+            "FSK": 16,
+            "typ": "film",
+            "favorit": "true",
+            "gesehen": "true",
+            "genere": "Action",
+            "bewertung": "0",
+            "regie": "",
+            "jahr": "2011",
+            "titel": "Yi dai zong shi",
+            "description": "The story of martial-arts master Ip Man, the man who trained Bruce Lee.",
+            "picture": "../LocalStorage/images/grand_master.jpg",
+            "preis": "15"
+
+        },
+        {
+            "id": 1003,
+            "FSK": 16,
+            "typ": "film",
+            "favorit": "true",
+            "gesehen": "true",
+            "genere": "Action",
+            "bewertung": "0",
+            "regie": "",
+            "jahr": "2011",
+            "titel": "Machete Kills",
+            "description": "The U.S. government recruits Machete to battle his way through Mexico in order to take down an arms dealer who looks to launch a weapon into space.",
+            "picture": "../LocalStorage/images/machete_kills.jpg",
+            "preis": "10"
+
+        },
+        {
+            "id": 1004,
+            "FSK": 16,
+            "typ": "film",
+            "favorit": "true",
+            "gesehen": "true",
+            "genere": "Action",
+            "bewertung": "0",
+            "regie": "",
+            "jahr": "2011",
+            "titel": "The Godfather",
+            "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+            "picture": "../LocalStorage/images/the_godfather.jpg",
+            "preis": "15"
+
+        },
+        {
+            "id": 1005,
+            "FSK": 16,
+            "typ": "film",
+            "favorit": "true",
+            "gesehen": "true",
+            "genere": "Action",
+            "bewertung": "0",
+            "regie": "",
+            "jahr": "2011",
+            "titel": "Schindler's List",
+            "description": "In Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+            "picture": "../LocalStorage/images/schindlers_list.jpg",
+            "preis": "10"
+        }
+    ]
+}
