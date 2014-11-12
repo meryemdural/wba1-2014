@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="studistaets.css">
+    <script src="Statistik.js"></script>
+    <script src="Statistik_LineChart.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="JsonAufruf.js"></script>
+    <script src="JsonAufruf2.js"></script>   
+    <script src="../Chart.js-master/Chart.js"></script>
+    <title>Studistäts - Vergleichen Sie die Studiengänge der FH Köln</title>
+</head>
+<body>
+       <div class="content">
+         
+          <input type="radio" name="radio-set" checked="checked" id="st-control-1"/>
+           <a href="#st-panel-1">Start</a>
+           
+           <input type="radio" name="radio-set" id="st-control-2"/>
+           <a href="#st-panel-2">Studiengänge</a>
+           
+           <input type="radio" name="radio-set" id="st-control-3"/>
+           <a href="#st-panel-3">Bundesländer</a>
+           
+           <input type="radio" name="radio-set" id="st-control-4"/>
+           <a href="#st-panel-4">Info</a>
+           
+           
+           <div class="sektionen">
+              
+               <section class="st-panel" id="st-panel-1">
+                   <div class="text">
+                   <h2>Willkommen auf Studistäts!</h2>
+                   <p>Studistäts gibt auskunft, listet und vergleicht die in Deutschland eingetragenen Studiengänge der Informatik miteinander.</p>
+                    </div>
+               </section>
+               
+               <section class="st-panel" id="st-panel-2">
+                   <div class="text">
+                        <h2>Studiengänge</h2>
+                        <p>Wählen Sie ein Bundesland zusätzliche Informationen <br>
+                            über jeden Informatik-Studiengang des Bundeslandes zu erfahren
+                        </p>
+                       
+                    <div id="Bundesland">  
+                       <p>Bundesland:</p>
+                            <p>
+                                <select name="Bundesländer" id="Bundes_Doughnut">
+                                    <option value="baden_wurttemberg">Baden-Würtemberg</option>
+                                    <option value="nordrhein_westfalen">Nordrhein-Westfalen</option>
+                                    <option value="bremen">Bremen</option>
+                                    <option value="hamburg">Hamburg</option>
+                                    <option value="niedersachsen">Niedersachsen</option>
+                                    <option value="sachsen_anhalt">Sachsen-Anhalt</option>
+                                    <option value="mecklenburg_Vorpommern">Mecklenburg-Vorpommern</option>
+                                    <option value="schleswig_holstein">Schleswig-Holstein</option>
+                                    <option value="brandenburg">Brandenburg</option>
+                                    <option value="berlin">Berlin</option>
+                                    <option value="sachsen">Sachsen</option>
+                                    <option value="thuringen">Thüringen</option>
+                                    <option value="hessen">Hessen</option>
+                                    <option value="rheinland_pfalz">Rheinland-Pfalz</option>
+                                    <option value="saarland">Saarland</option>
+                                    <option value="bayern">Bayern</option>
+                                </select>
+                            </p>
+                        </div>
+                       <button id="button2">Gimme Data!</button>
+                       
+                    <div class="canvas_slider">
+                       <div id="canvas-holder-1">
+                            <canvas id="chart-area-1" height="150" width="150"/>
+                       </div>
+                       <div id="canvas-holder-2">
+                            <canvas id="chart-area-2" height="150" width="150"/>
+                       </div>
+                       <div id="canvas-holder-3">
+                            <canvas id="chart-area-3" height="150" width="150"/>
+                       </div>
+                       <div id="canvas-holder-4">
+                            <canvas id="chart-area-4" height="150" width="150"/>
+                       </div>
+                       <div id="canvas-holder-5">
+                            <canvas id="chart-area-5" height="150" width="150"/>
+                       </div>
+                       <div id="canvas-holder-6">
+                            <canvas id="chart-area-6" height="150" width="150"/>
+                       </div>
+                    </div>
+                       
+                </div>
+               </section>
+               
+               <section class="st-panel" id="st-panel-3">
+                   <div class="text">
+                        <h2>Bundesländer</h2>
+
+                        
+                        <p>Hier werden die Studienanfänger des auszuwählenden Informatik-Studiengangs mit den gesamten Informatik-Studienfächern auf Bundeslandebene verglichen. Auswählbar sind zwei Bundesländer zum direktem Vergleich. Der Anwender wählt ein Studienfach und zwei Bundesländer, und die Anwendung gibt die gewünschten Daten in einem historisch gegliedertem Chart wieder.
+                       </p>
+                        
+                       <div id="canvas-holder-10">
+                       <canvas id="chart-area-LineChart" height="300" width="800px"></canvas>
+                       </div>
+                <div class="auswahl">  
+                    <div id="Stundiengange">   
+                        <p>Studiengänge:</p>
+                            <p>
+                                <select name="Studiengänge" id="Stud_LineChart">
+                                    <option value="0">Bioinformatik</option>
+                                    <option value="1">Informatik</option>
+                                    <option value="2">Technische Informatik</option>
+                                    <option value="3">Medieninformatik</option>
+                                    <option value="4">Medizinische Informatik</option>
+                                    <option value="5">Wirtschaftsinformatik</option>
+                                </select>
+                            </p>
+                    </div>
+                    
+                    <div id="Bundeslander">  
+                       <p>Bundesland 1:</p>
+                            <p>
+                                <select name="Bundesländer" id="Bundes_LineChart">
+                                    <option value="baden_wurttemberg">Baden-Würtemberg</option>
+                                    <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
+                                    <option value="Bremen">Bremen</option>
+                                    <option value="Hamburg">Hamburg</option>
+                                    <option value="Niedersachsen">Niedersachsen</option>
+                                    <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
+                                    <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
+                                    <option value="Schleswig-Holstein">Schleswig-Holstein</option>
+                                    <option value="Brandenburg">Brandenburg</option>
+                                    <option value="Berlin">Berlin</option>
+                                    <option value="Sachsen">Sachsen</option>
+                                    <option value="Thüringen">Thüringen</option>
+                                    <option value="Hessen">Hessen</option>
+                                    <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+                                    <option value="Saarland">Saarland</option>
+                                    <option value="Bayern">Bayern</option>
+                                </select>
+                            </p>
+                    </div>
+                    
+                    <div id="Bundeslander2">  
+                       <p>Bundesland 2:</p>
+                            <p>
+                                <select name="Bundesländer" id="Bundes2_LineChart">
+                                    <option value="baden_wurttemberg">Baden-Würtemberg</option>
+                                    <option value="nordrhein_westfalen">Nordrhein-Westfalen</option>
+                                    <option value="bremen">Bremen</option>
+                                    <option value="hamburg">Hamburg</option>
+                                    <option value="niedersachsen">Niedersachsen</option>
+                                    <option value="sachsen_anhalt">Sachsen-Anhalt</option>
+                                    <option value="mecklenburg_vorpommern">Mecklenburg-Vorpommern</option>
+                                    <option value="schleswig_holstein">Schleswig-Holstein</option>
+                                    <option value="brandenburg">Brandenburg</option>
+                                    <option value="berlin">Berlin</option>
+                                    <option value="sachsen">Sachsen</option>
+                                    <option value="thuringen">Thüringen</option>
+                                    <option value="hessen">Hessen</option>
+                                    <option value="rheinland_pfalz">Rheinland-Pfalz</option>
+                                    <option value="saarland">Saarland</option>
+                                    <option value="bayern">Bayern</option>
+                                </select>
+                            </p>
+                        </div>                       
+                       <button id="button1">Los!</button>
+                 </div>    
+                </div>
+               </section>  
+            
+               <section class="st-panel" id="st-panel-4">
+                <div class="text">
+                   <h2>Über Studistäts</h2>
+                   <p>Studistäts ist ein Studienprojekt der FH Köln. Durchgeführt wurde es von Joel Weihrauch und Nikolas Gander.</p>
+                </div>
+               </section>
+               
+           </div>
+       </div>
+</body>
+</html>
