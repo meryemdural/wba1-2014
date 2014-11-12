@@ -68,6 +68,8 @@ $(window).ready(function(){
                              break;
                     }
                      console.log(neu);
+                     // Auf neuen Wert setzen!!
+                     var neu1 = 0;
                      // Initialisierung der Variablen und Verwendung vom Index neu
                          var a = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu)]["Insgesamt"]);
                          var b = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu)+parseInt(1)]["Insgesamt"]);
@@ -85,8 +87,60 @@ $(window).ready(function(){
                          var n = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu)+parseInt(13)]["Insgesamt"]);
                          var o = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu)+parseInt(14)]["Insgesamt"]);
                          var p = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu)+parseInt(15)]["Insgesamt"]);
-                        console.log(a);
-                     console.log(b);
+                     
+                         var a1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)]["Insgesamt"]);
+                         var b1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(1)]["Insgesamt"]);
+                         var c1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(2)]["Insgesamt"]);
+                         var d1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(3)]["Insgesamt"]);
+                         var e1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(4)]["Insgesamt"]);
+                         var f1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(5)]["Insgesamt"]);
+                         var g1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(6)]["Insgesamt"]);
+                         var h1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(7)]["Insgesamt"]);
+                         var i1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(8)]["Insgesamt"]);
+                         var j1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(9)]["Insgesamt"]);
+                         var k1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(10)]["Insgesamt"]);
+                         var l1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(11)]["Insgesamt"]);
+                         var m1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(12)]["Insgesamt"]);
+                         var n1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(13)]["Insgesamt"]);
+                         var o1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(14)]["Insgesamt"]);
+                         var p1 = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(15)]["Insgesamt"]);
+                     
+                        var erste = parseFloat(data0.baden_wurttemberg[index1]["Insgesamt"]);
+                         var zweite = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]);
+                         var dritte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
+                         var vierte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(21)]["Insgesamt"]);
+                         var funfte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(28)]["Insgesamt"]);
+                         var sechste = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(35)]["Insgesamt"]);
+                         var siebte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(42)]["Insgesamt"]);
+                         var achte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(49)]["Insgesamt"]);
+                         var neunte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(56)]["Insgesamt"]);
+                         var zehnte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(63)]["Insgesamt"]);
+                         var elfte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(70)]["Insgesamt"]);
+                         var zwolfte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(77)]["Insgesamt"]);
+                         var dreizehnte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(84)]["Insgesamt"]);
+                         var vierzehnte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(91)]["Insgesamt"]);
+                         var funfzehnte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(98)]["Insgesamt"]);
+                         var sechzehnte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(105)]["Insgesamt"]);
+                         // Daten der LineChart werden aktualisiert: Umrechnung in Prozent und in den 1. Datensatz geladen 
+                            myLineChart.datasets[0].points[0].value = parseFloat(((erste * 100) / a1));
+                            myLineChart.datasets[0].points[1].value = parseFloat(((zweite * 100) / b1));
+                            myLineChart.datasets[0].points[2].value = parseFloat(((dritte * 100) / c1));
+                            myLineChart.datasets[0].points[3].value = parseFloat(((vierte * 100) / d1));
+                            myLineChart.datasets[0].points[4].value = parseFloat(((funfte * 100) / e1));
+                            myLineChart.datasets[0].points[5].value = parseFloat(((sechste * 100) / f1));
+                            myLineChart.datasets[0].points[6].value = parseFloat(((siebte * 100) / g1));
+                            myLineChart.datasets[0].points[7].value = parseFloat(((achte * 100) / h1));
+                            myLineChart.datasets[0].points[8].value = parseFloat(((neunte * 100) / i1));
+                            myLineChart.datasets[0].points[9].value = parseFloat(((zehnte * 100) / j1));
+                            myLineChart.datasets[0].points[10].value = parseFloat(((elfte * 100) / k1));
+                            myLineChart.datasets[0].points[11].value = parseFloat(((zwolfte * 100) / l1));
+                            myLineChart.datasets[0].points[12].value = parseFloat(((dreizehnte * 100) / m1));
+                            myLineChart.datasets[0].points[13].value = parseFloat(((vierzehnte * 100) / n1));
+                            myLineChart.datasets[0].points[14].value = parseFloat(((funfzehnte * 100) / o1));
+                            myLineChart.datasets[0].points[15].value = parseFloat(((sechzehnte * 100) / p1));
+                     console.log(erste);
+                      console.log(parseFloat(((erste * 100) / a)));
+                     
                      //Switch für das zweite BundesLand
                          var jslang1 = index3;
                         switch(jslang1){ 
@@ -134,42 +188,44 @@ $(window).ready(function(){
                             });
                          break;
                          case "bayern":
-                            $.getJSON("../JSON/bayern.json", function(data2){
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            var ws1 = parseInt(data2.bayern[index1]["Insgesamt"]); 
-                            var ws2 = parseInt(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
-                            var ws3 = parseInt(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]);
-                            var ws4 = parseInt(data2.bayern[parseInt(index1)+parseInt(21)]["Insgesamt"]); 
-                            var ws5 = parseInt(data2.bayern[parseInt(index1)+parseInt(28)]["Insgesamt"]);
-                            var ws6 = parseInt(data2.bayern[parseInt(index1)+parseInt(35)]["Insgesamt"]);
-                            var ws7 = parseInt(data2.bayern[parseInt(index1)+parseInt(42)]["Insgesamt"]); 
-                            var ws8 = parseInt(data2.bayern[parseInt(index1)+parseInt(49)]["Insgesamt"]); 
-                            var ws9 = parseInt(data2.bayern[parseInt(index1)+parseInt(56)]["Insgesamt"]); 
-                            var ws10 = parseInt(data2.bayern[parseInt(index1)+parseInt(63)]["Insgesamt"]); 
-                            var ws11 = parseInt(data2.bayern[parseInt(index1)+parseInt(70)]["Insgesamt"]); 
-                            var ws12 = parseInt(data2.bayern[parseInt(index1)+parseInt(77)]["Insgesamt"]); 
-                            var ws13 = parseInt(data2.bayern[parseInt(index1)+parseInt(84)]["Insgesamt"]); 
-                            var ws14 = parseInt(data2.bayern[parseInt(index1)+parseInt(91)]["Insgesamt"]); 
-                            var ws15 = parseInt(data2.bayern[parseInt(index1)+parseInt(98)]["Insgesamt"]); 
-                            var ws16 = parseInt(data2.bayern[parseInt(index1)+parseInt(105)]["Insgesamt"]);
-                            console.log(ws2);    
-                            // Daten der LineChart werden aktualisiert: Umrechnung in Prozent und in den 2. Datensatz geladen 
-                                myLineChart.datasets[1].points[0].value = parseFloat(((ws1 * 100) / a));
-                                myLineChart.datasets[1].points[1].value = parseFloat(((ws2 * 100) / b));
-                                myLineChart.datasets[1].points[2].value = parseFloat(((ws3 * 100) / c));
-                                myLineChart.datasets[1].points[3].value = parseFloat(((ws4 * 100) / d));
-                                myLineChart.datasets[1].points[4].value = parseFloat(((ws5 * 100) / e));
-                                myLineChart.datasets[1].points[5].value = parseFloat(((ws6 * 100) / f));
-                                myLineChart.datasets[1].points[6].value = parseFloat(((ws7 * 100) / g));
-                                myLineChart.datasets[1].points[7].value = parseFloat(((ws8 * 100) / h));
-                                myLineChart.datasets[1].points[8].value = parseFloat(((ws9 * 100) / i));
-                                myLineChart.datasets[1].points[9].value = parseFloat(((ws10 * 100) / j));
-                                myLineChart.datasets[1].points[10].value = parseFloat(((ws11 * 100) / k));
-                                myLineChart.datasets[1].points[11].value = parseFloat(((ws12 * 100) / l));
-                                myLineChart.datasets[1].points[12].value = parseFloat(((ws13 * 100) / m));
-                                myLineChart.datasets[1].points[13].value = parseFloat(((ws14 * 100) / n));
-                                myLineChart.datasets[1].points[14].value = parseFloat(((ws15 * 100) / o));
-                                myLineChart.datasets[1].points[15].value = parseFloat(((ws16 * 100) / p));
+                            $.getJSON("../JSON/bayern.json", function(data2){
+                                console.log(data2.bayern[parseInt(index1+3)]["Insgesamt"]);
+                            var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
+                            var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
+                                console.log(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]);
+                            var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
+                            var ws4 = parseFloat(data2.bayern[parseInt(index1)+parseInt(21)]["Insgesamt"]).toFixed(2); 
+                            var ws5 = parseFloat(data2.bayern[parseInt(index1)+parseInt(28)]["Insgesamt"]).toFixed(2);
+                            var ws6 = parseFloat(data2.bayern[parseInt(index1)+parseInt(35)]["Insgesamt"]).toFixed(2);
+                            var ws7 = parseFloat(data2.bayern[parseInt(index1)+parseInt(42)]["Insgesamt"]).toFixed(2); 
+                            var ws8 = parseFloat(data2.bayern[parseInt(index1)+parseInt(49)]["Insgesamt"]).toFixed(2); 
+                            var ws9 = parseFloat(data2.bayern[parseInt(index1)+parseInt(56)]["Insgesamt"]).toFixed(2); 
+                            var ws10 = parseFloat(data2.bayern[parseInt(index1)+parseInt(63)]["Insgesamt"]).toFixed(2); 
+                            var ws11 = parseFloat(data2.bayern[parseInt(index1)+parseInt(70)]["Insgesamt"]).toFixed(2); 
+                            var ws12 = parseFloat(data2.bayern[parseInt(index1)+parseInt(77)]["Insgesamt"]).toFixed(2); 
+                            var ws13 = parseFloat(data2.bayern[parseInt(index1)+parseInt(84)]["Insgesamt"]).toFixed(2); 
+                            var ws14 = parseFloat(data2.bayern[parseInt(index1)+parseInt(91)]["Insgesamt"]).toFixed(2); 
+                            var ws15 = parseFloat(data2.bayern[parseInt(index1)+parseInt(98)]["Insgesamt"]).toFixed(2); 
+                            var ws16 = parseFloat(data2.bayern[parseInt(index1)+parseInt(105)]["Insgesamt"]).toFixed(2);
+                                console.log(ws2);
+                                // Daten der LineChart werden aktualisiert: Umrechnung in Prozent und in den 2. Datensatz geladen 
+                                myLineChart.datasets[1].points[0].value = parseFloat(((ws1 * 100) / a)).toFixed(2);
+                                myLineChart.datasets[1].points[1].value = parseFloat(((ws2 * 100) / b)).toFixed(2);
+                                myLineChart.datasets[1].points[2].value = parseFloat(((ws3 * 100) / c)).toFixed(2);
+                                myLineChart.datasets[1].points[3].value = parseFloat(((ws4 * 100) / d)).toFixed(2);
+                                myLineChart.datasets[1].points[4].value = parseFloat(((ws5 * 100) / e)).toFixed(2);
+                                myLineChart.datasets[1].points[5].value = parseFloat(((ws6 * 100) / f)).toFixed(2);
+                                myLineChart.datasets[1].points[6].value = parseFloat(((ws7 * 100) / g)).toFixed(2);
+                                myLineChart.datasets[1].points[7].value = parseFloat(((ws8 * 100) / h)).toFixed(2);
+                                myLineChart.datasets[1].points[8].value = parseFloat(((ws9 * 100) / i)).toFixed(2);
+                                myLineChart.datasets[1].points[9].value = parseFloat(((ws10 * 100) / j)).toFixed(2);
+                                myLineChart.datasets[1].points[10].value = parseFloat(((ws11 * 100) / k)).toFixed(2);
+                                myLineChart.datasets[1].points[11].value = parseFloat(((ws12 * 100) / l)).toFixed(2);
+                                myLineChart.datasets[1].points[12].value = parseFloat(((ws13 * 100) / m)).toFixed(2);
+                                myLineChart.datasets[1].points[13].value = parseFloat(((ws14 * 100) / n)).toFixed(2);
+                                myLineChart.datasets[1].points[14].value = parseFloat(((ws15 * 100) / o)).toFixed(2);
+                                myLineChart.datasets[1].points[15].value = parseFloat(((ws16 * 100) / p)).toFixed(2);
                             });
                          break;
                          case "berlin":
@@ -609,39 +665,7 @@ $(window).ready(function(){
                                 
                          break;
                         }
-                         var erste = parseInt(data0.baden_wurttemberg[index1]["Insgesamt"]);
-                         var zweite = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]);
-                         var dritte = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
-                         var vierte = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(21)]["Insgesamt"]);
-                         var funfte = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(28)]["Insgesamt"]);
-                         var sechste = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(35)]["Insgesamt"]);
-                         var siebte = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(42)]["Insgesamt"]);
-                         var achte = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(49)]["Insgesamt"]);
-                         var neunte = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(56)]["Insgesamt"]);
-                         var zehnte = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(63)]["Insgesamt"]);
-                         var elfte = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(70)]["Insgesamt"]);
-                         var zwolfte = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(77)]["Insgesamt"]);
-                         var dreizehnte = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(84)]["Insgesamt"]);
-                         var vierzehnte = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(91)]["Insgesamt"]);
-                         var funfzehnte = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(98)]["Insgesamt"]);
-                         var sechzehnte = parseInt(data0.baden_wurttemberg[parseInt(index1)+parseInt(105)]["Insgesamt"]);
-                         // Daten der LineChart werden aktualisiert: Umrechnung in Prozent und in den 1. Datensatz geladen 
-                            myLineChart.datasets[0].points[0].value = parseFloat(((erste * 100) / a));
-                            myLineChart.datasets[0].points[1].value = parseFloat(((zweite * 100) / b));
-                            myLineChart.datasets[0].points[2].value = parseFloat(((dritte * 100) / c));
-                            myLineChart.datasets[0].points[3].value = parseFloat(((vierte * 100) / d));
-                            myLineChart.datasets[0].points[4].value = parseFloat(((funfte * 100) / e));
-                            myLineChart.datasets[0].points[5].value = parseFloat(((sechste * 100) / f));
-                            myLineChart.datasets[0].points[6].value = parseFloat(((siebte * 100) / g));
-                            myLineChart.datasets[0].points[7].value = parseFloat(((achte * 100) / h));
-                            myLineChart.datasets[0].points[8].value = parseFloat(((neunte * 100) / i));
-                            myLineChart.datasets[0].points[9].value = parseFloat(((zehnte * 100) / j));
-                            myLineChart.datasets[0].points[10].value = parseFloat(((elfte * 100) / k));
-                            myLineChart.datasets[0].points[11].value = parseFloat(((zwolfte * 100) / l));
-                            myLineChart.datasets[0].points[12].value = parseFloat(((dreizehnte * 100) / m));
-                            myLineChart.datasets[0].points[13].value = parseFloat(((vierzehnte * 100) / n));
-                            myLineChart.datasets[0].points[14].value = parseFloat(((funfzehnte * 100) / o));
-                            myLineChart.datasets[0].points[15].value = parseFloat(((sechzehnte * 100) / p));
+
                       
   
                         // Aktualisiert die Line-Chart
