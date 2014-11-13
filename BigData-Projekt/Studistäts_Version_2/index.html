@@ -14,23 +14,23 @@
 </head>
 <body>
        <div class="content">
-         
-          <input type="radio" name="radio-set" checked="checked" id="st-control-1"/>
-           <a href="#st-panel-1">Start</a>
+         <!-- Navigationsleiste am Boden -->
+          <input type="radio" name="radio-set" checked="checked" id="navi-punkt-1"/>
+           <a href="#unterseite-1">Start</a>
            
-           <input type="radio" name="radio-set" id="st-control-2"/>
-           <a href="#st-panel-2">Studiengänge</a>
+           <input type="radio" name="radio-set" id="navi-punkt-2"/>
+           <a href="#unterseite-2">Studiengänge</a>
            
-           <input type="radio" name="radio-set" id="st-control-3"/>
-           <a href="#st-panel-3">Bundesländer</a>
+           <input type="radio" name="radio-set" id="navi-punkt-3"/>
+           <a href="#unterseite-3">Bundesländer</a>
            
-           <input type="radio" name="radio-set" id="st-control-4"/>
-           <a href="#st-panel-4">Info</a>
+           <input type="radio" name="radio-set" id="navi-punkt-4"/>
+           <a href="#unterseite-4">Info</a>
            
-           
+           <!-- Beinhaltet alle Unterseiten -->
            <div class="sektionen">
               
-               <section class="st-panel" id="st-panel-1">
+               <section class="unterseite" id="unterseite-1">
                    <div class="text">
                    <h2>Willkommen auf Studistäts!</h2>
                    <p>Studistäts ziel ist es, die Immatrikulationen eines ausgewählten Informatik-Studiengangs mit den generellen Immatrikulationen des Bundeslandes in Relation zu setzen. Das Ergebnis ist der prozentuale Anteil des ausgewählten Studienganges zu den gesamten Einschreibungen im Bundesland. Dadurch lassen sich Trends im jeweiligen Bundesland veranschaulichen und ermitteln. Ausserdem ist es dadurch möglich herauszufinden, in welchem Land der ausgewählte Studiengang unter den Studenten beliebter ist.
@@ -38,7 +38,7 @@
                     </div>
                </section>
                
-               <section class="st-panel" id="st-panel-2">
+               <section class="unterseite" id="unterseite-2">
                    <div class="text">
                         <h2>Studiengänge</h2>
                         <p>Wählen Sie ein Bundesland um zusätzliche Informationen <br>
@@ -68,47 +68,59 @@
                                 </select>
                             </p>
                         </div>
-                       <button id="button2">Los!</button>
+                       <button id="button2">Start Stat!</button>
                        
                     <div class="canvas_slider">
+                        
+                        <p>Bioinformatik</p>
                        <div id="canvas-holder-1">
-                            <canvas id="chart-area-1" height="150" width="150"/> 
+                            <canvas id="chart-area-1"/>
                        </div>
+                        <hr>
+                        <p>Allgemeine Informatik</p>
                        <div id="canvas-holder-2">
-                            <canvas id="chart-area-2" height="150" width="150"/>
+                            <canvas id="chart-area-2"/>
                        </div>
+                        <hr>
+                        <p>Technische Informatik</p>
                        <div id="canvas-holder-3">
-                            <canvas id="chart-area-3" height="150" width="150"/>
+                            <canvas id="chart-area-3"/>
                        </div>
+                        <hr>
+                        <p>Medieninformatik</p>
                        <div id="canvas-holder-4">
-                            <canvas id="chart-area-4" height="150" width="150"/>
+                            <canvas id="chart-area-4"/>
                        </div>
+                        <hr>
+                        <p>Medizinische Informatik</p>
                        <div id="canvas-holder-5">
-                            <canvas id="chart-area-5" height="150" width="150"/>
+                            <canvas id="chart-area-5"/>
                        </div>
+                        <hr>
+                        <p>Wirtschaftsinformatik</p>
                        <div id="canvas-holder-6">
-                            <canvas id="chart-area-6" height="150" width="150"/>
+                            <canvas id="chart-area-6"/>
                        </div>
                     </div>
                        
                 </div>
                </section>
                
-               <section class="st-panel" id="st-panel-3">
+               <section class="unterseite" id="unterseite-3">
                    <div class="text">
                         <h2>Bundesländer</h2>
 
                         
                         <p>Hier werden die Studienanfänger des auszuwählenden Informatik-Studiengangs mit den gesamten Informatik-Studienfächern auf Bundeslandebene verglichen. Auswählbar sind zwei Bundesländer zum direktem Vergleich. Der Anwender wählt ein Studienfach und zwei Bundesländer, und die Anwendung gibt die gewünschten Daten in einem historisch gegliedertem Chart wieder.
                        </p>
-                        
+                        <p>&nbsp;</p>
                        <div id="canvas-holder-10">
                        <canvas id="chart-area-LineChart" height="300" width="800px"></canvas>
                        </div>
                 <div class="auswahl">  
                     <div id="Stundiengange">   
-                        <p>Studiengänge:</p>
-                            <p>
+                        <p>Studiengänge:
+                            <br>
                                 <select name="Studiengänge" id="Stud_LineChart">
                                     <option value="0">Bioinformatik</option>
                                     <option value="1">Allgemeine Informatik</option>
@@ -117,12 +129,12 @@
                                     <option value="4">Medizinische Informatik</option>
                                     <option value="5">Wirtschaftsinformatik</option>
                                 </select>
-                            </p>
+                        </p>
                     </div>
                     
                     <div id="Bundeslander">  
-                       <p>Bundesland 1:</p>
-                            <p>
+                       <p>Bundesland 1:
+                            <br>
                                 <select name="Bundesländer" id="Bundes_LineChart">
                                     <option value="baden_wurttemberg">Baden-Württemberg</option>
                                     <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
@@ -141,12 +153,12 @@
                                     <option value="Saarland">Saarland</option>
                                     <option value="Bayern">Bayern</option>
                                 </select>
-                            </p>
+                        </p>
                     </div>
                     
                     <div id="Bundeslander2">  
-                       <p>Bundesland 2:</p>
-                            <p>
+                       <p>Bundesland 2:
+                            <br>
                                 <select name="Bundesländer" id="Bundes2_LineChart">
                                     <option value="baden_wurttemberg">Baden-Württemberg</option>
                                     <option value="nordrhein_westfalen">Nordrhein-Westfalen</option>
@@ -165,17 +177,20 @@
                                     <option value="saarland">Saarland</option>
                                     <option value="bayern">Bayern</option>
                                 </select>
-                            </p>
+                        </p>
                         </div>                       
-                       <button id="button1">Los!</button>
+                       <button id="button1">Start Stat!</button>
                  </div>    
                 </div>
                </section>  
             
-               <section class="st-panel" id="st-panel-4">
+               <section class="unterseite" id="unterseite-4">
                 <div class="text">
                    <h2>Über Studistäts</h2>
-                   <p>Studistäts ist ein Studienprojekt der FH Köln. Durchgeführt wurde es von Joel Weihrauch und Nikolas Gander.</p>
+                   <p>Studistäts ist ein Studienprojekt der FH Köln. Durchgeführt wurde es von Joel Weihrauch und Nikolas Gander.<br>
+                       Die Ergebnisse dieser Webapplikation wurden selbstständig erarbeitet. <br> 
+                       Die erhobenen Daten wurden von der <a href="https://www-genesis.destatis.de/genesis/online/logon">Genesis Applikation des statistischen Bundesamtes</a> bereitgestellt. Die Veranschaulichung im Diagramm wird durch das <a href="https://github.com/">GitHub</a> Projekt <a href="http://www.chartjs.org/">Chart.js</a> ermöglicht.
+                    </p>
                 </div>
                </section>
                
