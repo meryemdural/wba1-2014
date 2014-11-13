@@ -244,45 +244,48 @@ select {
     overflow-y: scroll; 
     position: absolute;
     height: 280px;
-    padding: 10px;
+    padding-left: 10px;
     width: 520px;
     left: 200px;
     top: 220px;
     border: 2px solid;
     float: left;
+    background: #fff;
 }
 
 #canvas-holder-1 {
-    height: 250px;
-    width: 250px;
+    height: 240px;
+    width: 240px;
+    margin-bottom: 10px;
 }
 
 #canvas-holder-2 {
-    height: 250px;
-    width: 250px;
+    height: 240px;
+    width: 240px;
+    margin-bottom: 10px;
 }
 
 #canvas-holder-3 {
-    height: 250px;
-    width: 250px;
-    margin-top: 10px;
+    height: 240px;
+    width: 240px;
+    magin-bottom: 10px;
 }
 
 #canvas-holder-4 {
-    height: 250px;
-    width: 250px;
-    margin-top: 10px;
+    height: 240px;
+    width: 240px;
+    margin-bottom: 10px;
 }
 
 #canvas-holder-5 {
-    height: 250px;
-    width: 250px;
-    margin-top: 10px;
+    height: 240px;
+    width: 240px;
+    margin-bottom: 10px;
 }
 
 #canvas-holder-6 {
-    height: 250px;
-    width: 250px;
+    height: 240px;
+    width: 240px;
     margin-top: 10px;
 }
 
