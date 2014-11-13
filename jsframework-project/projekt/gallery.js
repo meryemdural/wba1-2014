@@ -1,6 +1,5 @@
 count = 0; //Versuchscounter
 	
-
 /*Startzustand setzen*/
 function set(){
     responsive();
@@ -164,13 +163,6 @@ function addBlockSize3(content){
 }
 
 
-
-
-
-
-
-
-
 /* Ausgabe des Array in Konsole console
    Debug Funktion aus der Entwicklung */
 function ausgabe(){
@@ -203,8 +195,6 @@ function ausgeben(){
 	
 	}
 }
-
-
 
 
 /* Galerie neu anordnen */
