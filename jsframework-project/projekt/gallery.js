@@ -176,7 +176,7 @@ function sort(){
 function ausgeben(){
     galleryBody =  $('<div></div>') .attr('class', 'gallery-body')
                                     .css('width', breite*width);
-	$('body').append(galleryBody); //Gallery Body in DOM einfuegen
+	$(parentBlock).append(galleryBody); //Gallery Body in DOM einfuegen
 	for(x = 0; x < f.length; x++){
 		for(y = 0; y < breite; y++){
 			element = f[x][y];
@@ -216,8 +216,7 @@ ausgeben();
 	
 $(window).resize(checkWindowSize);
 function checkWindowSize(){
-    maxWidth = $('body').width();
-    console.log ( (breite * width) + " < " + maxWidth)
+    maxWidth = $(parentBlock).width();
     if((breite * width) > maxWidth || ((breite + 2) * width) < maxWidth ){
         shuffle();
     }

@@ -4,6 +4,7 @@ posx = 0; //Position im Array Laufvariable
 posy = 0; //Position im Array Laufvariable
 width = 160; //Breite der Elemente inkl. css-border
 height = 160; // Hoehe der Elemente inkl. css-border
+parentBlock = '#gallery';
 
 ga = [
 '<div class="text"><h2>Selbstausrichtende Gallerie</h2>Ein Projekt im Rahmen des Fachs Web-basierte Anwendungen der FH K&ouml;ln am Campus Gummersbach. Erstellt durch Christhop Schnock und Oliver Zolper.<br><br><a href="bilder/bildquellen.txt">Bildquellen</a><br><br><a href="javascript: shuffle();">Shuffle</a><div>',
