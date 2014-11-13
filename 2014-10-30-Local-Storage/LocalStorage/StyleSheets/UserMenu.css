@@ -1,0 +1,118 @@
+﻿/*Style for Top User Menu goes here*/
+
+.search-inputs {
+    top: 82px;
+    left: 350px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.search-button {
+    width: 75px;
+    height: 38px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #FF5500;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+
+.search-field {
+    width: 300px;
+    height: 32px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 14px;
+}
+
+.user-menu {
+    top: 117px;
+    z-index: 1;
+    left: 800px;
+    height: 35px;
+    width: 197px;
+    position: relative;
+    background-color: #FF5500;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.profil-menu {
+    color: white;
+    position: absolute;
+    top: -7px;
+    left: 93px;
+}
+
+.arrow-profile, .arrow-chart {
+    color: white;
+    font: bold 25px 'arial, verdana';
+    position: relative;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+.arrow-profile {
+    left: 90px;
+    bottom: -50px;
+
+}
+
+.arrow-chart {
+    left: -28px;
+    bottom: 5px;
+}
+
+.drop-down-menu {
+    color: black;
+    width: 186px;
+    height: auto;
+    top: 30px;
+    position: absolute;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 0 1px 1px;
+}
+
+.imgThumbnail {
+    height: 100px;
+    width: 185px;
+    margin-bottom: -90px;
+    -webkit-box-shadow: 0 1px 2px 1px #585858;
+}
+
+.imgThumbnail img {
+    max-height: 100px;
+    max-width: 100px;
+    box-shadow: 1px 1px 4px;
+}
+
+
+.title, .price-info {
+    display: block;
+    bottom: 20px;
+    left: 75px;
+    position: relative;
+}
+
+.correct-space {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    bottom: 10px;
+    left: 160px;
+    position: relative;
+}
+
+.vLine {
+    width: 1px;
+    height: 20px;
+    left: 80px;
+    top: 5px;
+    position: relative;
+    background-color: white;
+    border-left: 1px solid white;
+}
