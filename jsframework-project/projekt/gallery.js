@@ -203,7 +203,7 @@ function shuffle(){
 	$('.gallery-body-old').remove();
 }
 
-set();
+set(); 
 sort();
 ausgeben();
 
