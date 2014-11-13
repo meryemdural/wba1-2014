@@ -1,0 +1,315 @@
+/*-- Allgemeine Styles --*/
+body {
+    overflow: hidden;
+    font-family: avenir next, arial;
+    color: #888;
+}
+
+a {
+    text-decoration: none;
+    color: #428bca;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px 0 0 23px;
+    -webkit-border-radius:18px;
+    -moz-border-radius:18px;
+    border-radius: 18px;
+    background: #fff;
+    color: #888;
+    border: none;
+    box-shadow: 0 3px 0 #ccc;
+}
+
+/* erzeugt einen "Klick" Effekt beim Drücken des Buttons */
+button:active {
+    position: relative;
+    margin-top: 1px;
+}
+
+#Bundes2_LineChart {
+    background: #428cba;
+    color: #F0F0F0;
+    box-shadow: 0 3px 0 #3979A0;
+}
+
+#Bundes_LineChart {
+    background: #ffb600;
+    box-shadow: 0 3px 0 #BF8800;
+}
+
+select {
+    padding:5px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc;
+    -moz-box-shadow: 0 3px 0 #ccc;
+    box-shadow: 0 3px 0 #ccc;
+    background: #fff;
+    color: #888;
+    border:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+
+/*----------------------------------------------------------*/
+/*-- Panels sind die einzelnen "Unterseiten" der Webseite. -*/
+.unterseite {
+    background: #F0F0F0;
+    overflow: hidden;
+}
+
+.unterseite h2 {
+    color: #428bca;
+    text-shadow: 2px 1px 1px rgba(66,139,202,0.3);
+    font-size: 46px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+/*----------------------------------------------------------*/
+/*-- .text ist für die Anordnung des Textes verantwortlich -*/
+.sektionen .text {
+    position: absolute;
+    left: 10%;
+    top: 2%;
+    height: 80%;
+    width: 80%;   
+}
+
+
+.unterseite p {
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.unterseite ul{
+    list-style: none;
+}
+
+/*-- Klasse, welche alle anderen Klassen beinhaltet. 
+    Regelt die Höhe und Breite der einzelnen Sektionen und Panels -*/
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.content > a,
+.content > input {
+    position: fixed;
+    bottom: 0px;
+    width: 25%;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+}
+
+/*-- Sorgt dafür, dass die Radio-Buttons nicht sichtbar sind, jedoch anstatt des Ankers gedrückt werden -*/
+
+.content > input {
+    opacity: 0;
+    z-index: 100;
+}
+
+.content > a {
+    z-index: 10;
+    background: #428bca;
+    color: #ffb600;
+    text-align: center;
+    font-size: 14px;
+}
+
+/*-- Anordnung der Navigationsleiste am Boden der Seite--*/
+
+#navi-punkt-1, #navi-punkt-1 + a {
+    left: 0;
+}
+
+#navi-punkt-2, #navi-punkt-2 + a {
+    left: 25%;
+}
+
+#navi-punkt-3, #navi-punkt-3 + a {
+    left: 50%;
+}
+
+#navi-punkt-4, #navi-punkt-4 + a {
+    left: 75%;
+}
+
+.content > input:checked + a,
+.content > input:checked:hover + a {
+    background: #ffb600;
+    color: #428bca;
+}
+
+/*-- Das Dreieck über dem Aktivem Navigationsleistenelement --*/
+.content > input:checked + a:after,
+.content > input:checked:hover + a:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #ffb600;
+    border-width: 20px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.content > input:hover + a {
+    background: #ffb600;
+    color: #428bca;
+}
+
+.sektionen,
+.unterseite {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.sektionen {
+    top: 0;
+    left: 0;
+    transition: all 0.6s ease-in-out;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+
+
+/* Dieser Abschnitt regelt den Seitenwechsel, wenn man eine "Unterseite" in der 
+    Navigationsleiste antippt. 
+    Der Quelltext wird folgendermaßen gelesen: 
+    Wenn beispielsweise "#st-control-2" als "checked" markiert wird
+    soll ".sektion" und all seine Tochterelemente sich zur position 100% auf der Y-Achse "transformieren" (bewegen).
+    100%, da jedes Panel 100% des Screens anzeigt und somit die komplette Anzeigefläche blockiert. 
+*/
+
+#navi-punkt-1:checked ~ .sektionen {
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-o-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	transform: translateY(0%);
+}
+#navi-punkt-2:checked ~ .sektionen {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+#navi-punkt-3:checked ~ .sektionen {
+	-webkit-transform: translateY(-200%);
+	-moz-transform: translateY(-200%);
+	-o-transform: translateY(-200%);
+	-ms-transform: translateY(-200%);
+	transform: translateY(-200%);
+}
+#navi-punkt-4:checked ~ .sektionen {
+	-webkit-transform: translateY(-300%);
+	-moz-transform: translateY(-300%);
+	-o-transform: translateY(-300%);
+	-ms-transform: translateY(-300%);
+	transform: translateY(-300%);
+}
+#navi-punkt-5:checked ~ .sektionen {
+	-webkit-transform: translateY(-400%);
+	-moz-transform: translateY(-400%);
+	-o-transform: translateY(-400%);
+	-ms-transform: translateY(-400%);
+	transform: translateY(-400%);
+}
+
+/*-- canvas-holder beinhalten die Charts. Hier wird die größe des jeweiligen Charts geregelt --*/
+#canvas-holder {
+    height: 250px;
+    width: 250px;
+}
+
+/*--  --*/
+.canvas_slider {
+    overflow-y: scroll; 
+    position: absolute;
+    height: 280px;
+    padding-left: 10px;
+    width: 520px;
+    left: 200px;
+    top: 220px;
+    border: 2px solid;
+    float: left;
+    background: #fff;
+}
+
+#canvas-holder-1 {
+    height: 240px;
+    width: 240px;
+    margin-bottom: 10px;
+}
+
+#canvas-holder-2 {
+    height: 240px;
+    width: 240px;
+    margin-bottom: 10px;
+}
+
+#canvas-holder-3 {
+    height: 240px;
+    width: 240px;
+    magin-bottom: 10px;
+}
+
+#canvas-holder-4 {
+    height: 240px;
+    width: 240px;
+    margin-bottom: 10px;
+}
+
+#canvas-holder-5 {
+    height: 240px;
+    width: 240px;
+    margin-bottom: 10px;
+}
+
+#canvas-holder-6 {
+    height: 240px;
+    width: 240px;
+    margin-top: 10px;
+}
+
+#canvas-holder-10 {
+    margin-left: 20%;
+}
+/*-- Auswahlboxen für die initialisierung der Linien-Charts. --*/
+#Stundiengange {
+    padding-right: 15px;
+}
+
+#Bundeslander {
+    padding-right: 15px;
+}
+
+#Semester {
+    float: left;
+    padding-right: 15px;
+}
+
+#Bundeslander2 {
+    padding-right: 15px;
+}
+
+#chart-area-LineChart {
+    position: absolute;
+}
