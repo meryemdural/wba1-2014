@@ -1,0 +1,28 @@
+body {
+    background-color: #000;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+
+.logo{
+    background: url("../img/logo-negativ.svg") no-repeat;
+}
+
+
+#breadcrumb a{
+    color: #fff;
+}
+
+
+.textlink {
+    color: #fff;
+}
+
+.info {
+    color: #77cc00;
+}
+
+nav a {
+    color: #fff;
+}
