@@ -212,9 +212,7 @@ function shuffle(){
 
 
 
-/*EventHandler*/
-
-	
+/*EventHandler*/	
 $(window).resize(function checkWindowSize(){
     maxWidth = $(parentBlock).width();
     if((breite * width) > maxWidth || ((breite + 2) * width) < maxWidth ){
@@ -222,7 +220,8 @@ $(window).resize(function checkWindowSize(){
     }
 });
 
-$( document ).ready(function() {
+/* Laden der Galerie wenn Dokument fertig geladen */
+$(document).ready(function() {
     set(); 
     sort();
     ausgeben();
