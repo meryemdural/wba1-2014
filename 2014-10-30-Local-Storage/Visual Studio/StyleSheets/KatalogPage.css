@@ -1,0 +1,23 @@
+﻿.filme-section {
+    top: 20px;
+    margin: 10px 10px auto;
+    width: 98%;
+    border-radius: 2px;
+    position: relative;
+    padding-top: 10px;
+    height:200px;
+}
+
+.katalog-page {
+    margin: 120px auto;
+    width: 1000px;
+    height: auto;
+    position: relative;
+}
+
+.not-implemented {
+    text-align: center; 
+    font-family: "Times New Roman", Times, serif;
+    font-size: 100px;
+    font-weight: bolder;
+}
