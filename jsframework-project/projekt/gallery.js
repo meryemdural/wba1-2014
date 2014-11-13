@@ -206,9 +206,7 @@ function shuffle(){
 	$('.gallery-body-old').remove();
 }
 
-set(); 
-sort();
-ausgeben();
+
 
 
 
@@ -217,10 +215,15 @@ ausgeben();
 /*EventHandler*/
 
 	
-$(window).resize(checkWindowSize);
-function checkWindowSize(){
+$(window).resize(function checkWindowSize(){
     maxWidth = $(parentBlock).width();
     if((breite * width) > maxWidth || ((breite + 2) * width) < maxWidth ){
         shuffle();
     }
-}
+});
+
+$( document ).ready(function() {
+    set(); 
+    sort();
+    ausgeben();
+});
