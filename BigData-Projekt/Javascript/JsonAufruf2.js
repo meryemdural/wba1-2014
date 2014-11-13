@@ -13,8 +13,8 @@ $(window).ready(function(){
             var neu = index3;
             ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/baden_wurttemberg.json", function(data0){
-                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+            $.getJSON("JSON/baden_wurttemberg.json", function(data0){
+                 $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                      //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                      var jsLang3 = $('#Bundes2_LineChart :selected').val();
                      switch(jsLang3){
@@ -150,7 +150,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -188,7 +188,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -226,7 +226,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -264,7 +264,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -302,7 +302,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -340,7 +340,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -378,7 +378,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -416,7 +416,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -454,7 +454,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -492,7 +492,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -530,7 +530,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -568,7 +568,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -606,7 +606,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -644,7 +644,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -682,7 +682,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -720,7 +720,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen.json", function(data2){
+                            $.getJSON("JSON/sachsen.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -773,8 +773,8 @@ $(window).ready(function(){
             var neu = index3;
             ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/bayern.json", function(data0){
-                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+            $.getJSON("JSON/bayern.json", function(data0){
+                 $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                      //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                      var jsLang3 = $('#Bundes2_LineChart :selected').val();
                      switch(jsLang3){
@@ -910,7 +910,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -948,7 +948,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -986,7 +986,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1024,7 +1024,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1062,7 +1062,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1100,7 +1100,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1138,7 +1138,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1176,7 +1176,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1214,7 +1214,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1252,7 +1252,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1290,7 +1290,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1328,7 +1328,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1366,7 +1366,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1404,7 +1404,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1442,7 +1442,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1480,7 +1480,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen.json", function(data2){
+                            $.getJSON("JSON/sachsen.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1533,8 +1533,8 @@ $(window).ready(function(){
             var neu = index3;
             ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/berlin.json", function(data0){
-                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+            $.getJSON("JSON/berlin.json", function(data0){
+                 $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                      //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                      var jsLang3 = $('#Bundes2_LineChart :selected').val();
                      switch(jsLang3){
@@ -1670,7 +1670,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -1708,7 +1708,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1746,7 +1746,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1784,7 +1784,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1822,7 +1822,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1860,7 +1860,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1898,7 +1898,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1936,7 +1936,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -1974,7 +1974,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2012,7 +2012,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2050,7 +2050,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2088,7 +2088,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2126,7 +2126,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2164,7 +2164,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2202,7 +2202,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2240,7 +2240,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen.json", function(data2){
+                            $.getJSON("JSON/sachsen.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2293,8 +2293,8 @@ $(window).ready(function(){
             var neu = index3;
             ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/brandenburg.json", function(data0){
-                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+            $.getJSON("JSON/brandenburg.json", function(data0){
+                 $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                      //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                      var jsLang3 = $('#Bundes2_LineChart :selected').val();
                      switch(jsLang3){
@@ -2430,7 +2430,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -2468,7 +2468,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2506,7 +2506,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2544,7 +2544,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2582,7 +2582,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2620,7 +2620,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2658,7 +2658,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2696,7 +2696,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2734,7 +2734,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2772,7 +2772,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2810,7 +2810,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2848,7 +2848,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2886,7 +2886,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2924,7 +2924,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -2962,7 +2962,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3000,7 +3000,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen.json", function(data2){
+                            $.getJSON("JSON/sachsen.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3053,8 +3053,8 @@ $(window).ready(function(){
             var neu = index3;
             ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/bremen.json", function(data0){
-                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+            $.getJSON("JSON/bremen.json", function(data0){
+                 $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                      //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                      var jsLang3 = $('#Bundes2_LineChart :selected').val();
                      switch(jsLang3){
@@ -3190,7 +3190,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -3228,7 +3228,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3266,7 +3266,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3304,7 +3304,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3342,7 +3342,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3380,7 +3380,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3418,7 +3418,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3456,7 +3456,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3494,7 +3494,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3532,7 +3532,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3570,7 +3570,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3608,7 +3608,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3646,7 +3646,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3684,7 +3684,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3722,7 +3722,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3776,8 +3776,8 @@ $(window).ready(function(){
                             var neu = index3;
                             ChartActive15();
                             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-                            $.getJSON("../JSON/sachsen.json", function(data0){
-                            $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+                            $.getJSON("JSON/sachsen.json", function(data0){
+                            $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                             //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                             var jsLang3 = $('#Bundes2_LineChart :selected').val();
                             
@@ -3914,7 +3914,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -3952,7 +3952,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -3990,7 +3990,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4028,7 +4028,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4066,7 +4066,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4104,7 +4104,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4142,7 +4142,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4180,7 +4180,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4218,7 +4218,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4256,7 +4256,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4294,7 +4294,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4332,7 +4332,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4370,7 +4370,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4408,7 +4408,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4446,7 +4446,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4499,8 +4499,8 @@ $(window).ready(function(){
                             var neu = index3;
                             ChartActive15();
                             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-                            $.getJSON("../JSON/hamburg.json", function(data0){
-                            $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+                            $.getJSON("JSON/hamburg.json", function(data0){
+                            $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                             //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                             var jsLang3 = $('#Bundes2_LineChart :selected').val();
                             
@@ -4637,7 +4637,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -4675,7 +4675,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4713,7 +4713,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4751,7 +4751,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4789,7 +4789,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4827,7 +4827,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4865,7 +4865,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4903,7 +4903,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4941,7 +4941,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -4979,7 +4979,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5017,7 +5017,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5055,7 +5055,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5093,7 +5093,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5131,7 +5131,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5169,7 +5169,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5223,8 +5223,8 @@ $(window).ready(function(){
                             var neu = index3;
                             ChartActive15();
                             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-                            $.getJSON("../JSON/hessen.json", function(data0){
-                            $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+                            $.getJSON("JSON/hessen.json", function(data0){
+                            $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                             //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                             var jsLang3 = $('#Bundes2_LineChart :selected').val();
                             
@@ -5361,7 +5361,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -5399,7 +5399,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5437,7 +5437,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5475,7 +5475,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5513,7 +5513,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5551,7 +5551,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5589,7 +5589,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5627,7 +5627,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5665,7 +5665,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5703,7 +5703,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5741,7 +5741,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5779,7 +5779,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5817,7 +5817,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5855,7 +5855,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5893,7 +5893,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -5946,8 +5946,8 @@ $(window).ready(function(){
             var neu = index3;
             ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data0){
-                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data0){
+                 $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                      //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                      var jsLang3 = $('#Bundes2_LineChart :selected').val();
                      switch(jsLang3){
@@ -6083,7 +6083,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -6121,7 +6121,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6159,7 +6159,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6197,7 +6197,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6235,7 +6235,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6273,7 +6273,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6311,7 +6311,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6349,7 +6349,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6387,7 +6387,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6425,7 +6425,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6463,7 +6463,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6501,7 +6501,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6539,7 +6539,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6577,7 +6577,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6615,7 +6615,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6653,7 +6653,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen.json", function(data2){
+                            $.getJSON("JSON/sachsen.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6706,8 +6706,8 @@ $(window).ready(function(){
             var neu = index3;
             ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/niedersachsen.json", function(data0){
-                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+            $.getJSON("JSON/niedersachsen.json", function(data0){
+                 $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                      //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                      var jsLang3 = $('#Bundes2_LineChart :selected').val();
                      switch(jsLang3){
@@ -6843,7 +6843,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -6881,7 +6881,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6919,7 +6919,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6957,7 +6957,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -6995,7 +6995,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7033,7 +7033,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7071,7 +7071,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7109,7 +7109,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7147,7 +7147,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7185,7 +7185,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7223,7 +7223,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7261,7 +7261,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7299,7 +7299,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7337,7 +7337,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7375,7 +7375,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7413,7 +7413,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen.json", function(data2){
+                            $.getJSON("JSON/sachsen.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7466,8 +7466,8 @@ $(window).ready(function(){
             var neu = index3;
             ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/nordrhein_westfalen.json", function(data0){
-                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+            $.getJSON("JSON/nordrhein_westfalen.json", function(data0){
+                 $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                      //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                      var jsLang3 = $('#Bundes2_LineChart :selected').val();
                      switch(jsLang3){
@@ -7603,7 +7603,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -7641,7 +7641,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7679,7 +7679,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7717,7 +7717,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7755,7 +7755,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7793,7 +7793,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7831,7 +7831,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7869,7 +7869,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7907,7 +7907,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7945,7 +7945,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -7983,7 +7983,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8021,7 +8021,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8059,7 +8059,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8097,7 +8097,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8135,7 +8135,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8173,7 +8173,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen.json", function(data2){
+                            $.getJSON("JSON/sachsen.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8226,8 +8226,8 @@ $(window).ready(function(){
             var neu = index3;
             ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/rheinland_pfalz.json", function(data0){
-                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+            $.getJSON("JSON/rheinland_pfalz.json", function(data0){
+                 $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                      //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                      var jsLang3 = $('#Bundes2_LineChart :selected').val();
                      switch(jsLang3){
@@ -8363,7 +8363,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -8401,7 +8401,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8439,7 +8439,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8477,7 +8477,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8515,7 +8515,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8553,7 +8553,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8591,7 +8591,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8629,7 +8629,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8667,7 +8667,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8705,7 +8705,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8743,7 +8743,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8781,7 +8781,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8819,7 +8819,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8857,7 +8857,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8895,7 +8895,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8933,7 +8933,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen.json", function(data2){
+                            $.getJSON("JSON/sachsen.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -8986,8 +8986,8 @@ $(window).ready(function(){
             var neu = index3;
             ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/saarland.json", function(data0){
-                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+            $.getJSON("JSON/saarland.json", function(data0){
+                 $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                      //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                      var jsLang3 = $('#Bundes2_LineChart :selected').val();
                      switch(jsLang3){
@@ -9123,7 +9123,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -9161,7 +9161,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9199,7 +9199,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9237,7 +9237,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9275,7 +9275,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9313,7 +9313,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9351,7 +9351,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9389,7 +9389,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9427,7 +9427,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9465,7 +9465,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9503,7 +9503,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9541,7 +9541,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9579,7 +9579,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9617,7 +9617,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9655,7 +9655,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9693,7 +9693,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen.json", function(data2){
+                            $.getJSON("JSON/sachsen.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9746,8 +9746,8 @@ $(window).ready(function(){
             var neu = index3;
             ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/sachsen_anhalt.json", function(data0){
-                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+            $.getJSON("JSON/sachsen_anhalt.json", function(data0){
+                 $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                      //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                      var jsLang3 = $('#Bundes2_LineChart :selected').val();
                      switch(jsLang3){
@@ -9883,7 +9883,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -9921,7 +9921,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9959,7 +9959,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -9997,7 +9997,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10035,7 +10035,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10073,7 +10073,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10111,7 +10111,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10149,7 +10149,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10187,7 +10187,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10225,7 +10225,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10263,7 +10263,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10301,7 +10301,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10339,7 +10339,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10377,7 +10377,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10415,7 +10415,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10453,7 +10453,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen.json", function(data2){
+                            $.getJSON("JSON/sachsen.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10506,8 +10506,8 @@ $(window).ready(function(){
             var neu = index3;
             ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/schleswig_holstein.json", function(data0){
-                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+            $.getJSON("JSON/schleswig_holstein.json", function(data0){
+                 $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                      //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                      var jsLang3 = $('#Bundes2_LineChart :selected').val();
                      switch(jsLang3){
@@ -10643,7 +10643,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -10681,7 +10681,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10719,7 +10719,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10757,7 +10757,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10795,7 +10795,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10833,7 +10833,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10871,7 +10871,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10909,7 +10909,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10947,7 +10947,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -10985,7 +10985,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11023,7 +11023,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11061,7 +11061,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11099,7 +11099,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11137,7 +11137,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11175,7 +11175,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11213,7 +11213,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen.json", function(data2){
+                            $.getJSON("JSON/sachsen.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11266,8 +11266,8 @@ $(window).ready(function(){
             var neu = index3;
             ChartActive15();
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/thuringen.json", function(data0){
-                 $.getJSON("../JSON/studienanfanger_bundeslander.json", function(data1){
+            $.getJSON("JSON/thuringen.json", function(data0){
+                 $.getJSON("JSON/studienanfanger_bundeslander.json", function(data1){
                      //Switch für die Auswahl in der studienanfanger_bundeslander, ineu wird als Index beim Objekt benutzt
                      var jsLang3 = $('#Bundes2_LineChart :selected').val();
                      switch(jsLang3){
@@ -11403,7 +11403,7 @@ $(window).ready(function(){
                             var hu = parseInt(index1+14);
                             
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/baden_wurttemberg.json", function(data2){
+                            $.getJSON("JSON/baden_wurttemberg.json", function(data2){
                             var ws1 = parseFloat(data2.baden_wurttemberg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]); 
                             var ws3 = parseFloat(data2.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
@@ -11441,7 +11441,7 @@ $(window).ready(function(){
                          break;
                          case "bayern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bayern.json", function(data2){     
+                            $.getJSON("JSON/bayern.json", function(data2){     
                             var ws1 = parseFloat(data2.bayern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bayern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bayern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11479,7 +11479,7 @@ $(window).ready(function(){
                          break;
                          case "berlin":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/berlin.json", function(data2){     
+                            $.getJSON("JSON/berlin.json", function(data2){     
                             var ws1 = parseFloat(data2.berlin[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.berlin[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.berlin[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11517,7 +11517,7 @@ $(window).ready(function(){
                          break;
                          case "brandenburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/brandenburg.json", function(data2){     
+                            $.getJSON("JSON/brandenburg.json", function(data2){     
                             var ws1 = parseFloat(data2.brandenburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.brandenburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11555,7 +11555,7 @@ $(window).ready(function(){
                          break;
                          case "bremen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/bremen.json", function(data2){     
+                            $.getJSON("JSON/bremen.json", function(data2){     
                             var ws1 = parseFloat(data2.bremen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.bremen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.bremen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11593,7 +11593,7 @@ $(window).ready(function(){
                          break;
                          case "hamburg":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hamburg.json", function(data2){     
+                            $.getJSON("JSON/hamburg.json", function(data2){     
                             var ws1 = parseFloat(data2.hamburg[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hamburg[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11631,7 +11631,7 @@ $(window).ready(function(){
                          break;
                          case "hessen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/hessen.json", function(data2){     
+                            $.getJSON("JSON/hessen.json", function(data2){     
                             var ws1 = parseFloat(data2.hessen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.hessen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.hessen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11669,7 +11669,7 @@ $(window).ready(function(){
                          break;
                          case "mecklenburg_vorpommern":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/mecklenburg_vorpommern.json", function(data2){     
+                            $.getJSON("JSON/mecklenburg_vorpommern.json", function(data2){     
                             var ws1 = parseFloat(data2.mecklenburg_vorpommern[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.mecklenburg_vorpommern[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11707,7 +11707,7 @@ $(window).ready(function(){
                          break;
                          case "niedersachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/niedersachsen.json", function(data2){
+                            $.getJSON("JSON/niedersachsen.json", function(data2){
                             var ws1 = parseFloat(data2.niedersachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.niedersachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11745,7 +11745,7 @@ $(window).ready(function(){
                          break;
                          case "nordrhein_westfalen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/nordrhein_westfalen.json", function(data2){
+                            $.getJSON("JSON/nordrhein_westfalen.json", function(data2){
                             var ws1 = parseFloat(data2.nordrhein_westfalen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.nordrhein_westfalen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11783,7 +11783,7 @@ $(window).ready(function(){
                          break;
                          case "rheinland_pfalz":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/rheinland_pfalz.json", function(data2){
+                            $.getJSON("JSON/rheinland_pfalz.json", function(data2){
                             var ws1 = parseFloat(data2.rheinland_pfalz[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.rheinland_pfalz[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11821,7 +11821,7 @@ $(window).ready(function(){
                          break;
                          case "saarland":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/saarland.json", function(data2){
+                            $.getJSON("JSON/saarland.json", function(data2){
                             var ws1 = parseFloat(data2.saarland[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.saarland[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.saarland[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11859,7 +11859,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen_anhalt":
                              // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen_anhalt.json", function(data2){
+                            $.getJSON("JSON/sachsen_anhalt.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen_anhalt[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen_anhalt[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11897,7 +11897,7 @@ $(window).ready(function(){
                          break;
                          case "schleswig_holstein":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.schleswig_holstein[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.schleswig_holstein[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11935,7 +11935,7 @@ $(window).ready(function(){
                          break;
                          case "thuringen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/schleswig_holstein.json", function(data2){
+                            $.getJSON("JSON/schleswig_holstein.json", function(data2){
                             var ws1 = parseFloat(data2.thuringen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.thuringen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
@@ -11973,7 +11973,7 @@ $(window).ready(function(){
                          break;
                          case "sachsen":
                             // Index setzt sich aus index1 aus der Studiengang Selectbox zusammen und der Stellen in der JSON-Datei
-                            $.getJSON("../JSON/sachsen.json", function(data2){
+                            $.getJSON("JSON/sachsen.json", function(data2){
                             var ws1 = parseFloat(data2.sachsen[index1]["Insgesamt"]).toFixed(2); 
                             var ws2 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(7)]["Insgesamt"]).toFixed(2); 
                             var ws3 = parseFloat(data2.sachsen[parseInt(index1)+parseInt(14)]["Insgesamt"]).toFixed(2);
