@@ -1,0 +1,195 @@
+body {
+    margin:auto;
+    background-color: #fff;
+    
+}
+
+#wrap {
+    height:auto;
+    width:892px;
+    margin-top: 10px;
+    margin-left:52px;
+    postion: absolute;
+}
+
+* {
+    font-family: Myriad Pro, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+    line-height: 15px;
+}
+
+
+/*header */
+
+header {
+    float:left;
+    width:100%;
+    height:auto;
+    
+}
+
+#FHlogo {
+    margin-left: -20px;
+    
+}
+
+#MIlogo {
+    float:right;
+    margin-top: -40px;
+    padding-right: 10px;
+}
+
+#MIlogo span {
+    color:#dd1166;
+}
+
+#headerzeile {
+    clear:both;
+    float:left;
+    }
+
+#grueneBox {
+    background-color: #77cc00;
+    text-transform: uppercase;
+    width:172 px;
+    margin-left: 8px;
+    float:left; 
+    color:#fff;
+    padding-left: 52px;
+    padding-right: 20px;
+    padding-bottom: 26px;
+    padding-top: 25px;
+    line-height: 20px;
+    margin-top: 10px;
+    
+}   
+
+#headerfoto {
+    clear:both;
+    float:left;
+    margin-top: 10px;
+}
+
+/*navigation*/
+ 
+#barrierenav {
+    float: right;
+    padding-right: 10px;  
+}
+
+.normal, .gross {
+    text-decoration: none;
+}
+
+ nav {
+    float:left;
+    padding-top: 20px;
+    width: 172px;
+    height:100%;
+    position:static;
+    
+ }
+
+nav li {
+    list-style: none;
+    text-indent: -38px;   
+}
+
+#liniepink {
+    border-bottom: solid 1px #d16;
+    margin-right: 12px;
+    margin-top: 10px;
+}
+
+nav a{
+    color: #d16;
+     text-decoration: none;
+}
+
+/*drei Fälle um Navigation mit der Tastatur zu ermöglichen*/
+
+nav a:hover, nav a:focus, nav a:active {
+	background: #d16;
+	color: #fff !important;
+	padding: 2px;
+}
+
+nav a:visited{
+	border: none;
+}
+
+
+
+#breadcrumb a {
+    text-decoration: none;
+}
+
+#breadcrumb a:hover,#breadcrumb a:focus,#breadcrumb a:active {
+    text-decoration: underline;
+}
+
+
+
+
+
+/*schriften*/
+
+h1 {
+background: #d16;
+color: #fff;
+font-size: 13px;
+font-weight: bold;
+padding: 4px;
+padding-top: 6px;
+padding-left: 4px;
+padding-right: 4px;
+margin-top:;
+text-transform: uppercase;
+margin-bottom: 15px;
+float: left;
+letter-spacing: 1px;
+text-align: left;
+
+}
+
+h2 {
+    color: #77cc00;
+    font-size: 15px;
+    float:left;
+}
+
+#text {
+    width: 532px;
+    float:left;
+    padding-left: 8px;
+    padding-top: 25px;
+    
+}
+#text p {
+    text-align: block;
+      
+}
+
+
+/*  to do: Farbe grau und Aufzählungs Punkte größer*/
+#text ul {
+    list-style: square;
+    margin-left: -25px;
+}
+
+#vergroessert {
+    font-size: 18px;
+}
+
+
+        
+/*footer*/
+
+footer {
+clear: both;
+border-top: solid 3px #77cc00;
+padding-bottom: 16px;
+width: 100%;
+}
