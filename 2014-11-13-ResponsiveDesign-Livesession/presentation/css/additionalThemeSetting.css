@@ -1,0 +1,57 @@
+#section .nebeneinander{
+	display:inline;
+}
+
+#logoContainer {
+	width:25%;
+	height:25%;
+	position:fixed;
+	left:50px;
+	bottom:10px;
+	z-index:999;
+}
+
+html.hellogoodbye #logoContainer{
+	display: none !important;
+}
+.img150
+{
+float: left;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+
+.hellogoodbye .reveal .state-background {
+	 background: #000;
+	  background: -moz-radial-gradient(center, circle cover, #633a01 0%, #261600 100%);
+	  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #633a01), color-stop(100%, #261600));
+	  background: -webkit-radial-gradient(center, circle cover, #633a01 0%, #261600 100%);
+	  background: -o-radial-gradient(center, circle cover, #633a01 0%, #261600 100%);
+	  background: -ms-radial-gradient(center, circle cover, #633a01 0%, #261600 100%);
+	  background: radial-gradient(center, circle cover, #633a01 0%, #261600 100%);
+	  background-color: #000;
+}
+
+.green .reveal .state-background {
+	 background: #000;
+	  background: -moz-radial-gradient(center, circle cover, #46730b 0%, #162601 100%);
+	  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #46730b), color-stop(100%, #162601));
+	  background: -webkit-radial-gradient(center, circle cover, #46730b 0%, #162601 100%);
+	  background: -o-radial-gradient(center, circle cover, #46730b 0%, #162601 100%);
+	  background: -ms-radial-gradient(center, circle cover, #46730b 0%, #162601 100%);
+	  background: radial-gradient(center, circle cover, #46730b 0%, #162601 100%);
+	  background-color: #000;
+}
+
+.red .reveal .state-background {
+	 background: #000;
+	  background: -moz-radial-gradient(center, circle cover, #74060 0%, #340202 100%);
+	  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #74060), color-stop(100%, #340202));
+	  background: -webkit-radial-gradient(center, circle cover, #74060 0%, #340202 100%);
+	  background: -o-radial-gradient(center, circle cover, #74060 0%, #340202 100%);
+	  background: -ms-radial-gradient(center, circle cover, #74060 0%, #340202 100%);
+	  background: radial-gradient(center, circle cover, #74060 0%, #340202 100%);
+	  background-color: #000;
+}
