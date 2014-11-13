@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Responsive Webdesign</title>
+
+		<meta name="description" content="Eine Livesession zu ResponsiveWebdesign im Rahmen des Moduls WBA1 an der Fachhochschule Köln am Campus Gummersbach">
+		<meta name="author" content="Maxim Engelmann & Stefan Barbie">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/additionalThemeSetting.css">
+		
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-state="hellogoodbye" class="future" class="ohneLogo" style="display: block;">
+					<h1>Responsive Webdesign</h1>
+					<h3>Livesession</h3>
+					<p>
+						<small>Created by<br/>Stefan Barbie und Maxim Engelmann</small>
+					</p>
+				</section>
+				
+				<section data-state="hellogoodbye" class="future" style="display: block;">
+					<h2>Inhaltsverzeichnis</h2>
+					
+					<ul>
+					<li>Was ist Responsive Webdesign?</li>
+					<li>Wie hat es sich entwickelt?</li>
+					<li>Wer hat's erfunden?</li>
+					<li>Geschichte</li>
+					<li>Warum das Ganze?</li>
+					<li>Adaptive vs. Responsive</li>
+					<li>Vor- und Nachteile von Adaptive und Responsive</li>
+					<li>Worauf ist zu achten?</li>
+					<li>Testing-Tools</li>
+					</ul>
+				</section>
+				
+				<section data-state="hellogoodbye" class="future" style="display: block;">
+					<h2>Inhaltsverzeichnis</h2>
+					
+					<ul>
+					<li>Das Prinzip</li>
+					<li>Anpassung des Viewports</li>
+					<li>Relative Wertangaben</li>
+					<li>Media Queries</li>
+					<li>Einfaches Beispiel</li>
+					<li>Übung</li>
+					</ul>
+				</section>
+
+				<section class="future" style="display: none;">
+					<h2>Was ist überhaupt<br/>Responsive Webdesign?</h2>
+					<p>
+					<p><img src="responsive-webdesign2.png" alt="responsive-webdesign bild_1"></p>
+					</p>
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Wie hat sich das Ganze entwickelt?</h2>
+					<p>
+					<p><img src="veränderung im web.jpg" alt="veränderung im web"></p>
+					</p>
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Wer hat's erfunden?</h2>
+					<p>
+					<small><br/><br/><br/>Der Begriff „Responsive Webdesign“ </br> 
+					wurde erstmals von Ethan Marcotte </br> 
+					im Mai 2010 in einem Artikel </br> 
+					für das Magazin „A List Apart“ verwendet.
+					</br> </br> </br> 
+					<i>„But what’s next? An iPad website?</br> 
+					An N90 website? Can we really continue to commit</br> 
+					to supporting each new user agent</br> 
+					with its own bespoke experience?</br> 
+					At some point, this starts to feel like a zero sum game.</br> 
+					But how can we—and our designs—adapt?“</i>
+					</small>
+									
+					<img src="Ethan_Marcotte.jpg" width="387" height="517" align="right" alt="Ethan_Marcotte bild_2">	
+					</p>
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Geschichte</h2>
+					<ul>
+					<li>2010 - Begriff „Responsive Webdesign“ wird zum ersten mal verwendet</li>
+					<li>2011 - Marcotte bringt ein Buch mit dem Titel „Responsive Webdesign“ heraus</li>
+					<li>2012 - „Responsive Webdesign“ wird zum Trend für die Zukunft im Webdesign</li>
+					<li>2013 - wird zum „Jahr des Responsive Webdesign“</li>
+					</ul>
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Warum das Ganze?</h2>
+					
+					<br/>
+					<img src="01_This_is_the_web.png" class="nebeneinander" width="270px" height="225px" border="0" alt="Rose 1">
+					<img src="02_This_is_the_web.png" class="nebeneinander" width="270px" height="225px" border="0" alt="Rose 2">
+					<img src="03_This_is_the_web.png" class="nebeneinander" width="270px" height="225px" border="0" alt="Rose 3">
+					
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>adaptive vs. responsive</h2>
+					<p>
+					Es wird zwischen adaptiven (anpassungsfähigen, „adaptive“)</br>
+					und reaktionsfähigen („responsive“) Layouts unterschieden.
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>adaptive layout</h2>
+					<ul>
+					<li>Für verschiedene Displaygrößen optimierte Website</li>
+					<li>Meistens 3 verschiedene Displaygrößen</br>
+					(Desktop, Tablet und Smartphone)</li>
+					<li>Je ein Layout für die 3 Ansichten, also ein starres Gestaltungsraster</li>
+					</ul>
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Vorteile adaptive</h2>
+					<ul>
+					<li>Leichtere Planung und Arbeit mit Mockups, Wireframe und Skizzen, da feste Abmessungen existieren</li>
+					<li>Viel gestalterischer Freiraum, da mit einem starren Raster gearbeitet wird</li>
+					<li>Technisch recht unkomplizierte und zeitsparende Umzusetzung</li>
+					</ul>
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Nachteile adaptive</h2>
+					<ul>
+					<li>Nur für bestimmte Displaygrößen optimiert</li>
+					<li>Diese müssen erst durch eine Zielgruppenanalyse bestimmt werden</li>
+					<li>Häufige Fehldarstellung bei unpassenden Displaygrößen</li>					
+					</ul>
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Responsive layout</h2>
+					<ul>
+					<li>Für jede erdenkliche Displaygröße optimierte Website</li>
+					<li>Flüssiges Gestaltungsraster</li>
+					<li>Dynamisches Layout und perfekt angepasster Inhalt</li>
+					<img src="responsive-layout.png" alt="responsive-layout">
+					</ul>
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Vorteile responsive</h2>
+					<ul>
+					<li>Zukünftige Geräte werden automatisch mit abgedeckt</li>
+					<li>Die Informationen und der Inhalt werden bestmöglichst dargestellt</li>
+					<li>optimale Anpassung der Website an jede Bildschirmauflösung und -größe</li>
+					</ul>
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Nachteile responsive</h2>
+					<ul>
+					<li>Komplizierter bei der Planung, Gestaltung sowie der technischen Umsetzung</li>
+					<li>Aufwendiges Einfügen der Inhalte</li>
+					<li>Dadurch höhere Kosten</li>					
+					</ul>
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Worauf ist zu achten?</h2>
+					<ul>
+					<li>Kein festes Raster</li>
+					<li>Keine festen Schriftgrößen</li>
+					<li>Keine festen Bildgrößen</li>
+					<li>Prozentuale statt fest vorgegebene Pixelwerte</li>
+					<li>Mobile first</li>
+					<li>Website als ganzes betrachten</li>					
+					</ul>
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Testing-Tools</h2>
+					
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Manuel</h2>
+					<a href="http://www.railslove.com/"><img src="Browser_resizin.gif" width="480" height="360" alt="Browser_resizin"></a>
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Chrome Browser</h2>
+					<a href="http://www.sony.de/"><img src="CromeScreenshot.jpg" alt="CromeScreenshot"></a>
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Resizer</h2>
+					<img src="Resizer.jpg" alt="resizer">
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>Emulatoren</h2>
+					<img src="iPadEmulator.jpg" alt="resizer">
+				</section>
+				
+				<section class="future" style="display: none;">
+					<h2>ghostlab</h2>
+					<img src="ghostlab.gif" alt="resizer">
+				</section>
+				
+				<section data-state="green" class="future" style="display: none;">
+					<h2>Das Prinzip</h2>
+					<p>
+						<img src="funktionsweise-von-responsive-design.jpg" alt="funktionsweise">
+						<img src="rd-grafik.jpg" alt="bildschirme">
+					</p>
+				</section>
+				
+				<section data-state="green" class="future" style="display: none;">
+					<h2>Anpassung des Viewports</h2>
+				<p>
+					<ul>
+					Dieser Meta-Tag wirkt sich nur auf Mobilgeräte aus<br/>und wird im head der HTML-Datei eingefügt:
+					</ul>
+				</p>		
+				<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">&lt;meta</span> <span style="color: #bbbbbb">name=</span><span style="color: #ed9d13">&quot;viewport&quot;</span> <span style="color: #bbbbbb">content=</span><span style="color: #ed9d13">&quot;width=device-width, initial-scale=1.0&quot;</span> <span style="color: #6ab825; font-weight: bold">/&gt;</span>
+</pre></div>
+				<p>
+						<img src="ohne_Viewport-Meta-Tag.png" alt="ohne_Viewport-Meta-Tag" style="margin-right: 50px;">
+						<img src="mit_Viewport-Meta-Tag.png" alt="mit_Viewport-Meta-Tag">
+				</p>
+				<p>
+				<small style="margin-right: 90px;">ohne Viewport-Meta-Tag</small>
+				<small style="margin-right: 90px;">mit Viewport-Meta-Tag</small>
+				</p>		
+				</section>
+
+				<section data-state="green" class="future" style="display: none;">
+				<h2>Relative Wertangaben</h2>
+				<table>
+					<tbody><tr>
+						<td style="width: 100px;"><s>"px</s>"</td>
+						<td><s>"Pixel</s>"</td>
+					</tr>
+					<tr>
+						<td>%</td>
+						<td>Prozent: Je nach CSS-Eigenschaft relativ zur elementeigenen Größe, oder zu der des Elternelements, oder zu einem allgemeinen Kontext</td>
+					</tr>
+					<tr>
+						<td>em</td>
+						<td>Bezogen auf die Schriftgröße des Elements. Ausnahme: Wenn die font-size-Eigenschaft (also die Schriftgröße) selbst mit dieser Maßangabe gesetzt wird, bezieht sich die Angabe auf die Schriftgröße des Elternelements.</td>
+					</tr>
+					<tr>
+						<td>rem</td>
+						<td>(root em): Bezieht sich auf die Schriftgröße des Wurzelelements.</td>
+					</tr>
+
+				</tbody></table>
+				<p>
+				<ul>
+				<small>Quelle: <a href="http://fh-koeln.github.io/wba1-2014/2014-10-16-css-basics/index.html#/32" target="_blank">Maßeinheiten im Web (fh-koeln.github.io/wba1-2014)</a></small>
+				</ul>
+				</p>
+
+			</section>				
+				
+				<section data-state="green" class="future" style="display: none;">
+					<h2>Relative Wertangaben</h2>
+					<small>Beispiel:</small>
+					<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #447fcf">#content</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #6ab825; font-weight: bold">width</span><span style="color: #d0d0d0">:</span> <span style="color: #3677a9">640px</span><span style="color: #d0d0d0">;</span>
+    <span style="color: #6ab825; font-weight: bold">float</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">left</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+			<br/>
+			<br/>
+				<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #447fcf">#content</span> <span style="color: #d0d0d0">{</span>
+    <span style="color: #6ab825; font-weight: bold">width</span><span style="color: #d0d0d0">:</span> <span style="color: #3677a9">73</span><span style="color: #d0d0d0">%;</span>
+    <span style="color: #6ab825; font-weight: bold">float</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">left</span><span style="color: #d0d0d0">;</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+	
+				</section>	
+				
+				<section data-state="green" class="future" style="display: none;">
+					<img src="media-queries-css3.png" alt="media-queries-css3">
+				</section>
+
+				<section data-state="green" class="future" style="display: none;">
+					<img src="what_media_queries.png" alt="what_media_queries">
+				</section>
+				
+				<section data-state="green" class="future" style="display: none;">
+					<h2>Breakpoints</h2>
+					<p>Breakpoints sind Schwellenwerte</br>ab denen eine CSS Media Query greift</p>
+					<ul>
+					<li> <a href=http://www.iawriter.com/ipad/ target="_blank">Website mit einem Breakpoint </a></li>
+					<li> <a href=https://www.manymo.com/users/sign_in target="_blank">Website mit zwei Breakpoints </a></li>
+					<li> <a href=https://www.telekom-empfehlen.de/ target="_blank">Website mit mehreren Breakpoints </a></li>
+					<li> <a href=http://hack.institute/ target="_blank">Website mit mehreren Breakpoints </a></li>
+					</ul>
+				</section>
+				
+				<section data-state="green" class="future" style="display: none;">
+					<img src="css3-media-query-parts.jpg" alt="css3-media-query-parts">
+				</section>
+
+				<section data-state="green" class="future" style="display: none;">
+					<h2>Einbindung - Media Queries</h2>
+					<small>Beispiel: Medienabfrage im HTML-Dokument</small>
+					<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">&lt;link</span> <span style="color: #bbbbbb">rel=</span><span style="color: #ed9d13">&quot;stylesheet&quot;</span> <span style="color: #bbbbbb">href=</span><span style="color: #ed9d13">&quot;bildschirm-stylesheet.css&quot;</span> <span style="color: #bbbbbb">media=</span><span style="color: #ed9d13">&quot;screen&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span>
+<span style="color: #6ab825; font-weight: bold">&lt;link</span> <span style="color: #bbbbbb">rel=</span><span style="color: #ed9d13">&quot;stylesheet&quot;</span> <span style="color: #bbbbbb">href=</span><span style="color: #ed9d13">&quot;druck-stylesheet.css&quot;</span> <span style="color: #bbbbbb">media=</span><span style="color: #ed9d13">&quot;print&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span>
+</pre></div>		
+					<br/>
+					<small>Beispiel: Medienabfrage im HTML-Dokument</small>
+					<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">&lt;link</span> <span style="color: #bbbbbb">rel=</span><span style="color: #ed9d13">&quot;stylesheet&quot;</span> <span style="color: #bbbbbb">href=</span><span style="color: #ed9d13">&quot;stylesheet.css&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span>
+<span style="color: #6ab825; font-weight: bold">&lt;link</span> <span style="color: #bbbbbb">rel=</span><span style="color: #ed9d13">&quot;stylesheet&quot;</span> <span style="color: #bbbbbb">href=</span><span style="color: #ed9d13">&quot;druck-stylesheet.css&quot;</span> <span style="color: #bbbbbb">media=</span><span style="color: #ed9d13">&quot;print&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span>
+</pre></div>
+					<br/>
+					<small>Beispiel: Medienabfrage in der CSS-Ressource</small>
+					<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #999999; font-style: italic">/* CSS-Regeln für alle Ausgabegeräte */</span>
+<span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #6ab825; font-weight: bold">print</span> <span style="color: #d0d0d0">{</span>
+  <span style="color: #999999; font-style: italic">/* zusätzliche oder abweichende CSS-Regeln für Drucker */</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div><small>Empfehlung: Aus Gründen der Performance sollten Sie diese Variante der Einbindung wählen.</small>
+				</section>
+
+				<section data-state="green" class="future" style="display: none;">
+					<h2>Einbindung - Media Queries</h2><br/>
+					<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">&lt;link</span> <span style="color: #bbbbbb">rel=</span><span style="color: #ed9d13">&quot;stylesheet&quot;</span> <span style="color: #bbbbbb">href=</span><span style="color: #ed9d13">&quot;kompakt.css&quot;</span> <span style="color: #bbbbbb">media=</span><span style="color: #ed9d13">&quot;(orientation: portrait)&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span>
+</pre></div><small>Das Stylesheet kompakt.css wird eingebunden, wenn die Inhalte auf Seiten im Hochformat ausgegeben werden.</small>
+					<br/><br/>
+					<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">&lt;style </span><span style="color: #bbbbbb">type=</span><span style="color: #ed9d13">&quot;text/css&quot;</span> <span style="color: #bbbbbb">media=</span><span style="color: #ed9d13">&quot;(color)&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span>
+<span style="color: #999999; font-style: italic">/* Farbangaben. */</span>
+<span style="color: #6ab825; font-weight: bold">&lt;/style&gt;</span>
+</pre></div><small>Die im style-Element angegebenen Farbangaben werden verarbeitet, wenn das Ausgabemedium Farben darstellen kann.</small>
+					<br/><br/>
+					<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">@import &#39;layout.css&#39; (min-width: 50em);
+</pre></div><small>Das Stylesheet layout.css kommt zur Anwendung, wenn der Anzeigebereich des Ausgabemediums mindestens 50em beträgt. Die Einheit em bezieht sich dabei auf die Standardschriftgröße des Browsers.</small>
+				</section>
+
+				<section data-state="green" class="future" style="display: none;">
+					<h2>Gruppierung und Kombination<br/>- Media Queries</h2>
+					<small>Mithilfe von Kommata können Medienabfragen gruppiert werden.<br/>Sobald mindestens eine der Abfragen zutrifft, werden die Deklarationen angewendet.</small>
+					<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #6ab825; font-weight: bold">print</span><span style="color: #d0d0d0">,</span> <span style="color: #6ab825; font-weight: bold">embossed</span> <span style="color: #d0d0d0">{</span> <span style="color: #999999; font-style: italic">/* Formate für Printmedien. */</span> <span style="color: #d0d0d0">}</span>
+</pre></div>		<br/>
+					
+					<small>Mehrere Medienmerkmale können mit dem Schlüsselwort and (und) verbunden werden.<br/>Ein Stylesheet wird nur dann verarbeitet, wenn alle mit "and" verbundenen Kriterien erfüllt werden</small>
+					<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">min-width</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">30em</span><span style="color: #d0d0d0">)</span> <span style="color: #6ab825; font-weight: bold">and</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">max-width</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">60em</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span> <span style="color: #999999; font-style: italic">/* Kompaktes Layout */</span> <span style="color: #d0d0d0">}</span>
+<span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #6ab825; font-weight: bold">print</span> <span style="color: #6ab825; font-weight: bold">and</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">color</span><span style="color: #d0d0d0">),</span> <span style="color: #6ab825; font-weight: bold">screen</span> <span style="color: #6ab825; font-weight: bold">and</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">color</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span> <span style="color: #999999; font-style: italic">/* Farbangaben */</span> <span style="color: #d0d0d0">}</span>
+</pre></div>
+				
+				</section>
+
+				<section data-state="green" class="future" style="display: none;">
+					<h2>Medientypen - Media Queries</h2>
+					<table class="wikitable">
+<tbody>
+<tr>
+<th scope="row">all
+</th>
+<td>Alle Ausgabemedien. Dies ist der Standardwert.
+</td>
+<td>
+</td></tr>
+<tr>
+<th scope="row">print
+</th>
+<td>für Drucker, die Inhalte sichtbar auf Papier drucken.
+</td>
+</tr>
+<tr>
+<th scope="row">screen
+</th>
+<td>(Computer-)Bildschirme
+</td>
+</tr>
+<tr>
+<th scope="row">speech
+</th>
+<td>für Sprachsynthesizer gedacht.<br> Die Angabe ist für ein zukünftiges CSS-Modul reserviert und wird bisher nicht verwendet, soll aber den Medientyp „aural“ ersetzen.
+</td>
+</tr></tbody></table>
+				</section>
+
+				<section data-state="green" class="future" style="display: none;">
+					<h2>Medienmerkmale  - Media Queries</h2>
+					<ul><li>width (Breite)</li>
+					<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">width</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">60em</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span><span style="color: #999999; font-style: italic">/*Breite entspricht genau 60em*/</span><span style="color: #d0d0d0">}</span>
+<span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">min-width</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">50em</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span><span style="color: #999999; font-style: italic">/*Breite beträgt mindestens 50em*/</span><span style="color: #d0d0d0">}</span>
+<span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">max-width</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">70em</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span><span style="color: #999999; font-style: italic">/*Breite beträgt höchstens 70em*/</span><span style="color: #d0d0d0">}</span>
+</pre></div></br>
+						<li>height (Höhe)</li>
+						<li>device-width (Geräte-Breite)</li>
+						<li>device-height (Geräte-Höhe)</li>
+						<li>orientation (Orientierung):</br>landscape (Querformat) oder portrait (Hochformat)</li>
+					</br><li>aspect-ratio (Seitenverhältnis)</li>
+						<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">aspect-ratio</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">4</span><span style="color: #d0d0d0">/</span><span style="color: #6ab825; font-weight: bold">3</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span><span style="color: #999999; font-style: italic">/*Fall1*/</span><span style="color: #d0d0d0">}</span>
+<span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">min-aspect-ratio</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">4</span><span style="color: #d0d0d0">/</span><span style="color: #6ab825; font-weight: bold">3</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span><span style="color: #999999; font-style: italic">/*Fall2*/</span><span style="color: #d0d0d0">}</span>
+<span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">max-aspect-ratio</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">4</span><span style="color: #d0d0d0">/</span><span style="color: #6ab825; font-weight: bold">3</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span><span style="color: #999999; font-style: italic">/*Fall3*/</span><span style="color: #d0d0d0">}</span>
+</pre></div>		</ul>
+				</section>
+
+				<section data-state="green" class="future" style="display: none;">
+					<h2>Einfaches Beispiel zu Media Queries</h2>
+					<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">&lt;style&gt;</span>
+<span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #6ab825; font-weight: bold">screen</span> <span style="color: #6ab825; font-weight: bold">and</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">min-width</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">960px</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
+	<span style="color: #447fcf">#hello</span> <span style="color: #d0d0d0">{</span>
+		<span style="color: #6ab825; font-weight: bold">background</span><span style="color: #d0d0d0">:</span><span style="color: #24909d">yellow</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">}</span> <span style="color: #d0d0d0">}</span>	
+		
+<span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #6ab825; font-weight: bold">screen</span> <span style="color: #6ab825; font-weight: bold">and</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">max-width</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">960px</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
+	<span style="color: #447fcf">#hello</span> <span style="color: #d0d0d0">{</span>
+		<span style="color: #6ab825; font-weight: bold">background</span><span style="color: #d0d0d0">:</span><span style="color: #24909d">blue</span><span style="color: #d0d0d0">;}</span> <span style="color: #d0d0d0">}</span>
+		
+<span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #6ab825; font-weight: bold">screen</span> <span style="color: #6ab825; font-weight: bold">and</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">max-width</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">480px</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
+	<span style="color: #447fcf">#hello</span> <span style="color: #d0d0d0">{</span>
+		<span style="color: #6ab825; font-weight: bold">background</span><span style="color: #d0d0d0">:</span><span style="color: #24909d">lime</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">}</span> <span style="color: #d0d0d0">}</span>
+		
+<span style="color: #6ab825; font-weight: bold">@media</span> <span style="color: #6ab825; font-weight: bold">screen</span> <span style="color: #6ab825; font-weight: bold">and</span> <span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">max-width</span><span style="color: #d0d0d0">:</span> <span style="color: #6ab825; font-weight: bold">320px</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">{</span>
+	<span style="color: #447fcf">#hello</span> <span style="color: #d0d0d0">{</span>
+		<span style="color: #6ab825; font-weight: bold">background</span><span style="color: #d0d0d0">:</span><span style="color: #24909d">red</span><span style="color: #d0d0d0">;</span>	<span style="color: #d0d0d0">}</span> <span style="color: #d0d0d0">}</span>
+<span style="color: #6ab825; font-weight: bold">&lt;/style&gt;</span>
+
+<span style="color: #6ab825; font-weight: bold">&lt;p</span> <span style="color: #bbbbbb">id=</span><span style="color: #ed9d13">&quot;hello&quot;</span> <span style="color: #bbbbbb">style=</span><span style="color: #ed9d13">&quot;font-size:64px;&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span>
+Hallo Welt! <span style="color: #6ab825; font-weight: bold">&lt;/p&gt;</span>
+</pre></div>
+					<p><a href=helloWorld.html target="_blank">Link</a></p>
+				</section>
+				
+				<section data-state="red" class="future" style="display: none;">
+					<h2><a href=./responsive-Übung-Aufgabe/index.html target="_blank">Übung</a></h2>
+					<ul>
+					<p>01. Setzen Sie den Viewport-Meta-Tag an die richtige Stelle.</p>
+					<p>02. Öffnen Sie die CSS-Datei "layout.css", die sich im Ordner "styles" befindet, um sie zu bearbeiten.</p>
+					<p>03. Ändern Sie den Pixel-Wert der body-Breite in einen prozentualen Wert. Entscheiden Sie sinnvoll.</p>		
+					<p>04. Schreiben Sie zusätzlich zur body-Breite eine Mindestbreite und eine Maximalbreite (320px & 1600px)</p>		
+					<p>05. Gibt es einen weiteren Pixel-Wert? Ändern Sie diesen sinnvoll.</p>
+					<p>06. Was stimmt mit dem Elefanten nicht? Ordnen Sie ihm eine prozentuale Maximalbreite zu. [Tipp: Der Elefant hat die Klasse .image_right]</p>
+					</ul>
+				</section>
+				
+				<section data-state="red" class="future" style="display: none;">
+					<h2><a href=./responsive-Übung-Aufgabe/index.html target="_blank">Übung</a></h2>
+					<ul>
+					<p>07. Erstellen Sie eine neue CSS-Datei mit dem Namen "media_queries.css".</p>
+					<p>08. Binden Sie die erstellte Datei im "head" der HTML-Datei ein.</p>
+					<p>09. Erstellen Sie zwei Media Queries (Medienabfragen) mit folgenden Maximalbreiten: 1024px & 800px</p>
+					<p>10. Setzen Sie die Breite des "content" und der "sidebar" auf 100% beim dazu passenden Media Query.</p>
+					<p>11. Setzen Sie den Textumfluss (float) auf die Normaleinstellung beim gleichen Media Query wie bei Nr.10.</p>
+					<p>12. Verändern Sie bei dem anderen Media Query sinnvoll folgendes: #header & #header h1</p>
+					</ul>
+				</section>
+				
+				<section data-state="red" class="future" style="display: none;">
+					<h2><a href=./responsive-Übung-Aufgabe/index.html target="_blank">Übung</a></h2>
+					<ul>
+					<p>13. Was passiert, wenn Sie folgendes in die CSS-Datei "media_queries.css" kopieren?</p>
+					<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #447fcf">#header</span> <span style="color: #d0d0d0">{</span>
+<span style="color: #d0d0d0">transition:</span> <span style="color: #6ab825; font-weight: bold">height</span> <span style="color: #3677a9">0.3s</span> <span style="color: #d0d0d0">linear;</span>
+<span style="color: #d0d0d0">}</span>
+<span style="color: #447fcf">#header</span> <span style="color: #6ab825; font-weight: bold">h1</span> <span style="color: #d0d0d0">{</span>
+<span style="color: #d0d0d0">transition:</span> <span style="color: #6ab825; font-weight: bold">font-size</span> <span style="color: #3677a9">0.3s</span> <span style="color: #d0d0d0">linear;</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+					</br>
+					<p>14. Wenn Sie noch Lust und Zeit haben, können Sie weitere Media Queries erzeugen
+					oder in bestehende Media Queries Sachen ergänzen, die Sie für sinnvoll halten.</p>
+					</ul>
+				</section>
+				
+				<section data-state="hellogoodbye" class="future" style="display: block;">
+					<img src="Katze.jpg" alt="Vielen Dank. Gibt es noch Fragen?">
+				</section>	
+				
+				<section data-state="hellogoodbye" class="future" style="display: block;">
+					
+					<h2>Quellen</h2>
+					<ul>
+					<a href=http://blog.lengow.de/2014/05/28/wie-wichtig-ist-responsive-design-im-e-commerce/#prettyPhoto/0/ target="_blank"><small>http://blog.lengow.de/2014/05/28/wie-wichtig-ist-responsive-design-im-e-commerce/#prettyPhoto/0/</small></a></li>
+					<a href=http://blog.kulturbanause.de/2012/11/responsive-webdesign-grundlagen-technik-workflow-inhalte/ target="_blank"><small>http://blog.kulturbanause.de/2012/11/responsive-webdesign-grundlagen-technik-workflow-inhalte/</small></a>
+					<a href=http://www.webmasters-akademie.de/blog/web_im_park/howto-web-im-park-responsive-webdesign-als-screencast target="_blank"><small>http://www.webmasters-akademie.de/blog/web_im_park/howto-web-im-park-responsive-webdesign-als-screencast</small></a></li>
+					<a href=https://www.video2brain.com/de/videotraining/responsive-webdesign-grundlagen/details target="_blank"><small>https://www.video2brain.com/de/videotraining/responsive-webdesign-grundlagen/details</small></a></li>
+					<a href=http://www.webdesignresponsive.de/geschichte-des-responsive-webdesigns target="_blank"><small>http://www.webdesignresponsive.de/geschichte-des-responsive-webdesigns</small></a></li>
+					<a href=http://www.vicon.de/adaptive-webdesign-vs-responsive-webdesign.html target="_blank"><small>http://www.vicon.de/adaptive-webdesign-vs-responsive-webdesign.html</small></a></li>
+					<a href=http://maddesigns.de/meta-viewport-1817.html target="_blank"><small>http://maddesigns.de/meta-viewport-1817.html</small></a>
+					<br/>
+					<a href=http://www.mediaevent.de/css/media-query.html target="_blank"><small>http://www.mediaevent.de/css/media-query.html</small></a>
+					<br/>
+					<a href=http://wiki.selfhtml.org/wiki/CSS/Media_Queries target="_blank"><small>http://wiki.selfhtml.org/wiki/CSS/Media_Queries</small></a>
+					<a href=http://www.capcom.de/capblog/blog-beitrag-34-einfuehrung-in-responsive-webdesign/ target="_blank"><small>http://www.capcom.de/capblog/blog-beitrag-34-einfuehrung-in-responsive-webdesign/</small></a>
+					<a href=http://blog.spark5.de/2013/09/responsive-webdesign---artikel-1-desktop-first.html target="_blank"><small>http://blog.spark5.de/2013/09/responsive-webdesign---artikel-1-desktop-first.html</small></a>
+					<a href=http://wiki.selfhtml.org/wiki/CSS/Media_Queries target="_blank"><small>http://wiki.selfhtml.org/wiki/CSS/Media_Queries</small></a>
+					<br/>
+					<a href=http://www.youtube.com/watch?v=xqZRmgGzVhM target="_blank"><small>http://www.youtube.com/watch?v=xqZRmgGzVhM</small></a>
+					</ul>
+				</section>
+				
+			</div>
+		
+		<div id="logoContainer" class="shareContainer clear">
+			<img src="RESPONSIVE_WEBDESIGN.png" alt="RESPONSIVE WEBDESIGN"/>
+		</div>
+		
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

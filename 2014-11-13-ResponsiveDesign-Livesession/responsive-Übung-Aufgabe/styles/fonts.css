@@ -1,0 +1,27 @@
+	@font-face {
+    font-family: Garamond;
+    src: url(../fonts/GaramondPro-Regular.otf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Garamond;
+    src: url(../fonts/GaramondPro-Bold.otf);
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Garamond;
+    src: url(../fonts/GaramondPro-Italic.otf);
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Garamond;
+    src: url(../fonts/GaramondPro-BoldItalic.otf);
+    font-style: italic;
+    font-weight: bold;
+}
