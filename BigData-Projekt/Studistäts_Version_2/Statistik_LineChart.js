@@ -24,8 +24,9 @@ var data = {
     ]
 };
 
-
+            //Funktion zum aktivieren der Chart
 			function ChartActive15(){
 				var ctx2 = document.getElementById("chart-area-LineChart").getContext("2d");
-				window.myLineChart = new Chart(ctx2).Line(data, true);
+                //Variable myLineChart erzeugt und Option hinzugefügt dass immer von an skaliert wird
+				window.myLineChart = new Chart(ctx2).Line(data, {scaleBeginAtZero: true});
 			};

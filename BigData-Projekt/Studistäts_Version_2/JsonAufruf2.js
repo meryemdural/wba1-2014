@@ -54,24 +54,25 @@ $(window).ready(function(){
                     case "saarland":
                              var neu = 176;
                              break;
-                    case "sachsen_anhalt":
-                             var neu = 191;
-                             break;
                     case "sachsen":
-                             var neu = 211;
+                             var neu = 192;
                              break;
+                    case "sachsen_anhalt":
+                             var neu = 208;
+                             break;
+
                     case "schleswig_holstein":
-                             var neu = 221;
+                             var neu = 224;
                              break;
                     case "thuringen":
-                             var neu = 236;
+                             var neu = 240;
                              break;
                     }
                      
                      // Auf neuen Wert setzen!!
                      var neu1 = 0;
                      // Initialisierung der Variablen und Verwendung vom Index neu
-                         var a = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu)]["Insgesamt"]);
+                         var a = parseInt(data1.Studienanfaenger_Bundesland[neu]["Insgesamt"]);
                          var b = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu)+parseInt(1)]["Insgesamt"]);
                          var c = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu)+parseInt(2)]["Insgesamt"]);
                          var d = parseInt(data1.Studienanfaenger_Bundesland[parseInt(neu)+parseInt(3)]["Insgesamt"]);
@@ -104,7 +105,7 @@ $(window).ready(function(){
                          var n1 = parseFloat(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(13)]["Insgesamt"]);
                          var o1 = parseFloat(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(14)]["Insgesamt"]);
                          var p1 = parseFloat(data1.Studienanfaenger_Bundesland[parseInt(neu1)+parseInt(15)]["Insgesamt"]);
-                     console.log(a1);
+
                         var erste = parseFloat(data0.baden_wurttemberg[index1]["Insgesamt"]);
                          var zweite = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(7)]["Insgesamt"]);
                          var dritte = parseFloat(data0.baden_wurttemberg[parseInt(index1)+parseInt(14)]["Insgesamt"]);
