@@ -1,0 +1,360 @@
+@media all and (max-width:600px){
+.Headline {
+	width: 100%;
+	height:100%;
+	padding: 0.8em;
+	color: white;
+	font-family: Roboto, sans-serif;
+	background-Image: Url("\Images\\student-bg.jpg");
+	background-size: cover;
+}
+
+.Paragraph-Section1{
+	position:relative;
+	width: 100%;
+	padding:0.1em;
+	float:left;
+	
+}
+
+.Paragraph-Section2{
+	position:relative;
+	width: 100%;
+	padding-top:0em;
+	float:left;
+	
+}
+
+.Paragraph-Section3{
+	position:relative;
+	width: 100%;
+	padding:0.1em;
+	float:left;
+	
+}
+
+img {
+	width: 30%;
+	margin: 5em;
+	box-sizing: border-box;
+	border-radius: 50% 50%;
+	box-shadow: black 0px 0px 5px;
+	float: auto;
+     }
+
+video{
+	
+	width: 90%;
+	border: 1em solid;
+	border-radius: 2.5em;
+	background-color:#e9e9e9;
+	box-shadow: 0em 0em 2em #888888;
+	float:left;
+}
+.container {
+	margin: auto;
+	max-width: 100%;
+}
+
+h1{
+	font-family: Roboto, sans-serif;
+	color: #39b1a4;
+}
+
+h2{
+	font-family: Roboto, sans-serif;
+	color: #39b1a4;
+}
+
+p{
+	font-family: Roboto, sans-serif;
+	color: #39b1a4;
+}
+
+footer p{
+	font-family: Roboto, sans-serif;
+	color:white;
+}
+
+button {
+	width:100%;
+	height:5%;
+	margin:1%;
+	background-color: #39b1a4;
+	color: #fff;
+}
+
+ul{
+	box-sizing: border-box;
+	width:100%;
+	padding:1em;
+	font-family: Roboto, sans-serif;
+	color:hsl(8, 70%, 54%);
+	list-style-image:Url("\Images\\ul.jpg");
+	line-height:1em;
+}
+
+button:hover {
+	cursor:pointer;
+	background-color: hsl(8, 70%, 54%);
+}
+
+footer {
+	left:0em;
+	bottom:0em;
+	width:100%;
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+	text-align: center;
+	background-color: hsl(8, 70%, 54%);
+	color: white;
+	padding-bottom: 2em;
+	padding-top: 2em;
+	float:left;
+}
+}
+
+@media all and (min-width: 900px){
+
+.Headline {
+	width: 100%;
+	height:100%;
+	padding: 0.8em;
+	color: white;
+	font-family: Roboto, sans-serif;
+	background-Image: Url("\Images\\student-bg.jpg");
+	background-size: cover;
+}
+
+.Paragraph-Section1{
+	position:relative;
+	width: 48%;
+	padding:0.1em;
+	float:left;
+	
+}
+
+.Paragraph-Section2{
+	position:relative;
+	width: 48%;
+	padding-top:0em;
+	float:left;
+	
+}
+
+.Paragraph-Section3{
+	position:relative;
+	width: 48%;
+	padding:0.1em;
+	float:right;
+	align:bottom-left;
+	
+}
+
+img {
+	width: 30%;
+	margin: 5em;
+	box-sizing: border-box;
+	border-radius: 50% 50%;
+	box-shadow: black 0px 0px 5px;
+	float: auto;
+     }
+
+video{
+	
+	width: 80%;
+	border: 1em solid;
+	border-radius: 2.5em;
+	background-color:#e9e9e9;
+	box-shadow: 0em 0em 2em #888888;
+	float:left;
+}
+.container {
+	margin: auto;
+	max-width: 100%;
+}
+
+h1{
+	font-family: Roboto, sans-serif;
+	color: #39b1a4;
+}
+
+h2{
+	font-family: Roboto, sans-serif;
+	color: #39b1a4;
+}
+
+p{
+	font-family: Roboto, sans-serif;
+	color: #39b1a4;
+}
+
+footer p{
+	font-family: Roboto, sans-serif;
+	color:white;
+}
+
+button {
+	width:20%;
+	height:5%;
+	margin:2.3%;
+	background-color: #39b1a4;
+	color: #fff;
+}
+
+ul{
+	box-sizing: border-box;
+	width:100%;
+	padding:1em;
+	font-family: Roboto, sans-serif;
+	color:hsl(8, 70%, 54%);
+	list-style-image:Url("\Images\\ul.jpg");
+	line-height:1em;
+}
+
+button:hover {
+	cursor:pointer;
+	background-color: hsl(8, 70%, 54%);
+}
+
+footer {
+	left:0em;
+	bottom:0em;
+	width:100%;
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+	text-align: center;
+	background-color: hsl(8, 70%, 54%);
+	color: white;
+	padding-bottom: 2em;
+	padding-top: 2em;
+	float:left;
+}
+
+}
+
+
+
+
+
+@media all and (min-width: 600px) and (max-width: 900px){
+.wrapper {
+	min-height:100%;
+	position:relative;
+}
+.Headline {
+	width: 100%;
+	height:100%;
+	padding: 0.8em;
+	color: white;
+	font-family: Roboto, sans-serif;
+	background-Image: Url("\Images\\student-bg.jpg");
+	background-size: 100% 100%;
+}
+
+.Paragraph-Section1{
+	width: 48%;
+	padding:0.1em;
+	float:left;
+	
+}
+
+.Paragraph-Section2{
+	width: 48%;
+	padding:0.1em;
+	float:left;
+	
+}
+
+.Paragraph-Section3{
+	position:relative;
+	width: 48%;
+	padding:0.1em;
+	float:left;
+}
+
+img {
+	width: 20%;
+	margin: 5em;
+	box-sizing: border-box;
+	border-radius: 50% 50%;
+	box-shadow: black 0px 0px 5px;
+	align:right;
+     }
+
+video{
+	width: 80%;
+	border: 1em solid;
+	border-radius: 2.5em;
+	background-color:#e9e9e9;
+	box-shadow: 0em 0em 2em #888888;
+	float:left;
+}
+.container {
+	margin: 5em;
+	max-width: 98%;
+}
+
+h1{
+	font-family: Roboto, sans-serif;
+	color: #39b1a4;
+}
+
+h2{
+	font-family: Roboto, sans-serif;
+	color: #39b1a4;
+}
+
+p{
+	font-family: Roboto, sans-serif;
+	color: #39b1a4;
+}
+
+footer p{
+	font-family: Roboto, sans-serif;
+	color:white;
+}
+
+button {
+	width:20%;
+	height:5%;
+	margin:1.4%;
+	background-color: #39b1a4;
+	color: #fff;
+}
+
+ul{
+	box-sizing: border-box;
+	width:100%;
+	padding:1em;
+	font-family: Roboto, sans-serif;
+	color:hsl(8, 70%, 54%);
+	list-style-image:Url("\Images\\ul.jpg");
+	line-height:1em;
+}
+
+button:hover {
+	cursor:pointer;
+	background-color: hsl(8, 70%, 54%);
+}
+
+.container {
+      margin: auto;
+      max-width: 800px;
+    }
+
+footer {
+	left:0em;
+	bottom:0em;
+	width:100%;
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+	text-align: center;
+	background-color: hsl(8, 70%, 54%);
+	color: white;
+	padding-bottom: 2em;
+	padding-top: 2em;
+	float:left;
+}
+
+}
