@@ -1,13 +1,12 @@
 ﻿/* A Flexboox is a container for structured grouped elements */
 
+.flexBox1{position:relative; left:380px; bottom:180px;}
+.flexBox2{position:relative; left:0;   bottom:-23px;}
+.flexBox3{position:relative; left:380px; bottom:158px;}
+.flexBox4{position:relative; left:0; bottom:120px;}
+.flexBox5{position:relative; left:380px; bottom:300px;}
 
-.flexBox3{position:relative; left:0;   bottom:-23px;}
-.flexBox2{position:relative; left:380px; bottom:180px;}
-.flexBox4{position:relative; left:380px; bottom:158px;}
-.flexBox5{position:relative; left:0; bottom:120px;}
-.flexBox6{position:relative; left:380px; bottom:300px;}
-
-.flexBox1, .flexBox2, .flexBox3, .flexBox4, .flexBox5, .flexBox6{
+.flexBox0, .flexBox1, .flexBox2, .flexBox3, .flexBox4, .flexBox5{
     display: -moz-box; /* Firefox */
     display: -webkit-box; /* Safari and Chrome */
     display: -ms-box; /* Internet Explorer 10 */

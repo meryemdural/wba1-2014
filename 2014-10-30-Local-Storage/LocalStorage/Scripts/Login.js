@@ -1,6 +1,4 @@
-﻿// Main document for Local Storage Logic
-
-$(document).ready(function () {
+﻿$(window).ready(function () {
     Login();
 });
 
@@ -28,12 +26,8 @@ function Login() {
 
 
 //Loging out by deleting CurrentUser Item. 
-var logout = $(document).ready(function () {
-
-    $("#arrowProfile").click(function () {
-        localStorage.removeItem('currentUser');
-        document.getElementById('profilName').innerHTML = localStorage.getItem('currentUser');
-        location.reload();
-    });
-
+$("#arrowProfile").click(function() {
+    localStorage.removeItem('currentUser');
+    document.getElementById('profilName').innerHTML = localStorage.getItem('currentUser');
+    location.reload();
 });

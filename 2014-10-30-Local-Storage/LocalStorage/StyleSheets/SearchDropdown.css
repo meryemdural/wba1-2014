@@ -1,12 +1,12 @@
 ﻿.search_dropdown {
-    position:relative;
-    top:28px;
-    left:-380px;
-    width: 300px;
+    position: relative;
+    width: 296px;
+    left: 351px;
     height: 32px;
     z-index: 200;
     text-align: left;
-    border: 0px;
-
-    background-color: white
+    border: 0;
+    top: 81px;
+    background-color: white;
+    float: none;
 }

@@ -28,14 +28,14 @@
 
             </div>
 
-            <div class="tab-header">
-
+            <div id="SearchMenu" class="search-header">
                 <form class="search-inputs">
                     <input id="topSearchField" type="text" placeholder="Suchen..." required class="search-field">
-                    <input type="button" value="Suchen" class="search-button">
+                    <input type="button" value="Suchen" class="search-button" />
                 </form>
+            </div>
 
-
+            <div class="tab-header">
                 <div class="tabs">
                     <ul class="tab-links">
                         <li>
@@ -60,21 +60,22 @@
                 <div class="category-separator">
                     <p>Favoriten</p>
                 </div>
+                
+                <div id="mein_profil_container"></div>
             </div>
         </div>
         
-        <div id="mein_profil_container"></div>
 
-        <script type="text/javascript" src="JQueryRAW/jquery-1.11.1.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+        <script type="text/javascript" src="jqueryRAW/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="Scripts/JavaScript.js"></script>
         <script src="Scripts/FavoriteButton.js"></script>
         
         <!-- This actually runs the Local Storage Stuff-->
         <script src="Scripts/Login.js"></script>
+        <script src="Scripts/Highlights.js"></script>
         <script src="Scripts/SearchInput.js"></script>
-        <script src="Scripts/ProfilPage.js"></script>
+        <script src="Scripts/Profil.js"></script>
         <script src="Scripts/Einkaufswagen.js"></script>
     </body>
 </html>
