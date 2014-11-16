@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Verifikation von Bescheinigungen - PSSO - Fachhochschule Köln</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+
+    <!-- Javascript -->
+    <script>
+        less = {env: 'development', logLevel: 2};</script>
+    <script src="./js/less.min.js"></script>
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input").keyup(function () {
+                if ($(this).val().length > 3) {
+                    var inputs = $(this).closest('form').find(':input');
+                    inputs.eq(inputs.index(this) + 1).focus();
+                }
+            });
+        });
+
+        function checkVerification() {
+            $('#verification_success').hide();
+            $('#verification_alert').hide();
+            var nr_1 = $('#nr_1').val();
+            var nr_2 = $('#nr_2').val();
+            var nr_3 = $('#nr_3').val();
+
+            if (nr_1 == "ABCD" && nr_2 == "EFGH" && nr_3 == "IJKL") {
+                $('#verification_success').slideDown();
+            } else {
+                $('#verification_alert').slideDown();
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+<div class="wrapper clearfix startpage">
+    <div id="wrap">
+        <div id="header" class="header clearfix">
+            <header>
+                <div class="c3">
+                    <div class="logo clearfix">
+                        <img src="./media/images/logo.svg" width="381" alt="Fachhochschule Köln"/>
+                    </div>
+                    <nav class="desktop-menu">
+                        <ul>
+                            <li><a href="./login.html">Anmeldung</a></li>
+                            <li class="active"><a href="verification.html">Verifikation von Bescheinigungen</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                        data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Navigation ein-/ausblenden</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="./">PSSO</a>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="login.html">Anmeldung</a></li>
+                                    <li class="active"><a href="verification.html">Verifikation von Bescheinigungen</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="psso_text">
+                        <h1>Prüfungs- und Studierendenservice Online</h1>
+                        <span><a href="login.php">Bitte melden Sie sich an.</a> </span>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <ol class="breadcrumb">
+            <li class="current">Verifikation von Bescheinigungen</li>
+        </ol>
+        <div class="inner-wrapper">
+            <div class="divider clearfix">
+                <div class="context">
+                    <div class="c1">
+                        <div class="article">
+                            <article>
+                                <h1>Hilfe</h1>
+                                <p>Mithilfe des Verifikationsnummer können Sie die Gültigkeit eines Dokuments prüfen,
+                                    welches von der Fachhochschule Köln ausgestellt wurde und dieses Merkmal
+                                    enthält.</p>
+                                <p>Die Verifikationsnummer finden Sie jeweils am Ende eines Dokumentes.</p>
+                                <p>Sie besteht aus 12 Buchstaben zwischen A und Z.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div id="content" class="content divider clearfix">
+                    <div class="c2">
+                        <article>
+                            <h1>Verifikationsnummer prüfen</h1>
+                            <div id="verification_alert" class="alert-danger">
+                                Die Verifikationsnummer ist leider nicht gültig. Bitte versuchen Sie es erneut.
+                            </div>
+                            <div id="verification_success" class="alert-success">
+                                Ihnen liegt eine Studienbescheinigung für Max Mustermann vom 31. Oktober 2014
+                                vor.<br/>
+                                Sie ist gültig für das Wintersemester 2014/15.
+                            </div>
+                            <p>
+                                Bitte geben Sie in das folgende Eingabefeld die Verifikationsnummer ein.
+                                Anschließend bestätigen Sie Ihre Eingabe mit einem Klick auf Verifizieren.</p>
+                            <form role="form" method="post" action="#" onsubmit="return checkVerification();">
+                                <br/>
+                                <div class="row">
+                                    <div class="col-md-3" style="height: 48px;">
+                                        Verifikationsnummer
+                                    </div>
+                                    <div class="col-md-7 align-right">
+                                        <input type="text" id="nr_1" class="inputText inputField" placeholder=""
+                                               maxlength="4" style="width:25%" required> -
+                                        <input type="text" id="nr_2" class="inputText inputField" placeholder=""
+                                               maxlength="4" style="width:25%" required> -
+                                        <input type="text" id="nr_3" class="inputText inputField" placeholder=""
+                                               maxlength="4" style="width:25%" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3" style="height: 48px;">
+                                        &nbsp;
+                                    </div>
+                                    <div class="col-md-7 align-right">
+                                        <input type="submit" class="inputText inputField"
+                                               value="Verifikationsnummer prüfen">
+                                    </div>
+                                </div>
+                            </form>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="footer">
+        <footer>
+            <div class="c3">
+                <ul class="meta">
+                    <li>
+                        <a href="#" title="Impressum">Impressum</a>
+                    </li>
+                </ul>
+                <em class="copyright">© 2014 Fachhochschule Köln</em>
+            </div>
+        </footer>
+    </div>
+</div>
+</body>
+</html>

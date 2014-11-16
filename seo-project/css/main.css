@@ -1,0 +1,139 @@
+html {
+	font-family: Arial,Verdana,Helvetica,Sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	font-family: Verdana,Arial,Sans-serif;
+        background-color: #fff;
+}
+header{
+    margin-bottom: 40px;
+}
+.menu{
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    height: 26px;
+    width: 320px;
+    margin-left: 15px;
+    margin-top: 50px;
+}
+#geschenke{
+    height: 185px;
+    width: 186px;
+    float: left;
+}
+#polterabend{
+    background-image: url('../img/1.png');
+}
+#ostergeschenke{
+    background-image: url('../img/2.png');
+}
+#valentinstag{
+    background-image: url('../img/3.png');
+}
+#geschenk-verpacken{
+    background-image: url('../img/4.png');
+}
+#selbstgemachte-geschenke{
+    background-image: url('../img/9.png');
+}
+#vatertag{
+    background-image: url('../img/6.png');
+}
+#geburtstag{
+    background-image: url('../img/7.png');
+}
+#kommunion{
+    background-image: url('../img/8.png');
+}
+a
+{
+	color: #092A6C;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:focus {
+	outline: thin dotted;
+}
+a:active, a:hover {
+	color: #758096;
+	outline: 0;
+	text-decoration: none;
+}
+img {
+	border: 0
+}
+#anker {
+	color: #222;	
+	font-size: 18px;
+    font-weight: 600;
+}
+#wrapper {
+    margin-left: 210px;
+}
+ul
+{
+	margin: 2px;
+	padding: 2px;
+	list-style: decimal inside;
+	//text-align: center;
+        
+}
+li
+{
+	
+	list-style: circle inside;
+	color: #2F5376;
+}
+nav ul li {
+	display:inline-block;
+    vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #222;
+	font-family: Arial,Verdana,Helvetica,Sans-serif;
+	font-weight: 500;
+}
+h1 {
+	font-size: 26px;
+	font-weight: 700;
+}
+h2 {
+	font-size: 20px;
+	font-weight: 600;
+}
+h3 {
+	font-size: 18px;
+    font-weight: 600;
+}
+h4 {
+	font-size: 17px;
+	font-weight: 600;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+section{
+    text-align: justify;
+}
+section p{
+    margin-right: 240px;
+}
+hgroup{
+}
+img{
+    float: left;
+    margin-right: 5px;
+}
+footer{
+    margin-top: 55px;
+    padding-bottom: 55px;
+    margin-left: 210px;
+}
+footer li{
+    margin-right: 15px;
+}

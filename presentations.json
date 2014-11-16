@@ -67,6 +67,18 @@
 		{
 			"title" : "SEO Livesession",
 			"authors" : ["Roman Seibt", "Markus Ernst"]
+		},
+		
+		"2014-11-13-ResponsiveDesign-Livesession/presentation/index.html":
+		{
+			"title" : "Responsive Webdesign - Livesession",
+			"authors" : ["Stefan Barbie", "Maxim Engelmann"]
+		},
+		
+		"2014-11-13-rechte-im-internet/index.html":
+		{
+			"title" : "Rechte im Internet - Livesession",
+			"authors" : ["Aylin Mengi", "Meryem Dural"]
 		}
 	}
 }

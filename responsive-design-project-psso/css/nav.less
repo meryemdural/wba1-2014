@@ -1,0 +1,204 @@
+/**
+ ** Navigation Responsive Webdesignproject PSSO
+ **
+ ** (c) 2014 by David Kurz
+ ** https://mdxdave.de
+ **/
+
+@blue: #1a264b;
+
+nav.navbar {
+  display: none;
+  background: @blue;
+  margin-top: 20px;
+  border: none;
+
+  .navbar-brand {
+    color: #fff;
+    &:hover {
+      color:#fff;
+    }
+
+
+  }
+}
+
+.navbar-default .navbar-nav>li>a,.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+  padding-left: 11.5%;
+}
+
+
+div.navbar-header{
+  width: 85%;
+  margin: 0 auto !important;
+}
+
+.navbar-nav .open .dropdown-menu>li>a {
+  line-height: 35px;
+  font-size: 14px;
+}
+
+.navbar-default  {
+  .navbar-nav {
+    li>a:hover, .open .dropdown-menu>li>a:hover, .open .dropdown-menu>li>a:focus {
+      color: #fff;
+    }
+  }
+
+  .navbar-collapse, .navbar-default .navbar-form {
+    border-top:none;
+    box-shadow:none;
+  }
+}
+.icon-bar {
+  background-color: #fff !important;
+}
+
+
+nav.desktop-menu {
+  display:block;
+  padding: 0;
+  margin: 0;
+  clear: both;
+  height: 0;
+
+    ul {
+      list-style: none;
+      border-top: 0;
+      margin: 0 auto;
+      z-index: 500;
+      height: 100%;
+
+
+      display: inline-table;
+
+      &:after {
+        content: ""; clear: both; display: block;
+      }
+
+      ul {
+        /** Transition **/
+        opacity:0;
+        transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+        visibility: hidden;
+        position: absolute;
+        top: 140px;
+        background-color: #fff;
+        -webkit-box-shadow: inset 0 8px 5px #d5d5d5;
+        -moz-box-shadow: inset 0 8px 5px #d5d5d5;
+        box-shadow: inset 0 8px 5px #d5d5d5;
+        height: 70%;
+        width: 100%;
+        margin: 0 auto;
+        left: 0;
+        padding: 0 12.5%;
+
+
+        &:after {
+          content: " ";
+          -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+          position: absolute;
+          bottom: -1px;
+          height: 3px;
+          width: 100%;
+          margin: 0 auto;
+          left: 0;
+          padding: 0 12.5%;
+          overflow-x: hidden;
+        }
+
+
+        &:hover {
+          display: block;
+        }
+
+        li {
+
+          background: none;
+          height: 50px;
+          background: none !important;
+
+          a {
+            color: #000;
+            background: transparent url("../media/images/sprite.png") no-repeat scroll 0 8px !important;
+            display: block;
+            float: left;
+            clear: both;
+            padding-left: 1.1em;
+            text-transform: none;
+
+            &:hover {
+
+              background: transparent url("../media/images/sprite.png") no-repeat scroll 0 8px !important;
+              text-decoration: underline;
+
+            }
+          }
+
+
+        }
+      }
+
+      li {
+        float: left;
+        font-family: "myriad-pro-condensed";
+        font-style: normal;
+        font-weight: 700;
+        -webkit-font-smoothing: antialiased;
+        text-transform: uppercase;
+        font-size: 1.125em;
+        height: 65%;
+
+        &.active {
+          background: url(../media/images/icon-navigation-active.png) 50% 1.95em transparent no-repeat;
+        }
+
+        &:hover > ul {
+          visibility:visible;
+          opacity:1;
+          transition-delay:0s;
+
+        }
+
+        &:hover {
+
+          background: url(../media/images/icon-navigation-hover.png) 50% 1.95em transparent no-repeat;
+        }
+
+        a{
+          color: #fff;
+
+          &:hover {
+            text-decoration: none;
+            background: 0;
+          }
+        }
+      }
+
+  }
+
+  li {
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: #fff;
+    float: left;
+    list-style: none;
+    margin: 2.1em .9em 0
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  nav.desktop-menu {display: none;}
+  nav.navbar {display:block}
+  .header .c3 {width: 100%}
+  .logo {
+    width: 80%;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      position: relative;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+body{
+	font-family: sans-serif;
+
+}
+
+
+.gallery-body{
+	position: relative;
+    margin: 0 auto;
+}
+
+
+.box{
+	border: 5px solid #fff;
+	position: absolute;
+}
+
+/* Groessen der Elemente 
+small: ausgangswerte
+mid: width = 2 * ausgangswert; height = ausgangswert
+big: width, height = 2 * ausgangswert
+*/
+.small{
+	width: 150px;
+	height: 150px;
+}
+.mid{
+	width: 300px;
+	height: 150px;
+}
+.big{
+	width: 300px;
+	height: 300px;
+}
+
+
+/* Groessenkorretur (durch border noetig) */
+.mid img{
+	width: 310px;
+	height: 150px;
+}
+
+.big img{
+	width: 310px;
+	height: 310px;
+}
+/* Ende Groessenkorretur */
+
+
+
+.text{
+	padding: 10px;
+	
+}
+
+.text h2{
+	margin: 0 0 10px 0;
+}

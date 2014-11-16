@@ -1,0 +1,450 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Notenspiegel - Fachhochschule Köln - PSSO</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/tables.css"/>
+
+    <!-- Javascript -->
+    <script>less = {env: 'development', logLevel: 2};</script>
+    <script src="./js/less.min.js"></script>
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper clearfix startpage">
+<div id="wrap">
+<div id="header" class="header clearfix">
+    <header>
+        <div class="c3">
+            <div class="logo clearfix">
+                <img src="./media/images/logo.svg" width="381" alt="Fachhochschule Köln"/>
+            </div>
+
+
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="./index.html">Startseite</a></li>
+                    <li><a href="./allgemeine-verwaltung.html">Allgemeine Verwaltung</a>
+                        <ul>
+                            <li><a href="./kontaktverwaltung.html">Kontaktverwaltung</a></li>
+                            <li><a href="./tanverwaltung.html">Tan-Verwaltung</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./studiumsverwaltung.html">Studiumsverwaltung</a>
+                        <ul>
+                            <li><a href="./info.html">Informationen zur Rückmeldung</a></li>
+                            <li><a href="./gebuehren.html">Gebühren-Konto</a></li>
+                            <li><a href="./bescheinigung.html">Studienbescheinigung für alle Semester</a></li>
+                        </ul>
+                    </li>
+                    <li class="active"><a href="./pruefungen.html">Prüfungsverwaltung</a>
+                        <ul>
+                            <li><a href="./an-und-abmeldungen.html">An- und Abmeldung</a></li>
+                            <li><a href="./pruefungsinfo.html">Infos über angemeldete Prüfungen</a></li>
+                            <li><a href="./notenspiegel.html">Notenspiegel</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+
+
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Navigation ein-/ausblenden</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">PSSO</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="./index.html">Startseite</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Allgemeine Verwaltung
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="./kontaktverwaltung.html">Kontaktverwaltung</a></li>
+                                    <li><a href="./tanverwaltung.html">Tan-Verwaltung</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Studiumsverwaltung
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="./info.html">Informationen zur Rückmeldung</a></li>
+                                    <li><a href="./gebuehren.html">Gebühren-Konto</a></li>
+                                    <li><a href="./bescheinigung.html">Studienbescheinigung für alle
+                                        Semester</a></li>
+                                </ul>
+                            </li>
+                            <li class="active dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prüfungsverwaltung
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="./an-und-abmeldungen.html">An- und Abmeldung</a></li>
+                                    <li><a href="./pruefungsinfo.html">Infos über angemeldete Prüfungen</a></li>
+                                    <li><a href="./notenspiegel.html">Notenspiegel</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Max Mustemann</a></li>
+                            <li><a href="#">1234567890</a></li>
+                            <li><a href="#">Abmelden</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="psso_text">
+                <h1>Prüfungs- und Studierendenservice Online</h1>
+                <span>Max Mustermann (1234567890)</span>
+                <span><a href="#">Abmelden</a> </span>
+            </div>
+
+        </div>
+    </header>
+</div>
+
+
+<ol class="breadcrumb">
+    <li><a href="./pruefungen.html">Prüfungssverwaltung</a> </li>
+    <li><span>/</span></li>
+    <li class="current">Notenspiegel</li>
+</ol>    
+    
+<div class="inner-wrapper">
+    <article>
+        <div class="divider-grades">
+        <div class="col-md-5">
+            <aside id="stammdaten" class="responsive-table">
+                <h1>Stammdaten</h1>
+                <table class="table-bordered table-striped table-condensed">
+                    <tr>
+                        <th>Name</th>
+                        <td>Max Mustermann</td>
+                    </tr>
+                    <tr>
+                        <th>Geburtsdatum und -ort</th>
+                        <td>01.01.1990 in Köln</td>
+                    </tr>
+                    <tr>
+                        <th>(angestrebter) Abschluss</th>
+                        <td>[BA]&nbsp;Bachelor-Studiengang</td>
+                    </tr>
+                    <tr>
+                        <th>Fach</th>
+                        <td>Medieninformatik</td>
+                    </tr>
+                    <tr>
+                        <th>Matrikelnummer</th>
+                        <td>1234567890</td>
+                    </tr>
+                    <tr>
+                        <th>Anschrift</th>
+                        <td>Musterstraße 1, 50968 Köln</td>
+                    </tr>
+                </table>
+            </aside>
+        </div>
+        </div>
+
+        <div class="divider-grades clearfix nonmobile">
+            <div class="col-md-5 nomobile">
+                <aside id="pdf-uebersichten">
+                    <h1>PDF-Übersichten</h1>
+                    <ul>
+                        <li><a href="#" class="link download">alle Leistungen</a></li>
+                        <li><a href="#" class="link download">alle Leistungen und angem. Prüfungen (zur Vorlage bei anderen
+                            Hochschulen)</a></li>
+                        <li><a href="#" class="link download">Bescheinigung über studiengangsfremde Leistungen</a></li>
+                        <li><a href="#" class="link download">nur bestandene Leistungen (nicht zur Vorlage bei anderen
+                            Hochschulen)</a></li>
+                        <li><a href="#" class="link download">Leistungsbescheinigung nach §48 BAföG</a></li>
+                        <li><a href="#" class="link download">Transcript of Records</a></li>
+                        <li><a href="#" class="link download">Transcript of Records - studiengangsfremde Leistungen</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+        <br class="mobile" />
+        <br class="mobile" />
+        <div class="col-md-12">
+            <aside id="noten" class="responsive-table">
+                <h1>Notenliste</h1>
+                <table class="table-bordered table-striped table-condensed">
+                    <thead>
+                    <tr>
+                        <th align="left" width="5%">PNR</th>
+                        <th align="left" width="50%">Prüfungstext</th>
+                        <th align="center" width="6%">Pflichtkz.</th>
+                        <th align="center" width="6%">Prf.Art</th>
+                        <th align="left" width="6%">Semester</th>
+                        <th align="right" width="4%">Note</th>
+                        <th align="center" width="6%">Status</th>
+                        <th align="right" width="6%">Credits</th>
+                        <th align="center" width="6%">Vermerk</th>
+                        <th align="center" width="6%">Versuch</th>
+                        <th align="center" width="10%">Prüfungsdatum</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="hauptkonto">
+                        <td data-title="PNR" class="nonmobile">974</td>
+                        <td class="fach">ECTS-Konto MIF MIB</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art" class="nonmobile">CP</td>
+                        <td data-title="Semester" class="nonmobile">&nbsp;</td>
+                        <td data-title="Note">1,0</td>
+                        <td data-title="Status" class="nonmobile"></td>
+                        <td data-title="Credits">60</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch" class="nonmobile">&nbsp;</td>
+                        <td data-title="Prüfungsdatum" class="nonmobile">&nbsp;</td>
+                    </tr>
+                    <tr class="subkonto">
+                        <td data-title="PNR" class="nonmobile">1000</td>
+                        <td class="fach">ECTS-Grundstudium MIF MIB</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art" class="nonmobile">CP</td>
+                        <td data-title="Semester">SS14</td>
+                        <td data-title="Note">1,0</td>
+                        <td data-title="Status" class="nonmobile">PV</td>
+                        <td data-title="Credits">60</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch" class="nonmobile">&nbsp;</td>
+                        <td data-title="Prüfungsdatum" class="nonmobile">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PNR" class="nonmobile">1010</td>
+                        <td class="fach">Einführung in die Medieninformatik</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art" class="nonmobile">MO</td>
+                        <td data-title="Semester">WS13/14</td>
+                        <td data-title="Note">1,0</td>
+                        <td data-title="Status">BE</td>
+                        <td data-title="Credits">7,0</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch">1</td>
+                        <td data-title="Prüfungsdatum">20.02.2014</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PNR" class="nonmobile">1020</td>
+                        <td class="fach">Einführung in Betriebssysteme und Rechnerarchitekturen</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art" class="nonmobile">MO</td>
+                        <td data-title="Semester">WS13/14</td>
+                        <td data-title="Note">1,0</td>
+                        <td data-title="Status">BE</td>
+                        <td data-title="Credits">7,0</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch">1</td>
+                        <td data-title="Prüfungsdatum">10.03.2014</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PNR" class="nonmobile">1030</td>
+                        <td class="fach">Algorithmen und Programmierung I</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art" class="nonmobile">MO</td>
+                        <td data-title="Semester">WS13/14</td>
+                        <td data-title="Note">1,0</td>
+                        <td data-title="Status">BE</td>
+                        <td data-title="Credits">8,0</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch">1</td>
+                        <td data-title="Prüfungsdatum">12.03.2014</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PNR" class="nonmobile">1040</td>
+                        <td class="fach">Algorithmen und Programmierung II</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art" class="nonmobile">MO</td>
+                        <td data-title="Semester">SS 14</td>
+                        <td data-title="Note">1,0</td>
+                        <td data-title="Status">BE</td>
+                        <td data-title="Credits">8,0</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch">1</td>
+                        <td data-title="Prüfungsdatum">24.09.2014</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PNR" class="nonmobile">1050</td>
+                        <td class="fach">Mathematik I</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art" class="nonmobile">MO</td>
+                        <td data-title="Semester">WS 13/14</td>
+                        <td data-title="Note">1,0</td>
+                        <td data-title="Status">BE</td>
+                        <td data-title="Credits">7,0</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch">1</td>
+                        <td data-title="Prüfungsdatum">11.03.2014</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PNR" class="nonmobile">1060</td>
+                        <td class="fach">Mathematik II</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art" class="nonmobile">MO</td>
+                        <td data-title="Semester">SS 14</td>
+                        <td data-title="Note">1,0</td>
+                        <td data-title="Status">BE</td>
+                        <td data-title="Credits">8,0</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch">1</td>
+                        <td data-title="Prüfungsdatum">23.09.2014</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PNR" class="nonmobile">1070</td>
+                        <td class="fach">Theoretische Informatik I, II</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art" class="nonmobile">MO</td>
+                        <td data-title="Semester">SS 14</td>
+                        <td data-title="Note">1,0</td>
+                        <td data-title="Status">BE</td>
+                        <td data-title="Credits">10,0</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch">1</td>
+                        <td data-title="Prüfungsdatum">17.09.2014</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PNR" class="nonmobile">1080</td>
+                        <td class="fach">Grundlagen der visuellen Kommunikation</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art" class="nonmobile">MO</td>
+                        <td data-title="Semester">SS 14</td>
+                        <td data-title="Note">1,0</td>
+                        <td data-title="Status">BE</td>
+                        <td data-title="Credits">5,0</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch">1</td>
+                        <td data-title="Prüfungsdatum">30.10.2014</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PNR" class="nonmobile">1031</td>
+                        <td class="fach">Algorithmen und Programmierung I</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art">TN</td>
+                        <td data-title="Semester">WS 13/14</td>
+                        <td data-title="Note" class="nonmobile">&nbsp;</td>
+                        <td data-title="Status">BE</td>
+                        <td data-title="Credits" class="nonmobile">0,0</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch">1</td>
+                        <td data-title="Prüfungsdatum">03.02.2014</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PNR" class="nonmobile">1041</td>
+                        <td class="fach">Algorithmen und Programmierung II</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art">TN</td>
+                        <td data-title="Semester">SS 14</td>
+                        <td data-title="Note" class="nonmobile">&nbsp;</td>
+                        <td data-title="Status">BE</td>
+                        <td data-title="Credits" class="nonmobile">0,0</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch">1</td>
+                        <td data-title="Prüfungsdatum">06.08.2014</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PNR" class="nonmobile">1051</td>
+                        <td class="fach">Mathematik I</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art">TN</td>
+                        <td data-title="Semester">WS 13/14</td>
+                        <td data-title="Note" class="nonmobile">&nbsp;</td>
+                        <td data-title="Status">BE</td>
+                        <td data-title="Credits" class="nonmobile">0,0</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch">1</td>
+                        <td data-title="Prüfungsdatum">19.02.2014</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PNR" class="nonmobile">1061</td>
+                        <td class="fach">Mathematik II</td>
+                        <td data-title="Pflichtkz." class="nonmobile">PF</td>
+                        <td data-title="Prf.Art">TN</td>
+                        <td data-title="Semester">SS 14</td>
+                        <td data-title="Note" class="nonmobile">&nbsp;</td>
+                        <td data-title="Status">BE</td>
+                        <td data-title="Credits" class="nonmobile">0,0</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch">1</td>
+                        <td data-title="Prüfungsdatum">22.07.2014</td>
+                    </tr>
+                    <tr>
+                        <td data-title="PNR" class="nonmobile">9022</td>
+                        <td class="fach">Mentoring4Beginners</td>
+                        <td data-title="Pflichtkz.">ZU</td>
+                        <td data-title="Prf.Art">SM</td>
+                        <td data-title="Semester">WS 13/14</td>
+                        <td data-title="Note" class="nonmobile">&nbsp;</td>
+                        <td data-title="Status">BE</td>
+                        <td data-title="Credits" class="nonmobile">0,0</td>
+                        <td data-title="Vermerk" class="nonmobile">&nbsp;</td>
+                        <td data-title="Versuch">1</td>
+                        <td data-title="Prüfungsdatum">09.12.2013</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </aside>
+        </div>
+
+        <div class="col-md-12 mobile">
+            <aside id="pdf-uebersichten-mobile">
+                <h1>PDF-Übersichten</h1>
+                <ul>
+                    <li><a href="#" class="link download">alle Leistungen</a></li>
+                    <li><a href="#" class="link download">alle Leistungen und angem. Prüfungen (zur Vorlage bei anderen
+                        Hochschulen)</a></li>
+                    <li><a href="#" class="link download">Bescheinigung über studiengangsfremde Leistungen</a></li>
+                    <li><a href="#" class="link download">nur bestandene Leistungen (nicht zur Vorlage bei anderen
+                        Hochschulen)</a></li>
+                    <li><a href="#" class="link download">Leistungsbescheinigung nach §48 BAföG</a></li>
+                    <li><a href="#" class="link download">Transcript of Records</a></li>
+                    <li><a href="#" class="link download">Transcript of Records - studiengangsfremde Leistungen</a></li>
+                </ul>
+            </aside>
+        </div>
+    </article>
+</div>
+<div id="footer" class="footer">
+    <footer>
+        <div class="c3">
+
+            <ul class="meta">
+
+
+                <li>
+                    <a href="#" title="Impressum">Impressum</a>
+                </li>
+
+
+            </ul>
+            <em class="copyright">© 2014 Fachhochschule Köln</em>
+        </div>
+    </footer>
+</div>
+
+
+</div>
+
+
+</body>
+</html>
