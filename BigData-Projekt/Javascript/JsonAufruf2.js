@@ -61,6 +61,8 @@ $(window).ready(function(){
 				m++;
 			}
 		}
+				// Setzt die Skalierung neu, indem die LineChart mit den neuen Werten neu geladen wird
+				myLineChart.update();
 				});
 			});
 		});
