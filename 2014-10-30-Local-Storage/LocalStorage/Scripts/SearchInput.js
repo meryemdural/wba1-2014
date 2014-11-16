@@ -1,42 +1,42 @@
-﻿$(document).ready(function() {
+﻿$('.search-button').click(function() {
+
+    var textInput = $('#topSearchField').val();
+
+    if (textInput.length <= 3) {
+        alert("Bitte einen Text größer als 3 Zeichen eingeben");
+        return;
+    }
 
 
-    $('.search-button').click(function() {
+    $.getJSON("../LocalStorage/json_Filme/json_Filme.json", function(json) {
 
-        var textInput = $('#topSearchField').val();
+        //Clear list first
+        $('.search_dropdown').remove();
 
-        var data_file = "../LocalStorage/json_Filme/json_Filme.json";
+        document.movieList = json;
+        var found = false;
+        for (var i = 0; i < window.movieList.Filme.length; i++) {
 
-        $.ajax({
-            type: "GET",
-            url: data_file,
-            dataType: 'json',
-            contentType: "application/json; charset=utf-8",
-            success: OnSuccess,
-            error: OnError
-        });
+            // Now this is cool! When we search for "Star" if gives us of course "Star Wars: ... "but also "The fault in our stars"
+            if (window.movieList.Filme[i].titel.toLowerCase().indexOf(textInput.toLowerCase()) > -1) {
 
-        //Search in JASON file and show DropDown
-        function OnSuccess(results) {
-            for (var i = 0; i < results.Filme.length; i++) {
+                var option = document.createElement("option");
+                option.text = window.movieList.Filme[i].titel;
+                option.className = "search_dropdown";
 
-                if (results.Filme[i].titel.toLowerCase() === textInput.toLowerCase()) {
-                    $(".search-button").after(
-                        '<button class="search_dropdown" id"test">' +
-                            ' <option value=' + textInput + '> ' + results.Filme[i].titel + ' </option>' +
-                            ' </button>');
-                    break;
-                }
+                var select = document.getElementById("SearchMenu");
+                select.appendChild(option);
+
+                found = true;
             }
         }
+        if (!found)
+            alert("Film konnte nicht gefunden werden");
 
-        function OnError(err) {
-            alert(err.status + " - " + err.statusText);
-        }
     });
+});
 
     //Remove Dropdown when button lost focus
-    $('.search-button').focusout(function () {
-        $('.search_dropdown').remove();
-    });
+$('.search-button').focusout(function() {
+    $('.search_dropdown').remove();
 });

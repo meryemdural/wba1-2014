@@ -1,12 +1,16 @@
 ﻿/*Style for Top User Menu goes here*/
 
+.search-header {
+    position: absolute;
+}
+
+
 .search-inputs {
     top: 82px;
     left: 350px;
     position: relative;
     display: inline-block;
 }
-
 
 .search-button {
     width: 75px;
@@ -56,9 +60,9 @@
 }
 
 .arrow-profile {
-    left: 90px;
-    bottom: -50px;
-
+    left: 175px;
+    bottom: 45px;
+    width: 10px;
 }
 
 .arrow-chart {
@@ -95,7 +99,12 @@
     display: block;
     bottom: 20px;
     left: 75px;
-    position: relative;
+    position: relative;  
+}
+
+.title {
+    word-wrap: break-word;
+    max-width: 100px;
 }
 
 .correct-space {

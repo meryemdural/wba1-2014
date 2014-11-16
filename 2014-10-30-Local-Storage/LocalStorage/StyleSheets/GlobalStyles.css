@@ -32,13 +32,22 @@ h3 {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     color: white;
+    font-size: 30px;
+}
+
+.category-separator-sub {
+    margin: -10px 0 10px auto;
+    background: #3C4D82;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: white;
     font-size: 20px;
 }
 
 .price {
     padding-right: 20px;
     padding-top: 2px;
-    padding-bottom: 3px;
+    padding-bottom: 2px;
     background-color: #d2d2d2;
     font: bold 14px 'Trebuchet MS';
 }
@@ -63,6 +72,15 @@ h3 {
 
 /*I know its useless but i want to keep my Refactoring tool shut up*/
 .ChartContainer {
+    border: 0;
+}
+
+.collapse-button {
+    float: right;
+    margin-top: 2px;
+    margin-right: 2px;
+    background-color: transparent;
+    color: white;
     border: 0;
 }
 

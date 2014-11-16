@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<!-- Diese Seite hat leider keine Buttons zum Favorisieren und Kaufen. -->
+<!DOCTYPE html>
 <html>
     <head>
         <title>Video Webstore</title>
@@ -27,15 +28,15 @@
                 </div>
 
             </div>
-
-            <div class="tab-header">
-
+                     
+            <div id="SearchMenu" class="search-header">
                 <form class="search-inputs">
                     <input id="topSearchField" type="text" placeholder="Suchen..." required class="search-field">
-                    <input type="button" value="Suchen" class="search-button">
+                    <input type="button" value="Suchen" class="search-button" />
                 </form>
-
-
+            </div>
+         
+            <div class="tab-header">
                 <div class="tabs">
                     <ul class="tab-links">
                         <li>
@@ -56,23 +57,70 @@
         
         
         <div id="MeinKatalogPage" class="katalog-page">
-            <div class="filme-section">
+            <div class="Katalog-section">
                 <div class="category-separator">
-                    <p>Filme</p> 
+                    <p>Filme</p>
+                </div>
+                <div>
+                    <div class="sub-section">
+                        <div class="category-separator-sub">
+                            <input type="button" class="collapse-button" id="1" value="⇑" />
+                            <p>Action</p>
+                        </div>
+                    </div>
+                    <div id="actionMovieSection"></div>
+
+                    <div class="sub-section">
+                        <div class="category-separator-sub">
+                            <input type="button" class="collapse-button" id="2" value="⇑" />
+                            <p>Drama</p>
+                        </div>
+                    </div>
+                    <div id="dramaMovieSection"></div>
+
+                    <div class="sub-section">
+                        <div class="category-separator-sub">
+                            <input type="button" class="collapse-button" id="3" value="⇑" />
+                            <p>Krimi</p>
+                        </div>
+                    </div>
+                    <div id="crimeMovieSection"></div>
+                </div>
+            </div>
+            
+            <div class="Katalog-section">
+                <div class="category-separator">
+                    <p>Serien</p>
                 </div>
                 
-                <p class="not-implemented">Nicht Implementiert</p>
+                <div>
+                    <div class="sub-section">
+                        <div class="category-separator-sub">
+                            <input type="button" class="collapse-button" id="4" value="⇑" />
+                            <p>Sci-Fi</p>
+                        </div>
+                    </div>
+                    <div id="SciFiSerieSection"></div>
+
+                    <div class="sub-section">
+                        <div class="category-separator-sub">
+                            <input type="button" class="collapse-button" id="5" value="⇑" />
+                            <p>Fantasy</p>
+                        </div>
+                    </div>
+                    <div id="FantasySerieSection"></div>
+                </div>
             </div>
         </div>
 
-        <script type="text/javascript" src="JQueryRAW/jquery-1.11.1.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="jqueryRAW/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="Scripts/JavaScript.js"></script>
         <script src="Scripts/FavoriteButton.js"></script>
         
         <!-- This actually runs the Local Storage Stuff-->
         <script src="Scripts/Login.js"></script>
+        <script src="Scripts/Highlights.js"></script>
+        <script src="Scripts/Katalog.js"></script>
         <script src="Scripts/SearchInput.js"></script>
         <script src="Scripts/Einkaufswagen.js"></script>
         

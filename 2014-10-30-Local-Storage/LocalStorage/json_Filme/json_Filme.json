@@ -1,8 +1,8 @@
 ﻿{
     "Filme": [
         {
-            "id": 1000,
-            "FSK": 16,
+            "id": 0,
+            "FSK": 12,
             "typ": "film",
             "favorit": "true",
             "gesehen": "true",
@@ -13,10 +13,10 @@
             "titel": "The World's End",
             "description": "Five friends who reunite in an attempt to top their epic pub crawl from 20 years earlier unwittingly become humankind's only hope for survival",
             "picture": "../LocalStorage/images/worlds_end.jpg",
-            "preis": "15"
+            "preis": 7.99
         },
         {
-            "id": 1001,
+            "id": 1,
             "FSK": 16,
             "typ": "film",
             "favorit": "true",
@@ -28,10 +28,10 @@
             "titel": "Homefront",
             "description": "A former DEA agent moves his family to a quiet town, where he soon tangles with a local meth druglord",
             "picture": "../LocalStorage/images/home_front.jpg",
-            "preis": "10"
+            "preis": 11.97
         },
         {
-            "id": 1002,
+            "id": 2,
             "FSK": 16,
             "typ": "film",
             "favorit": "true",
@@ -43,11 +43,11 @@
             "titel": "Yi dai zong shi",
             "description": "The story of martial-arts master Ip Man, the man who trained Bruce Lee.",
             "picture": "../LocalStorage/images/grand_master.jpg",
-            "preis": "15"
+            "preis": 8.97
 
         },
         {
-            "id": 1003,
+            "id": 3,
             "FSK": 16,
             "typ": "film",
             "favorit": "true",
@@ -59,39 +59,99 @@
             "titel": "Machete Kills",
             "description": "The U.S. government recruits Machete to battle his way through Mexico in order to take down an arms dealer who looks to launch a weapon into space.",
             "picture": "../LocalStorage/images/machete_kills.jpg",
-            "preis": "10"
+            "preis": 16.99
 
         },
         {
-            "id": 1004,
+            "id": 4,
             "FSK": 16,
             "typ": "film",
             "favorit": "true",
             "gesehen": "true",
-            "genere": "Action",
+            "genere": "Crime",
             "bewertung": "0",
             "regie": "",
             "jahr": "2011",
             "titel": "The Godfather",
             "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
             "picture": "../LocalStorage/images/the_godfather.jpg",
-            "preis": "15"
+            "preis": 16.99
 
         },
         {
-            "id": 1005,
+            "id": 5,
             "FSK": 16,
             "typ": "film",
             "favorit": "true",
             "gesehen": "true",
-            "genere": "Action",
+            "genere": "Drama",
             "bewertung": "0",
             "regie": "",
             "jahr": "2011",
             "titel": "Schindler's List",
             "description": "In Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
             "picture": "../LocalStorage/images/schindlers_list.jpg",
-            "preis": "10"
+            "preis": 5.55
+        },
+        {
+            "id": 6,
+            "FSK": 16,
+            "typ": "film",
+            "favorit": "true",
+            "gesehen": "true",
+            "genere": "Drama",
+            "bewertung": "0",
+            "regie": "",
+            "jahr": "2013",
+            "titel": "The Wolf of Wall Street",
+            "description": "From the American dream to corporate greed, Belfort goes from penny stocks and righteousness to IPOs and a life of corruption in the late 80s. Excess success and affluence in his early twenties as founder of the brokerage firm Stratton Oakmont warranted Belfort the title",
+            "picture": "../LocalStorage/images/wolfofwallstreet.jpg",
+            "preis": 9.99
+        },
+        {
+            "id": 7,
+            "FSK": 6,
+            "typ": "film",
+            "favorit": "true",
+            "gesehen": "true",
+            "genere": "Drama",
+            "bewertung": "0",
+            "regie": "",
+            "jahr": "2013",
+            "titel": "The Fault in our Stars",
+            "description": "Two teens, both who have different cancer conditions, fall in love after meeting at a cancer support group.",
+            "picture": "../LocalStorage/images/thefaultinourstars.jpg",
+            "preis": 12.99
+        },
+        {
+            "id": 8,
+            "FSK": 12,
+            "typ": "serie",
+            "favorit": "true",
+            "gesehen": "true",
+            "genere": "Sci-Fi",
+            "bewertung": "0",
+            "regie": "",
+            "jahr": "2008",
+            "titel": "Star Wars: The Clone Wars",
+            "description": "After the Battle of Geonosis the Galactic Republic and the Confederacy of Independent Systems are fighting to rule over the galaxy.",
+            "picture": "../LocalStorage/images/starwarstheclonewars.jpg",
+            "preis": 89.99
+        },
+        {
+            "id": 9,
+            "FSK": 18,
+            "typ": "serie",
+            "favorit": "true",
+            "gesehen": "true",
+            "genere": "Fantasy",
+            "bewertung": "0",
+            "regie": "",
+            "jahr": "2013",
+            "titel": "Game of Thrones",
+            "description": "After the death of King of the seven Kingdoms the whole world tries to get on the most wanted iron thron.",
+            "picture": "../LocalStorage/images/gameofthrones.jpg",
+            "preis": 34.97
         }
     ]
 }

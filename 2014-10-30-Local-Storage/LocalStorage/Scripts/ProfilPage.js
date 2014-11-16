@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     $.ajax({
         type: "GET",
-        url: "../LocalStorage/json_Filme/json_Filme.json",
+        url: "../LocalStorage/LocalStorage/json_Filme/json_Filme.json",
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
         success: OnSuccess,
