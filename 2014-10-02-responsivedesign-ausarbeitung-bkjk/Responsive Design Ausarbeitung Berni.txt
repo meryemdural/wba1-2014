@@ -1,0 +1,88 @@
+	1	Technischer Hintergrund
+
+Wie bereits im Vorherigen Abschnitt erwähnt dient Responsive Design dazu, eine Webseite zu schreiben, die sich auf die Bedürfnisse der Displaygröße des Gerätes auf dem sie angezeigt wird, anpasst.
+Hierzu werden neuere Webstandards wie Html5, CSS3 und JavaScript genutzt. Besonders wichtig sind hierbei die sogenannten Media Queries, welche dazu dienen die Eigenschaften des Endgerätes abzufragen, wie Breite und Höhe des Gerätes/Fenster, Bildschirmauflösung, Eingabemöglichkeiten oder auch die Orientierung, was besonders bei mobilen Endgeräten von Nutzen ist.
+
+Im Folgenden Beispiel werden Media Queries kurz dargestellt.
+Hier wird der Inhalt der seite mit einer Breite von 800px dargestellt, es sei denn der Bildschrim hat eine breite, welche 1025px unterschreitet. In diesem Fall wird der Inhalt auf eine maximale Breite von 600px beschränkt.
+
+#content {
+   width: 800px;
+}
+ 
+@media screen and (max-width: 1024px) {
+   #content {
+      width: 600px;
+   }
+ 
+   aside {
+      display: none;
+   }
+}
+
+Eine Verwendung in HTML ist auch möglich. Hierbei werden seperate Stylesheets erstellt, welche nun abhängig von der Displaygröße geladen werden. Dies hat den Vorteil, dass nur der Stylesheet geladen werden muss, welcher für das entsprechende Endgerät  benötigt wird, was für eine schnellere Ladezeit der Webseite sorgen kann und weniger Traffic erzeugt, was vor allem für Geräte mit mobilem Internetzugang einen großen Vorteil darstellt. Dies funktioniert natürlich auch für andere Faktoren, wie beispielsweise die Orientierung des Gerätes.
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/all.css" />
+  <link rel="stylesheet" type="text/css" media="all and (max-device-width: 480px)" href="css/smartphones.css" />
+</head>
+
+Quelle: [WIK]
+
+Die Unterteilung, ab welcher Größe man das Layout der Seite ändert, nennt man Breakpoints.
+An den erstellten Breakpoints (meist orientiert an der Breite des Displays in Pixeln) ändert man nun das Design der Seite, beispielsweise von einem mehrspaltigen Layout in ein ein- oder zweispaltiges
+
+Das folgende Beispiel enthält 3 Breakpoints:
+Unter  760px: Der Inhalt wird linear untereinander gesetzt, für Smartphones gedacht
+760px bis 980px: Zwei Spalten, gedacht für Tablets und kleine Browserfenster
+980px bis 1280px: Drei Spalten, gedacht für das klassische Browserfenster
+über 1280px: Layout bleibt unverändert, nur Schrift und Bilder werden größer
+
+
+Quelle: [VENT]
+
+
+Ein Großes Hilfsmittel für das Arbeiten mit Responsive Design sind Frameworks, die dabei helfen sollen, das Arbeiten mit verschiedenen Displaygrößen zu vereinfachen, gerade für Programmierer, die nicht von Grund auf anfangen möchten, eine responsive Seite zu machen.
+Diese Frameworks enthalten alle bestimmte Standarddefinitionen zu den dynamischen Design- und Strukturelementen der Webseite, wie CSS-Basierte Gridsysteme mit mehreren Spalten, standardisierte CSS-Klassen zbd vor allem Problemlösung bei der Nutzung von älteren Browsern wie dem Internet Explorer 8, die Features wie CSS3 nicht unterstützen.
+Besonders zu erwähnende Frameworks hierfür sind beispielsweise Bootstrap, welches Open Source ist, auf einem 12-spaltigem CSS System basiert, und mit Wordpress Templates arbeitet, oder auch Foundation, Version 4, welches ebenfals Open Source ist und besonders für Einsteiger empfohlen wird. [RDT]
+
+2.4 Vor- und Nachteile von Responive Design
+
+Einer der Großen Vorteile von Responsive Design ist der geringere Pflegeaufwand im Vergleich zu zwei oder gar mehreren Webseiten für verschiedene Endgeräte.
+Da nur eine Webseite geschrieben und betreut werden muss fallen deutlich weniger Kosten für den Auftraggeber oder Betreiber der Webseite an, weshalb sich immer öfter für Responsives Design entschieden wird, argumentieren viele Befürworter von Responsivem Design.
+Allerdings kann hier viel argumentiert werden.
+Da der gleiche Inhalt der auf dem Desktop dargestellt wird umgestellt werden muss, sehen mobile Seiten meist sehr lang aus und der Nutzer muss wesentlich mehr Scrollen, um ein gewünschtes Ergebnis zu finden. Zudem ist die Navigation meist im Rahmen der CSS-Möglichkeiten angepasst, was für Potenzielle Usabilitykonflikte sorgen kann und oft dazu führt, dass mobile Seiten überladen wirken und der Nutzer sich schwieriger zurecht findet.
+Außerdem stellt sich oft die Frage wie viele verschiede Designs tatsächlich benötigt werden.
+Befürworter von Responsivem Webdesign Argumentieren oft, dass immer mehr Geräte mit wesentlich unterschiedlichen Displaygrößen Internetfähig werden und das Alte Modell, in dem für jedes Gerät eine eigene Seite Designt wird, immer aufwendiger wird. 
+Hier widerspricht jedoch Patrick Voelcker, der wie viele andere ein Gegner von Responsivem Design ist mit dem Argument, dass obwohl immer mehr Displaygrößen ihren Weg ins Web finden, zwei Seiten völlig ausreichend sind da beispielsweise auf Tablets, besonders mit der immer größer werdenden Auflösung, sich Desktopvarianten als die Beste Möglichkeit des Betrachtens erwiesen haben und das tatsächlich nur zwei Varianten einer Seite benötigt werden, eine Mobile und eine für alle anderen Geräte. [SCHROTT]
+
+
+
+
+
+
+
+[WIK] http://de.wikipedia.org/wiki/Cascading_Style_Sheets#Eigenschaftsspezifische_Stylesheets_.28Media_Queries.29
+
+[VENT]
+http://www.mediaevent.de/css/media-query.html
+
+[RDT]
+http://www.responsive-design-test.de/responsive-design-frameworks
+
+[SCHROTT]
+http://www.mobile-zeitgeist.com/2013/08/07/warum-responsive-webdesign-schrott-ist/
+
+http://www.webmasterpro.de/coding/article/css-responsive-webdesign-media-queries-fuer-iphone-ipad-und-smartphones.html
+
+http://responsivedesign.is/strategy/page-layout/defining-breakpoints
+
+https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/how-to-choose-breakpoints
+
+http://die-netzialisten.de/responsive-design/neue-ideen-zu-breakpoints-im-responsive-web-design/
+
+
+
+
+
+

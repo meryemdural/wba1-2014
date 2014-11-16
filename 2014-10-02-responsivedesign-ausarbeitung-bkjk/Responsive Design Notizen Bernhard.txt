@@ -1,0 +1,70 @@
+Respoinsive Design
+
+
+http://de.wikipedia.org/wiki/Responsive_Webdesign
+-Responive design ist ein Paradigma zur Erstellung von Webseiten so dass sie auf das Jeweilige Endgerät reagieren
+-Aufbau der Webseite erfolge anhand des Gerätes, zb touchscreen oder maus
+-technischer Stand ist HTML5, CSS3
+-Aufgrund unterschiedlicher Größen müssen vor allem Blockelemente anders behandelt werden
+-Gestaltungsraster müssen variabel gehalten werden
+-Positionierung der Blockelemte verschiebt sich meistens
+-Unterschiede zur mobilen Webseite:
+	-Mobile webseite wird unabhängig von der Desktopversion erstellt
+	-Responsive Design bedeutet nur eine Webseite wird erstellt die unterschiedlich dargestellt wird, je nach Endgerät
+-Andere "Alternativen" sind adaptive Design und liquid Design
+-Meißt beachtete Faktoren sind:
+	-Größe des Gerätes
+	-Bildschirmauflösung
+	-Orientierung
+	-Eingabemöglichleiten
+
+
+http://www.responsive-webdesign.mobi/
+-"Form follows function" Bedeutet: Funktionen, Design und Inhalt folgen der Bildschirmauflösung
+-Immer mehr Nutzer surfen Mobil
+	-Vorteil: Nur eine Seite muss gewartet werden im Vergleich zu 2 Verschiedenen bei einer extra Seite für Mobile Endgeräte
+	-Aufgrund dessen Kosteneffiziens
+
+
+http://www.webmasterpro.de/coding/article/css-responsive-webdesign-media-queries-fuer-iphone-ipad-und-smartphones.html
+-Umsetzung durch "Media Queries"
+	-Es müssen trotzdem seperate CSS Dateien erzeugt werden die für die jeweiligen Größen gelten
+-Vorraussetzung für Media Queries ist eine klare Trennung von Gestaltung und Layout
+-Es werden verschiedene Möglichkeiten genutzt zusätzliche Eigenschaften einzubingen zb. link Elemente und media Attribute
+
+
+http://www.mobile-zeitgeist.com/2013/08/07/warum-responsive-webdesign-schrott-ist/
+-Nachteile von Responsive Design:
+-Usability:
+	-Content muss oft untereinandergepackt werden, was zu viel Scrollen führt:Hierdurch wird viel vom nutzer übersprungen
+	-Konflikt bei Navigation zwischen Übersicht, Platz und Vollständigkeit
+-Es werdne eigentlich nur 2 verschiedene Designs benötigt da Tablets die Auflösung von PCs haben und TVs auch, zudem kommt heir der große Sitzabstand
+-Doppelter Aufwand(und Geld) durch 2 Seiten gleicht sich durch Zufriedenheit des Nutzers aus(Einnahmen)
+-Längere Ladezeiten da der komplette Code der Siete geladen wird auch wenn nur ein Teil gebraucht wird
+
+
+http://www.responsive-design-test.de/responsive-design-frameworks
+-Responsive Design Frameworks existieren schon eineige
+-Populär sind:
+
+			Foundation, Version 4:
+			Dieses Responsive Design Framework ist eines der am weitesten entwickelten. Als Open Source Projekt wird es ständig mit Updates versorgt und aktuellen Entwicklungen angepasst. Es ist besonders für Einsteiger in die Welt des Responsive Design geeignet.
+			 
+			Bootstrap:
+			Basierend auf einem 12-spaltigem CSS, enthält dieses Open Source Framework zahlreiche Navigations- und Oberflächenelemente und kann unter anderem mit Wordpress Templates arbeiten.
+			 
+			Gumby 2:
+			Dieses relativ junge Responsive Framework basiert auf HTML, SASS-CSS und jQuery und kommt mit sehr vielen User Interface Elementen daher.
+			 
+			Kube:
+			Das sehr minimalistische Framework ist ebenfalls ein Open Source Produkt und basiert auf LESS-CSS, Javascript und HTML.
+			 
+			Base:
+			Mit dem Untertitel „Super Simple Responsive Framework“ kommt Base daher. Basierend auf LESS-CSS, HTML, jQuery und PSD-Templates, arbeitet es auf Grundlage eines 960 Pixel breiten CSS-Grids.
+			 
+			YAML:
+			Dieses kostenpflichtige CSS-Framework enthält sehr viele Internet Elemente – wie Buttons, Navigationen und Formulare. Besonderer Vorteil dieser Responsive Design Technik: Es lässt sich in mehr als 30 CMS integrieren und ist speziell auf eine schnelle Frontend-Entwicklung ausgerichtet.
+
+
+http://t3n.de/news/responsive-webdesign-html5-css3-grundlagen-335305/
+http://www.mediaevent.de/css/media-query.html

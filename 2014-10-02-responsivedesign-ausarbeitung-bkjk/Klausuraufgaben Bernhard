@@ -1,0 +1,25 @@
+#1
+Was genau ist der Zweck von Responsivem Design
+
+Eine Webseite zu schreiben die sich Dynamisch an das Endgerät anpasst.
+
+#2
+Nennen sie 2 Daten die genutzt werden um eine Seite Responsiv auf das Endgerät anzupassen?
+
+-Displaygröße
+-Auflösung
+-Art des Gerätes
+
+#3
+Mit welchen Mitteln im Code kann man eine Webseite Responsiv machen?
+
+-Verschiedene CSS Stylesheets die anhand der Gerätespezifischen Faktoren aufrufen kann
+-Direkte Einbindung im HTML Code
+
+#4
+Welche Vorteile hat Responsives Design gegenüber seperaten Webseiten für verschiedene Endgeräte?
+
+-Es muss nur eine Seite geschrieben werden
+-Inhalt muss nur ein mal eingepflegt werden
+-Der HTML Code muss nur eine mal gechrieben werden
+	=> Kosteneffiziens
