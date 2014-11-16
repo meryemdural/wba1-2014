@@ -1,8 +1,7 @@
 /* --------- IPHONE 5 Portrait und Landscape -*/
 
 @media only screen and (max-width: 320px) {
-    /*------- Standardgeschichten, wie body, headlines und co ------* */
-    /******************************************************************/
+
     h2 {
         font-size: 1.231em;
     }
@@ -45,10 +44,7 @@
     footer {
         margin-left: 0px;
     }
-}<!----- End of max-width:320px ------> 
-
-<!----------- Breakpoint max-width:350px ------------>
-/*****************************************************/
+}
 
 @media only screen and (max-width: 350px) {
     /*------- Standardgeschichten, wie body, headlines und co ------* */
@@ -98,10 +94,7 @@
     .bg_braun {
         background-color: #fff;
     }
-}<!---- End of breakpoint max-width: 350px ---->
-
-<!----------- Breakpoint max-width:568 ------------>
-/*****************************************************/
+}
 @media only screen and (max-width: 568px) {
     /*------- Standardgeschichten, wie body, headlines und co ------* */
     /*****************************/
@@ -301,10 +294,7 @@
     .bg_braun {
         background-color: #fff;
     }
-} <!---End of Breakpoint max-width: 568px--->
-
-<!----------- Breakpoint min-width: 569 und max-width:767 ------------>
-/*****************************************************/
+} 
 @media only screen and (min-width: 569px) and (max-width: 767px) {
     /* Zweispaltigkeit in eine Spalte verwandeln */
     /*------- Main ------* */
@@ -332,12 +322,7 @@
         background-color: #fff;
     }
     
-}<!---End of Breakpoint min-width: 569 und max-width:767--->
-
-
-/* ------- IPAD MINI in portrait und landscape ------- */
-/* ------- Diesen Breakpoint haben wir zwar hier mitgesetzt und ein paar Dinge reingeschrieben, damit es nicht völlig verhauen aussieht, aber im Grunde genommen wurde dieser Breakpoint nicht genau optimiert. Den haben wir uns am Anfang auch nicht gesetzt ----- */
-
+}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     /*------- Main ------* */
     /***********************/
