@@ -1,0 +1,105 @@
+/**
+ ** Responsive Tables for Responsive Webdesignproject PSSO
+ **
+ **/
+
+table th {
+    font-weight: bold;
+}
+
+aside#noten table {
+    width: 98%;
+}
+
+.onlymobile {
+    display: none;
+}
+
+h2 {
+    padding-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 670px) {
+    aside#noten {
+        padding-top: 2.5em;
+    }
+    
+    table tr.hauptkonto td {
+        font-size: 120%;
+        font-weight: bold;
+    }
+
+    table tr.subkonto td {
+        font-size: 110%;
+    }
+
+    .divider-grades {
+        background: url(../media/images/back_line.png) repeat-y 37.5% 0 transparent 
+    }
+}
+    
+@media only screen and (max-width: 670px) {
+    h2 {
+        padding-top: 1.5em;
+    }
+    
+    .onlymobile {
+        display: block;
+    }
+    aside#pdf-uebersichten-mobile {
+        margin-top: 2.5em;
+    }
+    .divider-grades {
+        background: none; 
+    }
+    
+    .responsive-table table,
+    .responsive-table thead,
+    .responsive-table tbody,
+    .responsive-table th,
+    .responsive-table td,
+    .responsive-table tr { 
+        display: block; 
+    }
+
+	.responsive-table thead tr,
+    .responsive-table td.nonmobile,
+    .responsive-table tr.nonmobile { 
+		display: none;
+	}
+ 
+	.responsive-table tr {
+        border: 1px solid #ccc;
+    }
+ 
+	.responsive-table td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		white-space: normal;
+		text-align:left;
+	}
+ 
+	.responsive-table td:before { 
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px; 
+		text-align:left;
+		font-weight: bold;
+        float: left;
+	}
+    
+    .responsive-table td.fach {
+        font-weight: bold;
+        font-size: 110%;
+    }
+    
+    .responsive-table td.fach::before {
+        display: none;
+    }
+    
+    .responsive-table td:before {
+        content: attr(data-title);
+    }
+}

@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Tanverwaltung - PSSO - Fachhochschule Köln</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet/less" type="text/css" href="./css/nav.less"/>
+    <link rel="stylesheet/less" type="text/css" href="./css/css.less"/>
+    <link rel="stylesheet" href="./css/fonts.css">
+
+    <!-- Javascript -->
+    <script>less = {env: 'development', logLevel: 2};</script>
+    <script src="./js/less.min.js"></script>
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function showPDF() {
+            $('#success').hide();
+            $('#alert').hide();
+            tan = $('#tan').val();
+
+            if (tan == "123456") {
+                $('form input[type!=submit]').val('');
+                $('#success').html('Die neue Tanliste wurde generiert und kann <strong><a href="./test.pdf">hier</a></strong> heruntergeladen werden.<br />Bitte denken Sie daran, die Tanliste zu aktivieren!').slideDown();
+            } else {
+                $('#alert').html('Die eingegebene Tannummer ist leider nicht gültig.').slideDown();
+            }
+            return false;
+        }
+
+        function activateTan(){
+            $('#success').hide();
+            $('#alert').hide();
+            tan_current = $('#tan_activate_current').val();
+            tan_new = $('#tan_activate_new').val();
+            if(tan_new == "654321" && tan_current == "123456"){
+                $('form input[type!=submit]').val('');
+                $('#success').html('Die neue Tanliste wurde erfolgreich aktiviert!').slideDown();
+            }else{
+                $('#alert').html('Eine der eingegebenen Tannummer ist leider nicht gültig.').slideDown();
+            }
+            return false
+        }
+    </script>
+</head>
+
+<body>
+<div class="wrapper clearfix startpage">
+    <div id="wrap">
+        <div id="header" class="header clearfix">
+            <header>
+                <div class="c3">
+                    <div class="logo clearfix">
+                        <img src="./media/images/logo.svg" width="381" alt="Fachhochschule Köln"/>
+                    </div>
+
+                    <nav class="desktop-menu">
+                        <ul>
+                            <li><a href="./index.html">Startseite</a></li>
+                            <li class="active"><a href="./allgemeine-verwaltung.html">Allgemeine Verwaltung</a>
+                                <ul>
+                                    <li><a href="./kontaktverwaltung.html">Kontaktverwaltung</a></li>
+                                    <li><a href="./tanverwaltung.html">Tan-Verwaltung</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./studiumsverwaltung.html">Studiumsverwaltung</a>
+                                <ul>
+                                    <li><a href="./info.html">Informationen zur Rückmeldung</a></li>
+                                    <li><a href="./gebuehren.html">Gebühren-Konto</a></li>
+                                    <li><a href="./bescheinigung.html">Studienbescheinigung für alle Semester</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./pruefungen.html">Prüfungsverwaltung</a>
+                                <ul>
+                                    <li><a href="./an-und-abmeldungen.html">An- und Abmeldung</a></li>
+                                    <li><a href="./pruefungsinfo.html">Infos über angemeldete Prüfungen</a></li>
+                                    <li><a href="./notenspiegel.html">Notenspiegel</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                        data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Navigation ein-/ausblenden</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">PSSO</a>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="./index.html">Startseite</a></li>
+                                    <li class="active dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Allgemeine Verwaltung
+                                            <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="./kontaktverwaltung.html">Kontaktverwaltung</a></li>
+                                            <li><a href="./tanverwaltung.html">Tan-Verwaltung</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Studiumsverwaltung
+                                            <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="./info.html">Informationen zur Rückmeldung</a></li>
+                                            <li><a href="./gebuehren.html">Gebühren-Konto</a></li>
+                                            <li><a href="./bescheinigung.html">Studienbescheinigung für alle
+                                                Semester</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prüfungsverwaltung
+                                            <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="./an-und-abmeldungen.html">An- und Abmeldung</a></li>
+                                            <li><a href="./pruefungsinfo.html">Infos über angemeldete Prüfungen</a></li>
+                                            <li><a href="./notenspiegel.html">Notenspiegel</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#">Max Mustemann</a></li>
+                                    <li><a href="#">1234567890</a></li>
+                                    <li><a href="#">Abmelden</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+
+                    <div class="psso_text">
+                        <h1>Prüfungs- und Studierendenservice Online</h1>
+                        <span>Max Mustermann (1234567890)</span>
+                        <span><a href="#">Abmelden</a> </span>
+                    </div>
+
+                </div>
+            </header>
+        </div>
+
+        <ol class="breadcrumb">
+            <li><a href="./allgemeine-verwaltung.html">Allgemeine Verwaltung</a> </li>
+            <li><span>/</span></li>
+            <li class="current">Tanverwaltung</li>
+        </ol>
+
+        <div class="inner-wrapper">
+
+            <div class="divider clearfix">
+                <div class="context">
+                    <div class="c1">
+                        <div class="article">
+                            <article>
+                                <h1>Hilfe</h1>
+                                <p>Die Tanlisten werden zur An- und Abmeldung von Prüfungen benötigt.</p>
+                                <p>Aus Sicherheitsgründen sind diese Aktionen nur mit einer gültigen Tan durchführbar.</p>
+                                <p>Sie können im Folgenden eine Tanliste aktivieren, oder eine neue erstellen.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div id="content" class="content divider clearfix">
+                    <div class="c2">
+                        <div id="alert" class="alert-danger">
+                            Die eingegebene Tan ist leider nicht gültig.
+                        </div>
+                        <div id="success" class="alert-success">
+                            Ihnen liegt eine Studienbescheinigung für Max Mustermann vom 31. Oktober 2014
+                            vor.<br/>
+                            Sie ist gültig für das Wintersemester 2014/15.
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <article>
+                                <h1>Neue Tanliste erzeugen</h1>
+                                <p>
+                                    Bitte geben Sie nachfolgend eine Tan aus ihrer aktiven Tanliste ein, und wählen Sie die Anzahl der zu generierenden Tannummern.</p>
+                                <form role="form" method="post" action="#" onsubmit="return showPDF();">
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-md-7" style="height: 48px;">
+                                            Tan aus aktiver Tanliste
+                                        </div>
+                                        <div class="col-md-4 align-right">
+                                            <input type="password" id="tan" class="inputText inputField" placeholder=""
+                                                   maxlength="6" style="width:100%" required>
+                                        </div>
+                                    </div>
+                                    <br class="mobile" />
+                                    <div class="row">
+                                        <div class="col-md-7" style="height: 48px;">
+                                            Anzahl neuer Tannummern
+                                        </div>
+                                        <div class="col-md-4 align-right">
+                                            <select id="tan_count" class="inputText inputField" style="width:100%" required>
+                                                <option>5</option>
+                                                <option selected>20</option>
+                                                <option>50</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7" style="height: 48px;">
+                                            &nbsp;
+                                        </div>
+                                        <div class="col-md-4 align-right">
+                                            <input type="submit" class="inputText inputField"
+                                                   value="Neue Tanliste generieren">
+                                        </div>
+                                    </div>
+                                </form>
+                            </article>
+                        </div>
+                        <br class="mobile" />
+                        <br class="mobile" />
+
+                        <div class="col-md-5">
+
+                            <article>
+                                <h1>Tanliste aktivieren</h1>
+                                <p>Zur Aktivierung geben Sie bitte eine Tan ihrer aktuellen Tanliste, und eine Tan aus ihrer neuen Tanliste ein.</p>
+                                <form role="form" method="post" action="#" onsubmit="return activateTan();">
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-md-7" style="height: 48px;">
+                                            Tan aus aktiver Tanliste
+                                        </div>
+                                        <div class="col-md-4 align-right">
+                                            <input type="password" id="tan_activate_current" class="inputText inputField" placeholder=""
+                                                   maxlength="6" style="width:100%" required>
+                                        </div>
+                                    </div>
+                                    <br class="mobile" />
+                                    <div class="row">
+                                        <div class="col-md-7" style="height: 48px;">
+                                            Tan aus neuer Tanliste
+                                        </div>
+                                        <div class="col-md-4 align-right">
+                                            <input type="password" id="tan_activate_new" class="inputText inputField" placeholder=""
+                                                   maxlength="6" style="width:100%" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7" style="height: 48px;">
+                                            &nbsp;
+                                        </div>
+                                        <div class="col-md-4 align-right">
+                                            <input type="submit" class="inputText inputField"
+                                                   value="Tanliste aktivieren">
+                                        </div>
+                                    </div>
+                                </form>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="footer" class="footer">
+        <footer>
+            <div class="c3">
+                <ul class="meta">
+                    <li>
+                        <a href="#" title="Impressum">Impressum</a>
+                    </li>
+                </ul>
+                <em class="copyright">© 2014 Fachhochschule Köln</em>
+            </div>
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>
