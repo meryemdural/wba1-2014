@@ -18,7 +18,7 @@
     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <!-- Unser CSS einbinden-->
+    <!--CSS-->
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/mediaqueries.css" type="text/css">
 
@@ -29,12 +29,9 @@
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-    <!--- DER BUTTON "MEHR ERFAHREN": Wenn man die Website auf dem Smartphone öffnet (Breakpoint (max-width: 568px)), 
-            dann wird der Teasertext NICHT angezeigt. Stattdessen ist da ein Button mit "mehr erfahren". Wenn man dort draufklickt,
-dann erscheint der Text und der Button verschwindet. Umgesetzt mit Jquery. #clickwiki(x) und #awiki(x) beachten.--->
-    <!---  $("header").hide().fadeIn(1000, function(){
-  $("header").css( { width:320, height:480 } );
-});---->
+    <!-- DER BUTTON -MEHR ERFAHREN-: Wenn man die Website auf dem Smartphone öffnet (Breakpoint (max-width: 568px)), 
+            dann wird der Teasertext NICHT angezeigt. Stattdessen ist da ein Button mit -mehr erfahren-. Wenn man dort draufklickt,
+dann erscheint der Text und der Button verschwindet. Umgesetzt mit Jquery.-->
     <script type="text/javascript">
         $(document).ready(function () {
             $("header").hide().fadeIn(1000);
@@ -70,7 +67,7 @@ dann erscheint der Text und der Button verschwindet. Umgesetzt mit Jquery. #clic
 
 
 
-    <!--- Jquery Schnipsel für die Navigation (bei breakpoint max-width 568) - Auf und zuklappen-Funktion --->
+    <!-- Jquery Schnipsel für die Navigation (bei breakpoint max-width 568) - Auf und Zuklappen-Funktion -->
     <script>
         $(function () {
             var pull = $('#pull');
@@ -97,18 +94,19 @@ dann erscheint der Text und der Button verschwindet. Umgesetzt mit Jquery. #clic
     <div id="wrap">
 
         <header>
-
+            <!-- Das Hauptlogo -->
             <div class="mainlogo float">
                 <img alt="Fachhochschule Köln Cologne University of Applied Sciences Logo" src="img/logo.svg">
             </div>
-
+            <!-- Das Medieninformatik-Logo -->
             <div class="sublogo">
                 <p>Medieninformatik
-                    <br /><span class="pink">an der Fachhochschule K&ouml;ln</span>
+                    <br /><span class="pink">an der Fachhochschule Köln</span>
                 </p>
             </div>
             <br style="clear:both;">
-
+            
+            <!--- Das Headerbild --->
             <div id="startbild">
                 <img alt="Box mit Symbolen der Medieninformatik" src="img/startheaderbild.jpg">
                 <div class="bu">
@@ -124,15 +122,15 @@ dann erscheint der Text und der Button verschwindet. Umgesetzt mit Jquery. #clic
 
 
 
-            <!---- Navigation ---->
+            <!-- Navigation // Alle Punkte mit der Klasse .mobilehide werden in der mobilen Ansicht versteckt und tauchen somit nicht in der Navigation auf-->
             <nav id="nav_wrap">
 
                 <ul class="firstul">
-                    <li class="mobilehide"><a href="index.html">Startseite</a>
+                    <li><a href="index.html">Startseite</a>
                     </li>
                     <li><a href="leute.html">Leute</a>
                     </li>
-                    <li><a href="#">Räume & Ressourcen</a>
+                    <li><a href="#">Räume &amp; Ressourcen</a>
                     </li>
                     <li><a href="#" lang="en">Showcase</a>
                     </li>
@@ -168,7 +166,8 @@ dann erscheint der Text und der Button verschwindet. Umgesetzt mit Jquery. #clic
 
             </nav>
         </header>
-
+        
+        <!-- Inhalt -->
         <div id="main">
 
             <div class="zeile">
@@ -176,7 +175,7 @@ dann erscheint der Text und der Button verschwindet. Umgesetzt mit Jquery. #clic
                 <div class="clear">
 
                     <p class="startnews float zweifach">
-                        <!--- BILDSWITCHER: "<span id="teaserbild(x)...." - damit das Bild bei mobilen Geräten in ein Bild mit doppelter Auflösung ausgetauscht wird. Das Bild wird rausgemacht und durch einen festen span-Bereich mit Hintergrundbild ersetzt.-->
+                        <!-- BILDSWITCHER: "<span id="teaserbild(x)...." - damit das Bild bei mobilen Geräten in ein Bild mit doppelter Auflösung ausgetauscht wird. Das Bild wird rausgemacht und durch einen festen span-Bereich mit Hintergrundbild ersetzt.-->
                         <a href="#">
                             <span id="teaserbild1" class="teaserbild"><img id="switchbild" src="img/teaserbilder/medieninformatik_filmfestival.jpg" alt="Medieninformatik Filmfestival 2014" class="fade"></span> 
                             <strong>Medieninformatik Filmfestival 2014</strong>
@@ -359,7 +358,8 @@ dann erscheint der Text und der Button verschwindet. Umgesetzt mit Jquery. #clic
                         <a href="#christiane">Christiane Grünloh (<abbr title="Master of science" lang="en">M.Sc.</abbr>)</a>
                     </p>
                 </div>
-
+                
+                <!-- Die Klasse .mobilehide sagt, dass dieser div in der mobilen Ansicht versteckt werden soll -->
                 <div class="float einfach last mobilehide">
                     <br class="spacer">
                 </div>

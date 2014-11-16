@@ -20,6 +20,17 @@
 .last {
     margin-right: 0;
 }
+/* Überschriften */
+
+/*****************/
+
+h2,
+h2 strong {
+    color: #77cc00;
+}
+p {
+    padding-bottom: 15px;
+}
 /* Hauptcontainer */
 
 /******************/
@@ -62,18 +73,5 @@ h2.index,
     border-bottom: solid 1px #dd1166;
 }
 
-/* Überschriften */
 
-/*****************/
 
-h2,
-h2 strong {
-    color: #77cc00;
-}
-p {
-    padding-bottom: 15px;
-}
-
-.zeile {
-width: 110% !important;
-}

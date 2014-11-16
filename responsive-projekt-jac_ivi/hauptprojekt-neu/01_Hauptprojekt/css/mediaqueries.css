@@ -1,6 +1,25 @@
 /* --------- IPHONE 5 Portrait und Landscape -*/
 
 @media only screen and (max-width: 320px) {
+    /*------- Standardgeschichten, wie body, headlines und co ------* */
+    /******************************************************************/
+    h2 {
+        font-size: 1.231em;
+    }
+    /*------- Header ------* */
+    /*****************************/
+    .mainlogo {
+        margin-left: -20px;
+    }
+    .sublogo {
+        float: left;
+    }
+    /*------- Navigation ------* */
+    /*****************************/
+    #nav_wrap {
+        width: 100%;
+        height: 30px;
+    }
     nav li {
         display: block;
         float: none;
@@ -9,6 +28,8 @@
     nav li a {
         border-bottom: 1px solid #576979;
     }
+    /*------- Main ------* */
+    /*****************************/
     div#themen div {
         float: left;
         width: 100%;
@@ -16,58 +37,37 @@
         margin-right: 8px;
         margin-bottom: 8px;
     }
-    #nav_wrap {
-        width: 93%;
-        height: 93px;
-    }
-    .sublogo {
-        float: left;
-    }
     .linkbox {
         width: 100%;
     }
-    h2 {
-        font-size: 1.231em;
-    }
-    .mainlogo {
-        margin-left: -20px;
-    }
-    #nav_wrap {
-        width: 100%;
-        height: 30px;
-    }
-    
-    
-    
-    
+    /*------- Footer ------* */
+    /*****************************/
     footer {
         margin-left: 0px;
     }
-    
-    
-    
-}
+}<!----- End of max-width:320px ------> 
 
+<!----------- Breakpoint max-width:350px ------------>
+/*****************************************************/
 
 @media only screen and (max-width: 350px) {
-.teaserbild {
-    max-width:100%;
-    }
-.linkbox {
-    max-width:100%;
-}
-    
+    /*------- Standardgeschichten, wie body, headlines und co ------* */
+    /*****************************/
     h2.index,
     .box_rahmen {
-    width: 89%;
-        font-size:1.231em;
-}
-    
-    .index_veranstaltung {
-    width: 290px;
-    height: 290px;
-   
-}
+        width: 89%;
+        font-size: 1.231em;
+    }
+    /*------- Main ------* */
+    /*****************************/
+    .teaserbild {
+        max-width: 100%;
+    }
+    .linkbox {
+        max-width: 100%;
+    }
+    /*------- Nur auf der Leute-Seite ------* */
+    /*****************************/
     span[id=leutebild] {
         display: block;
         background-image: url(../img/Gesichter/leuteg.jpg);
@@ -76,58 +76,83 @@
         width: 280px;
         height: 186px;
     }
-    
     img[id=switchbild2] {
         display: none;
     }
-    
-    .vierzig_prozent p{
-    font-size: 1.385em;
-    padding-top:20px;
-}
-    
+    .vierzig_prozent p {
+        font-size: 1.385em;
+        padding-top: 20px;
+    }
     .vierzig_prozent abbr {
-    font-size: 1.231em;
-}
+        font-size: 1.231em;
+    }
+    .index_veranstaltung {
+        width: 290px;
+        height: 290px;
+    }
+    /*------- Footer ------* */
+    /*****************************/
     .kontaktfooter {
         min-height: 300px;
     }
-    
     .bg_braun {
-    background-color:#fff;
+        background-color: #fff;
     }
-    
-}
+}<!---- End of breakpoint max-width: 350px ---->
 
-
+<!----------- Breakpoint max-width:568 ------------>
+/*****************************************************/
 @media only screen and (max-width: 568px) {
+    /*------- Standardgeschichten, wie body, headlines und co ------* */
+    /*****************************/
     * {
-    font-size:15px;
-    line-height: 18px;
+        font-size: 15px;
+        line-height: 18px;
     }
-    
-    .sublogo > p {
-    font-size: 1.154em;
-}
-.pink {
-    font-size: 1.154em;
-}
-    
-    
-    /* Zweispaltigkeit in eine Spalte verwandeln */
-    .zweifach {
+        /* ------ WICHTIG: Hier haben wir die Gestaltungsregel "Gesetz der Nähe" beachtet und über die verschiedenen Abschnitte einen größeren Abstand gemacht, damit die Abtrennung der Abschnitte klarer ist -------- */
+    h2.balkengruen,
+    h2.balkengrau {
+        margin-top: 80px;
+    }
+    h1 {
         width: 100%;
-        margin-top: 10px;
     }
-    
-    .termine .datum, .termine .beschreibung {
-width: 100%;
-}
-    
+    h1,
+    h2.balkengruen,
+    h2.balkengrau,
+    h3 a {
+        font-size: 1.231em;
+    }
+    /* ----- Alle Elemente mit der Klasse .mobilehide werden in der mobilen Ansicht versteckt. visibility:hidden + position:absolute deshalb, weil display:none an diesen Stellen, wie z.B. der Navigation, nicht funktioniert hat -----*/
+    .mobilehide {
+        visibility: hidden;
+        position: absolute;
+        top: -1000px;
+    }
+    /*------- Header ------* */
+    /*****************************/
+    .mainlogo {
+        margin-left: 0px;
+    }
+    .sublogo {
+        float: left;
+    }
+    .sublogo > p {
+        font-size: 1.154em;
+    }
+    .pink {
+        font-size: 1.154em;
+    }
+    #startbild .bu {
+        position: static;
+        width: 100%;
+        height: 93px;
+    }
+    /*------- Navigation ------* */
+    /*****************************/
     nav {
         margin-top: 10px;
         margin-bottom: 30px;
-
     }
     nav ul {
         display: none;
@@ -152,18 +177,6 @@ width: 100%;
         right: 15px;
         top: 10px;
     }
-    #startbild .bu {
-        position: static;
-        width: 100%;
-        height: 93px;
-    }
-    div#themen div {
-        float: left;
-        width: 100%;
-        /*height: 200px;*/
-        margin-right: 8px;
-        margin-bottom: 8px;
-    }
     #nav_wrap {
         width: 100%;
         height: 30px;
@@ -183,50 +196,31 @@ width: 100%;
     #nav_wrap ul {
         width: 100%;
     }
-    /* ---- mit Position:absolute haben wir getrickst und den Navigationspunkt rausgenommen -----*/
-    .mobilehide {
-        visibility: hidden;
-        position: absolute;
-        top:-1000px;
+    /*------- Main ------* */
+    /******************************************/
+    .zweifach {
+        width: 100%;
+        margin-top: 10px;
     }
-    
-    
-    /* ------ WICHTIG: Hier haben wir die Gestaltungsregel "Gesetz der Nähe" beachtet und über die verschiedenen Abschnitte einen größeren Abstand gemacht, damit die Abtrennung der Abschnitte klarer ist -------- */
-    h2.balkengruen, h2.balkengrau{
-        margin-top:80px;
-    }
-    
-    h1 {
+    .termine .datum,
+    .termine .beschreibung {
         width: 100%;
     }
-    h1,
-    h2.balkengruen,
-    h2.balkengrau,
-    h3 a{
-        font-size: 1.231em;
+    div#themen div {
+        float: left;
+        width: 100%;
+        /*height: 200px;*/
+        margin-right: 8px;
+        margin-bottom: 8px;
     }
     #wrap {
         padding-left: 10px;
         padding-right: 10px;
     }
-    .mainlogo {
-        margin-left: 0px;
-    }
-    .sublogo {
-        float: left;
-    }
+    
     .linkbox {
         width: 100%;
     }
-    .kontaktfooter {
-        min-height: 228px;
-    }
-    
-    .einfach {
-    width:50%;
-    margin-bottom: 10px;
-    }
-    
     /*---------- ALLE BILDER AUSTAUSCHEN IN DOPPELTER AUFLÖSUNG -------- */
     span[id=teaserbild1] {
         display: block;
@@ -276,33 +270,45 @@ width: 100%;
         width: 86px;
         height: 57px;
     }
-    
     img[id=switchbild] {
         display: none;
     }
     .disnone {
-    display: none;
+        display: none;
     }
+    .einfach {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
     .readmore {
-    display: block;
+        display: block;
+    }
+    
+    /*-------Footer  ------* */
+    /******************************************/
+    
+    .kontaktfooter {
+        min-height: 228px;
     }
     .twitter {
-    float: left;
-    margin-top: 20px;
+        float: left;
+        margin-top: 20px;
     }
-
     footer {
         margin-left: 0px;
     }
-    
     .bg_braun {
-    background-color:#fff;
+        background-color: #fff;
     }
-    
-    
-}
+} <!---End of Breakpoint max-width: 568px--->
+
+<!----------- Breakpoint min-width: 569 und max-width:767 ------------>
+/*****************************************************/
 @media only screen and (min-width: 569px) and (max-width: 767px) {
     /* Zweispaltigkeit in eine Spalte verwandeln */
+    /*------- Main ------* */
+    /******************************************/
     .zweifach {
         width: 100%;
         margin-top: 10px;
@@ -314,23 +320,27 @@ width: 100%;
         margin-right: 8px;
         margin-bottom: 8px;
     }
-    .kontaktfooter {
-        min-height: 200px;
-    }
-    
-
+    /*-------Footer  ------* */
+    /*************************/
     footer {
         margin-left: 0px;
     }
-    
-   .bg_braun {
-    background-color:#fff;
+    .kontaktfooter {
+        min-height: 200px;
+    }
+    .bg_braun {
+        background-color: #fff;
     }
     
-}
+}<!---End of Breakpoint min-width: 569 und max-width:767--->
+
+
 /* ------- IPAD MINI in portrait und landscape ------- */
+/* ------- Diesen Breakpoint haben wir zwar hier mitgesetzt und ein paar Dinge reingeschrieben, damit es nicht völlig verhauen aussieht, aber im Grunde genommen wurde dieser Breakpoint nicht genau optimiert. Den haben wir uns am Anfang auch nicht gesetzt ----- */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    /*------- Main ------* */
+    /***********************/
     .zweifach {
         width: 33%;
         margin-top: 10px;
@@ -342,11 +352,13 @@ width: 100%;
         margin-right: 8px;
         margin-bottom: 8px;
     }
+     #wrap {
+        padding-left: 10px;
+        max-width: 758px;
+    }
+    /*-------Footer  ------* */
+    /*************************/
     .kontaktfooter {
         min-height: 190px;
-    }
-    #wrap {
-    padding-left:10px;
-        max-width:758px;
     }
 }
