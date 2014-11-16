@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system">
+	<name>System - GK Extended Cache</name>
+	<author>www.gavick.com</author>
+	<creationDate>25 August 2011</creationDate>
+	<copyright>All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>test@gavick.com</authorEmail>
+	<authorUrl>http://www.gavick.com</authorUrl>
+	<version>1.0</version>
+	<description>Alternative for system cache plugin for GavickPro templates</description>
+	<files>
+		<filename plugin="gavickExtCache">gavickExtCache.php</filename>
+		<filename>index.html</filename>
+		<folder>gk_assets</folder>
+	</files>
+	<config>
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="template_name" type="textarea"
+					cols="30"
+					description="Template name: "
+					label="Template name"
+					rows="1"
+				/>
+		</fieldset>
+	</fields>
+	</config>
+</extension>
