@@ -1,6 +1,7 @@
 /*-- Allgemeine Styles --*/
 body {
     overflow: hidden;
+    scrolling: no;
     font-family: avenir next, arial;
     color: #888;
 }
@@ -192,9 +193,9 @@ select {
 /* Dieser Abschnitt regelt den Seitenwechsel, wenn man eine "Unterseite" in der 
     Navigationsleiste antippt. 
     Der Quelltext wird folgendermaßen gelesen: 
-    Wenn beispielsweise "#st-control-2" als "checked" markiert wird
-    soll ".sektion" und all seine Tochterelemente sich zur position 100% auf der Y-Achse "transformieren" (bewegen).
-    100%, da jedes Panel 100% des Screens anzeigt und somit die komplette Anzeigefläche blockiert. 
+    Wenn beispielsweise "#navi-punkt-2" als "checked" markiert wird,
+    soll jedes nachkommende namens ".sektion" sich zur Position -100% auf der Y-Achse "transformieren" (bewegen).
+    -100%, da jede Unterseite 100% des Bildschirms anzeigt und somit die komplette Anzeigefläche blockiert. 
 */
 
 #navi-punkt-1:checked ~ .sektionen {
@@ -239,7 +240,6 @@ select {
     width: 250px;
 }
 
-/*--  --*/
 .canvas_slider {
     overflow-y: scroll; 
     position: absolute;
@@ -292,6 +292,7 @@ select {
 #canvas-holder-10 {
     margin-left: 20%;
 }
+
 /*-- Auswahlboxen für die initialisierung der Linien-Charts. --*/
 #Stundiengange {
     padding-right: 15px;
