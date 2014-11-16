@@ -1,4 +1,4 @@
-$(window).ready(function(){
+﻿$(window).ready(function(){
     $("#button2").click(function(){
         // Vorherige Daten löschen um Überschneidung der Charts zu vermeiden
         $("#chart-area-1").remove();
@@ -29,7 +29,7 @@ $(window).ready(function(){
             switch (jsLang) {
         case "baden_wurttemberg":
             // getJSON-Funktion holt die Daten aus der .json-Datei, Aufruf der Daten mit übergebenen Parameter data0
-            $.getJSON("../JSON/baden_wurttemberg.json", function(data0){
+            $.getJSON("JSON/baden_wurttemberg.json", function(data0){
                
             // Prüfen ob die Daten vorhanden sind, Hier reicht die Überprüfung der ersten Variable
 
@@ -93,7 +93,7 @@ $(window).ready(function(){
             });
             break;
         case "bayern":
-            $.getJSON("../JSON/bayern.json", function(data0){
+            $.getJSON("JSON/bayern.json", function(data0){
                         // Setzen der neuen Werte und Beschriftungen
                 ChartActive1();
                 myDoughnut1.segments[0].value = parseInt(data0.bayern[105]["Deutsche Männlich"]);
@@ -153,7 +153,7 @@ $(window).ready(function(){
             });
             break;
         case "brandenburg":
-            $.getJSON("../JSON/brandenburg.json", function(data0){
+            $.getJSON("JSON/brandenburg.json", function(data0){
              // Setzen der neuen Werte und Beschriftungen
                 ChartActive1();
                 myDoughnut1.segments[0].value = parseInt(data0.brandenburg[105]["Deutsche Männlich"]);
@@ -213,7 +213,7 @@ $(window).ready(function(){
             });
             break;
         case "hessen":
-            $.getJSON("../JSON/hessen.json", function(data0){
+            $.getJSON("JSON/hessen.json", function(data0){
                 ChartActive1();
                 myDoughnut1.segments[0].value = parseInt(data0.hessen[105]["Deutsche Männlich"]);
                 myDoughnut1.segments[1].value = parseInt(data0.hessen[105]["Deutsche Weiblich"]);
@@ -272,7 +272,7 @@ $(window).ready(function(){
             });
             break;
         case "nordrhein_westfalen":
-            $.getJSON("../JSON/nordrhein_westfalen.json", function(data0){
+            $.getJSON("JSON/nordrhein_westfalen.json", function(data0){
                             ChartActive1();
                 myDoughnut1.segments[0].value = parseInt(data0.nordrhein_westfalen[105]["Deutsche Männlich"]);
                 myDoughnut1.segments[1].value = parseInt(data0.nordrhein_westfalen[105]["Deutsche Weiblich"]);
@@ -331,7 +331,7 @@ $(window).ready(function(){
             });
             break;
         case "saarland":
-            $.getJSON("../JSON/saarland.json", function(data0){
+            $.getJSON("JSON/saarland.json", function(data0){
                          ChartActive1();
                 myDoughnut1.segments[0].value = parseInt(data0.saarland[105]["Deutsche Männlich"]);
                 myDoughnut1.segments[1].value = parseInt(data0.saarland[105]["Deutsche Weiblich"]);
@@ -390,7 +390,7 @@ $(window).ready(function(){
             });
             break;
         case "sachsen_anhalt":
-            $.getJSON("../JSON/sachsen_anhalt.json", function(data0){
+            $.getJSON("JSON/sachsen_anhalt.json", function(data0){
                          ChartActive1();
                 myDoughnut1.segments[0].value = parseInt(data0.sachsen_anhalt[105]["Deutsche Männlich"]);
                 myDoughnut1.segments[1].value = parseInt(data0.sachsen_anhalt[105]["Deutsche Weiblich"]);
@@ -449,7 +449,7 @@ $(window).ready(function(){
             });
             break;
         case "schleswig_holstein":
-            $.getJSON("../JSON/schleswig_holstein.json", function(data0){
+            $.getJSON("JSON/schleswig_holstein.json", function(data0){
                         ChartActive1();
                 myDoughnut1.segments[0].value = parseInt(data0.schleswig_holstein[105]["Deutsche Männlich"]);
                 myDoughnut1.segments[1].value = parseInt(data0.schleswig_holstein[105]["Deutsche Weiblich"]);
@@ -508,7 +508,7 @@ $(window).ready(function(){
             });
             break;
         case "thuringen":
-            $.getJSON("../JSON/thuringen.json", function(data0){
+            $.getJSON("JSON/thuringen.json", function(data0){
                 ChartActive1();
                 myDoughnut1.segments[0].value = parseInt(data0.thuringen[105]["Deutsche Männlich"]);
                 myDoughnut1.segments[1].value = parseInt(data0.thuringen[105]["Deutsche Weiblich"]);
