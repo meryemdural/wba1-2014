@@ -47,7 +47,14 @@ article{
 	float: left;
 }
 
-a:link { text-decoration:none; }
+a:link { 
+    text-decoration:underline;
+    color:black;
+}
+
+a:visited{
+    color:black;
+}
 
 .link-row{
 	float: left;
