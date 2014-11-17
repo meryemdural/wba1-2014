@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Title of presentation -->
+		<title>CMS Content Management System</title>
+		<!-- Short description of presentation -->
+		<meta name="description" content="CMS">
+		<!-- Author of presentation -->
+		<meta name="author" content="Gözde Kaya und Turac Melis Ira">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../revealjs-framework/css/reveal.min.css">
+		<link rel="stylesheet" href="../revealjs-framework/css/theme/medieninformatik.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-framework/lib/css/solarized_light.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-framework/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-framework/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>Web-basierte Anwendungen 1</h1>
+          <h2>CMS</h2>
+          <p>13. November 2014</p>
+
+          <p>Studiengang Medieninformatik an der Fachhochschule Köln<br>
+          Campus Gummersbach</p>
+
+          <p style="margin-top:10%">Gözde Kaya, Turac Melis Ira</p>
+        </section>
+
+        <section>
+    			<h2>Inhaltsangabe</h2>
+            <p class="fragment">Einleitung</p>
+          <ul>
+          	
+          	<li class="fragment">Was ist CMS?</li>
+            <li class="fragment">Was kann ein CMS?</li>
+          	<li class="fragment">Wer braucht CMS?</li> 
+            </ul>
+            <p  class="fragment">Hauptteil</p>
+           <ul> 
+            <li class="fragment">Website mit/ohne CMS</li>
+            <li class="fragment">verbreitete CMS</li>
+            <li class="fragment">Wordpress(erstellen einer Website)</li>
+               </ul>
+            <p  class="fragment">Schlussteil</p>
+           <ul>
+            
+            <li class="fragment">Fazit</li>
+            <li class="fragment">Quellen</li>
+            <li class="fragment">Hands on</li>
+          </ul>
+    		</section>
+          
+          
+          <section>
+    			<h2>Was ist CMS?</h2>
+          <ul>
+          	<li class="fragment">Verwaltungssystem des Inhalts                                   (Content)</li>
+          	<li class="fragment">Software zur Erstellung, Bearbeitung und          Organisation von Text- und Multimediainhalten von Webauftritten</li>
+            <li class="fragment">zur Verwendung sind keine / wenige HTML-Kenntnisse nötig, da die Meisten Systeme eine grafische Benutzeroberfläche besitzen</li>
+           </ul>
+    		</section>
+          
+          <section>
+    			<h2>Was kann ein CMS?</h2>
+          <ul>
+          	<li class="fragment">Trennung von Layout und Content</li>
+          	<li class="fragment">Beschaffung und Erstellung von Inhalten</li>
+            <li class="fragment">Präsentation, Publikation und Pflege von Inhalten</li>
+          	<li class="fragment">Aufbereitung und Aktualisierung von Inhalten</li>
+<li class="fragment">Management und Organisation von Inhalten</li>
+              <li class="fragment">Verarbeitung von Inhalten (Workflow)</li>
+              
+          </ul>
+    		</section>
+          
+        <section>
+          <h2>Schema eines CMS</h2>
+            
+            <img src="cms.gif">
+        
+        </section>
+          
+            <section>
+          <h2>Website ohne CMS</h2>
+            
+          <ul>
+            <li class="fragment">besteht aus Startseite und mehreren Unterseiten</li>
+            <li class="fragment">Verknüpfung durch Navigation und Hyperlinks- damit man von einer Seite zur anderen gelangt, ohne die jeweilige Adresse zu kennen</li>
+            <li class="fragment">zeitaufwändig</li>
+         
+          </ul>
+        </section>
+          
+            <section>
+          <h2>Website mit CMS</h2>
+            
+          <ul>
+            <li class="fragment">Eingeschränkte Sichtweisen für Redakteure</li>
+            <li class="fragment">Garantie von aktuellen Informationen</li>
+            <li class="fragment">keine Programmierkenntnisse</li>
+                          <li class="fragment">leichte Erstellung und Verwaltung mehrsprachiger Web-Seiten</li>
+              <li class="fragment">Zugriffs- und Versionkontrolle über veröffentlichte Seiten und Inhalte</li>
+              <li class="fragment">einfacher Austausch der Ausgabeformate</li>
+                <li class="fragment">Archivierung ganzer Websites</li>
+              <li class="fragment">Digital Asset Management DAMs</li>
+              <li class="fragment">Entwurftsmodi</li>
+              <li class="fragment">Vermeidung von ungültigen Verknüpfung und Referenzen</li>
+
+         
+          </ul>
+        </section>
+           <section>
+          <h2>verbreitete CMS</h2>
+          <ul>
+              <li class="fragment">Typo3</li>
+            <li class="fragment">Drupal</li>
+            <li class="fragment">Joomla</li>
+               <li class="fragment"><strong>Wordpress</strong></li>
+            <li class="fragment">Contao</li>
+          </ul>
+        </section>
+          
+                   <section>
+          <h2>Wordpress</h2>
+          <ul>
+              <li class="fragment">bekannte CMS und Blogging Software </li>
+            <li class="fragment">als Open Source Code vertrieben</li>
+            <li class="fragment">frei zugänglich</li>
+               <li class="fragment">unbegrenzte Vorlagen</li>
+            <li class="fragment">Suchmaschinfreundliche Linkstruktur</li>
+               <li class="fragment">viele spezialisierte Plugins</li>
+              </ul>
+                       <p class="fragment">Unternehmen schätzen...</p>
+              <ul> <li class="fragment">hohe Benutzerfreundlichkeit</li>
+                  <li class="fragment">niedrigste Entwicklungs-, Betriebs- und Servicekosten</li>
+                   <li class="fragment">hohe Anpassungsfähigkeit</li>
+                    <li class="fragment">schnelle Einarbeitungszeit</li>
+          </ul>
+        </section>
+          
+           <section>
+          <h2>EBAY</h2>
+            
+            <img src="EBAY.jpg">
+        
+        </section>
+          
+              
+           <section>
+          <h2>GREENPEACE</h2>
+            
+            <img src="Greenpeace.jpg">
+        
+        </section>
+          
+              
+           <section>
+          <h2>Erstellung einer statischen Website</h2>
+            
+            <img src="Men%C3%BC2.jpg">
+        
+        </section>
+          
+            <section>
+          <h2>Erstellung einer statischen Website</h2>
+            
+            <img src="Design.jpg">
+        
+        </section>
+          
+            <section>
+          <h2>Erstellung einer statischen Website</h2>
+            
+            <img src="umschalten.jpg">
+        
+        </section>
+          
+            <section>
+          <h2>Erstellung einer statischen Website</h2>
+            
+            <img src="Beitragerstellen.jpg">
+        
+        </section>
+            <section>
+          <h2>Erstellung einer statischen Website</h2>
+            
+            <img src="Beitragerstellen2.jpg">
+        
+        </section>
+          
+            <section>
+          <h2>Erstellung einer statischen Website</h2>
+            
+            <img src="Men%C3%BC-erstellen.jpg">
+        
+        </section>
+          
+          
+          <section>
+                <h2>Quellen</h2>
+          <ul>
+              <li class="fragment">http://www.e-teaching.org/technik/distribution/cms/</li>
+            <li class="fragment">http://www.cmsmadesimple.de/simples-php-cms-als-open-source/was-ist-ein-cms.html</li>
+            <li class="fragment">http://www.typo34u.de/vorteile-eines-cms</li>
+               <li class="fragment">http://de.support.wordpress.com/post-vs-page/</li>
+            <li class="fragment">http://nblogs.de/wordpress-technischer-aufbau-eines-artikels-einer-seite/</li>
+          </ul>
+        </section>
+    
+          <section>
+                <h2><strong>Vielen Dank für Ihre Aufmerksamkeit!</strong></h2>
+         
+        </section>
+          
+          
+          <section>
+          <h2>Hands on</h2>
+            
+       
+            <p class="fragment"><strong>Erstellen Sie eine klasische Website  die sich an das Design und dem Content der Seite "www.erco.de" anpasst. (Entnehmen Sie dabei gewünschte Bilder und Textinhalte aus der ERCO Seite).</strong></p>
+             
+            <p class="fragment">1.Melden Sie sich unter der Seite "www.wordpress.com " unter folgenden Benutzerdaten an:
+Benutzername: wbaubung
+Kennwort: Wbaubung2014</p>
+            <p class="fragment">2.Erstellen Sie ein neues Wordpress unter "Meine Websites".</p>
+               <p class="fragment">3.Wandeln Sie die Website in eine statische Seite.</p>
+               <p class="fragment">4. Suchen Sie sich ein Design aus unter "Design --> Themes".
+a)Verändern Sie das Hauptdesign(Farben, Header, Startseite und Blogtitel)</p>
+               <p class="fragment">5.Erstellen Sie Beiträge/Seiten (Bilder ,Inhalt etc.)</p>
+               <p class="fragment">6.Erstellen Sie eine Menüstruktur unter "Design-->Menu" und fügen Sie Seiten/Beiträge hinzu.</p>
+               <p class="fragment">Diskutiert untereinander, ob CMS sinnvoll für die Website Gestaltung ist!</p>
+         
+          
+        </section>
+          
+    
+          
+          
+          
+          
+          
+          
+          
+          
+        
+
+		<script src="../revealjs-framework/lib/js/head.min.js"></script>
+		<script src="../revealjs-framework/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1000,
+
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast', // default/fast/slow
+				backgroundTransition: 'none', // default/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-framework/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-framework/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-framework/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-framework/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
