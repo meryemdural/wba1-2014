@@ -1,0 +1,43 @@
+﻿.Katalog-section {
+    top: 20px;
+    margin: 10px 10px auto;
+    width: 98%;
+    border-radius: 2px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.sub-section {
+    top: 5px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.katalog-page {
+    margin: 120px auto;
+    width: 1000px;
+    height: auto;
+    position: relative;
+}
+
+.profil-container {
+    width: 400px;
+    height: 430px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-table;
+}
+
+.profil-titel {
+    font-family: "Times New Roman", Times, serif;  
+}
+
+.profil-img {
+
+    max-height:200px;
+
+}
+.profil-desc {
+    font-family: "Times New Roman", Times, serif;
+    display:block;
+}

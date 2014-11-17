@@ -1,0 +1,128 @@
+﻿<!-- Diese Seite hat leider keine Buttons zum Favorisieren und Kaufen. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Webstore</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="StyleSheets/GlobalStyles.css" />
+        <link rel="stylesheet" href="StyleSheets/Flexboxes.css" />
+        <link rel="stylesheet" href="StyleSheets/StrapOn.css" />
+        <link rel="stylesheet" href="StyleSheets/Tabs.css" />
+        <link rel="stylesheet" href="StyleSheets/FavoriteButton.css" />
+        <link rel="stylesheet" href="StyleSheets/UserMenu.css" />
+        <link rel="stylesheet" href="StyleSheets/KatalogPage.css" />
+        <link rel="stylesheet" href="StyleSheets/SearchDropdown.css" />
+    </head>
+    <body>
+        <header>
+            <div class="user-menu">
+                <div class="vLine"></div>
+                <p id="profilName" class="profil-menu"></p>
+                <p id="arrowProfile" class="arrow-profile">&raquo;</p>
+                <p id="arrowChart" class="arrow-chart">&raquo;</p>
+
+                <div id="ChartDropDown" class="drop-down-menu">
+                    <p id="afterthis">Einkaufswagen</p>
+                    <hr />
+                    <p id="payment">Zur Kasse gehen &raquo;</p>
+                </div>
+
+            </div>
+                     
+            <div id="SearchMenu" class="search-header">
+                <form class="search-inputs">
+                    <input id="topSearchField" type="text" placeholder="Suchen..." required class="search-field">
+                    <input type="button" value="Suchen" class="search-button" />
+                </form>
+            </div>
+         
+            <div class="tab-header">
+                <div class="tabs">
+                    <ul class="tab-links">
+                        <li>
+                            <a href="videoLaden-Highlights.html">Highlights</a>
+                        </li>
+                        <!-- Due time reasons not implented-->
+                        <li class="active">
+                            <a href="videoLaden-Katalog.html">Katalog</a>
+                        </li>
+                        <li>
+                            <a href="videoLaden-Profil.html">Mein Profil</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+        
+        
+        <div id="MeinKatalogPage" class="katalog-page">
+            <div class="Katalog-section">
+                <div class="category-separator">
+                    <p>Filme</p>
+                </div>
+                <div>
+                    <div class="sub-section">
+                        <div class="category-separator-sub">
+                            <input type="button" class="collapse-button" id="1" value="⇑" />
+                            <p>Action</p>
+                        </div>
+                    </div>
+                    <div id="actionMovieSection"></div>
+
+                    <div class="sub-section">
+                        <div class="category-separator-sub">
+                            <input type="button" class="collapse-button" id="2" value="⇑" />
+                            <p>Drama</p>
+                        </div>
+                    </div>
+                    <div id="dramaMovieSection"></div>
+
+                    <div class="sub-section">
+                        <div class="category-separator-sub">
+                            <input type="button" class="collapse-button" id="3" value="⇑" />
+                            <p>Krimi</p>
+                        </div>
+                    </div>
+                    <div id="crimeMovieSection"></div>
+                </div>
+            </div>
+            
+            <div class="Katalog-section">
+                <div class="category-separator">
+                    <p>Serien</p>
+                </div>
+                
+                <div>
+                    <div class="sub-section">
+                        <div class="category-separator-sub">
+                            <input type="button" class="collapse-button" id="4" value="⇑" />
+                            <p>Sci-Fi</p>
+                        </div>
+                    </div>
+                    <div id="SciFiSerieSection"></div>
+
+                    <div class="sub-section">
+                        <div class="category-separator-sub">
+                            <input type="button" class="collapse-button" id="5" value="⇑" />
+                            <p>Fantasy</p>
+                        </div>
+                    </div>
+                    <div id="FantasySerieSection"></div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="jqueryRAW/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="Scripts/JavaScript.js"></script>
+        <script src="Scripts/FavoriteButton.js"></script>
+        
+        <!-- This actually runs the Local Storage Stuff-->
+        <script src="Scripts/Login.js"></script>
+        <script src="Scripts/Highlights.js"></script>
+        <script src="Scripts/Katalog.js"></script>
+        <script src="Scripts/SearchInput.js"></script>
+        <script src="Scripts/Einkaufswagen.js"></script>
+        
+    </body>
+</html>

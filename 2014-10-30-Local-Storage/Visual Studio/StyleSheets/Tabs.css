@@ -1,0 +1,60 @@
+﻿/* Styles for JQueryUI Tabs goes here*/
+
+.tab-header {
+    position: absolute;
+}
+
+.tab-header .tabs .tab-links li {
+    display: inline-block;
+    top: 67px;
+    left: -35px;
+    margin-bottom: 100px;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.tabs {
+    width:100%;
+    display:inline-block;
+}
+ 
+.tab-links:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.tab-links li {
+    margin: 0 5px;
+    float: left;
+    list-style: none;
+}
+
+.tab-links a {
+    padding: 9px 15px;
+    display: inline-block;
+    border-radius: 3px 3px 0 0;
+    background: #FF5500;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    transition: all linear 0.15s;
+}
+
+.tab-links a:hover {
+    background: #BB3124;
+    text-decoration: none;
+}
+
+li.active a, li.active a:hover {
+    background: #fff;
+    color: black;
+}
+ 
+    /*----- Content of Tabs -----*/
+.tab-content {
+    padding: 15px;
+    border-radius: 3px;
+    background: #fff;
+}

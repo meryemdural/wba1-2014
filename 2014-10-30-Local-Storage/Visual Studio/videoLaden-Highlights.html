@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Webstore</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="StyleSheets/GlobalStyles.css" />
+        <link rel="stylesheet" href="StyleSheets/Flexboxes.css" />
+        <link rel="stylesheet" href="StyleSheets/StrapOn.css" />
+        <link rel="stylesheet" href="StyleSheets/Tabs.css" />
+        <link rel="stylesheet" href="StyleSheets/FavoriteButton.css" />
+        <link rel="stylesheet" href="StyleSheets/UserMenu.css" />
+        <link rel="stylesheet" href="StyleSheets/HightlightsPage.css" />
+        <link rel="stylesheet" href="StyleSheets/Searchdropdown.css" />
+    </head>
+    <body>     
+        <!-- Header should be equal on all pages-->
+        <header>
+            <div class="user-menu">
+                <div class="vLine"></div>
+                <p id="profilName" class="profil-menu"></p>
+                <p id="arrowProfile" class="arrow-profile">&raquo;</p>
+                <p id="arrowChart" class="arrow-chart">&raquo;</p>
+
+                <div id="ChartDropDown" class="drop-down-menu">
+                    <p id="afterthis">Einkaufswagen</p>
+                    <hr />
+                    <p id="payment">Zur Kasse gehen &raquo;</p>
+                </div>
+
+            </div>
+
+            <!-- Thx to amazon source code. We had some troubles with search drop down but looking how they did it we made it finally-->
+            <div id="SearchMenu" class="search-header">
+                <form class="search-inputs">
+                    <input id="topSearchField" type="text" placeholder="Suchen..." required class="search-field">
+                    <input type="button" value="Suchen" class="search-button" />
+                </form>
+            </div>
+
+            <div class="tab-header">
+                <div class="tabs">
+                    <ul class="tab-links">
+                        <li class="active">
+                            <a href="videoLaden-Highlights.html">Highlights</a>
+                        </li>
+                        <!-- Due time reasons not implented-->
+                        <li>
+                            <a href="videoLaden-Katalog.html">Katalog</a>
+                        </li>
+                        <li>
+                            <a href="videoLaden-Profil.html">Mein Profil</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+           
+        <!-- Some very odd page resizing here after images are loaded. Not sure why. -->
+        <div id="HightlightsPage" class="highlights-page">
+            
+            <!-- Not sure why but we have to organize it this way with all its divs. is ugly but no time to fix-->
+            <div>
+                <div class="highlights-section">
+                    <div class="category-separator">
+                        <p>Highlights</p>
+                    </div>
+                    
+                    <!-- For some strange reason I am not able to design this very first box not the same as the others. Will not be fixed. -->
+                    <div class="flexBox0">
+                        <div id="flexImgBox0" class="flex-img-box"/>
+                    </div>
+                    <div class="flex-rest">
+                        <h3 id="movieTitle0"></h3>
+                        <p id="info0"></p>
+                        <span class="price" id="price0"></span>
+                        <input id="buyBtn0" class="buy-button" type="button" value="Kaufen" />
+                    </div>
+                </div>
+
+                <div class="flexBox1">
+                    <div id="flexImgBox1" class="flex-img-box"></div>
+                    <div class="flex-rest">
+                        <h3 id="movieTitle1"></h3>
+                        <p id="info1"></p>
+                        <span class="price" id="price1"></span>
+                        <input id="buyBtn1" class="buy-button" type="button" value="Kaufen" />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlights-section">
+
+                <div>
+                    <div class="flexBox2">
+                        <div id="flexImgBox2" class="flex-img-box"></div>
+                        <div class="flex-rest">
+                            <h3 id="movieTitle2"></h3>
+                            <p id="info2"></p>
+                            <span class="price" id="price2"></span>
+                            <input id="buyBtn2" class="buy-button" type="button" value="Kaufen" />
+                        </div>
+                    </div>
+
+                    <div class="flexBox3">
+                        <div id="flexImgBox3" class="flex-img-box"></div>
+                        <div class="flex-rest">
+                            <h3 id="movieTitle3"></h3>
+                            <p id="info3"></p>
+                            <span class="price" id="price3"></span>
+                            <input id="buyBtn3" class="buy-button" type="button" value="Kaufen" />
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flexBox4">
+                        <div id="flexImgBox4" class="flex-img-box"></div>
+                        <div class="flex-rest">
+                            <h3 id="movieTitle4"></h3>
+                            <p id="info4"></p>
+                            <span class="price" id="price4"></span>
+                            <input id="buyBtn4" class="buy-button" type="button" value="Kaufen" />
+                        </div>
+                    </div>
+                    <div class="flexBox5">
+                        <div id="flexImgBox5" class="flex-img-box"></div>
+                        <div class="flex-rest">
+                            <h3 id="movieTitle5"></h3>
+                            <p id="info5"></p>
+                            <span class="price" id="price5"></span>
+                            <input id="buyBtn5" class="buy-button" type="button" value="Kaufen" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <script type="text/javascript" src="jqueryRAW/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="Scripts/JavaScript.js"></script>
+        <script src="Scripts/FavoriteButton.js"></script>
+        
+        <!-- This actually runs the Local Storage Stuff-->
+        <script src="Scripts/Highlights.js"></script>
+        <script src="Scripts/Login.js"></script>
+        <script src="Scripts/SearchInput.js"></script>
+        <script src="Scripts/Einkaufswagen.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Adressen - PSSO - Fachhochschule Köln</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+
+    <!-- Javascript -->
+    <script>less = {env: 'development', logLevel: 2};</script>
+    <script src="./js/less.min.js"></script>
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function showPDF() {
+            $('#success').hide();
+            $('#alert').hide();
+
+                $('#success').html('Die Adresse wurde erfolgreich gespeichert.!').slideDown();
+            return false;
+        }
+
+    </script>
+</head>
+
+<body>
+<div class="wrapper clearfix startpage">
+<div id="wrap">
+<div id="header" class="header clearfix">
+    <header>
+        <div class="c3">
+            <div class="logo clearfix">
+                <img src="./media/images/logo.svg" width="381" alt="Fachhochschule Köln"/>
+            </div>
+
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="./index.html">Startseite</a></li>
+                    <li class="active"><a href="./allgemeine-verwaltung.html">Allgemeine Verwaltung</a>
+                        <ul>
+                            <li><a href="./kontaktverwaltung.html">Kontaktverwaltung</a></li>
+                            <li><a href="./tanverwaltung.html">Tan-Verwaltung</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./studiumsverwaltung.html">Studiumsverwaltung</a>
+                        <ul>
+                            <li><a href="./info.html">Informationen zur Rückmeldung</a></li>
+                            <li><a href="./gebuehren.html">Gebühren-Konto</a></li>
+                            <li><a href="./bescheinigung.html">Studienbescheinigung für alle Semester</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./pruefungen.html">Prüfungsverwaltung</a>
+                        <ul>
+                            <li><a href="./an-und-abmeldungen.html">An- und Abmeldung</a></li>
+                            <li><a href="./pruefungsinfo.html">Infos über angemeldete Prüfungen</a></li>
+                            <li><a href="./notenspiegel.html">Notenspiegel</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+
+
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Navigation ein-/ausblenden</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">PSSO</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="./index.html">Startseite</a></li>
+                            <li class="active dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Allgemeine Verwaltung
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="./kontaktverwaltung.html">Kontaktverwaltung</a></li>
+                                    <li><a href="./tanverwaltung.html">Tan-Verwaltung</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Studiumsverwaltung
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="./info.html">Informationen zur Rückmeldung</a></li>
+                                    <li><a href="./gebuehren.html">Gebühren-Konto</a></li>
+                                    <li><a href="./bescheinigung.html">Studienbescheinigung für alle
+                                        Semester</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prüfungsverwaltung
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="./an-und-abmeldungen.html">An- und Abmeldung</a></li>
+                                    <li><a href="./pruefungsinfo.html">Infos über angemeldete Prüfungen</a></li>
+                                    <li><a href="./notenspiegel.html">Notenspiegel</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Max Mustemann</a></li>
+                            <li><a href="#">1234567890</a></li>
+                            <li><a href="#">Abmelden</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="psso_text">
+                <h1>Prüfungs- und Studierendenservice Online</h1>
+                <span>Max Mustermann (1234567890)</span>
+                <span><a href="#">Abmelden</a> </span>
+            </div>
+
+        </div>
+    </header>
+</div>
+
+<ol class="breadcrumb">
+    <li><a href="./allgemeine-verwaltung.html">Allgemeine Verwaltung</a> </li>
+    <li><span>/</span></li>
+    <li><a href="./kontaktverwaltung.html">Kontaktverwaltung</a> </li>
+    <li><span>/</span></li>
+    <li class="current">Adressen</li>
+</ol>
+
+<div class="inner-wrapper">
+
+    <div class="divider clearfix">
+        <div class="context">
+            <div class="c1">
+                <div class="article">
+                    <article>
+                        <h1>Adresse auswählen</h1>
+                        <p>Nachfolgend können Sie eine Haimatadresse und eine Semesteradresse eingeben.</p>
+                        <p>Bitte wählen Sie aus, an welche Adresse Sie Post der Fachhochschule erhalten möchten:</p>
+                        <div id="success_choose" class="alert-success">
+                            Die Adresse wurde erfolgreich gespeichert!
+                        </div>
+                        <p><select name="post_to" style="width: 100%">
+                            <option value="h">Heimatadresse</option>
+                            <option value="s">Semesteradresse</option>
+                        </select> </p>
+                        <p>
+                            <div class="pull-right">
+                                <input type="submit" onclick="$('#success_choose').slideDown();" class="inputText inputField"
+                                       value="Auswahl speichern">
+                            </div>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="content divider clearfix">
+            <div class="c2">
+                <div id="alert" class="alert-danger">
+                    Die eingegebene Tan ist leider nicht gültig.
+                </div>
+                <div id="success" class="alert-success">
+                    Ihnen liegt eine Studienbescheinigung für Max Mustermann vom 31. Oktober 2014
+                    vor.<br/>
+                    Sie ist gültig für das Wintersemester 2014/15.
+                </div>
+
+                <div class="col-md-6">
+
+                    <article>
+                        <h1>Heimatadresse</h1>
+                        <p>Nachfolgend geben Sie bitte ihre private Heimatadresse ein.</p>
+                        <form role="form" method="post" action="#" onsubmit="return showPDF();">
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-4" style="height: 48px;">
+                                    Straße *
+                                </div>
+                                <div class="col-md-7 align-right">
+                                    <input type="text" id="street" class="inputText inputField" value="Musterstraße 123" placeholder="" style="width:100%" required>
+                                </div>
+                            </div>
+                            <br class="mobile" />
+                            <div class="row">
+                                <div class="col-md-4" style="height: 48px;">
+                                    Zusatz
+                                </div>
+                                <div class="col-md-7 align-right">
+                                    <input type="text" id="street_additional" class="inputText inputField" placeholder="" style="width:100%">
+                                </div>
+                            </div>
+                            <br class="mobile" />
+                            <div class="row">
+                                <div class="col-md-4" style="height: 48px;">
+                                    c/o / Zimmernr.
+                                </div>
+                                <div class="col-md-7 align-right">
+                                    <input type="text" id="co" class="inputText inputField" placeholder="" style="width:100%">
+                                </div>
+                            </div>
+                            <br class="mobile" />
+                            <div class="row">
+                                <div class="col-md-4" style="height: 48px;">
+                                    PLZ / Ort *
+                                </div>
+                                <div class="col-md-7 align-right">
+                                    <input type="text" id="plz" class="inputText inputField" placeholder="" value="50968" style="width:33%" required>
+                                    <input type="text" id="ort" class="inputText inputField" placeholder="" value="Köln" style="width:65%" required>
+                                </div>
+                            </div>
+                            <br class="mobile" />
+                            <div class="row">
+                                <div class="col-md-4" style="height: 48px;">
+                                    Land *
+                                </div>
+                                <div class="col-md-7 align-right">
+                                    <select name="country" style="width: 100%">
+                                        <option>Deutschland</option>
+                                        <option>Österreich</option>
+                                        <option>Schweiz</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br class="mobile" />
+                            <div class="row">
+                                <div class="col-md-4" style="height: 48px;">
+                                    Mit TAN bestätigen *
+                                </div>
+                                <div class="col-md-7 align-right">
+                                    <input type="password" maxlength="6" id="tan" class="inputText inputField" placeholder="" style="width:100%">
+                                </div>
+                            </div>
+                            <br class="mobile" />
+                            <div class="row">
+                                <div class="col-md-7" style="height: 48px;">
+                                    &nbsp;
+                                </div>
+                                <div class="col-md-4 align-right">
+                                    <input type="submit" class="inputText inputField"
+                                           value="Adresse speichern">
+                                </div>
+                            </div>
+                        </form>
+                    </article>
+                </div>
+                <br class="mobile" />
+                <br class="mobile" />
+
+                <div class="col-md-6">
+
+                    <article>
+                        <h1>Semesteradresse</h1>
+                        <p>Nachfolgend können Sie eine Adresse angeben, unter welcher sie sich aktuell aufhalten.</p>
+                        <form role="form" method="post" action="#" onsubmit="return showPDF();">
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-4" style="height: 48px;">
+                                    Straße *
+                                </div>
+                                <div class="col-md-7 align-right">
+                                    <input type="text" id="street" class="inputText inputField" placeholder="" style="width:100%" required>
+                                </div>
+                            </div>
+                            <br class="mobile" />
+                            <div class="row">
+                                <div class="col-md-4" style="height: 48px;">
+                                    Zusatz
+                                </div>
+                                <div class="col-md-7 align-right">
+                                    <input type="text" id="street_additional" class="inputText inputField" placeholder="" style="width:100%">
+                                </div>
+                            </div>
+                            <br class="mobile" />
+                            <div class="row">
+                                <div class="col-md-4" style="height: 48px;">
+                                    c/o / Zimmernr.
+                                </div>
+                                <div class="col-md-7 align-right">
+                                    <input type="text" id="co" class="inputText inputField" placeholder="" style="width:100%">
+                                </div>
+                            </div>
+                            <br class="mobile" />
+                            <div class="row">
+                                <div class="col-md-4" style="height: 48px;">
+                                    PLZ / Ort *
+                                </div>
+                                <div class="col-md-7 align-right">
+                                    <input type="text" id="plz" class="inputText inputField" placeholder="" style="width:33%" required>
+                                    <input type="text" id="ort" class="inputText inputField" placeholder="" style="width:65%" required>
+                                </div>
+                            </div>
+                            <br class="mobile" />
+                            <div class="row">
+                                <div class="col-md-4" style="height: 48px;">
+                                    Land *
+                                </div>
+                                <div class="col-md-7 align-right">
+                                    <select name="country" style="width: 100%">
+                                        <option>Deutschland</option>
+                                        <option>Österreich</option>
+                                        <option>Schweiz</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br class="mobile" />
+                            <div class="row">
+                                <div class="col-md-4" style="height: 48px;">
+                                    Mit TAN bestätigen *
+                                </div>
+                                <div class="col-md-7 align-right">
+                                    <input type="password" maxlength="6" id="tan" class="inputText inputField" placeholder="" style="width:100%">
+                                </div>
+                            </div>
+                            <br class="mobile" />
+                            <div class="row">
+                                <div class="col-md-7" style="height: 48px;">
+                                    &nbsp;
+                                </div>
+                                <div class="col-md-4 align-right">
+                                    <input type="submit" class="inputText inputField"
+                                           value="Adresse speichern">
+                                </div>
+                            </div>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+<div id="footer" class="footer">
+    <footer>
+        <div class="c3">
+            <ul class="meta">
+                <li>
+                    <a href="#" title="Impressum">Impressum</a>
+                </li>
+            </ul>
+            <em class="copyright">© 2014 Fachhochschule Köln</em>
+        </div>
+    </footer>
+</div>
+</div>
+
+</body>
+</html>

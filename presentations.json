@@ -55,6 +55,30 @@
 		{
 			"title" : "Social Media Livesession",
 			"authors" : ["Dajana Jeyaratnam", "Sophie Stelzer"]
+		},
+
+		"2014-11-06 Medienformate-Livesession/praesentation.html":
+		{
+			"title" : "Medienformate Livesession",
+			"authors" : ["Oliver Haarmann", "Maximilian Huhn"]
+		},
+
+		"2014-11-06-seo-livesession/index.html":
+		{
+			"title" : "SEO Livesession",
+			"authors" : ["Roman Seibt", "Markus Ernst"]
+		},
+		
+		"2014-11-13-ResponsiveDesign-Livesession/presentation/index.html":
+		{
+			"title" : "Responsive Webdesign - Livesession",
+			"authors" : ["Stefan Barbie", "Maxim Engelmann"]
+		},
+		
+		"2014-11-13-rechte-im-internet/index.html":
+		{
+			"title" : "Rechte im Internet - Livesession",
+			"authors" : ["Aylin Mengi", "Meryem Dural"]
 		}
 	}
 }
