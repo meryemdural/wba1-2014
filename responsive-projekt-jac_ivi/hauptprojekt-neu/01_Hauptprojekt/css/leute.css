@@ -1,0 +1,77 @@
+/* /////// CSS fuer die Unterseite "Leute" /////// */
+
+/* Allgemeines wie Logo, Abstände, Schriften, ect. */
+
+/***************************************************/
+
+/* - Fh Köln-Logo - */
+
+.mainlogo {
+    margin: 20px 0px 20px 27px;
+    float: left;
+}
+.block {
+    display: block;
+}
+.dreifach {
+    width: 526px;
+    margin-right: 8px;
+}
+.last {
+    margin-right: 0;
+}
+/* Überschriften */
+
+/*****************/
+
+h2,
+h2 strong {
+    color: #77cc00;
+}
+p {
+    padding-bottom: 15px;
+}
+/* Hauptcontainer */
+
+/******************/
+
+.index_veranstaltung {
+    width: 164px;
+    height: 164px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 4px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.vierzig_prozent {
+    background-color: #b4a7a0 !important;
+    color: #fff;
+}
+.vierzig_prozent a {
+    border-bottom: dotted 1px #ffffff;
+}
+.vierzig_prozent a:hover {
+    border-bottom: solid 1px #dd1166;
+}
+.index_veranstaltung * {
+    color: #fff;
+}
+h2.index,
+.box_rahmen {
+    width: 162px;
+    height: 162px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: solid 1px #dd1166;
+    padding: 4px;
+    display: block;
+}
+.index_veranstaltung p a:hover {
+    border-bottom: solid 1px #dd1166;
+}
+
+
+
