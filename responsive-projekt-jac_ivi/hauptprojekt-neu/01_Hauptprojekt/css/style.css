@@ -1,0 +1,421 @@
+    /*------- Standardgeschichten, wie body, headlines und co ------* */
+    /******************************************************************/
+    body {
+        margin: auto;
+        background-color: #fff;
+    }
+    * {
+        font-family: 'PT Sans', Geneva, Arial, Tahoma, Verdana, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        color: #000;
+        line-height: 15px;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    #wrap {
+        padding-top: 15px;
+        padding-left: 52px;
+        max-width: 768px;
+        margin-right: 0 !important;
+    }
+    input,
+    textarea {
+        background: #F3F6ED;
+        border: #75bf0d 1px solid;
+        margin: 0;
+        padding: 2px;
+        font-size: 0.846em;
+    }
+    .float {
+        float: left;
+        display: block;
+    }
+    /* Basic Einstellungen: Links */
+    a {
+        color: #000;
+        border-bottom: dotted 1px #d16;
+        text-decoration: none;
+    }
+    a:visited {
+        color: #666;
+        border-bottom: dotted 1px #d16;
+    }
+    a:hover {
+        color: #75bf0d;
+    }
+    /* Basic Einstellungen: Headlines */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 0.846em;
+        font-weight: normal;
+    }
+    h1 {
+        background: #d16;
+        color: #fff !important;
+        font-weight: bold;
+        padding: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: 0;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        float: left;
+        letter-spacing: 1px;
+    }
+    h2.balkengruen,
+    span.balkengruen,
+    h2.balkenblau,
+    span.balkenblau {
+        background: #77cc00;
+        color: #fff !important;
+        font-size: 0.846em;
+        font-weight: normal;
+        padding: 2px;
+        padding-left: 5px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+    h2.balkengruen a,
+    h2.balkengrau a {
+        color: #d16;
+    }
+    h2.balkenblau,
+    span.balkenblau {
+        background: #77aabb;
+    }
+    h2.balkengrau,
+    span.balkengrau {
+        background: #442211;
+        color: #fff !important;
+        font-size: 0.846em;
+        font-weight: normal;
+        padding: 2px;
+        padding-left: 5px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+    h3,
+    h3 a {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 600;
+        color: #000;
+    }
+    .readmore {
+        font-size: 1.231em;
+        background-color: #d16;
+        color: #fff;
+        width: 100%;
+        padding: 5px;
+        display: none;
+    }
+
+    /* Bilder automatisch responsiv skalieren lassen */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    /*--------- Header --------* */
+    /*****************************/
+    header {
+        margin: 0;
+        padding-bottom: 16px;
+    }
+    .mainlogo {
+        margin-left: -20px;
+    }
+    /* - MI an der FH Köln - */
+    .sublogo {
+        float: right;
+        margin: 20px 0px 20px 27px;
+    }
+    .sublogo > p {
+        font-size: 0.923em;
+    }
+    .pink {
+        font-size: 0.923em;
+        font-weight: 600;
+        color: #d16;
+    }
+    #startbild {
+        border-top: 4px solid #70c000;
+        position: relative;
+        margin-top: 15px;
+    }
+    #startbild .bu {
+        position: absolute;
+        left: 50%;
+        bottom: 2px;
+        filter: alpha(opacity=80);
+        -moz-opacity: 0.8;
+        opacity: 0.8;
+        background: #77cc00;
+        width: 50%;
+        height: 73px;
+    }
+    /* Bildunterschrift */
+    .bu .myriad {
+        font-weight: 400;
+        font-size: 1.385em;
+        padding: 8px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    .myriadklein {
+        padding: 4px;
+        padding-bottom: 8px;
+        margin: 0;
+    }
+    /*------- Navigation ------* */
+    /*****************************/
+    #nav_wrap ul li {
+        display: block;
+        background: none;
+        padding: 0;
+    }
+    #nav_wrap ul {
+        float: left;
+        width: 21.8%;
+        margin: 0 10px 0 0;
+        padding: 0;
+    }
+    #nav_wrap a {
+        display: block;
+        border: none;
+    }
+    #nav_wrap a:hover {
+        background: #d16;
+        color: #fff !important;
+        border: none;
+    }
+    #nav_wrap a:visited {
+        border: none;
+    }
+    #nav_wrap * {
+        color: #d16;
+    }
+    #nav_wrap {
+        width: 109.5%;
+        height: 93px;
+    }
+    nav a#pull {
+        display: none;
+    }
+    
+    /*--------- Main ----------* */
+    /*****************************/
+    /* Wiki-Spalte */
+    #main {
+        margin: 0;
+        paddding: 0;
+    }
+    .datum {
+        padding: 20px 0;
+    }
+    .wiki div .author,
+    .wiki div .datum,
+    .wiki div .bezug,
+    .wiki .art,
+    .wiki .studiengang,
+    .wiki .ansprechpartner {
+        display: inline;
+        padding-right: 0;
+    }
+    .wiki div + div {
+        border-top: solid 1px #b4a7a0;
+    }
+    .wiki div {
+        padding-top: 4px;
+        padding-bottom: 8px;
+    }
+    .zeile {
+        width: 101.1%;
+        clear: both;
+        padding-bottom: 16px;
+    }
+    .zeile2 {
+        padding-top: 50px;
+    }
+    .clear,
+    span.clear {
+        display: block;
+        clear: both;
+    }
+    p.startnews {
+        position: relative;
+    }
+    .zweifach {
+        width: 48.8%;
+        margin-right: 8px;
+        margin-top: 0;
+    }
+    .zweifach p {
+        padding-right: 8px;
+    }
+    .float {
+        float: left;
+        display: block;
+    }
+    p.startnews a {
+        display: block;
+        position: relative;
+    }
+    p.startnews img {
+        border: solid 1px #b4a7a0;
+    }
+    p.startnews a,
+    p.startnews a:visited {
+        border: none;
+    }
+    .fade {
+        opacity: 0.6;
+    }
+    .fade:hover {
+        opacity: 1;
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+    }
+    p.startnews strong {
+        display: block;
+        position: absolute;
+        bottom: 13px;
+        left: 0;
+        margin: 1px;
+        background: #fff;
+        color: #77cc00;
+        padding: 2px;
+        font-weight: normal;
+        padding-right: 5px;
+    }
+    p.startnews span {
+        color: #77cc00;
+    }
+    .linkbox {
+        border: solid 1px #77cc00;
+        width: 48.2%;
+        height: 90px;
+        padding: 5px;
+        text-align: right;
+        display: block;
+        position: relative;
+    }
+    .linkbox * {
+        color: #77cc00 !important;
+    }
+    .linkbox a::before {
+        height: 65px;
+        display: block;
+        content: "";
+    }
+    .linkbox:hover {
+        border: solid 1px #d16;
+    }
+    .linkbox *:hover {
+        color: #d16 !important;
+    }
+    .termine {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        margin-bottom: 10px;
+        position: relative;
+        min-height: 60px;
+    }
+    .termine .datum,
+    .termine .beschreibung {
+        display: block;
+        float: left;
+        width: 47.8%;
+    }
+    .termine .datum {
+        text-transform: uppercase;
+        color: #77cc00;
+        margin-right: 8px;
+    }
+    div#themen {
+        width: 101.2%;
+    }
+    /* dieses div hat eine feste Breite, weil die Spalten beim "fluiden" nicht nebeneinander stehen soll */
+    div#themen div {
+        float: left;
+        width: 23.8%;
+        /*height: 200px;*/
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+    div#themen .titel,
+    div#themen .ansprechpartner,
+    div#themen .art,
+    div#themen .studiengang {
+        display: inline;
+        padding-right: 2px;
+    }
+    .halb {
+        width: 86px;
+        margin-right: 8px;
+    }
+    /* Boxen mit farbigen Hintergruenden */
+    .bg_braun {
+        background-color: #f2ebe6;
+    }
+    .bg_gruen {
+        background-color: #e4f5cc;
+    }
+    /* linien */
+    .linieoben_pink {
+        border-top: solid 1px #d16;
+    }
+    .linieoben_braun {
+        border-top: solid 1px #b4a7a0;
+    }
+    .linieoben_pink,
+    .linieoben_braun {
+        padding-top: 4px;
+        margin-top: 8px;
+    }
+    .linieunten_pink {
+        border-bottom: solid 1px #d16;
+    }
+    .linieunten_blau {
+        border-bottom: solid 1px #77aabb;
+    }
+    .linieunten_braun {
+        border-bottom: solid 1px #b4a7a0;
+    }
+    .linieoben_pink,
+    .linieoben_braun {
+        padding-top: 4px;
+        margin-top: 8px;
+    }
+    .linieoben_braun {
+        border-top: solid 1px #b4a7a0;
+    }
+    .einfach {
+        width: 172px;
+        margin-right: 8px;
+    }
+
+    /* -------- FOOTER --------- */
+    .kontaktfooter {
+        width: 101.2%;
+        min-height: 108px;
+    }
+    footer {
+        padding: 2px 0;
+        clear: both;
+        color: #999;
+        border-top: solid 3px #77cc00;
+        padding-bottom: 16px;
+        width: 101.2%;
+    }
+    footer p#copy {
+        padding-bottom: 16px;
+    }
