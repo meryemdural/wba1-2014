@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Auslastung</title>
+		<script src="../Chart.js"></script>
+	</head>
+	<body>
+		<div id="canvas-holder">
+			<canvas id="chart-area" width="300" height="300"/>
+		</div>
+
+
+	<script>
+
+		var pieData = [
+				{
+					value: 300,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "blabla 06/07"
+				},
+				{
+					value: 101,
+					color: "#46BFBD",
+					highlight: "#5AD3D1",
+					label: "Auslastung 07/08"
+				},
+				{
+					value: 116,
+					color: "#FDB45C",
+					highlight: "#FFC870",
+					label: "Auslastung 08/09"
+				},
+				{
+					value: 115,
+					color: "#949FB1",
+					highlight: "#A8B3C5",
+					label: "Auslastung 09/10"
+				},
+				{
+					value: 122,
+					color: "#4D5360",
+					highlight: "#616774",
+					label: "Auslastung 10/11"
+				}
+
+			];
+
+			window.onload = function(){
+				var ctx = document.getElementById("chart-area").getContext("2d");
+				window.myPie = new Chart(ctx).Pie(pieData);
+			};
+
+
+
+	</script>
+	</body>
+</html>
