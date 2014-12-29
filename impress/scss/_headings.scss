@@ -1,0 +1,47 @@
+h2 {
+	display: block;
+	width: 100%;
+	font-size: 2em;
+	margin: 0;
+	color: $pink;
+	font-weight: bold;
+	@include box-sizing(border-box);
+
+	&.color-block {
+		background-color: $pink;
+		color: white;
+		padding: 15px 30px;
+	}
+}
+
+h3 {
+	display: inline-block;
+	margin: 0;
+	color: $green;
+	font-weight: bold;
+	@include box-sizing(border-box);
+
+	&.color-block {
+		background-color: $green;
+		color: white;
+		padding: 15px 30px;
+	}
+}
+
+h4 {
+	display: inline-block;
+	margin: 0;
+	color: $blue;
+	font-weight: bold;
+	@include box-sizing(border-box);
+
+	&.color-block {
+		background-color: $blue;
+		color: white;
+		padding: 15px 30px;
+	}
+}
+
+.margin-bottom {
+	margin-bottom: 60px;
+}

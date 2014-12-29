@@ -1,0 +1,45 @@
+body {
+	font-family: 'PT Sans', Arial, Helvetica, Tahoma, sans-serif;;
+	background: black;
+	color: white;
+
+	&:before {
+		content: '';
+		opacity: .5;
+		position: fixed;
+		bottom: 10px;
+		left: 10px;
+		display: block;
+		width: 141px;
+		height: 20px;
+		background-size: 100%;
+		@include retina-image('viel-drin', 'png', 141px, 20px);
+	}
+}
+
+@include selection {
+	background-color: rgba($green, .99); // alpha .99 quickfix for chrome forcing semi-transparent background
+	color: black;
+}
+
+.fallback-message {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -350px;
+	font-size: 11px;
+	line-height: 1.3;
+	opacity: .8;
+	width: 700px;
+	padding: 10px;
+	background-color: $pink;
+	@include box-sizing(border-box);
+
+	p {
+		margin-bottom: 0;
+	}
+
+	.impress-supported & {
+		display: none;
+	}
+}
