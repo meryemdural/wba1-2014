@@ -1,0 +1,42 @@
+.pink {
+	color: $pink;
+}
+
+.blue {
+	color: $blue;
+}
+
+.green {
+	color: $green;
+}
+
+.brown {
+	color: $brown;
+}
+
+.colory-color-block {
+	color: white;
+	padding: 0 5px;
+}
+
+.pink-color-block {
+	@extend .colory-color-block;
+	background-color: $pink;
+}
+
+.green-color-block {
+	@extend .colory-color-block;
+	background-color: $green;
+	color: black;
+}
+
+.blue-color-block {
+	@extend .colory-color-block;
+	background-color: $blue;
+	color: black;
+}
+
+.brown-color-block {
+	@extend .colory-color-block;
+	background-color: $brown;
+}

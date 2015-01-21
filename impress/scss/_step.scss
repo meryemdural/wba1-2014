@@ -1,0 +1,31 @@
+.step {	
+	position: relative;
+	padding: 40px;
+	width: 1024px;
+	font-size: 30px;
+	@include box-sizing(border-box);
+
+	.impress-enabled & {
+		margin: 0;
+		opacity: 0.5;
+		@include transition(opacity 1s);
+
+		&.active {
+			opacity: 1;
+		}
+	}
+}
+
+.slide {
+	height: 768px;
+	border: 1px solid lighten(black, 30);
+}
+
+#overview {
+	display: none;
+}
+
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}

@@ -1,0 +1,349 @@
+/* --------- IPHONE 5 Portrait und Landscape -*/
+
+@media only screen and (max-width: 320px) {
+
+    h2 {
+        font-size: 1.231em;
+    }
+    /*------- Header ------* */
+    /*****************************/
+    .mainlogo {
+        margin-left: -20px;
+    }
+    .sublogo {
+        float: left;
+    }
+    /*------- Navigation ------* */
+    /*****************************/
+    #nav_wrap {
+        width: 100%;
+        height: 30px;
+    }
+    nav li {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    nav li a {
+        border-bottom: 1px solid #576979;
+    }
+    /*------- Main ------* */
+    /*****************************/
+    div#themen div {
+        float: left;
+        width: 100%;
+        /*height: 200px;*/
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+    .linkbox {
+        width: 100%;
+    }
+    /*------- Footer ------* */
+    /*****************************/
+    footer {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    /*------- Standardgeschichten, wie body, headlines und co ------* */
+    /*****************************/
+    h2.index,
+    .box_rahmen {
+        width: 89%;
+        font-size: 1.231em;
+    }
+    /*------- Main ------* */
+    /*****************************/
+    .teaserbild {
+        max-width: 100%;
+    }
+    .linkbox {
+        max-width: 100%;
+    }
+    /*------- Nur auf der Leute-Seite ------* */
+    /*****************************/
+    span[id=leutebild] {
+        display: block;
+        background-image: url(../img/Gesichter/leuteg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 280px;
+        height: 186px;
+    }
+    img[id=switchbild2] {
+        display: none;
+    }
+    .vierzig_prozent p {
+        font-size: 1.385em;
+        padding-top: 20px;
+    }
+    .vierzig_prozent abbr {
+        font-size: 1.231em;
+    }
+    .index_veranstaltung {
+        width: 290px;
+        height: 290px;
+    }
+    /*------- Footer ------* */
+    /*****************************/
+    .kontaktfooter {
+        min-height: 300px;
+    }
+    .bg_braun {
+        background-color: #fff;
+    }
+}
+@media only screen and (max-width: 568px) {
+    /*------- Standardgeschichten, wie body, headlines und co ------* */
+    /*****************************/
+    * {
+        font-size: 15px;
+        line-height: 18px;
+    }
+        /* ------ WICHTIG: Hier haben wir die Gestaltungsregel "Gesetz der Nähe" beachtet und über die verschiedenen Abschnitte einen größeren Abstand gemacht, damit die Abtrennung der Abschnitte klarer ist -------- */
+    h2.balkengruen,
+    h2.balkengrau {
+        margin-top: 80px;
+    }
+    h1 {
+        width: 100%;
+    }
+    h1,
+    h2.balkengruen,
+    h2.balkengrau,
+    h3 a {
+        font-size: 1.231em;
+    }
+    /* ----- Alle Elemente mit der Klasse .mobilehide werden in der mobilen Ansicht versteckt. visibility:hidden + position:absolute deshalb, weil display:none an diesen Stellen, wie z.B. der Navigation, nicht funktioniert hat -----*/
+    .mobilehide {
+        visibility: hidden;
+        position: absolute;
+        top: -1000px;
+    }
+    /*------- Header ------* */
+    /*****************************/
+    .mainlogo {
+        margin-left: 0px;
+    }
+    .sublogo {
+        float: left;
+    }
+    .sublogo > p {
+        font-size: 1.154em;
+    }
+    .pink {
+        font-size: 1.154em;
+    }
+    #startbild .bu {
+        position: static;
+        width: 100%;
+        height: 93px;
+    }
+    /*------- Navigation ------* */
+    /*****************************/
+    nav {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    nav ul {
+        display: none;
+        height: auto;
+    }
+    nav a#pull {
+        display: block;
+        background-color: #d16;
+        color: #fff;
+        position: absolute;
+        padding: 10px;
+        width: 95%;
+        font-size: 1.231em;
+    }
+    nav a#pull:after {
+        content: "";
+        background: url('../img/nav-icon.svg') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+    #nav_wrap {
+        width: 100%;
+        height: 30px;
+    }
+    #nav_wrap a {
+        background: #d16;
+        color: #fff !important;
+        padding: 10px;
+        margin-top: 3px;
+    }
+    #nav_wrap .firstul {
+        margin-top: 40px;
+    }
+    #nav_wrap .lastul {
+        margin-bottom: 10px;
+    }
+    #nav_wrap ul {
+        width: 100%;
+    }
+    /*------- Main ------* */
+    /******************************************/
+    .zweifach {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .termine .datum,
+    .termine .beschreibung {
+        width: 100%;
+    }
+    div#themen div {
+        float: left;
+        width: 100%;
+        /*height: 200px;*/
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+    #wrap {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .linkbox {
+        width: 100%;
+    }
+    /*---------- ALLE BILDER AUSTAUSCHEN IN DOPPELTER AUFLÖSUNG -------- */
+    span[id=teaserbild1] {
+        display: block;
+        background-image: url(../img/teaserbilder/da_medieninformatik_filmfestival.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100px;
+    }
+    span[id=teaserbild2] {
+        display: block;
+        background-image: url(../img/teaserbilder/da_opitz_preis.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100px;
+    }
+    span[id=teaserbild3] {
+        display: block;
+        background-image: url(../img/teaserbilder/da_vortrag_christian_solmecke.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100px;
+    }
+    span[id=teaserbild4] {
+        display: block;
+        background-image: url(../img/teaserbilder/da_vortrag_tobias_schiwek.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100px;
+    }
+    span[id=teaserbild5] {
+        display: block;
+        background-image: url(../img/teaserbilder/da_nacht_der_technik_2013.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100px;
+    }
+    span[id=christiane] {
+        display: block;
+        background-image: url(../img/footer/da_christiane_gruenloh.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 86px;
+        height: 57px;
+    }
+    img[id=switchbild] {
+        display: none;
+    }
+    .disnone {
+        display: none;
+    }
+    .einfach {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .readmore {
+        display: block;
+    }
+    
+    /*-------Footer  ------* */
+    /******************************************/
+    
+    .kontaktfooter {
+        min-height: 228px;
+    }
+    .twitter {
+        float: left;
+        margin-top: 20px;
+    }
+    footer {
+        margin-left: 0px;
+    }
+    .bg_braun {
+        background-color: #fff;
+    }
+} 
+@media only screen and (min-width: 569px) and (max-width: 767px) {
+    /* Zweispaltigkeit in eine Spalte verwandeln */
+    /*------- Main ------* */
+    /******************************************/
+    .zweifach {
+        width: 100%;
+        margin-top: 10px;
+    }
+    div#themen div {
+        float: left;
+        width: 100%;
+        /*height: 200px;*/
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+    /*-------Footer  ------* */
+    /*************************/
+    footer {
+        margin-left: 0px;
+    }
+    .kontaktfooter {
+        min-height: 200px;
+    }
+    .bg_braun {
+        background-color: #fff;
+    }
+    
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    /*------- Main ------* */
+    /***********************/
+    .zweifach {
+        width: 33%;
+        margin-top: 10px;
+    }
+    div#themen div {
+        float: left;
+        width: 100%;
+        /*height: 200px;*/
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+     #wrap {
+        padding-left: 10px;
+        max-width: 758px;
+    }
+    /*-------Footer  ------* */
+    /*************************/
+    .kontaktfooter {
+        min-height: 190px;
+    }
+}

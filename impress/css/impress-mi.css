@@ -1,0 +1,533 @@
+/* impress.js Theme for MI */
+/* normalize.css v2.1.1 | MIT License | git.io/normalize */
+/* line 19, ../scss/bits/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 26, ../scss/bits/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 32, ../scss/bits/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 38, ../scss/bits/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 53, ../scss/bits/_normalize.scss */
+html {
+  background: #fff;
+  color: #000;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 62, ../scss/bits/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 71, ../scss/bits/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 77, ../scss/bits/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 87, ../scss/bits/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 93, ../scss/bits/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 99, ../scss/bits/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 104, ../scss/bits/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 109, ../scss/bits/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 116, ../scss/bits/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 125, ../scss/bits/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 131, ../scss/bits/_normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/* line 136, ../scss/bits/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 141, ../scss/bits/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 147, ../scss/bits/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 154, ../scss/bits/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 158, ../scss/bits/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 167, ../scss/bits/_normalize.scss */
+img {
+  border: 0;
+}
+
+/* line 172, ../scss/bits/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 181, ../scss/bits/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* line 190, ../scss/bits/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 198, ../scss/bits/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 209, ../scss/bits/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 218, ../scss/bits/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/* line 227, ../scss/bits/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 239, ../scss/bits/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 246, ../scss/bits/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 253, ../scss/bits/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 261, ../scss/bits/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 271, ../scss/bits/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 277, ../scss/bits/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 284, ../scss/bits/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 294, ../scss/bits/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of normalize css */
+/* line 1, ../scss/_document.scss */
+body {
+  font-family: 'PT Sans', Arial, Helvetica, Tahoma, sans-serif;
+  background: black;
+  color: white;
+}
+/* line 6, ../scss/_document.scss */
+body:before {
+  content: '';
+  opacity: .5;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  display: block;
+  width: 141px;
+  height: 20px;
+  background-size: 100%;
+  background-image: url("../img/viel-drin.png");
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* line 6, ../scss/_document.scss */
+  body:before {
+    background-image: url("../img/viel-drin@2x.png");
+    background-size: 141px 20px;
+  }
+}
+
+/* line 2, ../scss/bits/_selection.scss */
+::-moz-selection {
+  background-color: rgba(119, 204, 0, 0.99);
+  color: black;
+}
+
+/* line 3, ../scss/bits/_selection.scss */
+::selection {
+  background-color: rgba(119, 204, 0, 0.99);
+  color: black;
+}
+
+/* line 25, ../scss/_document.scss */
+.fallback-message {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -350px;
+  font-size: 11px;
+  line-height: 1.3;
+  opacity: .8;
+  width: 700px;
+  padding: 10px;
+  background-color: #dd1166;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 38, ../scss/_document.scss */
+.fallback-message p {
+  margin-bottom: 0;
+}
+/* line 42, ../scss/_document.scss */
+.impress-supported .fallback-message {
+  display: none;
+}
+
+/* line 1, ../scss/_text.scss */
+p {
+  margin-top: 0;
+}
+
+/* line 5, ../scss/_text.scss */
+.small {
+  font-size: .6em;
+}
+
+/* line 9, ../scss/_text.scss */
+.big {
+  font-size: 2em;
+}
+
+/* line 13, ../scss/_text.scss */
+a {
+  display: inline-block;
+  background-color: #dd1166;
+  text-decoration: none;
+}
+/* line 19, ../scss/_text.scss */
+a:hover, a:focus {
+  background-color: #c50f5b;
+}
+
+/* line 24, ../scss/_text.scss */
+ul {
+  padding-left: 60px;
+  list-style-type: none;
+}
+/* line 28, ../scss/_text.scss */
+ul li {
+  position: relative;
+}
+/* line 31, ../scss/_text.scss */
+ul li:before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: -20px;
+  display: block;
+  width: 7px;
+  height: 7px;
+  background-color: #dd1166;
+}
+
+/* line 44, ../scss/_text.scss */
+pre {
+  font-size: .7em;
+  font-family: monospace;
+}
+
+/* line 49, ../scss/_text.scss */
+blockquote {
+  margin: 40px 0;
+  background-color: #dd1166;
+  position: relative;
+  padding: 20px 30px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 56, ../scss/_text.scss */
+blockquote:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  bottom: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #dd1166;
+}
+
+/* line 1, ../scss/_color-text.scss */
+.pink {
+  color: #dd1166;
+}
+
+/* line 5, ../scss/_color-text.scss */
+.blue {
+  color: #77aabb;
+}
+
+/* line 9, ../scss/_color-text.scss */
+.green {
+  color: #77cc00;
+}
+
+/* line 13, ../scss/_color-text.scss */
+.brown {
+  color: #442211;
+}
+
+/* line 17, ../scss/_color-text.scss */
+.colory-color-block, a, .pink-color-block, .green-color-block, .blue-color-block, .brown-color-block {
+  color: white;
+  padding: 0 5px;
+}
+
+/* line 22, ../scss/_color-text.scss */
+.pink-color-block {
+  background-color: #dd1166;
+}
+
+/* line 27, ../scss/_color-text.scss */
+.green-color-block {
+  background-color: #77cc00;
+  color: black;
+}
+
+/* line 33, ../scss/_color-text.scss */
+.blue-color-block {
+  background-color: #77aabb;
+  color: black;
+}
+
+/* line 39, ../scss/_color-text.scss */
+.brown-color-block {
+  background-color: #442211;
+}
+
+/* line 1, ../scss/_step.scss */
+.step {
+  position: relative;
+  padding: 40px;
+  width: 1024px;
+  font-size: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 8, ../scss/_step.scss */
+.impress-enabled .step {
+  margin: 0;
+  opacity: 0.5;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+/* line 13, ../scss/_step.scss */
+.impress-enabled .step.active {
+  opacity: 1;
+}
+
+/* line 19, ../scss/_step.scss */
+.slide {
+  height: 768px;
+  border: 1px solid #4d4d4d;
+}
+
+/* line 24, ../scss/_step.scss */
+#overview {
+  display: none;
+}
+
+/* line 28, ../scss/_step.scss */
+.impress-on-overview .step {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* line 1, ../scss/_headings.scss */
+h2 {
+  display: block;
+  width: 100%;
+  font-size: 2em;
+  margin: 0;
+  color: #dd1166;
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 10, ../scss/_headings.scss */
+h2.color-block {
+  background-color: #dd1166;
+  color: white;
+  padding: 15px 30px;
+}
+
+/* line 17, ../scss/_headings.scss */
+h3 {
+  display: inline-block;
+  margin: 0;
+  color: #77cc00;
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 24, ../scss/_headings.scss */
+h3.color-block {
+  background-color: #77cc00;
+  color: white;
+  padding: 15px 30px;
+}
+
+/* line 31, ../scss/_headings.scss */
+h4 {
+  display: inline-block;
+  margin: 0;
+  color: #77aabb;
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 38, ../scss/_headings.scss */
+h4.color-block {
+  background-color: #77aabb;
+  color: white;
+  padding: 15px 30px;
+}
+
+/* line 45, ../scss/_headings.scss */
+.margin-bottom {
+  margin-bottom: 60px;
+}

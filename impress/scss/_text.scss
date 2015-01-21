@@ -1,0 +1,67 @@
+p {
+	margin-top: 0;
+}
+
+.small {
+	font-size: .6em;
+}
+
+.big {
+	font-size: 2em;
+}
+
+a {
+	@extend .colory-color-block;
+	display: inline-block;
+	background-color: $pink;
+	text-decoration: none;
+
+	&:hover, &:focus {
+		background-color: darken($pink, 5);
+	}
+}
+
+ul {
+	padding-left: 60px;
+	list-style-type: none;
+
+	li {
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 16px;
+			left: -20px;
+			display: block;
+			width: 7px;
+			height: 7px;
+			background-color: $pink;
+		}
+	}
+}
+
+pre {
+	font-size: .7em;
+	font-family: monospace;
+}
+
+blockquote {
+	margin: 40px 0;
+	background-color: $pink;
+	position: relative;
+	padding: 20px 30px;
+	@include border-radius(10px);
+
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 0;
+		height: 0;
+		bottom: -10px;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 10px solid $pink;
+	}
+}
